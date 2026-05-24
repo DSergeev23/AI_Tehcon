@@ -1,15 +1,17 @@
 import React from 'react';
 import HeroSection from '../components/home/HeroSection';
-import BentoGrid from '../components/home/BentoGrid';
-import TrustedSection from '../components/home/TrustedSection';
+import LogoBar from '../components/home/LogoBar';
+import FeaturesGrid from '../components/home/FeaturesGrid';
+import BentoShowcase from '../components/home/BentoShowcase';
 import CTASection from '../components/home/CTASection';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <TrustedSection />
-      <BentoGrid />
+      <LogoBar />
+      <FeaturesGrid />
+      <BentoShowcase />
       <CTASection />
     </>
   );

@@ -1,98 +1,80 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { Plus } from 'lucide-react';
+import WireframeGlobe from './WireframeGlobe';
+import CornerMark from '../shared/CornerMark';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-primary/[0.07] blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-accent/[0.06] blur-[120px] pointer-events-none" />
+    <section className="relative min-h-screen bg-black grid-lines overflow-hidden">
+      {/* Grid overlay */}
+      <div className="absolute inset-0 grid-lines opacity-100" />
 
-      {/* Grid lines */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-        backgroundSize: '80px 80px'
-      }} />
+      {/* Corner marks */}
+      <span className="absolute top-[56px] left-5 text-white/20 text-xs">+</span>
+      <span className="absolute top-[56px] right-5 text-white/20 text-xs">+</span>
+      <span className="absolute bottom-12 left-5 text-white/20 text-xs">+</span>
+      <span className="absolute bottom-12 right-5 text-white/20 text-xs">+</span>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.03] text-xs font-medium text-muted-foreground mb-8">
-            <Sparkles className="w-3.5 h-3.5 text-primary" />
-            Агентство ИИ-автоматизации
-          </div>
-        </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter-custom leading-[0.9] mb-8"
-        >
-          <span className="text-gradient-white">Будущее</span>
-          <br />
-          <span className="text-gradient-white">бизнеса — </span>
-          <span className="text-gradient-blue">ИИ</span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12"
-        >
-          Разрабатываем и внедряем интеллектуальные системы автоматизации, которые трансформируют бизнес-процессы и кратно увеличивают эффективность.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
-        >
-          <Link
-            to="/catalog"
-            className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-primary to-accent text-white font-medium text-sm hover:opacity-90 transition-all"
-          >
-            Смотреть решения
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link
-            to="/about"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/[0.1] bg-white/[0.03] text-foreground font-medium text-sm hover:bg-white/[0.06] transition-all"
-          >
-            О компании
-          </Link>
-        </motion.div>
-
-        {/* Stats */}
+      <div className="relative z-10 max-w-7xl mx-auto px-5 pt-14 flex flex-col items-center">
+        {/* Globe - centered at top */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12"
+          transition={{ duration: 1.2, ease: 'easeOut' }}
+          className="relative mt-10 mb-0"
         >
-          {[
-            { value: '150+', label: 'Проектов' },
-            { value: '94%', label: 'Точность ИИ' },
-            { value: '340%', label: 'Рост конверсий' },
-            { value: '24/7', label: 'Работа систем' },
-          ].map((stat, i) => (
-            <div key={i} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold tracking-tighter-custom text-gradient-white">{stat.value}</div>
-              <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
-            </div>
-          ))}
+          <WireframeGlobe size={400} />
+          {/* Fade bottom of globe */}
+          <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-black to-transparent" />
         </motion.div>
-      </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+        {/* Content below globe */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full -mt-10 pb-20">
+          {/* Left: Badge + Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.12] rounded text-[11px] text-white/50 mb-6">
+              <div className="w-3.5 h-3.5 grid grid-cols-2 gap-0.5">
+                <div className="bg-white/60 rounded-[1px]" />
+                <div className="bg-white/20 rounded-[1px]" />
+                <div className="bg-white/20 rounded-[1px]" />
+                <div className="bg-white/60 rounded-[1px]" />
+              </div>
+              Стать бета-партнёром
+            </div>
+
+            <h1 className="font-serif text-5xl md:text-6xl text-white leading-[1.0] tracking-tight mb-0">
+              Ваш ИИ-мозг<br />для бизнеса
+            </h1>
+          </motion.div>
+
+          {/* Right: Description + CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col justify-end"
+          >
+            <p className="text-sm text-white/50 leading-relaxed mb-6 max-w-sm">
+              Безопасный код, зависимости, контейнеры и инфраструктура из единой платформы автоматизации.
+            </p>
+            <div>
+              <Link
+                to="/catalog"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors"
+              >
+                Смотреть каталог
+                <Plus className="w-4 h-4" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
     </section>
   );
 }

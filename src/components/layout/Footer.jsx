@@ -1,52 +1,66 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/[0.04] bg-black">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <Zap className="w-4 h-4 text-white" />
+    <footer className="border-t border-white/[0.08] bg-black">
+      <div className="max-w-7xl mx-auto px-5 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-16">
+          {/* Brand */}
+          <div className="col-span-2 md:col-span-1">
+            <Link to="/" className="flex items-center gap-2 mb-4">
+              <div className="w-5 h-5 grid grid-cols-2 gap-0.5">
+                <div className="bg-white rounded-[1px]" />
+                <div className="bg-white/40 rounded-[1px]" />
+                <div className="bg-white/40 rounded-[1px]" />
+                <div className="bg-white rounded-[1px]" />
               </div>
-              <span className="text-lg font-bold tracking-tighter-custom text-foreground">
-                NEXUS<span className="text-gradient-blue">.AI</span>
-              </span>
+              <span className="text-sm font-semibold text-white tracking-tight">NEXUS.AI</span>
             </Link>
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
-              Создаём интеллектуальные системы автоматизации, которые трансформируют бизнес-процессы и открывают новые возможности для роста.
+            <p className="text-xs text-white/40 leading-relaxed">
+              Stack: TypeScript<br />
+              React · Tailwind
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider">Навигация</h4>
+            <p className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Быстрые ссылки</p>
             <div className="flex flex-col gap-3">
-              <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Главная</Link>
-              <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">О компании</Link>
-              <Link to="/catalog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Каталог</Link>
-              <Link to="/contacts" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Контакты</Link>
+              <Link to="/catalog" className="text-xs text-white/40 hover:text-white/80 transition-colors">Каталог</Link>
+              <Link to="/about" className="text-xs text-white/40 hover:text-white/80 transition-colors">Возможности</Link>
+              <Link to="/about" className="text-xs text-white/40 hover:text-white/80 transition-colors">Функции</Link>
             </div>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider">Контакты</h4>
+            <p className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Страницы</p>
             <div className="flex flex-col gap-3">
-              <span className="text-sm text-muted-foreground">hello@nexus-ai.ru</span>
-              <span className="text-sm text-muted-foreground">+7 (495) 123-45-67</span>
-              <span className="text-sm text-muted-foreground">Москва, Россия</span>
+              <Link to="/" className="text-xs text-white/40 hover:text-white/80 transition-colors">Главная</Link>
+              <Link to="/about" className="text-xs text-white/40 hover:text-white/80 transition-colors">О компании</Link>
+              <Link to="/contacts" className="text-xs text-white/40 hover:text-white/80 transition-colors">Контакты</Link>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Страницы</p>
+            <div className="flex flex-col gap-3">
+              <span className="text-xs text-white/40">Условия использования</span>
+              <span className="text-xs text-white/40">Конфиденциальность</span>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Связаться</p>
+            <div className="flex flex-col gap-3">
+              <span className="text-xs text-white/40">hello@nexus-ai.ru</span>
+              <span className="text-xs text-white/40">+7 (495) 123-45-67</span>
             </div>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/[0.04] flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">© 2026 NEXUS.AI — Все права защищены</p>
-          <div className="flex gap-6">
-            <span className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors">Политика конфиденциальности</span>
-            <span className="text-xs text-muted-foreground hover:text-foreground cursor-pointer transition-colors">Условия использования</span>
-          </div>
+        <div className="pt-8 border-t border-white/[0.06] flex justify-between items-center">
+          <p className="text-xs text-white/25">© 2026 NEXUS.AI</p>
+          <p className="text-xs text-white/25">Все права защищены</p>
         </div>
       </div>
     </footer>

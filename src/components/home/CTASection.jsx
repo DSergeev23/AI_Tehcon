@@ -1,32 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import RevealOnScroll from '../shared/RevealOnScroll';
 
 export default function CTASection() {
   return (
-    <section className="relative py-32 overflow-hidden">
-      {/* Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-primary/[0.05] blur-[120px] pointer-events-none" />
+    <section className="border-t border-white/[0.08]">
+      <div className="max-w-7xl mx-auto px-5 py-24 text-center relative">
+        <span className="absolute top-5 left-5 text-white/15 text-xs">+</span>
+        <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
+        <span className="absolute bottom-5 left-5 text-white/15 text-xs">+</span>
+        <span className="absolute bottom-5 right-5 text-white/15 text-xs">+</span>
 
-      <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
         <RevealOnScroll>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter-custom text-gradient-white leading-tight mb-6">
-            Готовы трансформировать<br />ваш бизнес?
+          <h2 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight mb-6">
+            Готовы трансформировать<br />бизнес с ИИ?
           </h2>
         </RevealOnScroll>
         <RevealOnScroll delay={0.1}>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
-            Обсудим ваш проект и подберём оптимальное ИИ-решение для достижения бизнес-целей.
+          <p className="text-sm text-white/40 max-w-md mx-auto mb-10 leading-relaxed">
+            Обсудим вашу задачу и подберём оптимальное решение для автоматизации.
           </p>
         </RevealOnScroll>
         <RevealOnScroll delay={0.2}>
           <Link
             to="/contacts"
-            className="group inline-flex items-center gap-2.5 px-10 py-4 rounded-full bg-gradient-to-r from-primary to-accent text-white font-medium text-sm hover:opacity-90 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors"
           >
-            Начать проект
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            Начать проект <Plus className="w-4 h-4" />
           </Link>
         </RevealOnScroll>
       </div>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Plus } from 'lucide-react';
 import { catalogProducts } from '../lib/catalogData';
 import CatalogCard from '../components/catalog/CatalogCard';
-import SectionHeader from '../components/shared/SectionHeader';
 
 const categories = ['Все', ...new Set(catalogProducts.map(p => p.category))];
 
@@ -11,49 +11,59 @@ export default function Catalog() {
   const filtered = active === 'Все' ? catalogProducts : catalogProducts.filter(p => p.category === active);
 
   return (
-    <>
-      {/* Hero */}
-      <section className="relative pt-40 pb-16 overflow-hidden">
-        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full bg-accent/[0.05] blur-[120px] pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <SectionHeader
-            badge="Каталог решений"
-            title="ИИ-решения для бизнеса"
-            description="Готовые продукты и кастомные решения для автоматизации любых процессов"
-          />
+    <div className="min-h-screen bg-black pt-14">
+      {/* Header */}
+      <div className="border-b border-white/[0.08] relative">
+        <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
+        <div className="max-w-7xl mx-auto px-5 pt-16 pb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.1] rounded-sm text-[11px] text-white/40 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
+              Каталог решений
+            </div>
+            <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight mb-4">
+              ИИ-решения<br />для бизнеса
+            </h1>
+            <p className="text-sm text-white/40 max-w-md leading-relaxed">
+              Готовые продукты и кастомные решения для автоматизации любых бизнес-процессов
+            </p>
+          </motion.div>
+        </div>
+      </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
+      {/* Filter */}
+      <div className="border-b border-white/[0.08]">
+        <div className="max-w-7xl mx-auto px-5">
+          <div className="flex items-center gap-1 py-3 overflow-x-auto">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-3 py-1.5 text-xs rounded-sm whitespace-nowrap transition-colors ${
                   active === cat
-                    ? 'bg-white/[0.1] text-foreground border border-white/[0.12]'
-                    : 'text-muted-foreground hover:text-foreground border border-transparent hover:border-white/[0.06]'
+                    ? 'border border-white/[0.2] text-white bg-white/[0.05]'
+                    : 'border border-transparent text-white/40 hover:text-white/70'
                 }`}
               >
-                {cat}
+                {active === cat ? `[${cat}]` : cat}
               </button>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Grid */}
-      <section className="relative pb-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-          >
-            {filtered.map((product, i) => (
-              <CatalogCard key={product.id} product={product} index={i} />
-            ))}
-          </motion.div>
-        </div>
-      </section>
-    </>
+      <div className="max-w-7xl mx-auto px-5 py-12">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {filtered.map((product, i) => (
+            <CatalogCard key={product.id} product={product} index={i} />
+          ))}
+        </motion.div>
+      </div>
+    </div>
   );
 }

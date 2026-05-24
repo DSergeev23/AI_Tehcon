@@ -1,81 +1,71 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic } from 'lucide-react';
+import { Plus, UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic } from 'lucide-react';
 
-const iconMap = {
-  UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic,
-};
-
-const colorMap = {
-  blue: { border: 'group-hover:border-blue-500/30', glow: 'from-blue-500/10', icon: 'text-blue-400' },
-  purple: { border: 'group-hover:border-purple-500/30', glow: 'from-purple-500/10', icon: 'text-purple-400' },
-  cyan: { border: 'group-hover:border-cyan-500/30', glow: 'from-cyan-500/10', icon: 'text-cyan-400' },
-  pink: { border: 'group-hover:border-pink-500/30', glow: 'from-pink-500/10', icon: 'text-pink-400' },
-  green: { border: 'group-hover:border-green-500/30', glow: 'from-green-500/10', icon: 'text-green-400' },
-  orange: { border: 'group-hover:border-orange-500/30', glow: 'from-orange-500/10', icon: 'text-orange-400' },
-};
+const iconMap = { UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic };
 
 export default function CatalogCard({ product, index }) {
   const Icon = iconMap[product.icon] || Sparkles;
-  const colors = colorMap[product.color] || colorMap.blue;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.6, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+      viewport={{ once: true, margin: '-30px' }}
+      transition={{ duration: 0.5, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
     >
       <Link to={`/catalog/${product.id}`} className="block group">
         <motion.div
-          whileHover={{ y: -6 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-          className={`glass-card rounded-2xl p-7 h-full relative overflow-hidden transition-colors duration-500 ${colors.border}`}
-          style={{ borderWidth: '0.5px' }}
+          whileHover={{ backgroundColor: 'rgba(255,255,255,0.025)' }}
+          className="relative border border-white/[0.08] rounded-sm p-7 transition-colors duration-200 bg-black h-full"
         >
-          {/* Glow */}
-          <div className={`absolute -top-24 -right-24 w-72 h-72 rounded-full bg-gradient-radial ${colors.glow} to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
+          {/* Corner pluses */}
+          <Plus className="absolute top-3 right-3 w-3.5 h-3.5 text-white/15 group-hover:text-white/30 transition-colors" />
 
-          <div className="relative z-10">
-            {/* Tags */}
-            <div className="flex items-center gap-2 mb-5">
-              {product.tags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="px-2.5 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider border border-white/[0.08] bg-white/[0.03] text-muted-foreground"
-                >
-                  {tag}
-                </span>
-              ))}
+          {/* Tags */}
+          <div className="flex flex-wrap gap-1.5 mb-6">
+            {product.tags.map((tag, i) => (
+              <span
+                key={i}
+                className="px-2 py-0.5 border border-white/[0.1] rounded-sm text-[10px] font-medium text-white/40 uppercase tracking-wide"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          {/* Icon + visual placeholder */}
+          <div className="mb-6 flex items-end justify-between">
+            <div className="w-10 h-10 border border-white/[0.1] rounded flex items-center justify-center">
+              <Icon className="w-4 h-4 text-white/60" />
             </div>
+            {/* Small wireframe visual */}
+            <svg viewBox="0 0 60 60" className="w-12 h-12 opacity-20" fill="none" stroke="white" strokeWidth="0.6">
+              <polygon points="30,5 55,20 55,45 30,58 5,45 5,20" />
+              <circle cx="30" cy="30" r="12" strokeDasharray="2 3" />
+            </svg>
+          </div>
 
-            {/* Icon */}
-            <div className="w-12 h-12 rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center mb-5">
-              <Icon className={`w-5 h-5 ${colors.icon}`} />
-            </div>
+          {/* Category */}
+          <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-1.5">{product.category}</p>
 
-            {/* Category */}
-            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">{product.category}</p>
+          {/* Title */}
+          <h3 className="text-sm font-semibold text-white mb-3 leading-snug tracking-tight group-hover:text-white transition-colors">
+            {product.title}
+          </h3>
 
-            {/* Title */}
-            <h3 className="text-lg font-bold tracking-tight text-foreground mb-3 group-hover:text-gradient-blue transition-all duration-300">
-              {product.title}
-            </h3>
+          {/* Description */}
+          <p className="text-xs text-white/40 leading-relaxed mb-6 line-clamp-2">
+            {product.shortDescription}
+          </p>
 
-            {/* Description */}
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6 line-clamp-2">
-              {product.shortDescription}
-            </p>
-
-            {/* Price + CTA */}
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-semibold text-foreground">{product.pricing}</span>
-              <div className="flex items-center gap-1.5 text-xs font-medium text-primary group-hover:gap-2.5 transition-all duration-300">
-                Подробнее
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </div>
-            </div>
+          {/* Bottom row */}
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-semibold text-white/70">{product.pricing}</span>
+            <span className="text-[11px] text-white/40 group-hover:text-white/80 transition-colors flex items-center gap-1">
+              Подробнее →
+            </span>
           </div>
         </motion.div>
       </Link>

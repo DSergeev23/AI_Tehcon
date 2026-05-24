@@ -1,148 +1,141 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Users, Lightbulb, Shield, Brain, Cpu, Database, Cloud } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
-import SectionHeader from '../components/shared/SectionHeader';
 import CTASection from '../components/home/CTASection';
 
 const values = [
-  { icon: Target, title: 'Результат', description: 'Каждое решение измеряется конкретными бизнес-метриками и ROI.' },
-  { icon: Users, title: 'Партнёрство', description: 'Работаем как часть вашей команды, погружаясь в специфику бизнеса.' },
-  { icon: Lightbulb, title: 'Инновации', description: 'Применяем передовые исследования ИИ в реальных бизнес-задачах.' },
-  { icon: Shield, title: 'Надёжность', description: 'Enterprise-grade безопасность и SLA 99.9% для всех систем.' },
+  { title: 'Результат', desc: 'Каждое решение измеряется конкретными бизнес-метриками и ROI.' },
+  { title: 'Партнёрство', desc: 'Работаем как часть вашей команды, погружаясь в специфику бизнеса.' },
+  { title: 'Инновации', desc: 'Применяем передовые исследования ИИ в реальных бизнес-задачах.' },
+  { title: 'Надёжность', desc: 'Enterprise-grade безопасность и SLA 99.9% для всех систем.' },
 ];
 
-const techStack = [
-  { icon: Brain, name: 'LLM & NLP', desc: 'GPT-4, Claude, LLaMA, BERT' },
-  { icon: Cpu, name: 'ML Frameworks', desc: 'PyTorch, TensorFlow, JAX' },
-  { icon: Database, name: 'Data Infrastructure', desc: 'PostgreSQL, Redis, Pinecone' },
-  { icon: Cloud, name: 'Cloud & Deploy', desc: 'Kubernetes, AWS, GCP' },
+const stats = [
+  { num: '150+', label: 'Проектов' },
+  { num: '40+', label: 'Экспертов' },
+  { num: '5 лет', label: 'На рынке' },
+  { num: '98%', label: 'Рекомендуют' },
 ];
+
+const techStack = ['Python', 'TypeScript', 'PyTorch', 'LangChain', 'GPT-4o', 'Claude', 'PostgreSQL', 'Redis', 'Kubernetes', 'Docker', 'AWS', 'GCP'];
 
 export default function About() {
   return (
-    <>
+    <div className="min-h-screen bg-black pt-14">
       {/* Hero */}
-      <section className="relative pt-40 pb-24 overflow-hidden">
-        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/[0.05] blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] rounded-full bg-accent/[0.04] blur-[120px] pointer-events-none" />
-
-        <div className="max-w-5xl mx-auto px-6 relative z-10">
+      <div className="border-b border-white/[0.08] relative">
+        <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
+        <span className="absolute bottom-5 left-5 text-white/15 text-xs">+</span>
+        <div className="max-w-7xl mx-auto px-5 pt-16 pb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-center"
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.03] text-xs font-medium text-muted-foreground mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.1] rounded-sm text-[11px] text-white/40 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
               О компании
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter-custom text-gradient-white leading-[0.95] mb-8">
+            <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">
               Создаём будущее<br />с помощью ИИ
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              NEXUS.AI — агентство интеллектуальной автоматизации нового поколения. Мы объединяем экспертизу в машинном обучении с глубоким пониманием бизнес-процессов.
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <p className="text-sm text-white/50 leading-relaxed mb-6">
+              NEXUS.AI — агентство интеллектуальной автоматизации. Объединяем экспертизу в машинном обучении с глубоким пониманием бизнес-процессов.
+            </p>
+            <p className="text-sm text-white/35 leading-relaxed">
+              За 5 лет работы реализовали более 150 проектов для компаний от стартапов до enterprise. Накопили уникальную экспертизу на стыке ИИ и бизнеса.
             </p>
           </motion.div>
         </div>
-      </section>
+      </div>
+
+      {/* Stats row */}
+      <div className="border-b border-white/[0.08]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {stats.map((s, i) => (
+              <RevealOnScroll key={i} delay={i * 0.06}>
+                <div className={`py-10 px-7 text-center ${i < 3 ? 'border-r border-white/[0.08]' : ''}`}>
+                  <div className="text-3xl font-serif text-white tracking-tight mb-1">{s.num}</div>
+                  <div className="text-xs text-white/35">{s.label}</div>
+                </div>
+              </RevealOnScroll>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Mission */}
-      <section className="relative py-24 border-y border-white/[0.04]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="border-b border-white/[0.08]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             <RevealOnScroll>
-              <div>
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary mb-4">Миссия</p>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tighter-custom text-foreground mb-6 leading-tight">
-                  Делаем ИИ доступным для каждого бизнеса
+              <div className="p-10 border-r border-white/[0.08]">
+                <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-6">Миссия</p>
+                <h2 className="font-serif text-3xl text-white tracking-tight leading-tight mb-5">
+                  Делаем ИИ доступным<br />для каждого бизнеса
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Мы верим, что искусственный интеллект — это не привилегия корпораций, а инструмент, который должен быть доступен бизнесу любого масштаба. Наша команда создаёт решения, которые интегрируются в существующие процессы без болезненных трансформаций.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  За 5 лет работы мы реализовали более 150 проектов для компаний от стартапов до enterprise-уровня, накопив уникальную экспертизу на стыке ИИ и бизнеса.
+                <p className="text-sm text-white/45 leading-relaxed">
+                  Верим, что искусственный интеллект — это не привилегия корпораций, а инструмент для бизнеса любого масштаба. Создаём решения, которые встраиваются в существующие процессы без болезненных трансформаций.
                 </p>
               </div>
             </RevealOnScroll>
-            <RevealOnScroll delay={0.15}>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { num: '150+', label: 'Проектов реализовано' },
-                  { num: '40+', label: 'Экспертов в команде' },
-                  { num: '5', label: 'Лет на рынке' },
-                  { num: '98%', label: 'Клиентов рекомендуют' },
-                ].map((s, i) => (
-                  <div key={i} className="glass-card rounded-2xl p-6 text-center">
-                    <div className="text-3xl font-bold text-gradient-blue tracking-tighter-custom">{s.num}</div>
-                    <div className="text-xs text-muted-foreground mt-2">{s.label}</div>
-                  </div>
-                ))}
+
+            {/* Values */}
+            <RevealOnScroll delay={0.1}>
+              <div className="p-10">
+                <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-6">Принципы</p>
+                <div className="space-y-5">
+                  {values.map((v, i) => (
+                    <div key={i} className="flex gap-4 py-4 border-b border-white/[0.06] last:border-0">
+                      <div className="w-6 h-6 border border-white/[0.1] rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-[10px] font-mono text-white/40">{String(i + 1).padStart(2, '0')}</span>
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-semibold text-white mb-1">{v.title}</h3>
+                        <p className="text-xs text-white/40 leading-relaxed">{v.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </RevealOnScroll>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Values */}
-      <section className="relative py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader
-            badge="Принципы"
-            title="Наши ценности"
-            description="Четыре столпа, на которых строится каждый наш проект"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {values.map((v, i) => {
-              const Icon = v.icon;
-              return (
-                <RevealOnScroll key={i} delay={i * 0.08}>
-                  <motion.div
-                    whileHover={{ y: -4 }}
-                    className="glass-card rounded-2xl p-7 h-full group"
-                  >
-                    <div className="w-11 h-11 rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center mb-5 group-hover:border-primary/30 transition-colors">
-                      <Icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="text-base font-bold text-foreground mb-2">{v.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{v.description}</p>
-                  </motion.div>
-                </RevealOnScroll>
-              );
-            })}
-          </div>
+      {/* Tech stack */}
+      <div className="border-b border-white/[0.08]">
+        <div className="max-w-7xl mx-auto px-5 py-12">
+          <RevealOnScroll>
+            <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-6">Технологический стек</p>
+            <div className="flex flex-wrap gap-2">
+              {techStack.map((tech, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.04 }}
+                  className="px-3 py-1.5 border border-white/[0.08] rounded-sm text-xs text-white/50 hover:text-white/80 hover:border-white/[0.15] transition-colors"
+                >
+                  {tech}
+                </motion.span>
+              ))}
+            </div>
+          </RevealOnScroll>
         </div>
-      </section>
-
-      {/* Tech Stack */}
-      <section className="relative py-24 border-t border-white/[0.04]">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader
-            badge="Технологии"
-            title="Наш стек"
-            description="Используем лучшие инструменты для создания enterprise-grade решений"
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {techStack.map((t, i) => {
-              const Icon = t.icon;
-              return (
-                <RevealOnScroll key={i} delay={i * 0.08}>
-                  <div className="glass-card rounded-2xl p-7 text-center group hover:border-white/[0.12] transition-colors">
-                    <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-center mx-auto mb-4 group-hover:border-accent/30 transition-colors">
-                      <Icon className="w-6 h-6 text-accent" />
-                    </div>
-                    <h3 className="text-sm font-bold text-foreground mb-1">{t.name}</h3>
-                    <p className="text-xs text-muted-foreground">{t.desc}</p>
-                  </div>
-                </RevealOnScroll>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      </div>
 
       <CTASection />
-    </>
+    </div>
   );
 }
