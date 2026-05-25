@@ -38,15 +38,15 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
             
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.12] rounded text-[11px] text-white/50 mb-6 hidden">
-              <div className="w-3.5 h-3.5 grid grid-cols-2 gap-0.5">
-                <div className="bg-white/60 rounded-[1px]" />
-                <div className="bg-white/20 rounded-[1px]" />
-                <div className="bg-white/20 rounded-[1px]" />
-                <div className="bg-white/60 rounded-[1px]" />
-              </div>
-              Стать бета-партнёром
-            </div>
+            
+
+
+
+
+
+
+
+            
 
             <h1 className="font-serif text-5xl md:text-6xl text-white leading-[1.0] tracking-tight mb-0">
               Ваш ИИ-мозг<br />для бизнеса
