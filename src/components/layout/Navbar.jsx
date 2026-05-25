@@ -43,7 +43,7 @@ export default function Navbar() {
               <div className="bg-white/40 rounded-[1px]" />
               <div className="bg-white rounded-[1px]" />
             </div>
-            <span className="text-sm font-semibold text-white tracking-tight">Tehk</span>
+            <span className="text-sm font-semibold text-white tracking-tight">Techon</span>
           </Link>
 
           {/* Desktop Nav */}
