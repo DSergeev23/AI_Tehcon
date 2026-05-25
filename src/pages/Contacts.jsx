@@ -29,8 +29,8 @@ export default function Contacts() {
               <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
               Связаться
             </div>
-            <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">ДАВАЙТ ОБСУДИ
-Ваш прое
+            <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">Давайте обсудим 
+Ваш проект
             </h1>
           </motion.div>
         </div>
