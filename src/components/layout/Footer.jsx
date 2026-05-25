@@ -15,9 +15,9 @@ export default function Footer() {
                 <div className="bg-white/40 rounded-[1px]" />
                 <div className="bg-white rounded-[1px]" />
               </div>
-              <span className="text-sm font-semibold text-white tracking-tight">NEXUS.AI</span>
+              <span className="text-sm font-semibold text-white tracking-tight">Tehcon AI</span>
             </Link>
-            <p className="text-xs text-white/40 leading-relaxed">
+            <p className="text-xs text-white/40 leading-relaxed hidden">
               Stack: TypeScript<br />
               React · Tailwind
             </p>
@@ -59,10 +59,10 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/[0.06] flex justify-between items-center">
-          <p className="text-xs text-white/25">© 2026 NEXUS.AI</p>
+          <p className="text-xs text-white/25">© 2026 AI</p>
           <p className="text-xs text-white/25">Все права защищены</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 }
