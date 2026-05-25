@@ -5,8 +5,6 @@ import { Menu, X, Plus } from 'lucide-react';
 
 const navLinks = [
 { label: 'Главная', path: '/' },
-{ label: 'Возможности', path: '/#features' },
-{ label: 'Преимущества', path: '/#benefits' },
 { label: 'Каталог', path: '/catalog' },
 { label: 'О компании', path: '/about' }];
 
@@ -43,8 +41,7 @@ export default function Navbar() {
               <div className="bg-white/40 rounded-[1px]" />
               <div className="bg-white rounded-[1px]" />
             </div>
-            <span className="text-sm font-semibold text-white tracking-tight">Techon AI
-            </span>
+            <span className="text-sm font-semibold text-white tracking-tight">Tehcon AI</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -56,7 +53,7 @@ export default function Navbar() {
                   to={link.path}
                   className={`bracket-link text-xs ${isActive ? 'active' : ''}`}>
                   
-                  {isActive ? `[${link.label}]` : link.label}
+                  {link.label}
                 </Link>);
 
             })}

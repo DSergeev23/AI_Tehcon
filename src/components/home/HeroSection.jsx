@@ -23,7 +23,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: 'easeOut' }}
-          className="relative mt-10 mb-0">
+          className="relative mt-10 mb-16">
           
           <WireframeGlobe size={400} />
           {/* Fade bottom of globe */}

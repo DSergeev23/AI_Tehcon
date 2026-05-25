@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/[0.06] flex justify-between items-center">
-          <p className="text-xs text-white/25">© 2026 AI</p>
+          <p className="text-xs text-white/25">© 2026 Tehcon AI</p>
           <p className="text-xs text-white/25">Все права защищены</p>
         </div>
       </div>
