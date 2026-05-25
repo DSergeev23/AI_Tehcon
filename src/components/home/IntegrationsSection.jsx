@@ -1,73 +1,72 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Plus } from 'lucide-react';
+import { Plus, Calendar, HardDrive, FileText, Sheet, Search, Video, Send, Github, GitBranch, Zap, MessageSquare, BookOpen } from 'lucide-react';
 import RevealOnScroll from '../shared/RevealOnScroll';
 
 const integrations = [
   {
     name: 'Google Calendar',
     desc: 'Читает расписание, создаёт события, проверяет занятость и блокирует время',
-    icon: '📅',
+    icon: Calendar,
   },
   {
     name: 'Google Drive',
     desc: 'Ищет файлы, читает документы, создаёт папки и управляет доступом',
-    icon: '📁',
+    icon: HardDrive,
   },
   {
     name: 'Google Docs',
     desc: 'Создаёт и редактирует документы, вставляет таблицы, сохраняет отчёты',
-    icon: '📄',
+    icon: FileText,
   },
   {
     name: 'Google Sheets',
     desc: 'Читает и записывает данные в таблицы, строит сводки, делает пакетные обновления',
-    icon: '📊',
+    icon: Sheet,
   },
   {
     name: 'Search Console',
     desc: 'Анализирует поисковый трафик, позиции, CTR и ошибки индексации',
-    icon: '🔍',
+    icon: Search,
   },
   {
     name: 'Google Meet',
     desc: 'Получает информацию о встречах, список участников, записи и транскрипции',
-    icon: '🎥',
+    icon: Video,
   },
   {
     name: 'Telegram',
     desc: 'Отправляет и получает сообщения, управляет каналами, ботами и уведомлениями',
-    icon: '✈️',
+    icon: Send,
   },
   {
     name: 'GitHub',
     desc: 'Управляет репозиториями, issues и PR, мониторит CI/CD и алерты безопасности',
-    icon: '🐙',
+    icon: Github,
   },
   {
     name: 'GitLab',
     desc: 'Работает с issues, merge requests, pipeline-ами, wiki и milestones',
-    icon: '🦊',
+    icon: GitBranch,
   },
   {
     name: 'Supabase',
     desc: 'Выполняет SQL-запросы, управляет таблицами, деплоит Edge Functions',
-    icon: '⚡',
+    icon: Zap,
   },
   {
     name: 'Slack',
     desc: 'Отправляет сообщения, ищет по истории переписки, создаёт уведомления',
-    icon: '💬',
+    icon: MessageSquare,
   },
   {
     name: 'Notion',
     desc: 'Создаёт страницы и базы данных, ищет по воркспейсу, обновляет записи',
-    icon: '📝',
+    icon: BookOpen,
   },
   {
     name: 'И многое другое',
     desc: 'Тысячи интеграций через API и MCP-серверы',
-    icon: '+',
     isMore: true,
   },
 ];
@@ -106,8 +105,8 @@ export default function IntegrationsSection() {
                 ? <div className="w-8 h-8 border border-white/[0.15] rounded flex items-center justify-center mb-4">
                     <Plus className="w-4 h-4 text-white/50" />
                   </div>
-                : <div className="w-8 h-8 border border-white/[0.1] rounded flex items-center justify-center mb-4 text-base">
-                    {item.icon}
+                : <div className="w-8 h-8 border border-white/[0.1] rounded flex items-center justify-center mb-4">
+                    {item.icon && <item.icon className="w-4 h-4 text-white/60" />}
                   </div>
               }
               <h3 className="text-sm font-semibold text-white mb-1.5 leading-snug">{item.name}</h3>
