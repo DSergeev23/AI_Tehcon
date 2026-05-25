@@ -43,23 +43,23 @@ export default function Navbar() {
               <div className="bg-white/40 rounded-[1px]" />
               <div className="bg-white rounded-[1px]" />
             </div>
-            <span className="text-sm font-semibold text-white tracking-tight">Techon</span>
+            <span className="text-sm font-semibold text-white tracking-tight">Techon.A
+</span>
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
-              return (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`bracket-link text-xs ${isActive ? 'active' : ''}`}>
+            {navLinks.map((link) => {const isActive = location.pathname === link.path;
+                return (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`bracket-link text-xs ${isActive ? 'active' : ''}`}>
                   
                   {isActive ? `[${link.label}]` : link.label}
                 </Link>);
 
-            })}
+              })}
           </div>
 
           {/* CTA */}
