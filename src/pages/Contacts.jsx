@@ -23,14 +23,14 @@ export default function Contacts() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+            transition={{ duration: 0.6 }}>
+            
             <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.1] rounded-sm text-[11px] text-white/40 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
               Связаться
             </div>
-            <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">
-              Начнём<br />проект
+            <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">ДАВАЙТ ОБСУДИМ
+аш проект
             </h1>
           </motion.div>
         </div>
@@ -46,15 +46,15 @@ export default function Contacts() {
                 <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-5">Контакты</p>
                 <div className="space-y-4">
                   {[
-                    { label: 'Email', val: 'hello@nexus-ai.ru' },
-                    { label: 'Телефон', val: '+7 (495) 123-45-67' },
-                    { label: 'Адрес', val: 'Москва, Пресненская наб. 12' },
-                  ].map((c, i) => (
-                    <div key={i} className="py-3 border-b border-white/[0.06] last:border-0">
+                  { label: 'Email', val: 'hello@nexus-ai.ru' },
+                  { label: 'Телефон', val: '+7 (495) 123-45-67' },
+                  { label: 'Адрес', val: 'Москва, Пресненская наб. 12' }].
+                  map((c, i) =>
+                  <div key={i} className="py-3 border-b border-white/[0.06] last:border-0">
                       <p className="text-[10px] text-white/25 uppercase tracking-[0.12em] mb-0.5">{c.label}</p>
                       <p className="text-sm text-white/60">{c.val}</p>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </RevealOnScroll>
@@ -73,80 +73,80 @@ export default function Contacts() {
           {/* Form */}
           <div className="lg:col-span-3 p-8">
             <RevealOnScroll delay={0.1}>
-              {submitted ? (
-                <motion.div
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex flex-col items-center justify-center py-20 text-center"
-                >
+              {submitted ?
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex flex-col items-center justify-center py-20 text-center">
+                
                   <div className="w-12 h-12 border border-white/[0.12] rounded flex items-center justify-center mb-6">
                     <CheckCircle2 className="w-5 h-5 text-white/60" />
                   </div>
                   <h3 className="text-xl font-serif text-white mb-2">Заявка отправлена</h3>
                   <p className="text-sm text-white/40">Свяжемся с вами в течение 2 часов.</p>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                </motion.div> :
+
+              <form onSubmit={handleSubmit} className="space-y-4">
                   <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-6">Форма обратной связи</p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Имя</label>
                       <Input
-                        value={form.name}
-                        onChange={e => setForm(p => ({ ...p, name: e.target.value }))}
-                        placeholder="Ваше имя"
-                        required
-                        className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm"
-                      />
+                      value={form.name}
+                      onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
+                      placeholder="Ваше имя"
+                      required
+                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm" />
+                    
                     </div>
                     <div>
                       <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Email</label>
                       <Input
-                        type="email"
-                        value={form.email}
-                        onChange={e => setForm(p => ({ ...p, email: e.target.value }))}
-                        placeholder="email@company.ru"
-                        required
-                        className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm"
-                      />
+                      type="email"
+                      value={form.email}
+                      onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
+                      placeholder="email@company.ru"
+                      required
+                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm" />
+                    
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Компания</label>
                     <Input
-                      value={form.company}
-                      onChange={e => setForm(p => ({ ...p, company: e.target.value }))}
-                      placeholder="Название компании"
-                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm"
-                    />
+                    value={form.company}
+                    onChange={(e) => setForm((p) => ({ ...p, company: e.target.value }))}
+                    placeholder="Название компании"
+                    className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm" />
+                  
                   </div>
 
                   <div>
                     <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Сообщение</label>
                     <Textarea
-                      value={form.message}
-                      onChange={e => setForm(p => ({ ...p, message: e.target.value }))}
-                      placeholder="Опишите вашу задачу..."
-                      rows={6}
-                      required
-                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm text-sm resize-none"
-                    />
+                    value={form.message}
+                    onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
+                    placeholder="Опишите вашу задачу..."
+                    rows={6}
+                    required
+                    className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm text-sm resize-none" />
+                  
                   </div>
 
                   <button
-                    type="submit"
-                    className="w-full flex items-center justify-center gap-2 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors"
-                  >
+                  type="submit"
+                  className="w-full flex items-center justify-center gap-2 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
+                  
                     Отправить заявку <Plus className="w-4 h-4" />
                   </button>
                 </form>
-              )}
+              }
             </RevealOnScroll>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
