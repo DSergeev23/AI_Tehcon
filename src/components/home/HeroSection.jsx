@@ -23,8 +23,8 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: 'easeOut' }}
-          className="relative mt-10 mb-0"
-        >
+          className="relative mt-10 mb-0">
+          
           <WireframeGlobe size={400} />
           {/* Fade bottom of globe */}
           <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-black to-transparent" />
@@ -36,9 +36,9 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.12] rounded text-[11px] text-white/50 mb-6">
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+            
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.12] rounded text-[11px] text-white/50 mb-6 hidden">
               <div className="w-3.5 h-3.5 grid grid-cols-2 gap-0.5">
                 <div className="bg-white/60 rounded-[1px]" />
                 <div className="bg-white/20 rounded-[1px]" />
@@ -58,16 +58,16 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col justify-end"
-          >
+            className="flex flex-col justify-end">
+            
             <p className="text-sm text-white/50 leading-relaxed mb-6 max-w-sm">
               Безопасный код, зависимости, контейнеры и инфраструктура из единой платформы автоматизации.
             </p>
             <div>
               <Link
                 to="/catalog"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors"
-              >
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors">
+                
                 Смотреть каталог
                 <Plus className="w-4 h-4" />
               </Link>
@@ -75,6 +75,6 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
