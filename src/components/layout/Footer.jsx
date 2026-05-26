@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Страницы</p>
+            <p className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Правовое</p>
             <div className="flex flex-col gap-3">
               <span className="text-xs text-white/40">Условия использования</span>
               <span className="text-xs text-white/40">Конфиденциальность</span>
@@ -52,8 +52,8 @@ export default function Footer() {
           <div>
             <p className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Связаться</p>
             <div className="flex flex-col gap-3">
-              <span className="text-xs text-white/40">hello@nexus-ai.ru</span>
-              <span className="text-xs text-white/40">+7 (495) 123-45-67</span>
+              <span className="text-xs text-white/40">hello@tehcon.ai</span>
+              <a href="https://t.me/tehconai" className="text-xs text-white/40 hover:text-white/70 transition-colors">Telegram: @tehconai</a>
             </div>
           </div>
         </div>

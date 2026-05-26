@@ -98,6 +98,8 @@ export default function WireframeGlobe({ size = 380 }) {
       height={size}
       className="opacity-80"
       style={{ width: size, height: size }}
+      aria-label="Анимированный глобус — визуализация глобального охвата Tehcon AI"
+      role="img"
     />
   );
 }
