@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Plus, CheckCircle2 } from 'lucide-react';
+import SEOHead from '../components/shared/SEOHead';
+import { pageSEO } from '../lib/seoConfig';
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import RevealOnScroll from '../components/shared/RevealOnScroll';
@@ -16,6 +18,7 @@ export default function Contacts() {
 
   return (
     <div className="min-h-screen bg-black pt-14">
+      <SEOHead {...pageSEO.contacts} />
       {/* Header */}
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>

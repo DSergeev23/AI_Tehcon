@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Plus, CheckCircle2, UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic } from 'lucide-react';
 import { getProductById } from '../lib/catalogData';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
+import SEOHead from '../components/shared/SEOHead';
+import { getProductSEO } from '../lib/seoConfig';
 
 const iconMap = { UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic };
 
@@ -13,9 +15,26 @@ export default function ProductDetail() {
   if (!product) return <Navigate to="/catalog" replace />;
 
   const Icon = iconMap[product.icon] || Sparkles;
+  const seo = getProductSEO(product);
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": product.title,
+    "description": product.shortDescription,
+    "provider": { "@type": "Organization", "name": "Tehcon AI", "url": "https://tehcon.ai" },
+    "offers": {
+      "@type": "Offer",
+      "price": product.pricing,
+      "priceCurrency": "RUB"
+    },
+    "serviceType": product.category,
+    "areaServed": "RU"
+  };
 
   return (
     <div className="min-h-screen bg-black pt-14">
+      <SEOHead {...seo} schemaJson={productSchema} />
       {/* Breadcrumb */}
       <div className="border-b border-white/[0.08]">
         <div className="max-w-7xl mx-auto px-5 py-4 flex items-center gap-2">

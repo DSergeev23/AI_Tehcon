@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Plus } from 'lucide-react';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
 import CTASection from '../components/home/CTASection';
+import SEOHead from '../components/shared/SEOHead';
+import { pageSEO } from '../lib/seoConfig';
 
 const values = [
   { title: 'Результат', desc: 'Каждое решение измеряется конкретными бизнес-метриками и ROI.' },
@@ -20,9 +22,22 @@ const stats = [
 
 const techStack = ['Python', 'TypeScript', 'PyTorch', 'LangChain', 'GPT-4o', 'Claude', 'PostgreSQL', 'Redis', 'Kubernetes', 'Docker', 'AWS', 'GCP'];
 
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Tehcon AI",
+  "url": "https://tehcon.ai",
+  "description": "Tehcon AI — агентство ИИ автоматизации бизнес-процессов. Разработка AI решений и интеграция нейросетей.",
+  "foundingDate": "2019",
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 40 },
+  "areaServed": "RU",
+  "knowsAbout": ["ИИ агенты", "автоматизация бизнеса", "машинное обучение", "нейросети"]
+};
+
 export default function About() {
   return (
     <div className="min-h-screen bg-black pt-14">
+      <SEOHead {...pageSEO.about} schemaJson={orgSchema} />
       {/* Hero */}
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
