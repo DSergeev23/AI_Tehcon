@@ -8,18 +8,18 @@ export default function AutomationBlock() {
     <section className="border-t border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-5 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Left: Illustration placeholder */}
+          {/* Left: Illustration */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="relative h-80 rounded-sm border border-white/[0.08] overflow-hidden">
+            className="relative rounded-sm border border-white/[0.08] overflow-hidden flex items-center justify-center">
             
-            
-
-
-            
+            <img
+              src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/46a529f43_image.png"
+              alt="Автоматизация процессов"
+              className="w-full h-auto object-contain" />
             
           </motion.div>
 
