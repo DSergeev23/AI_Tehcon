@@ -120,19 +120,33 @@ export default function ProductDetail() {
             </RevealOnScroll>
 
             {/* Benefits */}
-            <RevealOnScroll delay={0.1}>
-              <div className="p-8">
-                <p className="text-xs text-white/30 uppercase tracking-[0.15em] mb-6">Преимущества</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {product.benefits.map((b, i) => (
-                    <div key={i} className="flex items-start gap-3 border border-white/[0.07] rounded-sm p-4">
-                      <CheckCircle2 className="w-4 h-4 text-white/40 flex-shrink-0 mt-0.5" />
-                      <span className="text-xs text-white/60 leading-relaxed">{b}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </RevealOnScroll>
+             <RevealOnScroll delay={0.1}>
+               <div className="p-8 border-b border-white/[0.08]">
+                 <p className="text-xs text-white/30 uppercase tracking-[0.15em] mb-6">Преимущества</p>
+                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                   {product.benefits.map((b, i) => (
+                     <div key={i} className="flex items-start gap-3 border border-white/[0.07] rounded-sm p-4">
+                       <CheckCircle2 className="w-4 h-4 text-white/40 flex-shrink-0 mt-0.5" />
+                       <span className="text-xs text-white/60 leading-relaxed">{b}</span>
+                     </div>
+                   ))}
+                 </div>
+               </div>
+             </RevealOnScroll>
+
+             {/* Results Block */}
+             <RevealOnScroll delay={0.15}>
+               <div className="p-8">
+                 <div className="text-center">
+                   <h2 className="font-serif text-3xl md:text-4xl text-white tracking-tight leading-tight">
+                     Никакого хайпа вокруг ИИ.<br />Только результаты.
+                   </h2>
+                   <p className="text-xs text-white/40 mt-4 max-w-md mx-auto leading-relaxed">
+                     Мы не обещаем чудеса. Мы доставляем измеримые результаты, которые напрямую влияют на вашу прибыль.
+                   </p>
+                 </div>
+               </div>
+             </RevealOnScroll>
           </div>
 
           {/* Sidebar */}
