@@ -39,9 +39,9 @@ export default function BentoShowcase() {
                   <Zap className="w-3 h-3" />
                   Автономные агенты
                 </div>
-                <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight tracking-tight mb-4">
-                  1С работает сама,<br />
-                  <span className="italic text-white/60">пока вы принимаете решения</span>
+                <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight tracking-tight mb-4">1С работа сам,
+пока вы принимаете решени
+
                 </h2>
                 <p className="text-xs text-white/40 max-w-sm leading-relaxed">
                   Хватит использовать сотрудников как «живые мосты» между таблицами. AI-агент напрямую управляет документами, остатками и закупками внутри вашей 1С.
