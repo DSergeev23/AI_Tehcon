@@ -14,12 +14,13 @@ export default function AutomationBlock() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="relative h-80 rounded-sm border border-white/[0.08] bg-gradient-to-br from-white/[0.02] to-white/[0.01] flex items-center justify-center"
+            className="relative h-80 rounded-sm border border-white/[0.08] overflow-hidden"
           >
-            <div className="text-center">
-              <div className="text-white/20 text-sm font-serif mb-2">Иллюстрация</div>
-              <div className="text-white/10 text-xs">Автоматизация процессов</div>
-            </div>
+            <img 
+              src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/9fe49f18c_image.png" 
+              alt="Автоматизация процессов"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
 
           {/* Right: Content */}
