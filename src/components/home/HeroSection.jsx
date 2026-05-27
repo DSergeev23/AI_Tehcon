@@ -56,7 +56,7 @@ export default function HeroSection() {
           <motion.div initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col justify-end">
+          className="flex flex-col justify-end md:col-start-2">
             
             <p className="text-sm text-white/50 leading-relaxed mb-6 max-w-sm">Превращаем 1С, CRM, Excel, Telegram и внутренние системы в единую AI-инфраструктуру управления бизнесом. 
 Tehcon AI внедряет автономных AI-агентов, которые самостоятельно анализируют данные, контролируют процессы, запускают действия и помогают бизнесу работать быстрее, точнее и дешевле.</p>
