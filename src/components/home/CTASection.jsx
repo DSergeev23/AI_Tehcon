@@ -18,19 +18,19 @@ export default function CTASection() {
           </h2>
         </RevealOnScroll>
         <RevealOnScroll delay={0.1}>
-          <p className="text-sm text-white/40 max-w-md mx-auto mb-10 leading-relaxed">
-            Обсудим вашу задачу и подберём оптимальное решение для автоматизации.
+          <p className="text-sm text-white/40 max-w-md mx-auto mb-10 leading-relaxed">Обсудим вашу задачу и подберём оптимальное решение для автоматизации абсолютно бесплатно
+
           </p>
         </RevealOnScroll>
         <RevealOnScroll delay={0.2}>
           <Link
             to="/contacts"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors"
-          >
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors">
+            
             Начать проект <Plus className="w-4 h-4" />
           </Link>
         </RevealOnScroll>
       </div>
-    </section>
-  );
+    </section>);
+
 }
