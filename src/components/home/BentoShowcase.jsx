@@ -43,8 +43,8 @@ export default function BentoShowcase() {
 
 
                 </h2>
-                <p className="text-xs text-white/40 max-w-sm leading-relaxed">
-                  Хватит использовать сотрудников как «живые мосты» между таблицами. AI-агент напрямую управляет документами, остатками и закупками внутри вашей 1С.
+                <p className="text-xs text-white/40 max-w-sm leading-relaxed">Пока вы строите стратегию, AI-агенты Tehcon управляют процессами в 1С, CRM и мессенджерах. Без пауз, ошибок и человеческого фактора.
+
                 </p>
               </div>
 
