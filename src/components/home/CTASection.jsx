@@ -36,7 +36,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-sm text-white/40 max-w-md mx-auto mb-10 leading-relaxed space-y-2"
+          className="text-sm text-white/40 max-w-md mx-auto mb-10 leading-relaxed space-y-2 list-decimal list-inside text-left"
         >
           <li>Найдем 3–5 процессов, где ваш бизнес теряет деньги на ручной работе</li>
           <li>Покажем, что можно автоматизировать в вашей 1С, CRM и таблицах</li>
