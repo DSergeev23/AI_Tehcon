@@ -16,10 +16,10 @@ export default function AutomationBlock() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="relative h-80 rounded-sm border border-white/[0.08] overflow-hidden">
             
-            <img
-              src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/9fe49f18c_image.png"
-              alt="Автоматизация процессов"
-              className="w-full h-full object-cover hidden" />
+            
+
+
+            
             
           </motion.div>
 
