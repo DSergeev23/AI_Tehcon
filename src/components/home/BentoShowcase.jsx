@@ -39,7 +39,7 @@ export default function BentoShowcase() {
                   <Zap className="w-3 h-3" />
                   Автономные агенты
                 </div>
-                <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight tracking-tight mb-4">Операционка работает
+                <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight tracking-tight mb-4">Операционка работает, пока вы принимаете решения
 
 
                 </h2>
