@@ -11,6 +11,16 @@ export default function CTASection() {
         <span className="absolute bottom-5 left-5 text-white/15 text-xs">+</span>
         <span className="absolute bottom-5 right-5 text-white/15 text-xs">+</span>
 
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-[11px] text-white/30 uppercase tracking-[0.2em] mb-6"
+        >
+          Никакого хайпа вокруг ИИ. Только результаты.
+        </motion.p>
+
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
