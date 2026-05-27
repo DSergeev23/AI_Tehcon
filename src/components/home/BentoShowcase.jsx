@@ -74,7 +74,7 @@ export default function BentoShowcase() {
               <span className="absolute top-4 right-4 text-white/15 text-xs">+</span>
 
               <div className="relative z-10">
-                <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-3 hidden">ОПЕРАЦИОННЫЙ ИНТЕЛЛЕКТ</p>
+                
                 <h3 className="font-serif text-3xl text-white tracking-tight leading-tight mb-4">ОПЕРАЦИОННЫЙ ИНТЕЛЛЕКТ
 
                 </h3>
