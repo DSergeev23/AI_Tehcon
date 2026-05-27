@@ -19,7 +19,7 @@ export default function AutomationBlock() {
             <img
               src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/35d064e95_image.png"
               alt="Автоматизация процессов"
-              className="w-full h-full object-cover" />
+              className="w-full h-full object-cover hidden" />
             
           </motion.div>
 
