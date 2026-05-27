@@ -17,7 +17,7 @@ export default function BentoShowcase() {
 
         {/* Section label */}
         <RevealOnScroll>
-          <p className="text-[10px] text-white/30 uppercase tracking-[0.2em] mb-10">Почему Tehcon AI</p>
+          <p className="text-sm text-white uppercase tracking-[0.2em] mb-10 font-semibold">Почему Tehcon AI</p>
         </RevealOnScroll>
 
         {/* Bento Grid */}
