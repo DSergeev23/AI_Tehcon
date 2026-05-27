@@ -95,7 +95,7 @@ export default function BentoShowcase() {
               </div>
 
               <div className="relative z-10 mt-6">
-                <p className="text-xs text-white/40 italic">Управляйте бизнесом по понятным данным, а не по ощущениям.</p>
+                <p className="text-xs text-white/40 italic">Мы поможем вам управлять бизнесом не по ощущениям, а по понятным данным.</p>
               </div>
             </div>
           </RevealOnScroll>
