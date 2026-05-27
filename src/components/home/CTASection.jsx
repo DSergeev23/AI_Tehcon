@@ -25,9 +25,9 @@ export default function CTASection() {
         <RevealOnScroll delay={0.2}>
           <Link
             to="/contacts"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors">
-            
-            Начать проект <Plus className="w-4 h-4" />
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors">Получить аудит
+
+
           </Link>
         </RevealOnScroll>
       </div>
