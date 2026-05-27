@@ -5,7 +5,7 @@ import { Plus, Zap, Shield, Layers, ArrowUpRight } from 'lucide-react';
 import RevealOnScroll from '../shared/RevealOnScroll';
 
 const metrics = [
-  { value: '15 сек.', label: 'на обработку любой заявки' },
+  { value: '20 мин → 15 сек', label: 'обработка заявки' },
   { value: '90%', label: 'снижение ошибок ручного ввода' },
   { value: '24/7', label: 'контроль всех бизнес-процессов' },
 ];
