@@ -6,6 +6,7 @@ import LogoBar from '../components/home/LogoBar';
 import FeaturesGrid from '../components/home/FeaturesGrid';
 import BentoShowcase from '../components/home/BentoShowcase';
 import IntegrationsSection from '../components/home/IntegrationsSection';
+import AutomationBlock from '../components/home/AutomationBlock';
 import CasesSection from '../components/home/CasesSection';
 import CTASection from '../components/home/CTASection';
 import FloatingContacts from '../components/shared/FloatingContacts';
@@ -29,6 +30,7 @@ export default function Home() {
       <FeaturesGrid />
       <BentoShowcase />
       <IntegrationsSection />
+      <AutomationBlock />
       <CasesSection />
       <CTASection />
       <FloatingContacts />
