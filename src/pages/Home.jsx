@@ -30,8 +30,8 @@ export default function Home() {
       <FeaturesGrid />
       <BentoShowcase />
       <IntegrationsSection />
-      <AutomationBlock />
       <CasesSection />
+      <AutomationBlock />
       <CTASection />
       <FloatingContacts />
     </>
