@@ -49,7 +49,7 @@ export default function HeroSection() {
             </div>
 
             <h1 className="font-serif text-5xl md:text-6xl text-white leading-[1.0] tracking-tight mb-0">AI агенты и автоматизации 
-            </h1>
+для бизнеса</h1>
           </motion.div>
 
           {/* Right: Description + CTA */}
