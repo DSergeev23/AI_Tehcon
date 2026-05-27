@@ -97,7 +97,7 @@ export default function FeaturesGrid() {
           <RevealOnScroll key={i} delay={i * 0.07}>
               <motion.div
               whileHover={{ backgroundColor: 'rgba(255,255,255,0.02)' }}
-              className={`relative p-8 border-b border-white/[0.08] transition-colors duration-300 ${
+              className={`relative p-8 border-b border-white/[0.08] transition-colors duration-300 h-full ${
               i % 3 !== 2 ? 'md:border-r' : ''} border-white/[0.08]`
               }>
               
