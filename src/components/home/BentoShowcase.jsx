@@ -5,9 +5,9 @@ import { Plus, Zap, Shield, Layers, ArrowUpRight } from 'lucide-react';
 import RevealOnScroll from '../shared/RevealOnScroll';
 
 const metrics = [
-  { value: '4×', label: 'быстрее обработка заявок' },
-  { value: '87%', label: 'снижение ручного труда' },
-  { value: '24/7', label: 'работа без перерывов' },
+  { value: '15 сек.', label: 'на обработку любой заявки' },
+  { value: '90%', label: 'снижение ошибок ручного ввода' },
+  { value: '24/7', label: 'контроль всех бизнес-процессов' },
 ];
 
 export default function BentoShowcase() {
@@ -40,12 +40,11 @@ export default function BentoShowcase() {
                   Автономные агенты
                 </div>
                 <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight tracking-tight mb-4">
-                  Агент работает,<br />
-                  <span className="italic text-white/60">пока вы спите</span>
+                  1С работает сама,<br />
+                  <span className="italic text-white/60">пока вы принимаете решения</span>
                 </h2>
                 <p className="text-xs text-white/40 max-w-sm leading-relaxed">
-                  Задайте правила один раз — ИИ-агент самостоятельно обрабатывает заявки,
-                  отвечает клиентам и обновляет CRM без вашего участия.
+                  Хватит использовать сотрудников как «живые мосты» между таблицами. AI-агент напрямую управляет документами, остатками и закупками внутри вашей 1С.
                 </p>
               </div>
 
@@ -59,10 +58,10 @@ export default function BentoShowcase() {
                   ))}
                 </div>
                 <Link
-                  to="/catalog"
+                  to="/contacts"
                   className="flex items-center gap-1.5 px-4 py-2 bg-white text-black text-xs font-semibold rounded-sm hover:bg-white/90 transition-colors flex-shrink-0"
                 >
-                  Смотреть <ArrowUpRight className="w-3.5 h-3.5" />
+                  Рассчитать ROI <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </div>
@@ -75,25 +74,28 @@ export default function BentoShowcase() {
               <span className="absolute top-4 right-4 text-white/15 text-xs">+</span>
 
               <div className="relative z-10">
-                <div className="w-10 h-10 border border-white/[0.1] rounded flex items-center justify-center mb-6">
-                  <Shield className="w-4 h-4 text-white/50" />
-                </div>
-                <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-3">Безопасность</p>
+                <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-3">ОПЕРАЦИОННЫЙ ИНТЕЛЛЕКТ</p>
                 <h3 className="font-serif text-3xl text-white tracking-tight leading-tight mb-4">
-                  Ваши данные<br />не видит никто,<br />кроме вас
+                  От данных в 1С<br />к конкретным<br />действиям
                 </h3>
-                <p className="text-xs text-white/40 leading-relaxed">
-                  Каждый аккаунт изолирован. Данные клиентов, переписки и файлы не пересекаются с чужими. Агент видит только то, что вы разрешили.
-                </p>
+                <p className="text-xs text-white/50 font-semibold mb-3">Что делает Tehcon AI</p>
+                <div className="space-y-3 text-xs text-white/40 leading-relaxed">
+                  <p>Найдём процессы, где сотрудники тратят время вручную, и сделаем так, чтобы система выполняла их сама.</p>
+                  <p>Подключимся к 1С и покажем не просто цифры, а выводы:</p>
+                  <div className="space-y-1 pl-3 border-l border-white/[0.08]">
+                    {['что продаётся', 'что лежит на складе', 'где заморожены деньги', 'что пора распродать', 'что нужно докупить'].map((item, i) => (
+                      <div key={i} className="flex items-center gap-2">
+                        <div className="w-1 h-1 rounded-full bg-white/30 flex-shrink-0" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <p>Настроим автоматические напоминания, чтобы клиенты и менеджеры не забывали важные действия.</p>
+                </div>
               </div>
 
-              <div className="relative z-10 mt-8 space-y-2">
-                {['Изолированные аккаунты', 'Шифрование данных', 'Enterprise SLA 99.9%', 'Аудит действий'].map((f, i) => (
-                  <div key={i} className="flex items-center gap-2.5 py-2 border-b border-white/[0.05] last:border-0">
-                    <div className="w-1 h-1 rounded-full bg-white/40 flex-shrink-0" />
-                    <span className="text-xs text-white/50">{f}</span>
-                  </div>
-                ))}
+              <div className="relative z-10 mt-6">
+                <p className="text-xs text-white/40 italic">Управляйте бизнесом по понятным данным, а не по ощущениям.</p>
               </div>
             </div>
           </RevealOnScroll>
@@ -107,15 +109,15 @@ export default function BentoShowcase() {
                 <div className="w-10 h-10 border border-white/[0.1] rounded flex items-center justify-center mb-5">
                   <Layers className="w-4 h-4 text-white/50" />
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-2 tracking-tight">Одно подключение — все данные внутри</h3>
+                <h3 className="text-sm font-semibold text-white mb-2 tracking-tight">Единый контур управления</h3>
                 <p className="text-xs text-white/40 leading-relaxed">
-                  Gmail, Google Calendar, Notion, HubSpot, GitHub, Slack — в один клик.
+                  Связываем 1С, CRM, почту и мессенджеры в живую экосистему. Данные больше не теряются.
                 </p>
               </div>
 
               {/* Integration logos strip */}
               <div className="mt-6 flex flex-wrap gap-1.5">
-                {['Gmail', 'Slack', 'Notion', 'GitHub', 'HubSpot', 'Sheets', '+40'].map((t, i) => (
+                {['1С:ERP', 'Bitrix24', 'amoCRM', 'Telegram', 'WhatsApp', 'Почта'].map((t, i) => (
                   <span key={i} className="px-2 py-0.5 border border-white/[0.08] rounded-sm text-[10px] text-white/35">
                     {t}
                   </span>
@@ -133,13 +135,13 @@ export default function BentoShowcase() {
               <div className="relative z-10">
                 <div className="inline-flex items-center gap-1.5 px-2.5 py-1 border border-white/[0.15] rounded-sm text-[10px] text-white/60 mb-5">
                   <div className="w-1.5 h-1.5 rounded-full bg-white/60" />
-                  Бета-программа
+                  Early Access
                 </div>
                 <h3 className="text-sm font-semibold text-white mb-2 tracking-tight leading-snug">
-                  Стать первым.<br />Получить больше.
+                  Станьте первым.<br />Заберите преимущество.
                 </h3>
                 <p className="text-[11px] text-white/40 leading-relaxed">
-                  Приоритетный доступ и персональная настройка.
+                  Через год разрыв в эффективности между AI-бизнесом и ручным управлением станет критическим.
                 </p>
               </div>
 
@@ -147,7 +149,7 @@ export default function BentoShowcase() {
                 to="/contacts"
                 className="relative z-10 mt-4 flex items-center gap-1.5 text-xs text-white/60 hover:text-white transition-colors"
               >
-                Подать заявку <ArrowUpRight className="w-3.5 h-3.5" />
+                Записаться на аудит процессов <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </RevealOnScroll>
