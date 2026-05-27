@@ -5,10 +5,10 @@ import { Plus, Zap, Shield, Layers, ArrowUpRight } from 'lucide-react';
 import RevealOnScroll from '../shared/RevealOnScroll';
 
 const metrics = [
-  { value: '15 сек', label: 'обработка заявки' },
-  { value: '90%', label: 'снижение ошибок ручного ввода' },
-  { value: '24/7', label: 'контроль всех бизнес-процессов' },
-];
+{ value: '15 сек', label: 'обработка заявки' },
+{ value: '90%', label: 'снижение ошибок ручного ввода' },
+{ value: '24/7', label: 'контроль всех бизнес-процессов' }];
+
 
 export default function BentoShowcase() {
   return (
@@ -50,18 +50,18 @@ export default function BentoShowcase() {
 
               <div className="relative z-10 flex items-center justify-between mt-8">
                 <div className="flex gap-6">
-                  {metrics.map((m, i) => (
-                    <div key={i}>
+                  {metrics.map((m, i) =>
+                  <div key={i}>
                       <div className="text-2xl font-serif text-white tracking-tight">{m.value}</div>
                       <div className="text-[10px] text-white/35 mt-0.5">{m.label}</div>
                     </div>
-                  ))}
+                  )}
                 </div>
                 <Link
                   to="/contacts"
-                  className="flex items-center gap-1.5 px-4 py-2 bg-white text-black text-xs font-semibold rounded-sm hover:bg-white/90 transition-colors flex-shrink-0"
-                >
-                  Рассчитать ROI <ArrowUpRight className="w-3.5 h-3.5" />
+                  className="flex items-center gap-1.5 px-4 py-2 bg-white text-black text-xs font-semibold rounded-sm hover:bg-white/90 transition-colors flex-shrink-0">Рассчитать 
+
+
                 </Link>
               </div>
             </div>
@@ -83,12 +83,12 @@ export default function BentoShowcase() {
                   <p>Найдём процессы, где сотрудники тратят время вручную, и сделаем так, чтобы система выполняла их сама.</p>
                   <p>Подключимся к 1С и покажем не просто цифры, а выводы:</p>
                   <div className="space-y-1 pl-3 border-l border-white/[0.08]">
-                    {['что продаётся', 'что лежит на складе', 'где заморожены деньги', 'что пора распродать', 'что нужно докупить'].map((item, i) => (
-                      <div key={i} className="flex items-center gap-2">
+                    {['что продаётся', 'что лежит на складе', 'где заморожены деньги', 'что пора распродать', 'что нужно докупить'].map((item, i) =>
+                    <div key={i} className="flex items-center gap-2">
                         <div className="w-1 h-1 rounded-full bg-white/30 flex-shrink-0" />
                         <span>{item}</span>
                       </div>
-                    ))}
+                    )}
                   </div>
                   <p>Настроим автоматические напоминания, чтобы клиенты и менеджеры не забывали важные действия.</p>
                 </div>
@@ -117,11 +117,11 @@ export default function BentoShowcase() {
 
               {/* Integration logos strip */}
               <div className="mt-6 flex flex-wrap gap-1.5">
-                {['1С:ERP', 'Bitrix24', 'amoCRM', 'Telegram', 'WhatsApp', 'Почта'].map((t, i) => (
-                  <span key={i} className="px-2 py-0.5 border border-white/[0.08] rounded-sm text-[10px] text-white/35">
+                {['1С:ERP', 'Bitrix24', 'amoCRM', 'Telegram', 'WhatsApp', 'Почта'].map((t, i) =>
+                <span key={i} className="px-2 py-0.5 border border-white/[0.08] rounded-sm text-[10px] text-white/35">
                     {t}
                   </span>
-                ))}
+                )}
               </div>
             </div>
           </RevealOnScroll>
@@ -147,8 +147,8 @@ export default function BentoShowcase() {
 
               <Link
                 to="/contacts"
-                className="relative z-10 mt-4 flex items-center gap-1.5 text-xs text-white/60 hover:text-white transition-colors"
-              >
+                className="relative z-10 mt-4 flex items-center gap-1.5 text-xs text-white/60 hover:text-white transition-colors">
+                
                 Записаться на аудит процессов <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -156,6 +156,6 @@ export default function BentoShowcase() {
 
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
