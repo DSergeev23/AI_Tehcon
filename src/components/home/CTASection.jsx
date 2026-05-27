@@ -31,15 +31,17 @@ export default function CTASection() {
           Готовы трансформировать<br />бизнес с ИИ?
         </motion.h2>
 
-        <motion.p
+        <motion.ol
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-sm text-white/40 max-w-md mx-auto mb-10 leading-relaxed"
+          className="text-sm text-white/40 max-w-md mx-auto mb-10 leading-relaxed space-y-2"
         >
-          Найдем 3–5 процессов, где ваш бизнес теряет деньги на ручной работе. Покажем, что можно автоматизировать в вашей 1С, CRM и таблицах. За 30–60 минут найдем процессы, которые можно сократить в 5–10 раз
-        </motion.p>
+          <li>Найдем 3–5 процессов, где ваш бизнес теряет деньги на ручной работе</li>
+          <li>Покажем, что можно автоматизировать в вашей 1С, CRM и таблицах</li>
+          <li>За 30–60 минут найдем процессы, которые можно сократить в 5–10 раз</li>
+        </motion.ol>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
