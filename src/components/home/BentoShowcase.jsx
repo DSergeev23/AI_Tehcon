@@ -59,7 +59,7 @@ export default function BentoShowcase() {
                 </div>
                 <Link
                   to="/contacts"
-                  className="flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors flex-shrink-0 whitespace-nowrap">Рассчитать потенциал</Link>
+                  className="flex items-center gap-1.5 px-4 py-2 bg-white text-black text-xs font-semibold rounded-sm hover:bg-white/90 transition-colors flex-shrink-0">Рассчитать потенциал</Link>
               </div>
             </div>
           </RevealOnScroll>
