@@ -13,7 +13,14 @@ const catalogSchema = {
   "@type": "ItemList",
   "name": "Каталог ИИ агентов для автоматизации бизнеса",
   "description": "Готовые ИИ решения для бизнеса от Tehcon AI",
-  "numberOfItems": 6
+  "numberOfItems": catalogProducts.length,
+  "itemListElement": catalogProducts.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": p.title,
+    "description": p.shortDescription,
+    "url": `https://tehcon.ai/catalog/${p.id}`,
+  }))
 };
 
 export default function Catalog() {

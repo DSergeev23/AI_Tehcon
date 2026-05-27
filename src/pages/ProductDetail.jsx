@@ -19,17 +19,32 @@ export default function ProductDetail() {
 
   const productSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": product.title,
-    "description": product.shortDescription,
-    "provider": { "@type": "Organization", "name": "Tehcon AI", "url": "https://tehcon.ai" },
-    "offers": {
-      "@type": "Offer",
-      "price": product.pricing,
-      "priceCurrency": "RUB"
-    },
-    "serviceType": product.category,
-    "areaServed": "RU"
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://tehcon.ai" },
+          { "@type": "ListItem", "position": 2, "name": "Каталог", "item": "https://tehcon.ai/catalog" },
+          { "@type": "ListItem", "position": 3, "name": product.title, "item": `https://tehcon.ai/catalog/${product.id}` },
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": product.title,
+        "description": product.fullDescription,
+        "provider": { "@type": "Organization", "name": "Tehcon AI", "url": "https://tehcon.ai" },
+        "offers": {
+          "@type": "Offer",
+          "price": product.pricing?.replace(/[^0-9]/g, '') || "0",
+          "priceCurrency": "RUB",
+          "priceSpecification": { "@type": "PriceSpecification", "price": product.pricing, "priceCurrency": "RUB" }
+        },
+        "serviceType": product.category,
+        "areaServed": "RU",
+        "url": `https://tehcon.ai/catalog/${product.id}`,
+        "category": product.tags?.join(', '),
+      }
+    ]
   };
 
   return (

@@ -13,26 +13,54 @@ import FloatingContacts from '../components/shared/FloatingContacts';
 
 const homeSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Tehcon AI",
-  "url": "https://tehcon.ai",
-  "description": "Разработка ИИ агентов и автоматизация бизнес-процессов",
-  "sameAs": ["https://t.me/tehconai"],
-  "serviceType": "AI автоматизация бизнеса"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://tehcon.ai/#organization",
+      "name": "Tehcon AI",
+      "url": "https://tehcon.ai",
+      "logo": "https://tehcon.ai/logo.svg",
+      "description": "Разработка ИИ агентов и автоматизация бизнес-процессов с помощью нейросетей",
+      "sameAs": ["https://t.me/tehconai"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "availableLanguage": "Russian",
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tehcon.ai/#website",
+      "url": "https://tehcon.ai",
+      "name": "Tehcon AI",
+      "publisher": { "@id": "https://tehcon.ai/#organization" },
+      "inLanguage": "ru-RU",
+    },
+    {
+      "@type": "Service",
+      "name": "Автоматизация бизнес-процессов с ИИ агентами",
+      "provider": { "@id": "https://tehcon.ai/#organization" },
+      "serviceType": "AI автоматизация бизнеса",
+      "description": "Разрабатываем автономных ИИ агентов, которые управляют процессами в 1С, CRM и мессенджерах без участия человека",
+      "areaServed": "RU",
+    }
+  ]
 };
 
 export default function Home() {
   return (
     <>
       <SEOHead {...pageSEO.home} schemaJson={homeSchema} />
-      <HeroSection />
-      <LogoBar />
-      <FeaturesGrid />
-      <BentoShowcase />
-      <AutomationBlock />
-      <CasesSection />
-      <IntegrationsSection />
-      <CTASection />
+      <main>
+        <HeroSection />
+        <LogoBar />
+        <FeaturesGrid />
+        <BentoShowcase />
+        <AutomationBlock />
+        <CasesSection />
+        <IntegrationsSection />
+        <CTASection />
+      </main>
       <FloatingContacts />
     </>
   );
