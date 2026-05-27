@@ -29,9 +29,9 @@ export default function Home() {
       <LogoBar />
       <FeaturesGrid />
       <BentoShowcase />
-      <IntegrationsSection />
       <AutomationBlock />
       <CasesSection />
+      <IntegrationsSection />
       <CTASection />
       <FloatingContacts />
     </>
