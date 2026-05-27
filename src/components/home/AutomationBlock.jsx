@@ -14,13 +14,13 @@ export default function AutomationBlock() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="relative h-80 rounded-sm border border-white/[0.08] overflow-hidden"
-          >
-            <img 
-              src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/9fe49f18c_image.png" 
+            className="relative h-80 rounded-sm border border-white/[0.08] overflow-hidden">
+            
+            <img
+              src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/9fe49f18c_image.png"
               alt="Автоматизация процессов"
-              className="w-full h-full object-cover"
-            />
+              className="w-full h-full object-cover hidden" />
+            
           </motion.div>
 
           {/* Right: Content */}
@@ -28,8 +28,8 @@ export default function AutomationBlock() {
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          >
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
+            
             <h2 className="font-serif text-4xl md:text-5xl text-white tracking-tight leading-tight mb-4">
               Автоматизация под ключ
             </h2>
@@ -38,13 +38,13 @@ export default function AutomationBlock() {
             </p>
             <Link
               to="/contacts"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors"
-            >
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors">
+              
               Связаться с отделом продаж <ArrowUpRight className="w-4 h-4" />
             </Link>
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
