@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Plus } from 'lucide-react';
-import RevealOnScroll from '../shared/RevealOnScroll';
+import { motion } from 'framer-motion';
 
 export default function CTASection() {
   return (
@@ -12,25 +11,40 @@ export default function CTASection() {
         <span className="absolute bottom-5 left-5 text-white/15 text-xs">+</span>
         <span className="absolute bottom-5 right-5 text-white/15 text-xs">+</span>
 
-        <RevealOnScroll>
-          <h2 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight mb-6">
-            Готовы трансформировать<br />бизнес с ИИ?
-          </h2>
-        </RevealOnScroll>
-        <RevealOnScroll delay={0.1}>
-          <p className="text-sm text-white/40 max-w-md mx-auto mb-10 leading-relaxed">Обсудим вашу задачу и подберём оптимальное решение для автоматизации абсолютно бесплатно
+        <motion.h2
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight mb-6"
+        >
+          Готовы трансформировать<br />бизнес с ИИ?
+        </motion.h2>
 
-          </p>
-        </RevealOnScroll>
-        <RevealOnScroll delay={0.2}>
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="text-sm text-white/40 max-w-md mx-auto mb-10 leading-relaxed"
+        >
+          Обсудим вашу задачу и подберём оптимальное решение для автоматизации абсолютно бесплатно
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        >
           <Link
             to="/contacts"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors">Получить аудит
-
-
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors"
+          >
+            Получить аудит
           </Link>
-        </RevealOnScroll>
+        </motion.div>
       </div>
-    </section>);
-
+    </section>
+  );
 }
