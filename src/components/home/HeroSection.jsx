@@ -48,7 +48,7 @@ export default function HeroSection() {
               Стать бета-партнёром
             </div>
 
-            <h1 className="font-serif text-5xl md:text-6xl text-white leading-[1.0] tracking-tight mb-0">AI агенты 
+            <h1 className="font-serif text-5xl md:text-6xl text-white leading-[1.0] tracking-tight mb-0">AI агенты 
 для бизнеса</h1>
           </motion.div>
 
