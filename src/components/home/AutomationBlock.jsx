@@ -52,7 +52,7 @@ export default function AutomationBlock() {
               className="font-inter text-4xl md:text-5xl text-white leading-tight"
               style={{ letterSpacing: '-0.02em', fontWeight: 600 }}
             >
-              Архитектура эффективности
+              Автоматизация под ключ
             </h2>
 
             <p
