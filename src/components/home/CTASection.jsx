@@ -16,7 +16,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="text-[11px] text-white/30 uppercase tracking-[0.2em] mb-6"
+          className="text-[11px] text-white/70 uppercase tracking-[0.2em] mb-6"
         >
           Никакого хайпа вокруг ИИ. Только результаты.
         </motion.p>
