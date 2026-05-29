@@ -42,39 +42,35 @@ export default function AutomationBlock() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="md:col-span-2 flex flex-col gap-6">
+            className="md:col-span-2 flex flex-col md:pl-12 md:items-end">
             
-            <p className="text-[11px] text-white/70 uppercase tracking-[0.2em]">АВТОМАТИЗАЦИЯ ДЛЯ КОРПОРАЦИЙ
+            <div className="flex flex-col gap-0" style={{ maxWidth: '300px' }}>
+              <p className="text-[11px] text-white/70 uppercase tracking-[0.2em] mb-5">АВТОМАТИЗАЦИЯ ДЛЯ КОРПОРАЦИЙ</p>
 
-            </p>
+              <h2
+                className="font-inter text-4xl md:text-5xl text-white leading-tight mb-8"
+                style={{ letterSpacing: '-0.02em', fontWeight: 600 }}>
+                Автоматизация под ключ
+              </h2>
 
-            <h2
-              className="font-inter text-4xl md:text-5xl text-white leading-tight"
-              style={{ letterSpacing: '-0.02em', fontWeight: 600 }}>
-              
-              Автоматизация под ключ
-            </h2>
+              <p
+                className="leading-[1.75]"
+                style={{ fontSize: '15px', color: '#A1A1AA' }}>
+                Неважно, какой сложности ваш бизнес, наш Enterprise план создан для тех, кому нужны готовые автоматизированные решения под ключ. Вы описываете свою задачу, а наши специалисты реализуют её с полной поддержкой в минимальные сроки с почасовой оплатой.
+              </p>
 
-            <p
-              className="leading-relaxed"
-              style={{ fontSize: '18px', color: '#A1A1AA', maxWidth: '360px' }}>
-              
-              Неважно, какой сложности ваш бизнес, наш Enterprise план создан для тех, кому нужны готовые автоматизированные решения под ключ. Вы описываете свою задачу, а наши специалисты реализуют её с полной поддержкой в минимальные сроки с почасовой оплатой.
-            </p>
-
-            <div className="pt-2">
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}>
-                
-                <Link
-                  to="/contacts"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
-                  
-                  Связаться с отделом продаж
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
-              </motion.div>
+              <div className="pt-10">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}>
+                  <Link
+                    to="/contacts"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
+                    Связаться с отделом продаж
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                </motion.div>
+              </div>
             </div>
           </motion.div>
 
