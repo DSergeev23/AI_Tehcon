@@ -42,29 +42,35 @@ export default function AutomationBlock() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="md:col-span-2 flex flex-col pl-8 md:pl-16">
+            className="md:col-span-2 flex flex-col gap-6">
             
-            <p className="text-[11px] text-white/70 uppercase tracking-[0.2em] mb-8">АВТОМАТИЗАЦИЯ ДЛЯ КОРПОРАЦИЙ</p>
+            <p className="text-[11px] text-white/70 uppercase tracking-[0.2em]">АВТОМАТИЗАЦИЯ ДЛЯ КОРПОРАЦИЙ
+
+            </p>
 
             <h2
-              className="font-inter text-4xl md:text-5xl text-white leading-tight mb-8"
-              style={{ letterSpacing: '-0.02em', fontWeight: 600, maxWidth: '300px' }}>
+              className="font-inter text-4xl md:text-5xl text-white leading-tight"
+              style={{ letterSpacing: '-0.02em', fontWeight: 600 }}>
+              
               Автоматизация под ключ
             </h2>
 
             <p
-              className="leading-[1.8]"
-              style={{ fontSize: '15px', color: '#A1A1AA', maxWidth: '280px' }}>
+              className="leading-relaxed"
+              style={{ fontSize: '18px', color: '#A1A1AA', maxWidth: '360px' }}>
+              
               Неважно, какой сложности ваш бизнес, наш Enterprise план создан для тех, кому нужны готовые автоматизированные решения под ключ. Вы описываете свою задачу, а наши верифицированные пользователи реализуют её с полной поддержкой в минимальные сроки на базе нашей платформы с почасовой оплатой.
             </p>
 
-            <div className="pt-10">
+            <div className="pt-2">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}>
+                
                 <Link
                   to="/contacts"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
+                  
                   Связаться с отделом продаж
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>
