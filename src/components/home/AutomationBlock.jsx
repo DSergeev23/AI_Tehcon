@@ -44,7 +44,7 @@ export default function AutomationBlock() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="md:col-span-2 flex flex-col gap-6">
             
-            <p className="text-[11px] text-white/70 uppercase tracking-[0.2em]">Автоматизация для Корпрацийо
+            <p className="text-[11px] text-white/70 uppercase tracking-[0.2em]">АВТОМАТИЗАЦИЯ ДЛЯ КОРПОРАЦИЙ
 
             </p>
 
