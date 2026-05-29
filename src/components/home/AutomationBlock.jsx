@@ -15,12 +15,12 @@ export default function AutomationBlock() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="md:col-span-3 relative flex items-center justify-center"
-          >
+            className="md:col-span-3 relative flex items-center justify-center">
+            
             {/* Subtle ambient glow behind image */}
             <div className="absolute inset-0 rounded-2xl"
-              style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(255,255,255,0.04) 0%, transparent 70%)' }}
-            />
+            style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(255,255,255,0.04) 0%, transparent 70%)' }} />
+            
 
             {/* Floating image */}
             <motion.img
@@ -31,9 +31,9 @@ export default function AutomationBlock() {
               className="relative z-10 w-full h-auto"
               style={{
                 filter: 'drop-shadow(0 0 50px rgba(255,255,255,0.05))',
-                marginBottom: '-24px',
-              }}
-            />
+                marginBottom: '-24px'
+              }} />
+            
           </motion.div>
 
           {/* Right: Content — 40% */}
@@ -42,35 +42,35 @@ export default function AutomationBlock() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="md:col-span-2 flex flex-col gap-6"
-          >
-            <p className="text-[11px] text-white/30 uppercase tracking-[0.2em]">
-              Enterprise Automation
+            className="md:col-span-2 flex flex-col gap-6">
+            
+            <p className="text-[11px] text-white/30 uppercase tracking-[0.2em]">Автоматизация для 
+
             </p>
 
             <h2
               className="font-inter text-4xl md:text-5xl text-white leading-tight"
-              style={{ letterSpacing: '-0.02em', fontWeight: 600 }}
-            >
+              style={{ letterSpacing: '-0.02em', fontWeight: 600 }}>
+              
               Автоматизация под ключ
             </h2>
 
             <p
               className="leading-relaxed"
-              style={{ fontSize: '18px', color: '#A1A1AA', maxWidth: '360px' }}
-            >
+              style={{ fontSize: '18px', color: '#A1A1AA', maxWidth: '360px' }}>
+              
               Неважно, какой сложности ваш бизнес, наш Enterprise план создан для тех, кому нужны готовые автоматизированные решения под ключ. Вы описываете свою задачу, а наши верифицированные пользователи реализуют её с полной поддержкой в минимальные сроки на базе нашей платформы с почасовой оплатой.
             </p>
 
             <div className="pt-2">
               <motion.div
                 whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
+                transition={{ duration: 0.2 }}>
+                
                 <Link
                   to="/contacts"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors"
-                >
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
+                  
                   Связаться с отделом продаж
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>
@@ -80,6 +80,6 @@ export default function AutomationBlock() {
 
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
