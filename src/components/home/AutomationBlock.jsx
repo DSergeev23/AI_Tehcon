@@ -69,13 +69,10 @@ export default function AutomationBlock() {
               >
                 <Link
                   to="/contacts"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white text-sm font-medium rounded-sm transition-all duration-300 hover:border-white/50 hover:bg-white/[0.04]"
-                  style={{ boxShadow: '0 0 0 0 rgba(255,255,255,0)' }}
-                  onMouseEnter={e => e.currentTarget.style.boxShadow = '0 0 20px rgba(255,255,255,0.06)'}
-                  onMouseLeave={e => e.currentTarget.style.boxShadow = '0 0 0 0 rgba(255,255,255,0)'}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors"
                 >
                   Связаться с отделом продаж
-                  <ArrowUpRight className="w-4 h-4" style={{ transform: 'rotate(0deg)' }} />
+                  <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </motion.div>
             </div>
