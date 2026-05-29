@@ -31,12 +31,13 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Content below globe */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full -mt-10 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 w-full -mt-10 pb-20">
           {/* Left: Badge + Heading */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="md:pl-16">
             
             <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.12] rounded text-[11px] text-white/50 mb-6 hidden">
               <div className="w-3.5 h-3.5 grid grid-cols-2 gap-0.5">
@@ -57,7 +58,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
           style={{ transform: 'translateX(20px)' }}
-          className="flex flex-col justify-end md:col-start-2">
+          className="flex flex-col justify-end md:col-start-2 md:pl-8">
             
             <p className="text-sm text-white/50 leading-relaxed mb-6 max-w-sm">Превращаем 1С, CRM, Excel, Telegram и внутренние системы в единую AI-инфраструктуру управления бизнесом. 
 Tehcon AI внедряет автономных AI-агентов, которые самостоятельно анализируют данные, контролируют процессы, запускают действия и помогают бизнесу работать быстрее, точнее и дешевле.</p>
