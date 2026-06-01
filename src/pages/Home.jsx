@@ -16,10 +16,10 @@ const homeSchema = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://tehcon.ai/#organization",
+      "@id": "https://ai-tehcon.ru/#organization",
       "name": "Tehcon AI",
-      "url": "https://tehcon.ai",
-      "logo": "https://tehcon.ai/logo.svg",
+      "url": "https://ai-tehcon.ru",
+      "logo": "https://ai-tehcon.ru/logo.svg",
       "description": "Разработка ИИ агентов и автоматизация бизнес-процессов с помощью нейросетей",
       "sameAs": ["https://t.me/tehconai"],
       "contactPoint": {
@@ -30,16 +30,16 @@ const homeSchema = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://tehcon.ai/#website",
-      "url": "https://tehcon.ai",
+      "@id": "https://ai-tehcon.ru/#website",
+      "url": "https://ai-tehcon.ru",
       "name": "Tehcon AI",
-      "publisher": { "@id": "https://tehcon.ai/#organization" },
+      "publisher": { "@id": "https://ai-tehcon.ru/#organization" },
       "inLanguage": "ru-RU",
     },
     {
       "@type": "Service",
       "name": "Автоматизация бизнес-процессов с ИИ агентами",
-      "provider": { "@id": "https://tehcon.ai/#organization" },
+      "provider": { "@id": "https://ai-tehcon.ru/#organization" },
       "serviceType": "AI автоматизация бизнеса",
       "description": "Разрабатываем автономных ИИ агентов, которые управляют процессами в 1С, CRM и мессенджерах без участия человека",
       "areaServed": "RU",

@@ -26,7 +26,7 @@ const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Tehcon AI",
-  "url": "https://tehcon.ai",
+  "url": "https://ai-tehcon.ru",
   "description": "Tehcon AI — агентство ИИ автоматизации бизнес-процессов. Разработка AI решений и интеграция нейросетей.",
   "foundingDate": "2019",
   "numberOfEmployees": { "@type": "QuantitativeValue", "value": 40 },

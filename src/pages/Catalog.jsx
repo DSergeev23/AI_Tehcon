@@ -19,7 +19,7 @@ const catalogSchema = {
     "position": i + 1,
     "name": p.title,
     "description": p.shortDescription,
-    "url": `https://tehcon.ai/catalog/${p.id}`,
+    "url": `https://ai-tehcon.ru/catalog/${p.id}`,
   }))
 };
 

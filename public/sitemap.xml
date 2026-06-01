@@ -1,62 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tehcon.ai/</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://ai-tehcon.ru/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tehcon.ai/about</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tehcon.ai/catalog</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://tehcon.ai/contacts</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://ai-tehcon.ru/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tehcon.ai/catalog/ai-sales-agent</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://ai-tehcon.ru/contacts</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ai-tehcon.ru/catalog</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ai-tehcon.ru/catalog/telegram-lead-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tehcon.ai/catalog/customer-support-automation</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://ai-tehcon.ru/catalog/customer-support-automation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tehcon.ai/catalog/document-analyzer</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://ai-tehcon.ru/catalog/document-analyzer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tehcon.ai/catalog/content-generator</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://ai-tehcon.ru/catalog/content-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tehcon.ai/catalog/predictive-analytics</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://ai-tehcon.ru/catalog/predictive-analytics</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tehcon.ai/catalog/voice-ai-assistant</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://ai-tehcon.ru/catalog/voice-ai-assistant</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

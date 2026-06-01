@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tehcon.ai/sitemap.xml
+Sitemap: https://ai-tehcon.ru/sitemap.xml
