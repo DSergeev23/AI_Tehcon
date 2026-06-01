@@ -52,7 +52,7 @@ export default function ProductDetail() {
       <SEOHead {...seo} schemaJson={productSchema} />
       {/* Breadcrumb */}
       <div className="border-b border-white/[0.08]">
-        <div className="max-w-7xl mx-auto px-5 py-4 flex items-center gap-2">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-4 flex items-center gap-2">
           <Link to="/catalog" className="inline-flex items-center gap-1.5 text-xs text-white/40 hover:text-white/70 transition-colors">
             <ArrowLeft className="w-3.5 h-3.5" />
             Каталог
@@ -65,7 +65,7 @@ export default function ProductDetail() {
       {/* Hero */}
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
-        <div className="max-w-7xl mx-auto px-5 py-14">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -95,7 +95,7 @@ export default function ProductDetail() {
       </div>
 
       {/* Content grid */}
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3">
           {/* Main content */}
           <div className="lg:col-span-2 border-r border-white/[0.08]">

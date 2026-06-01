@@ -8,6 +8,9 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
         serif: ['Instrument Serif', 'serif'],
       },
+      screens: {
+        '3xl': '1920px',
+      },
       letterSpacing: {
         tight2: '-0.04em',
         tight3: '-0.06em',

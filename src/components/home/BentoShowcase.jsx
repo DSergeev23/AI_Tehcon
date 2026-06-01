@@ -13,7 +13,7 @@ const metrics = [
 export default function BentoShowcase() {
   return (
     <section className="border-t border-white/[0.08]">
-      <div className="max-w-7xl mx-auto px-5 py-16">
+      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-16 2xl:py-24">
 
         {/* Section label */}
         <RevealOnScroll>
@@ -39,7 +39,7 @@ export default function BentoShowcase() {
                   <Zap className="w-3 h-3" />
                   Автономные агенты
                 </div>
-                <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight tracking-tight mb-4">Бизнес работает, пока вы принимаете решения
+                <h2 className="font-serif text-4xl md:text-5xl 2xl:text-6xl text-white leading-tight tracking-tight mb-4">Бизнес работает, пока вы принимаете решения
 
 
                 </h2>

@@ -32,7 +32,7 @@ export default function Navbar() {
         scrolled ? 'border-b border-white/[0.06] bg-black/80 backdrop-blur-md' : 'bg-transparent'}`
         }>
         
-        <div className="max-w-7xl mx-auto px-5 h-14 flex items-center justify-between">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 h-14 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-5 h-5 grid grid-cols-2 gap-0.5">

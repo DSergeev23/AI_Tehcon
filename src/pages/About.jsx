@@ -42,7 +42,7 @@ export default function About() {
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
         <span className="absolute bottom-5 left-5 text-white/15 text-xs">+</span>
-        <div className="max-w-7xl mx-auto px-5 pt-16 pb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 pt-16 pb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function About() {
               <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
               О компании
             </div>
-            <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">
+            <h1 className="font-serif text-5xl md:text-6xl 2xl:text-7xl text-white tracking-tight leading-tight">
               Создаём будущее<br />с помощью ИИ
             </h1>
           </motion.div>
@@ -74,7 +74,7 @@ export default function About() {
 
       {/* Stats row */}
       <div className="border-b border-white/[0.08]">
-        <div className="max-w-7xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {stats.map((s, i) => (
               <RevealOnScroll key={i} delay={i * 0.06}>
@@ -90,7 +90,7 @@ export default function About() {
 
       {/* Mission */}
       <div className="border-b border-white/[0.08]">
-        <div className="max-w-7xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <RevealOnScroll>
               <div className="p-10 border-r border-white/[0.08]">
@@ -129,7 +129,7 @@ export default function About() {
 
       {/* Tech stack */}
       <div className="border-b border-white/[0.08]">
-        <div className="max-w-7xl mx-auto px-5 py-12">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-12">
           <RevealOnScroll>
             <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-6">Технологический стек</p>
             <div className="flex flex-wrap gap-2">

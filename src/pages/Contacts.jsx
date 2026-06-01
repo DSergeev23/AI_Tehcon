@@ -22,7 +22,7 @@ export default function Contacts() {
       {/* Header */}
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
-        <div className="max-w-7xl mx-auto px-5 pt-16 pb-12">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 pt-16 pb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ export default function Contacts() {
       </div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-5">
           {/* Info sidebar */}
           <div className="lg:col-span-2 border-r border-white/[0.08]">

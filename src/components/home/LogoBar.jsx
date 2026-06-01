@@ -6,7 +6,7 @@ const logos = ['Сбербанк', 'Яндекс', 'VK Tech', 'Газпром', 
 export default function LogoBar() {
   return (
     <div className="border-y border-white/[0.08] bg-black">
-      <div className="max-w-7xl mx-auto px-5">
+      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24">
         <div className="grid grid-cols-3 md:grid-cols-6">
           {logos.map((name, i) =>
           <motion.div

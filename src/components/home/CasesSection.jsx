@@ -45,11 +45,11 @@ export default function CasesSection() {
 
   return (
     <section className="border-t border-white/[0.08]">
-      <div className="max-w-7xl mx-auto px-5 py-24">
+      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-24 2xl:py-32">
         {/* Header */}
         <RevealOnScroll>
           <div className="text-center mb-16">
-            <h2 className="font-serif text-5xl md:text-6xl text-white tracking-tight mb-4">
+            <h2 className="font-serif text-5xl md:text-6xl 2xl:text-7xl text-white tracking-tight mb-4">
               Кейсы клиентов
             </h2>
             <p className="text-sm text-white/40">

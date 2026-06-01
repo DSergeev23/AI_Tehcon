@@ -74,11 +74,11 @@ const integrations = [
 export default function IntegrationsSection() {
   return (
     <section className="border-t border-white/[0.08]">
-      <div className="max-w-7xl mx-auto px-5 py-16">
+      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-16 2xl:py-24">
         {/* Header */}
         <RevealOnScroll>
           <div className="mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl text-white tracking-tight leading-tight mb-4">
+            <h2 className="font-serif text-4xl md:text-5xl 2xl:text-6xl text-white tracking-tight leading-tight mb-4">
               Подключается ко всему,<br />
               <span className="italic">что вы уже используете</span>
             </h2>
@@ -90,7 +90,7 @@ export default function IntegrationsSection() {
         </RevealOnScroll>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.06]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 2xl:grid-cols-6 3xl:grid-cols-7 gap-px bg-white/[0.06]">
           {integrations.map((item, i) => (
             <motion.div
               key={i}

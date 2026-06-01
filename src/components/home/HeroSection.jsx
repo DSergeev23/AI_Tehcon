@@ -17,7 +17,7 @@ export default function HeroSection() {
       <span className="absolute bottom-12 left-5 text-white/20 text-xs">+</span>
       <span className="absolute bottom-12 right-5 text-white/20 text-xs">+</span>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-5 pt-14 flex flex-col items-center">
+      <div className="relative z-10 w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 pt-14 flex flex-col items-center">
         {/* Globe - centered at top */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -25,7 +25,7 @@ export default function HeroSection() {
           transition={{ duration: 1.2, ease: 'easeOut' }}
           className="relative mt-10 mb-16">
           
-          <WireframeGlobe size={400} />
+          <WireframeGlobe size={480} />
           {/* Fade bottom of globe */}
           <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-black to-transparent" />
         </motion.div>
@@ -49,7 +49,7 @@ export default function HeroSection() {
               Стать бета-партнёром
             </div>
 
-            <h1 className="font-serif text-5xl md:text-6xl text-white leading-[1.0] tracking-tight mb-0">AI агенты и автоматизации 
+            <h1 className="font-serif text-5xl md:text-6xl 2xl:text-7xl 3xl:text-8xl text-white leading-[1.0] tracking-tight mb-0">AI агенты и автоматизации 
 для бизнеса</h1>
           </motion.div>
 

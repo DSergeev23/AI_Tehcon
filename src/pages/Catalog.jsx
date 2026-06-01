@@ -33,7 +33,7 @@ export default function Catalog() {
       {/* Header */}
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
-        <div className="max-w-7xl mx-auto px-5 pt-16 pb-12">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 pt-16 pb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export default function Catalog() {
               <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
               Каталог решений
             </div>
-            <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight mb-4">
+            <h1 className="font-serif text-5xl md:text-6xl 2xl:text-7xl text-white tracking-tight leading-tight mb-4">
               ИИ-решения<br />для бизнеса
             </h1>
             <p className="text-sm text-white/40 max-w-md leading-relaxed">
@@ -55,7 +55,7 @@ export default function Catalog() {
 
       {/* Filter */}
       <div className="border-b border-white/[0.08]">
-        <div className="max-w-7xl mx-auto px-5">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24">
           <div className="flex items-center gap-1 py-3 overflow-x-auto">
             {categories.map((cat) => (
               <button
@@ -75,8 +75,8 @@ export default function Catalog() {
       </div>
 
       {/* Grid */}
-      <div className="max-w-7xl mx-auto px-5 py-12">
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-12">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3">
           {filtered.map((product, i) => (
             <CatalogCard key={product.id} product={product} index={i} />
           ))}

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function CTASection() {
   return (
     <section className="border-t border-white/[0.08]">
-      <div className="max-w-7xl mx-auto px-5 py-24 text-center relative">
+      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-24 2xl:py-36 text-center relative">
         <span className="absolute top-5 left-5 text-white/15 text-xs">+</span>
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
         <span className="absolute bottom-5 left-5 text-white/15 text-xs">+</span>
@@ -30,7 +30,7 @@ export default function CTASection() {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="font-serif text-white"
-          style={{ fontSize: 'clamp(48px, 7vw, 80px)', lineHeight: '1.1', letterSpacing: '-0.02em', marginBottom: '40px' }}
+          style={{ fontSize: 'clamp(48px, 5vw, 100px)', lineHeight: '1.1', letterSpacing: '-0.02em', marginBottom: '40px' }}
         >
           Готовы трансформировать<br />бизнес с ИИ?
         </motion.h2>

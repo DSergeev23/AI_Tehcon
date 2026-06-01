@@ -91,14 +91,14 @@ function Visual({ type }) {
 export default function FeaturesGrid() {
   return (
     <section id="features" className="border-t border-white/[0.08]">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="w-full max-w-[1920px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-6">
           {features.map((f, i) =>
           <RevealOnScroll key={i} delay={i * 0.07}>
               <motion.div
               whileHover={{ backgroundColor: 'rgba(255,255,255,0.02)' }}
-              className={`relative p-8 border-b border-white/[0.08] transition-colors duration-300 h-full ${
-              i % 3 !== 2 ? 'md:border-r' : ''} border-white/[0.08]`
+              className={`relative p-8 2xl:p-10 border-b border-white/[0.08] transition-colors duration-300 h-full ${
+              i % 3 !== 2 ? 'md:border-r 2xl:border-r' : 'md:border-r-0'} border-white/[0.08]`
               }>
               
                 {/* Corner plus */}

@@ -6,7 +6,7 @@ import { ArrowUpRight } from 'lucide-react';
 export default function AutomationBlock() {
   return (
     <section className="border-t border-white/[0.08] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-5" style={{ paddingBlock: '120px' }}>
+      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24" style={{ paddingBlock: '120px' }}>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
 
           {/* Left: Visual — 60% */}

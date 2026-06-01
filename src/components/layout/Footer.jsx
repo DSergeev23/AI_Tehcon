@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <footer className="border-t border-white/[0.08] bg-black">
-      <div className="max-w-7xl mx-auto px-5 py-16">
+      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-16">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
