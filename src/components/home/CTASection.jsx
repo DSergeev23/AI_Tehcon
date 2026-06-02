@@ -52,7 +52,7 @@ export default function CTASection() {
             map(({ num, text }) =>
             <div key={num} className="flex items-start gap-5 text-left">
                 <span className="text-[10px] text-white/20 tracking-widest mt-0.5 font-mono shrink-0">{num}</span>
-                <div className="flex-1 h-px bg-white/[0.07] mt-[9px] shrink-0 w-6 hidden sm:block" />
+                
                 <p className="text-white/45 leading-relaxed opacity-100 text-base text-justify">{text}</p>
               </div>
             )}
