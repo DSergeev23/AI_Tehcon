@@ -2,8 +2,36 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { motion } from 'framer-motion';
 
-// REMINDER: Place all product image files into the /public/images/ folder in your VS Code project.
-// Example: public/images/outreach-schema.png → accessible at /images/outreach-schema.png
+// IMAGES GUIDE:
+// - External URLs  → use full URL starting with "http", e.g. "https://images.unsplash.com/..."
+// - Local files    → place file in /public/images/ and use path "/images/filename.png"
+
+// Renders an image block — supports both external URLs (http...) and local paths (/images/...)
+// Local files must be placed in public/images/ to resolve correctly.
+function ImageBlock({ src, alt }) {
+  const [errored, setErrored] = React.useState(false);
+  const isLocal = src && src.startsWith('/images/');
+  const filename = isLocal ? src.split('/').pop() : null;
+
+  if (errored && isLocal) {
+    return (
+      <div className="my-10 w-full rounded-2xl border border-white/10 bg-white/[0.03] flex items-center justify-center py-14 text-sm text-white/30">
+        Ожидается файл: <span className="ml-1.5 font-mono text-white/50">{filename}</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="my-10">
+      <img
+        src={src}
+        alt={alt}
+        onError={() => setErrored(true)}
+        className="w-full h-auto rounded-2xl border border-white/10 shadow-xl block"
+      />
+    </div>
+  );
+}
 
 const markdownComponents = {
   h2: ({ children }) => (
@@ -59,14 +87,8 @@ export default function SectionsRenderer({ content, fallbackText }) {
           transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
         >
           {block.type === 'image' ? (
-            // REMINDER: Add the image file to public/images/ so this path resolves correctly.
-            <div className="my-12">
-              <img
-                src={block.value}
-                alt={block.alt || ''}
-                className="w-full h-auto rounded-2xl border border-white/10 shadow-2xl block"
-              />
-            </div>
+            <ImageBlock src={block.value} alt={block.alt || ''} />
+          
           ) : (
             <div className="max-w-3xl mb-8 text-lg leading-relaxed text-gray-300">
               <ReactMarkdown components={markdownComponents}>{block.value}</ReactMarkdown>
