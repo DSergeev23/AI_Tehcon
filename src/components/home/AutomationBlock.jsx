@@ -42,35 +42,34 @@ export default function AutomationBlock() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="md:col-span-2 flex flex-col md:pl-12">
+            className="md:col-span-2 flex flex-col md:pl-12 md:items-end">
+            
+            <div className="flex flex-col gap-0" style={{ maxWidth: '300px' }}>
+              <p className="text-[11px] text-white/70 uppercase tracking-[0.2em] mb-5">АВТОМАТИЗАЦИЯ ДЛЯ КОРПОРАЦИЙ</p>
 
-            <div className="flex flex-col max-w-xl">
-              {/* Eyebrow */}
-              <p className="text-xs text-slate-500 uppercase tracking-widest mb-5 font-medium">
-                АВТОМАТИЗАЦИЯ ДЛЯ КОРПОРАЦИЙ
-              </p>
-
-              {/* Headline */}
-              <h2 className="font-inter text-4xl md:text-5xl lg:text-6xl text-white leading-[1.05] tracking-tighter font-extrabold mb-6">
+              <h2
+                className="font-inter text-4xl md:text-5xl text-white leading-tight mb-8"
+                style={{ letterSpacing: '-0.02em', fontWeight: 600 }}>
                 Автоматизация под ключ
               </h2>
 
-              {/* Divider */}
-              <div className="w-10 h-px bg-white/20 mb-7" />
-
-              {/* Body */}
-              <p className="text-slate-400 leading-relaxed text-base max-w-md">
+              <p
+                className="leading-[1.75]"
+                style={{ fontSize: '15px', color: '#A1A1AA' }}>
                 Неважно, какой сложности ваш бизнес, наш Enterprise план создан для тех, кому нужны готовые автоматизированные решения под ключ. Вы описываете свою задачу, а наши специалисты реализуют её с полной поддержкой в минимальные сроки с почасовой оплатой.
               </p>
 
-              {/* CTA */}
-              <div className="mt-10">
-                <Link
-                  to="/contacts"
-                  className="group inline-flex items-center gap-2.5 px-6 py-3.5 bg-white text-black text-sm font-semibold rounded-lg hover:bg-white/90 transition-all duration-200 hover:shadow-[0_0_24px_rgba(255,255,255,0.15)]">
-                  Связаться с отделом продаж
-                  <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
+              <div className="pt-10">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}>
+                  <Link
+                    to="/contacts"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
+                    Связаться с отделом продаж
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                </motion.div>
               </div>
             </div>
           </motion.div>
