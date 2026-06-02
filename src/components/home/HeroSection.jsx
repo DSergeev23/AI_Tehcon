@@ -17,7 +17,7 @@ export default function HeroSection() {
       <span className="absolute bottom-12 left-5 text-white/20 text-xs">+</span>
       <span className="absolute bottom-12 right-5 text-white/20 text-xs">+</span>
 
-      <div className="relative z-10 w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 pt-14 flex flex-col items-center">
+      <div className="relative z-10 w-full mx-auto px-6 md:px-12 lg:px-20 2xl:px-28 3xl:px-40 pt-14 flex flex-col items-center">
         {/* Globe - centered at top */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -31,15 +31,14 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Content below globe */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 2xl:gap-32 w-full -mt-10 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-[55fr_45fr] gap-10 lg:gap-16 2xl:gap-24 w-full -mt-10 pb-20">
           {/* Left: Heading */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
 
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl 3xl:text-9xl text-white leading-[1.0] tracking-tight mb-0">AI агенты и автоматизации 
-для бизнеса</h1>
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-white leading-[1.0] tracking-tight mb-0">AI агенты и автоматизации для бизнеса</h1>
           </motion.div>
 
           {/* Right: Description + CTA */}
@@ -49,7 +48,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col justify-end">
 
-            <p className="text-sm lg:text-base text-white/50 leading-relaxed mb-6 max-w-lg 2xl:max-w-xl">Превращаем 1С, CRM, Excel, Telegram и внутренние системы в единую AI-инфраструктуру управления бизнесом. 
+            <p className="text-sm lg:text-base 2xl:text-lg text-white/50 leading-relaxed mb-6 max-w-none">Превращаем 1С, CRM, Excel, Telegram и внутренние системы в единую AI-инфраструктуру управления бизнесом. 
 Tehcon AI внедряет автономных AI-агентов, которые самостоятельно анализируют данные, контролируют процессы, запускают действия и помогают бизнесу работать быстрее, точнее и дешевле.</p>
             <div>
               <Link to="/catalog"
