@@ -7,7 +7,7 @@ export default function AutomationBlock() {
   return (
     <section className="border-t border-white/[0.08] overflow-hidden">
       <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24" style={{ paddingBlock: '120px' }}>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-20 2xl:gap-32 items-center">
 
           {/* Left: Visual — 60% */}
           <motion.div
@@ -44,14 +44,14 @@ export default function AutomationBlock() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="md:col-span-2 flex flex-col md:pl-12 md:items-end">
             
-            <div className="flex flex-col gap-0 w-full max-w-xs md:max-w-sm 2xl:max-w-5xl">
-              <p className="text-[11px] text-white/70 uppercase tracking-[0.2em] mb-5">АВТОМАТИЗАЦИЯ ДЛЯ КОРПОРАЦИЙ</p>
+            <div className="flex flex-col gap-0 w-full max-w-xl 2xl:max-w-3xl">
+              <p className="text-xs md:text-sm text-slate-500 uppercase tracking-[0.2em] mb-5">АВТОМАТИЗАЦИЯ ДЛЯ КОРПОРАЦИЙ</p>
 
-              <h2 className="font-extrabold text-4xl md:text-6xl 2xl:text-8xl 3xl:text-9xl text-white leading-tight tracking-tighter mb-8 md:mb-12">
+              <h2 className="font-bold text-5xl md:text-7xl 2xl:text-8xl 3xl:text-9xl text-white leading-tight tracking-tighter mb-0">
                 Автоматизация под ключ
               </h2>
 
-              <p className="text-base md:text-xl 2xl:text-2xl 3xl:text-3xl leading-relaxed text-slate-400">
+              <p className="text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl leading-relaxed text-slate-400 mt-6 md:mt-10">
                 Неважно, какой сложности ваш бизнес, наш Enterprise план создан для тех, кому нужны готовые автоматизированные решения под ключ. Наши специалисты реализуют вашу задачу с полной поддержкой в минимальные сроки на базе нашей платформы с почасовой оплатой.
               </p>
 
