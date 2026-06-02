@@ -6,76 +6,60 @@ import { ArrowUpRight } from 'lucide-react';
 export default function AutomationBlock() {
   return (
     <section className="border-t border-white/[0.08] overflow-hidden">
-      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24" style={{ paddingBlock: '120px' }}>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+      <div className="w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-20 2xl:px-28 3xl:px-40 py-24 md:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-          {/* Left: Visual — 60% */}
+          {/* Left: Visual */}
           <motion.div
             initial={{ opacity: 0, x: -32 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="md:col-span-3 relative flex items-center justify-center">
+            className="relative flex items-center justify-center order-2 lg:order-1">
             
-            {/* Subtle ambient glow behind image */}
             <div className="absolute inset-0 rounded-2xl"
-            style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(255,255,255,0.04) 0%, transparent 70%)' }} />
-            
+              style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(255,255,255,0.04) 0%, transparent 70%)' }} />
 
-            {/* Floating image */}
             <motion.img
               src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/46a529f43_image.png"
               alt="AI Автоматизация"
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="relative z-10 w-full h-auto"
-              style={{
-                filter: 'drop-shadow(0 0 50px rgba(255,255,255,0.05))',
-                marginBottom: '-24px'
-              }} />
-            
+              className="relative z-10 w-full max-w-lg lg:max-w-none h-auto mx-auto"
+              style={{ filter: 'drop-shadow(0 0 50px rgba(255,255,255,0.05))' }} />
           </motion.div>
 
-          {/* Right: Content — 40% */}
+          {/* Right: Content */}
           <motion.div
             initial={{ opacity: 0, x: 32 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="md:col-span-2 flex flex-col md:pl-12 md:items-end">
-            
-            <div className="flex flex-col gap-0" style={{ maxWidth: '300px' }}>
-              <p className="text-[11px] text-white/70 uppercase tracking-[0.2em] mb-5">АВТОМАТИЗАЦИЯ ДЛЯ КОРПОРАЦИЙ</p>
+            className="flex flex-col order-1 lg:order-2">
 
-              <h2
-                className="font-inter text-4xl md:text-5xl text-white leading-tight mb-8"
-                style={{ letterSpacing: '-0.02em', fontWeight: 600 }}>
-                Автоматизация под ключ
-              </h2>
+            <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] mb-6">Автоматизация для корпораций</p>
 
-              <p
-                className="leading-[1.75]"
-                style={{ fontSize: '15px', color: '#A1A1AA' }}>
-                Неважно, какой сложности ваш бизнес, наш Enterprise план создан для тех, кому нужны готовые автоматизированные решения под ключ. Вы описываете свою задачу, а наши специалисты реализуют её с полной поддержкой в минимальные сроки с почасовой оплатой.
-              </p>
+            <h2 className="font-serif text-4xl md:text-5xl xl:text-6xl text-white leading-tight tracking-tight mb-6">
+              Автоматизация<br />под ключ
+            </h2>
 
-              <div className="pt-10">
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}>
-                  <Link
-                    to="/contacts"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
-                    Связаться с отделом продаж
-                    <ArrowUpRight className="w-4 h-4" />
-                  </Link>
-                </motion.div>
-              </div>
-            </div>
+            <div className="w-8 h-px bg-white/20 mb-6" />
+
+            <p className="text-sm md:text-base text-white/50 leading-relaxed mb-10 max-w-lg">
+              Неважно, какой сложности ваш бизнес — наш Enterprise план создан для тех, кому нужны готовые автоматизированные решения под ключ. Вы описываете свою задачу, а наши специалисты реализуют её с полной поддержкой в минимальные сроки с почасовой оплатой.
+            </p>
+
+            <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+              <Link
+                to="/contacts"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
+                Связаться с отделом продаж
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
           </motion.div>
 
         </div>
       </div>
     </section>);
-
 }
