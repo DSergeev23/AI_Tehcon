@@ -36,16 +36,28 @@ export default function CTASection() {
         </motion.h2>
 
         {/* Body */}
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          style={{ fontSize: '14px', lineHeight: '1.75', color: 'rgba(255,255,255,0.38)', maxWidth: '520px', marginBottom: '56px' }}
-          className="mx-auto"
+          className="mx-auto mb-14"
+          style={{ maxWidth: '560px' }}
         >
-          Найдем 3–5 процессов, где ваш бизнес теряет деньги на ручной работе. Покажем, что можно автоматизировать в вашей 1С, CRM и таблицах. За 30–60 минут найдем процессы, которые можно сократить в 5–10 раз.
-        </motion.p>
+          <div className="flex flex-col gap-4">
+            {[
+              { num: '01', text: 'Найдём 3–5 процессов, где бизнес теряет деньги на ручной работе' },
+              { num: '02', text: 'Покажем, что можно автоматизировать в вашей 1С, CRM и таблицах' },
+              { num: '03', text: 'За 30–60 минут — процессы, которые сократятся в 5–10 раз' },
+            ].map(({ num, text }) => (
+              <div key={num} className="flex items-start gap-5 text-left">
+                <span className="text-[10px] text-white/20 tracking-widest mt-0.5 font-mono shrink-0">{num}</span>
+                <div className="flex-1 h-px bg-white/[0.07] mt-[9px] shrink-0 w-6 hidden sm:block" />
+                <p className="text-sm text-white/45 leading-relaxed">{text}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* CTA */}
         <motion.div
