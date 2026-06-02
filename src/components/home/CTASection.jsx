@@ -18,8 +18,8 @@ export default function CTASection() {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#666', marginBottom: '28px' }}
-          className="uppercase"
-        >
+          className="uppercase">
+          
           Никакого хайпа вокруг ИИ. Только результаты.
         </motion.p>
 
@@ -30,8 +30,8 @@ export default function CTASection() {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="font-serif text-white"
-          style={{ fontSize: 'clamp(48px, 5vw, 100px)', lineHeight: '1.1', letterSpacing: '-0.02em', marginBottom: '40px' }}
-        >
+          style={{ fontSize: 'clamp(48px, 5vw, 100px)', lineHeight: '1.1', letterSpacing: '-0.02em', marginBottom: '40px' }}>
+          
           Готовы трансформировать<br />бизнес с ИИ?
         </motion.h2>
 
@@ -42,20 +42,20 @@ export default function CTASection() {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto mb-14"
-          style={{ maxWidth: '560px' }}
-        >
+          style={{ maxWidth: '560px' }}>
+          
           <div className="flex flex-col gap-4">
             {[
-              { num: '01', text: 'Найдём 3–5 процессов, где бизнес теряет деньги на ручной работе' },
-              { num: '02', text: 'Покажем, что можно автоматизировать в вашей 1С, CRM и таблицах' },
-              { num: '03', text: 'За 30–60 минут — процессы, которые сократятся в 5–10 раз' },
-            ].map(({ num, text }) => (
-              <div key={num} className="flex items-start gap-5 text-left">
+            { num: '01', text: 'Найдём 3–5 процессов, где бизнес теряет деньги на ручной работе' },
+            { num: '02', text: 'Покажем, что можно автоматизировать в вашей 1С, CRM и таблицах' },
+            { num: '03', text: 'За 30–60 минут — процессы, которые сократятся в 5–10 раз' }].
+            map(({ num, text }) =>
+            <div key={num} className="flex items-start gap-5 text-left">
                 <span className="text-[10px] text-white/20 tracking-widest mt-0.5 font-mono shrink-0">{num}</span>
                 <div className="flex-1 h-px bg-white/[0.07] mt-[9px] shrink-0 w-6 hidden sm:block" />
-                <p className="text-sm text-white/45 leading-relaxed">{text}</p>
+                <p className="text-white/45 leading-relaxed opacity-100 text-base text-justify">{text}</p>
               </div>
-            ))}
+            )}
           </div>
         </motion.div>
 
@@ -64,17 +64,17 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-        >
+          transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>
+          
           <Link
             to="/contacts"
             className="inline-flex items-center gap-2 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors"
-            style={{ padding: '12px 36px' }}
-          >
+            style={{ padding: '12px 36px' }}>
+            
             Получить аудит
           </Link>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
