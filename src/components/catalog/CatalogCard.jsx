@@ -51,12 +51,12 @@ export default function CatalogCard({ product, index }) {
           <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-1.5">{product.category}</p>
 
           {/* Title */}
-          <h3 className="text-sm font-semibold text-white mb-3 leading-snug tracking-tight group-hover:text-white transition-colors">
+          <h3 className="text-sm font-bold text-white mb-3 leading-snug tracking-[-0.02em] group-hover:text-white transition-colors">
             {product.title}
           </h3>
 
           {/* Description */}
-          <p className="text-xs text-white/40 leading-relaxed mb-6 line-clamp-2">
+          <p className="text-xs text-slate-400 leading-relaxed mb-6 line-clamp-2">
             {product.shortDescription}
           </p>
 

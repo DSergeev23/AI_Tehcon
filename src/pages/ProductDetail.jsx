@@ -80,7 +80,7 @@ export default function ProductDetail() {
               </div>
               <div>
                 <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-1">{product.category}</p>
-                <h1 className="font-serif text-4xl md:text-5xl 2xl:text-6xl text-white tracking-tight leading-tight">{product.title}</h1>
+                <h1 className="font-inter font-extrabold text-4xl md:text-5xl 2xl:text-6xl text-white tracking-[-0.04em] leading-[0.95]">{product.title}</h1>
               </div>
             </div>
 
