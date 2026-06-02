@@ -53,7 +53,7 @@ export default function AutomationBlock() {
               Автоматизация для корпораций
             </p>
 
-            <h2 className="font-serif text-5xl md:text-7xl 2xl:text-8xl 3xl:text-9xl text-white leading-tight tracking-tighter font-bold mb-6 2xl:mb-10">
+            <h2 className="font-inter text-5xl md:text-7xl 2xl:text-8xl 3xl:text-9xl text-white leading-tight tracking-tight font-semibold mb-6 2xl:mb-10" style={{ letterSpacing: '-0.02em' }}>
               Автоматизация<br />под ключ
             </h2>
 
