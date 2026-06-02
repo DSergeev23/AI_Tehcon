@@ -44,19 +44,15 @@ export default function AutomationBlock() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="md:col-span-2 flex flex-col md:pl-12 md:items-end">
             
-            <div className="flex flex-col gap-0" style={{ maxWidth: '300px' }}>
+            <div className="flex flex-col gap-0 w-full max-w-xs md:max-w-sm 2xl:max-w-5xl">
               <p className="text-[11px] text-white/70 uppercase tracking-[0.2em] mb-5">АВТОМАТИЗАЦИЯ ДЛЯ КОРПОРАЦИЙ</p>
 
-              <h2
-                className="font-inter text-4xl md:text-5xl text-white leading-tight mb-8"
-                style={{ letterSpacing: '-0.02em', fontWeight: 600 }}>
+              <h2 className="font-extrabold text-4xl md:text-6xl 2xl:text-8xl 3xl:text-9xl text-white leading-tight tracking-tighter mb-8 md:mb-12">
                 Автоматизация под ключ
               </h2>
 
-              <p
-                className="leading-[1.75]"
-                style={{ fontSize: '15px', color: '#A1A1AA' }}>
-                Неважно, какой сложности ваш бизнес, наш Enterprise план создан для тех, кому нужны готовые автоматизированные решения под ключ. Вы описываете свою задачу, а наши специалисты реализуют её с полной поддержкой в минимальные сроки с почасовой оплатой.
+              <p className="text-base md:text-xl 2xl:text-2xl 3xl:text-3xl leading-relaxed text-slate-400">
+                Неважно, какой сложности ваш бизнес, наш Enterprise план создан для тех, кому нужны готовые автоматизированные решения под ключ. Наши специалисты реализуют вашу задачу с полной поддержкой в минимальные сроки на базе нашей платформы с почасовой оплатой.
               </p>
 
               <div className="pt-10">
@@ -65,9 +61,9 @@ export default function AutomationBlock() {
                   transition={{ duration: 0.2 }}>
                   <Link
                     to="/contacts"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
+                    className="inline-flex items-center gap-2 px-6 py-3 2xl:px-12 2xl:py-6 2xl:text-2xl 2xl:rounded-2xl bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
                     Связаться с отделом продаж
-                    <ArrowUpRight className="w-4 h-4" />
+                    <ArrowUpRight className="w-4 h-4 2xl:w-6 2xl:h-6" />
                   </Link>
                 </motion.div>
               </div>
