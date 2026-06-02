@@ -15,7 +15,7 @@ export default function AutomationBlock() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="relative flex items-center justify-center order-2 lg:order-1">
+            className="relative flex items-center justify-center order-2 lg:order-1 ml-5">
             
             <div className="absolute inset-0 rounded-2xl"
               style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(255,255,255,0.04) 0%, transparent 70%)' }} />
