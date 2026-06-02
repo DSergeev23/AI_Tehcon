@@ -52,7 +52,7 @@ export default function About() {
               <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
               О компании
             </div>
-            <h1 className="font-inter font-extrabold text-5xl md:text-6xl 2xl:text-7xl text-white tracking-[-0.04em] leading-[0.95]">
+            <h1 className="font-serif text-5xl md:text-6xl 2xl:text-7xl text-white tracking-tight leading-tight">
               Создаём будущее<br />с помощью ИИ
             </h1>
           </motion.div>
@@ -62,7 +62,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-base text-slate-300 leading-relaxed mb-6">
+            <p className="text-sm text-white/50 leading-relaxed mb-6">
               NEXUS.AI — агентство интеллектуальной автоматизации. Объединяем экспертизу в машинном обучении с глубоким пониманием бизнес-процессов.
             </p>
             <p className="text-sm text-white/35 leading-relaxed">
@@ -79,7 +79,7 @@ export default function About() {
             {stats.map((s, i) => (
               <RevealOnScroll key={i} delay={i * 0.06}>
                 <div className={`py-10 px-7 text-center ${i < 3 ? 'border-r border-white/[0.08]' : ''}`}>
-                  <div className="text-3xl font-inter font-bold text-white tracking-tight mb-1">{s.num}</div>
+                  <div className="text-3xl font-serif text-white tracking-tight mb-1">{s.num}</div>
                   <div className="text-xs text-white/35">{s.label}</div>
                 </div>
               </RevealOnScroll>
@@ -95,7 +95,7 @@ export default function About() {
             <RevealOnScroll>
               <div className="p-10 border-r border-white/[0.08]">
                 <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-6">Миссия</p>
-                <h2 className="font-inter font-bold text-3xl text-white tracking-[-0.03em] leading-tight mb-5">
+                <h2 className="font-serif text-3xl text-white tracking-tight leading-tight mb-5">
                   Делаем ИИ доступным<br />для каждого бизнеса
                 </h2>
                 <p className="text-sm text-white/45 leading-relaxed">

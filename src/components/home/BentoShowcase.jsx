@@ -39,7 +39,7 @@ export default function BentoShowcase() {
                   <Zap className="w-3 h-3" />
                   Автономные агенты
                 </div>
-                <h2 className="font-inter font-extrabold text-4xl md:text-5xl 2xl:text-6xl text-white leading-[0.95] tracking-[-0.04em] mb-4">Бизнес работает, пока вы принимаете решения
+                <h2 className="font-serif text-4xl md:text-5xl 2xl:text-6xl text-white leading-tight tracking-tight mb-4">Бизнес работает, пока вы принимаете решения
 
 
                 </h2>
@@ -52,7 +52,7 @@ export default function BentoShowcase() {
                 <div className="flex gap-6">
                   {metrics.map((m, i) =>
                   <div key={i}>
-                      <div className="text-2xl font-inter font-bold text-white tracking-tight">{m.value}</div>
+                      <div className="text-2xl font-serif text-white tracking-tight">{m.value}</div>
                       <div className="text-[10px] text-white/35 mt-0.5">{m.label}</div>
                     </div>
                   )}
@@ -72,7 +72,7 @@ export default function BentoShowcase() {
 
               <div className="relative z-10">
                 
-                <h3 className="font-inter font-bold text-2xl text-white tracking-[-0.03em] leading-tight mb-4">Операционный интеллект
+                <h3 className="font-serif text-3xl text-white tracking-tight leading-tight mb-4">ОПЕРАЦИОННЫЙ ИНТЕЛЛЕКТ
 
                 </h3>
                 <p className="text-xs text-white/50 font-semibold mb-3">Что делает Tehcon AI</p>

@@ -35,13 +35,13 @@ function ImageBlock({ src, alt }) {
 
 const markdownComponents = {
   h2: ({ children }) => (
-    <h2 className="font-inter font-bold text-2xl md:text-3xl text-white tracking-[-0.03em] leading-tight mt-12 mb-4">{children}</h2>
+    <h2 className="font-serif text-2xl md:text-3xl text-white tracking-tight leading-tight mt-12 mb-4">{children}</h2>
   ),
   h3: ({ children }) => (
-    <h3 className="font-inter font-bold text-xl md:text-2xl text-white tracking-[-0.025em] leading-tight mt-8 mb-3">{children}</h3>
+    <h3 className="font-serif text-xl md:text-2xl text-white tracking-tight leading-tight mt-8 mb-3">{children}</h3>
   ),
   p: ({ children }) => (
-    <p className="text-base md:text-lg leading-relaxed text-slate-300 mb-6">{children}</p>
+    <p className="text-lg leading-relaxed text-gray-300 mb-6">{children}</p>
   ),
   strong: ({ children }) => (
     <strong className="text-white font-semibold">{children}</strong>

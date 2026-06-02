@@ -43,10 +43,10 @@ export default function Catalog() {
               <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
               Каталог решений
             </div>
-            <h1 className="font-inter font-extrabold text-5xl md:text-6xl 2xl:text-7xl text-white tracking-[-0.04em] leading-[0.95] mb-4">
+            <h1 className="font-serif text-5xl md:text-6xl 2xl:text-7xl text-white tracking-tight leading-tight mb-4">
               ИИ-решения<br />для бизнеса
             </h1>
-            <p className="text-base text-slate-400 max-w-md leading-relaxed">
+            <p className="text-sm text-white/40 max-w-md leading-relaxed">
               Готовые продукты и кастомные решения для автоматизации любых бизнес-процессов
             </p>
           </motion.div>
