@@ -6,6 +6,7 @@ import { getProductById } from '../lib/catalogData';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
 import SEOHead from '../components/shared/SEOHead';
 import { getProductSEO } from '../lib/seoConfig';
+import ProductGallery from '../components/catalog/ProductGallery';
 
 const iconMap = { UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic };
 
@@ -106,6 +107,13 @@ export default function ProductDetail() {
                 <p className="text-sm text-white/60 leading-relaxed">{product.fullDescription}</p>
               </div>
             </RevealOnScroll>
+
+            {/* Gallery */}
+            {product.galleryImages && (
+              <RevealOnScroll delay={0.05}>
+                <ProductGallery images={product.galleryImages} />
+              </RevealOnScroll>
+            )}
 
             {/* How it works */}
             <RevealOnScroll delay={0.05}>
