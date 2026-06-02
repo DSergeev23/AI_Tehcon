@@ -43,13 +43,6 @@ export const catalogProducts = [
     category: "Продажи",
     tags: ["Telegram", "Лидогенерация", "Холодные рассылки", "ИИ-персонализация", "Мультиканал"],
     color: "blue",
-    galleryImages: [
-      { src: "https://placehold.co/1200x675/0a0a0a/ffffff?text=Панель+управления+рассылками", caption: "Главная панель управления рассылками" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Google+Таблица+с+базой", caption: "Интерфейс загрузки базы в Google Таблицах" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Диалоги+в+Telegram", caption: "Реальные диалоги агента с лидами" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Аналитика+и+отчёты", caption: "Аналитика конверсий и KPI" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Настройка+оффера", caption: "Конструктор персонализированного оффера" },
-    ],
     specs: {
       "Продуктивность": "15 200+ касаний/мес (с 40 аккаунтов)",
       "Персонализация": "ИИ-генерация уникальных сообщений для каждого клиента",
@@ -87,12 +80,6 @@ export const catalogProducts = [
     category: "Поддержка",
     tags: ["Мультиканал", "24/7"],
     color: "purple",
-    galleryImages: [
-      { src: "https://placehold.co/1200x675/0a0a0a/ffffff?text=Омниканальный+хаб", caption: "Омниканальный хаб входящих обращений" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Чат+с+ИИ+агентом", caption: "Live-диалог ИИ-агента с клиентом" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Дашборд+NPS", caption: "Дашборд метрик NPS и SLA" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=База+знаний", caption: "Редактор базы знаний агента" },
-    ],
     specs: {
       "Автоматизация": "87% запросов",
       "Каналы": "Чат, Email, Telegram, WhatsApp",
@@ -124,12 +111,6 @@ export const catalogProducts = [
     category: "Документы",
     tags: ["OCR", "NLP", "API"],
     color: "cyan",
-    galleryImages: [
-      { src: "https://placehold.co/1200x675/0a0a0a/ffffff?text=Обработка+документов", caption: "Интерфейс загрузки и обработки документов" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=OCR+Распознавание", caption: "Пример работы OCR-движка" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Извлечённые+данные", caption: "Структурированные данные после обработки" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=API+Интеграция", caption: "Интеграция с внешними системами через API" },
-    ],
     specs: {
       "Точность OCR": "99.2%",
       "Форматы": "PDF, DOCX, JPG, PNG, TIFF",
@@ -161,12 +142,6 @@ export const catalogProducts = [
     category: "Маркетинг",
     tags: ["Контент", "SMM", "Новинка"],
     color: "pink",
-    galleryImages: [
-      { src: "https://placehold.co/1200x675/0a0a0a/ffffff?text=Контент+Редактор", caption: "ИИ-редактор контента с превью" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Контент-Календарь", caption: "Умный контент-календарь публикаций" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=A/B+Тесты", caption: "Панель управления A/B тестами" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Аналитика+Engagement", caption: "Аналитика охвата и вовлечённости" },
-    ],
     specs: {
       "Платформы": "VK, Telegram, Instagram, YouTube",
       "Форматы": "Текст, изображения, Reels",
@@ -198,12 +173,6 @@ export const catalogProducts = [
     category: "Аналитика",
     tags: ["ML", "Big Data", "API"],
     color: "green",
-    galleryImages: [
-      { src: "https://placehold.co/1200x675/0a0a0a/ffffff?text=Прогнозный+Дашборд", caption: "Интерактивный дашборд прогнозов" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Анализ+Аномалий", caption: "Детектор аномалий и отклонений" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Коннекторы+Данных", caption: "Библиотека коннекторов источников данных" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Автоматические+Алерты", caption: "Настройка алертов и уведомлений" },
-    ],
     specs: {
       "Точность прогноза": "92.3%",
       "Горизонт": "До 12 месяцев",
@@ -235,12 +204,6 @@ export const catalogProducts = [
     category: "Телефония",
     tags: ["Voice AI", "Телефония"],
     color: "orange",
-    galleryImages: [
-      { src: "https://placehold.co/1200x675/0a0a0a/ffffff?text=Конструктор+Сценариев", caption: "Визуальный конструктор диалоговых сценариев" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Мониторинг+Звонков", caption: "Real-time мониторинг активных звонков" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=Анализ+Эмоций", caption: "Визуализация распознавания эмоций" },
-      { src: "https://placehold.co/800x600/0d0d0d/ffffff?text=CRM+Интеграция", caption: "Интеграция результатов звонков с CRM" },
-    ],
     specs: {
       "Распознавание речи": "98.5%",
       "Задержка": "< 300мс",
