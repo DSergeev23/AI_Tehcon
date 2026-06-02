@@ -31,40 +31,29 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Content below globe */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 w-full -mt-10 pb-20">
-          {/* Left: Badge + Heading */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 2xl:gap-32 w-full -mt-10 pb-20">
+          {/* Left: Heading */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="md:pl-16">
-            
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.12] rounded text-[11px] text-white/50 mb-6 hidden">
-              <div className="w-3.5 h-3.5 grid grid-cols-2 gap-0.5">
-                <div className="bg-white/60 rounded-[1px]" />
-                <div className="bg-white/20 rounded-[1px]" />
-                <div className="bg-white/20 rounded-[1px]" />
-                <div className="bg-white/60 rounded-[1px]" />
-              </div>
-              Стать бета-партнёром
-            </div>
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
 
-            <h1 className="font-serif text-5xl md:text-6xl 2xl:text-7xl 3xl:text-8xl text-white leading-[1.0] tracking-tight mb-0">AI агенты и автоматизации 
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl 3xl:text-9xl text-white leading-[1.0] tracking-tight mb-0">AI агенты и автоматизации 
 для бизнеса</h1>
           </motion.div>
 
           {/* Right: Description + CTA */}
-          <motion.div initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col justify-end md:col-start-2 md:pl-20">
-            
-            <p className="text-sm text-white/50 leading-relaxed mb-6 max-w-sm">Превращаем 1С, CRM, Excel, Telegram и внутренние системы в единую AI-инфраструктуру управления бизнесом. 
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col justify-end">
+
+            <p className="text-sm lg:text-base text-white/50 leading-relaxed mb-6 max-w-lg 2xl:max-w-xl">Превращаем 1С, CRM, Excel, Telegram и внутренние системы в единую AI-инфраструктуру управления бизнесом. 
 Tehcon AI внедряет автономных AI-агентов, которые самостоятельно анализируют данные, контролируют процессы, запускают действия и помогают бизнесу работать быстрее, точнее и дешевле.</p>
             <div>
               <Link to="/catalog"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors">
-                
                 Смотреть каталог
                 <Plus className="w-4 h-4" />
               </Link>
