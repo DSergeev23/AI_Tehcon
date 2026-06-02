@@ -98,7 +98,7 @@ export default function ProductDetail() {
             {/* Long-read content constrained to readable width */}
             <div className="max-w-3xl">
               <RevealOnScroll>
-                <SectionsRenderer sections={product.sections} fallbackText={product.fullDescription} />
+                <SectionsRenderer content={product.content} fallbackText={product.fullDescription} />
               </RevealOnScroll>
 
               {/* How it works */}
