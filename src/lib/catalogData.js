@@ -48,7 +48,7 @@ export const catalogProducts = [
       },
       {
         type: 'image',
-        value: 'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=1200&q=85',
+        value: '/images/ai_schema.png',
         alt: 'Сравнение: ручная рассылка vs AI-агент'
       },
       {
