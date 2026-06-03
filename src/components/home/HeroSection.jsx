@@ -38,7 +38,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
 
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-white leading-[1.0] tracking-tight mb-0">AI агенты и автоматизации для бизнеса</h1>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white leading-[1.0] tracking-tight mb-0">AI агенты и автоматизации для бизнеса</h1>
           </motion.div>
 
           {/* Right: Description + CTA */}
