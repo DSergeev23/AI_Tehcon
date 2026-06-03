@@ -135,7 +135,7 @@ export default function TermsOfUse() {
   return (
     <div className="min-h-screen bg-black pt-14">
       <SEOHead
-        title="Условия использования | Tehcon AI"
+        title="Tehcon AI"
         description="Условия использования сайта Tehcon AI: правила доступа к сайту, ограничения ответственности, интеллектуальная собственность и порядок взаимодействия с пользователями."
         canonical="/terms-of-use"
       />

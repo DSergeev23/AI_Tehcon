@@ -4,25 +4,25 @@ export const DEFAULT_OG_IMAGE = 'https://ai-tehcon.ru/og-image.jpg';
 
 export const pageSEO = {
   home: {
-    title: 'Tehcon AI — Автоматизация бизнес-процессов с помощью ИИ агентов',
+    title: 'Tehcon AI',
     description: 'Tehcon AI разрабатывает автономных ИИ агентов для автоматизации бизнес-процессов. Интеграция нейросетей в 1С, CRM, Telegram. Первые результаты за 14 дней. Экономия до 4 млн ₽/год.',
     canonical: '/',
     keywords: 'ИИ агенты, автоматизация бизнеса, разработка AI решений, интеграция нейросетей, искусственный интеллект для бизнеса',
   },
   about: {
-    title: 'О компании Tehcon AI — Разработка AI решений и ИИ агентов',
+    title: 'Tehcon AI',
     description: 'Tehcon AI — команда экспертов по разработке AI решений и интеграции нейросетей в бизнес. Автоматизируем процессы в 1С, CRM, мессенджерах. Узнайте о нашем подходе и ценностях.',
     canonical: '/about',
     keywords: 'Tehcon AI, разработка AI решений, команда, ИИ агенты, автоматизация',
   },
   catalog: {
-    title: 'Каталог ИИ агентов — Готовые решения для автоматизации бизнеса | Tehcon AI',
+    title: 'Tehcon AI',
     description: 'Готовые ИИ агенты для продаж, поддержки клиентов, аналитики и маркетинга. Интеграция нейросетей в бизнес-процессы от 55 000 ₽/мес. Быстрое внедрение от 14 дней.',
     canonical: '/catalog',
     keywords: 'каталог ИИ агентов, автоматизация продаж, поддержка клиентов AI, предиктивная аналитика',
   },
   contacts: {
-    title: 'Контакты — Обсудить автоматизацию бизнеса с ИИ | Tehcon AI',
+    title: 'Tehcon AI',
     description: 'Свяжитесь с Tehcon AI для бесплатного аудита бизнес-процессов. Найдём 3–5 точек роста и покажем, как ИИ агенты сократят расходы и увеличат эффективность вашего бизнеса.',
     canonical: '/contacts',
     keywords: 'контакты Tehcon AI, аудит бизнес-процессов, консультация по AI',
@@ -31,7 +31,7 @@ export const pageSEO = {
 
 export function getProductSEO(product) {
   return {
-    title: `${product.title} — ИИ агент для автоматизации бизнеса | Tehcon AI`,
+    title: 'Tehcon AI',
     description: `${product.shortDescription} Цена: ${product.pricing}. Интеграция нейросетей, разработка AI решений и автоматизация бизнес-процессов с Tehcon AI.`,
     canonical: `/catalog/${product.id}`,
     keywords: `${product.title}, ${product.category}, ИИ агент, автоматизация бизнеса, ${product.tags?.join(', ')}`,

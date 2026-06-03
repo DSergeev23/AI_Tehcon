@@ -21,7 +21,7 @@ export default function Contacts() {
 
   return (
     <div className="min-h-screen bg-black pt-14">
-      <SEOHead {...pageSEO.contacts} />
+      <SEOHead title="Tehcon AI" description={pageSEO.contacts.description} canonical={pageSEO.contacts.canonical} />
       {/* Header */}
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
