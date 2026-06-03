@@ -106,7 +106,7 @@ export default function Footer() {
           </div>
 
           {/* Col 3 — Solutions */}
-          <div>
+          <div className="hidden">
             <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Решения</p>
             <div className="flex flex-col gap-3">
               {solutions.map((l) =>
