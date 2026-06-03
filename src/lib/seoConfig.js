@@ -1,6 +1,6 @@
 export const SITE_URL = 'https://ai-tehcon.ru';
 export const SITE_NAME = 'Tehcon AI';
-export const DEFAULT_OG_IMAGE = 'https://ai-tehcon.ru/og-image.jpg';
+export const DEFAULT_OG_IMAGE = 'https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/b29535303_generated_image.png';
 
 export const pageSEO = {
   home: {
