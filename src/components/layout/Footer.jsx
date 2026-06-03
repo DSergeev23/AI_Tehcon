@@ -82,16 +82,16 @@ export default function Footer() {
                 
                 <Send className="w-3.5 h-3.5" />
               </motion.a>
-              <motion.a
-                href="https://linkedin.com/company/tehconai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-white/40 hover:text-white/80 hover:border-white/25 transition-colors hidden"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.15 }}>
-                
-                <Linkedin className="w-3.5 h-3.5" />
-              </motion.a>
+              
+
+
+
+
+
+
+
+
+              
             </div>
           </div>
 
