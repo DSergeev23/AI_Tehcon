@@ -13,6 +13,8 @@ import About from './pages/About';
 import Catalog from './pages/Catalog';
 import ProductDetail from './pages/ProductDetail';
 import Contacts from './pages/Contacts';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfUse from './pages/TermsOfUse';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -38,6 +40,8 @@ const AuthenticatedApp = () => {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/catalog/:id" element={<ProductDetail />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

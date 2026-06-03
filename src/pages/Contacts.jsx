@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Plus, CheckCircle2 } from 'lucide-react';
 import SEOHead from '../components/shared/SEOHead';
@@ -10,9 +11,11 @@ import RevealOnScroll from '../components/shared/RevealOnScroll';
 export default function Contacts() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
+  const [consent, setConsent] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!consent) return;
     setSubmitted(true);
   };
 
@@ -138,9 +141,36 @@ export default function Contacts() {
                   
                   </div>
 
+                  {/* Consent checkbox */}
+                  <label className="flex items-start gap-3 cursor-pointer group mt-2">
+                    <div className="relative mt-0.5 shrink-0">
+                      <input
+                        type="checkbox"
+                        checked={consent}
+                        onChange={(e) => setConsent(e.target.checked)}
+                        className="sr-only"
+                      />
+                      <div className={`w-4 h-4 rounded-[3px] border transition-colors ${consent ? 'bg-white border-white' : 'border-white/20 bg-white/[0.03] group-hover:border-white/35'}`}>
+                        {consent && (
+                          <svg className="w-4 h-4 text-black" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+                    </div>
+                    <span className="text-[12px] text-white/35 leading-relaxed">
+                      Я соглашаюсь с{' '}
+                      <Link to="/privacy-policy" className="text-white/55 underline underline-offset-2 hover:text-white/80 transition-colors">
+                        Политикой конфиденциальности
+                      </Link>{' '}
+                      и даю согласие на обработку персональных данных.
+                    </span>
+                  </label>
+
                   <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
+                  disabled={!consent}
+                  className="w-full flex items-center justify-center gap-2 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white">
                   
                     Отправить заявку <Plus className="w-4 h-4" />
                   </button>

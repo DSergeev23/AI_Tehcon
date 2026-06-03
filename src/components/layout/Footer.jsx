@@ -21,8 +21,8 @@ const solutions = [
 
 
 const legal = [
-{ label: 'Политика конфиденциальности', to: '/privacy' },
-{ label: 'Условия использования', to: '/terms' }];
+{ label: 'Политика конфиденциальности', to: '/privacy-policy' },
+{ label: 'Условия использования', to: '/terms-of-use' }];
 
 
 function FooterLink({ to, children, external }) {
