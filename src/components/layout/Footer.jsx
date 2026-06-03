@@ -4,26 +4,26 @@ import { motion } from 'framer-motion';
 import { Send, Linkedin } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Главная', to: '/' },
-  { label: 'О компании', to: '/about' },
-  { label: 'Каталог решений', to: '/catalog' },
-  { label: 'Контакты', to: '/contacts' },
-];
+{ label: 'Главная', to: '/' },
+{ label: 'О компании', to: '/about' },
+{ label: 'Каталог решений', to: '/catalog' },
+{ label: 'Контакты', to: '/contacts' }];
+
 
 const solutions = [
-  { label: 'ИИ-Лидогенерация в Telegram', to: '/catalog/telegram-lead-generator' },
-  { label: 'Автоматизация поддержки', to: '/catalog/customer-support-automation' },
-  { label: 'Анализ документов', to: '/catalog/document-analyzer' },
-  { label: 'Генератор контента', to: '/catalog/content-generator' },
-  { label: 'Предиктивная аналитика', to: '/catalog/predictive-analytics' },
-  { label: 'ИИ-Агент для рассылок', to: '/catalog/outreach-ai-agent' },
-  { label: 'Голосовой ИИ-ассистент', to: '/catalog/voice-ai-assistant' },
-];
+{ label: 'ИИ-Лидогенерация в Telegram', to: '/catalog/telegram-lead-generator' },
+{ label: 'Автоматизация поддержки', to: '/catalog/customer-support-automation' },
+{ label: 'Анализ документов', to: '/catalog/document-analyzer' },
+{ label: 'Генератор контента', to: '/catalog/content-generator' },
+{ label: 'Предиктивная аналитика', to: '/catalog/predictive-analytics' },
+{ label: 'ИИ-Агент для рассылок', to: '/catalog/outreach-ai-agent' },
+{ label: 'Голосовой ИИ-ассистент', to: '/catalog/voice-ai-assistant' }];
+
 
 const legal = [
-  { label: 'Политика конфиденциальности', to: '/privacy' },
-  { label: 'Условия использования', to: '/terms' },
-];
+{ label: 'Политика конфиденциальности', to: '/privacy' },
+{ label: 'Условия использования', to: '/terms' }];
+
 
 function FooterLink({ to, children, external }) {
   const base = "text-[13px] text-white/40 leading-snug transition-colors duration-200 hover:text-white/80";
@@ -35,17 +35,17 @@ function FooterLink({ to, children, external }) {
         rel="noopener noreferrer"
         className={base}
         whileHover={{ x: 2 }}
-        transition={{ duration: 0.15 }}
-      >
+        transition={{ duration: 0.15 }}>
+        
         {children}
-      </motion.a>
-    );
+      </motion.a>);
+
   }
   return (
     <motion.div whileHover={{ x: 2 }} transition={{ duration: 0.15 }}>
       <Link to={to} className={base}>{children}</Link>
-    </motion.div>
-  );
+    </motion.div>);
+
 }
 
 export default function Footer() {
@@ -78,18 +78,18 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-white/40 hover:text-white/80 hover:border-white/25 transition-colors"
                 whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.15 }}
-              >
+                transition={{ duration: 0.15 }}>
+                
                 <Send className="w-3.5 h-3.5" />
               </motion.a>
               <motion.a
                 href="https://linkedin.com/company/tehconai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-white/40 hover:text-white/80 hover:border-white/25 transition-colors"
+                className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-white/40 hover:text-white/80 hover:border-white/25 transition-colors hidden"
                 whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.15 }}
-              >
+                transition={{ duration: 0.15 }}>
+                
                 <Linkedin className="w-3.5 h-3.5" />
               </motion.a>
             </div>
@@ -99,9 +99,9 @@ export default function Footer() {
           <div>
             <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Навигация</p>
             <div className="flex flex-col gap-3">
-              {navLinks.map(l => (
-                <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
-              ))}
+              {navLinks.map((l) =>
+              <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
+              )}
             </div>
           </div>
 
@@ -109,9 +109,9 @@ export default function Footer() {
           <div>
             <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Решения</p>
             <div className="flex flex-col gap-3">
-              {solutions.map(l => (
-                <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
-              ))}
+              {solutions.map((l) =>
+              <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
+              )}
             </div>
           </div>
 
@@ -125,9 +125,9 @@ export default function Footer() {
             <div className="mt-8">
               <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Правовое</p>
               <div className="flex flex-col gap-3">
-                {legal.map(l => (
-                  <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
-                ))}
+                {legal.map((l) =>
+                <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
+                )}
               </div>
             </div>
           </div>
@@ -137,17 +137,17 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
           <p className="text-[11px] text-white/20">© 2026 Tehcon AI. Все права защищены.</p>
           <div className="flex items-center gap-5">
-            {legal.map(l => (
-              <motion.div key={l.to} whileHover={{ x: 1 }} transition={{ duration: 0.15 }}>
+            {legal.map((l) =>
+            <motion.div key={l.to} whileHover={{ x: 1 }} transition={{ duration: 0.15 }}>
                 <Link to={l.to} className="text-[11px] text-white/20 hover:text-white/45 transition-colors">
                   {l.label}
                 </Link>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
 
       </div>
-    </footer>
-  );
+    </footer>);
+
 }
