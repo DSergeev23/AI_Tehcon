@@ -1,15 +1,65 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Send, Linkedin } from 'lucide-react';
+
+const navLinks = [
+  { label: 'Главная', to: '/' },
+  { label: 'О компании', to: '/about' },
+  { label: 'Каталог решений', to: '/catalog' },
+  { label: 'Контакты', to: '/contacts' },
+];
+
+const solutions = [
+  { label: 'ИИ-Лидогенерация в Telegram', to: '/catalog/telegram-lead-generator' },
+  { label: 'Автоматизация поддержки', to: '/catalog/customer-support-automation' },
+  { label: 'Анализ документов', to: '/catalog/document-analyzer' },
+  { label: 'Генератор контента', to: '/catalog/content-generator' },
+  { label: 'Предиктивная аналитика', to: '/catalog/predictive-analytics' },
+  { label: 'ИИ-Агент для рассылок', to: '/catalog/outreach-ai-agent' },
+  { label: 'Голосовой ИИ-ассистент', to: '/catalog/voice-ai-assistant' },
+];
+
+const legal = [
+  { label: 'Политика конфиденциальности', to: '/privacy' },
+  { label: 'Условия использования', to: '/terms' },
+];
+
+function FooterLink({ to, children, external }) {
+  const base = "text-[13px] text-white/40 leading-snug transition-colors duration-200 hover:text-white/80";
+  if (external) {
+    return (
+      <motion.a
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={base}
+        whileHover={{ x: 2 }}
+        transition={{ duration: 0.15 }}
+      >
+        {children}
+      </motion.a>
+    );
+  }
+  return (
+    <motion.div whileHover={{ x: 2 }} transition={{ duration: 0.15 }}>
+      <Link to={to} className={base}>{children}</Link>
+    </motion.div>
+  );
+}
 
 export default function Footer() {
   return (
     <footer className="border-t border-white/[0.08] bg-black">
-      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-16">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-5 h-5 grid grid-cols-2 gap-0.5">
+      <div className="w-full mx-auto px-6 md:px-12 lg:px-20 2xl:px-28 3xl:px-40 pt-16 pb-10">
+
+        {/* Main grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-[2fr_1fr_2fr_1.5fr] gap-x-8 gap-y-12 mb-16">
+
+          {/* Col 1 — Brand */}
+          <div className="col-span-2 md:col-span-4 lg:col-span-1">
+            <Link to="/" className="inline-flex items-center gap-2.5 mb-5 group">
+              <div className="w-5 h-5 grid grid-cols-2 gap-0.5 transition-opacity group-hover:opacity-80">
                 <div className="bg-white rounded-[1px]" />
                 <div className="bg-white/40 rounded-[1px]" />
                 <div className="bg-white/40 rounded-[1px]" />
@@ -17,52 +67,87 @@ export default function Footer() {
               </div>
               <span className="text-sm font-semibold text-white tracking-tight">Tehcon AI</span>
             </Link>
-            <p className="text-xs text-white/40 leading-relaxed hidden">
-              Stack: TypeScript<br />
-              React · Tailwind
+            <p className="text-[13px] text-white/35 leading-relaxed max-w-[260px]">
+              Внедряем автономных AI-агентов в 1С, CRM, Excel и Telegram. Бизнес работает быстрее, точнее и дешевле.
             </p>
-          </div>
-
-          <div>
-            <p className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Быстрые ссылки</p>
-            <div className="flex flex-col gap-3">
-              <Link to="/catalog" className="text-xs text-white/40 hover:text-white/80 transition-colors">Каталог</Link>
-              <Link to="/about" className="text-xs text-white/40 hover:text-white/80 transition-colors">Возможности</Link>
-              <Link to="/about" className="text-xs text-white/40 hover:text-white/80 transition-colors">Функции</Link>
+            {/* Social */}
+            <div className="flex items-center gap-3 mt-6">
+              <motion.a
+                href="https://t.me/tehconai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-white/40 hover:text-white/80 hover:border-white/25 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.15 }}
+              >
+                <Send className="w-3.5 h-3.5" />
+              </motion.a>
+              <motion.a
+                href="https://linkedin.com/company/tehconai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-white/40 hover:text-white/80 hover:border-white/25 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.15 }}
+              >
+                <Linkedin className="w-3.5 h-3.5" />
+              </motion.a>
             </div>
           </div>
 
+          {/* Col 2 — Navigation */}
           <div>
-            <p className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Страницы</p>
+            <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Навигация</p>
             <div className="flex flex-col gap-3">
-              <Link to="/" className="text-xs text-white/40 hover:text-white/80 transition-colors">Главная</Link>
-              <Link to="/about" className="text-xs text-white/40 hover:text-white/80 transition-colors">О компании</Link>
-              <Link to="/contacts" className="text-xs text-white/40 hover:text-white/80 transition-colors">Контакты</Link>
+              {navLinks.map(l => (
+                <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
+              ))}
             </div>
           </div>
 
+          {/* Col 3 — Solutions */}
           <div>
-            <p className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Правовое</p>
+            <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Решения</p>
             <div className="flex flex-col gap-3">
-              <span className="text-xs text-white/40">Условия использования</span>
-              <span className="text-xs text-white/40">Конфиденциальность</span>
+              {solutions.map(l => (
+                <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
+              ))}
             </div>
           </div>
 
+          {/* Col 4 — Contact */}
           <div>
-            <p className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Связаться</p>
+            <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Контакты</p>
             <div className="flex flex-col gap-3">
-              <span className="text-xs text-white/40">hello@tehcon.ai</span>
-              <a href="https://t.me/tehconai" className="text-xs text-white/40 hover:text-white/70 transition-colors">Telegram: @tehconai</a>
+              <FooterLink to="mailto:hello@tehcon.ai" external>hello@tehcon.ai</FooterLink>
+              <FooterLink to="https://t.me/tehconai" external>@tehconai в Telegram</FooterLink>
+            </div>
+            <div className="mt-8">
+              <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Правовое</p>
+              <div className="flex flex-col gap-3">
+                {legal.map(l => (
+                  <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/[0.06] flex justify-between items-center">
-          <p className="text-xs text-white/25">© 2026 Tehcon AI</p>
-          <p className="text-xs text-white/25">Все права защищены</p>
+        {/* Bottom bar */}
+        <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+          <p className="text-[11px] text-white/20">© 2026 Tehcon AI. Все права защищены.</p>
+          <div className="flex items-center gap-5">
+            {legal.map(l => (
+              <motion.div key={l.to} whileHover={{ x: 1 }} transition={{ duration: 0.15 }}>
+                <Link to={l.to} className="text-[11px] text-white/20 hover:text-white/45 transition-colors">
+                  {l.label}
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
+
       </div>
-    </footer>);
-
+    </footer>
+  );
 }
