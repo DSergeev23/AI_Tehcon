@@ -106,14 +106,14 @@ export default function Footer() {
           </div>
 
           {/* Col 3 — Solutions */}
-          
-
-
-
-
-
-
-          
+          <div>
+            <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Решения</p>
+            <div className="flex flex-col gap-3">
+              {solutions.map((l) =>
+              <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
+              )}
+            </div>
+          </div>
 
           {/* Col 4 — Contact */}
           <div>
