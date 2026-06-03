@@ -35,7 +35,6 @@ const AuthenticatedApp = () => {
 
   return (
     <>
-    <YandexMetrika />
     <Routes>
       <Route element={<PageLayout />}>
         <Route path="/" element={<Home />} />
@@ -58,6 +57,7 @@ function App() {
       <AuthProvider>
         <QueryClientProvider client={queryClientInstance}>
           <Router>
+            <YandexMetrika />
             <AuthenticatedApp />
           </Router>
           <Toaster />
