@@ -8,6 +8,7 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 
 import PageLayout from './components/layout/PageLayout';
+import YandexMetrika from './components/shared/YandexMetrika';
 import Home from './pages/Home';
 import About from './pages/About';
 import Catalog from './pages/Catalog';
@@ -33,6 +34,8 @@ const AuthenticatedApp = () => {
   }
 
   return (
+    <>
+    <YandexMetrika />
     <Routes>
       <Route element={<PageLayout />}>
         <Route path="/" element={<Home />} />
@@ -45,6 +48,7 @@ const AuthenticatedApp = () => {
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
+    </>
   );
 };
 
