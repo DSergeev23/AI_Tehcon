@@ -7,7 +7,7 @@ import CornerMark from '../shared/CornerMark';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-black grid-lines overflow-hidden">
+    <section className="relative min-h-[100svh] max-h-[1200px] bg-black grid-lines overflow-hidden flex flex-col justify-center">
       {/* Grid overlay */}
       <div className="absolute inset-0 grid-lines opacity-100" />
 
@@ -17,13 +17,13 @@ export default function HeroSection() {
       <span className="absolute bottom-12 left-5 text-white/20 text-xs">+</span>
       <span className="absolute bottom-12 right-5 text-white/20 text-xs">+</span>
 
-      <div className="relative z-10 w-full mx-auto px-6 md:px-12 lg:px-20 2xl:px-28 3xl:px-40 pt-14 flex flex-col items-center">
+      <div className="relative z-10 w-full mx-auto px-6 md:px-12 lg:px-20 2xl:px-28 3xl:px-40 flex flex-col items-center py-16">
         {/* Globe - centered at top */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: 'easeOut' }}
-          className="relative mt-10 mb-16">
+          className="relative mb-12">
           
           <WireframeGlobe size={480} />
           {/* Fade bottom of globe */}
@@ -31,7 +31,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Content below globe */}
-        <div className="grid grid-cols-1 md:grid-cols-[55fr_45fr] gap-10 lg:gap-16 2xl:gap-24 w-full -mt-10 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-[55fr_45fr] gap-10 lg:gap-16 2xl:gap-24 w-full -mt-10">
           {/* Left: Heading */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -60,6 +60,29 @@ Tehcon AI внедряет автономных AI-агентов, которы�
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll down indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.2 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/30 hover:text-white/70 transition-colors cursor-default"
+      >
+        <span className="text-[10px] uppercase tracking-[0.2em]">Scroll</span>
+        <motion.div
+          animate={{ y: [0, 5, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <rect x="1" y="1" width="14" height="22" rx="7" />
+            <motion.line
+              x1="8" y1="6" x2="8" y2="10"
+              animate={{ opacity: [1, 0, 1], y: [0, 2, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+            />
+          </svg>
+        </motion.div>
+      </motion.div>
     </section>);
 
 }
