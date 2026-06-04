@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Plus, Calendar, HardDrive, FileText, Sheet, Search, Video, Send, Github, GitBranch, Zap, MessageSquare, BookOpen } from 'lucide-react';
+import { Plus, Calendar, HardDrive, FileText, Sheet, Search, Video, Send, Github, GitBranch, Zap, MessageSquare, BookOpen, Database } from 'lucide-react';
 import RevealOnScroll from '../shared/RevealOnScroll';
 
 const integrations = [
@@ -63,6 +63,11 @@ const integrations = [
     name: 'Notion',
     desc: 'Создаёт страницы и базы данных, ищет по воркспейсу, обновляет записи',
     icon: BookOpen,
+  },
+  {
+    name: '1С',
+    desc: 'Читает и записывает данные в документы, справочники, создаёт отчёты',
+    icon: Database,
   },
   {
     name: 'И многое другое',
