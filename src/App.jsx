@@ -9,6 +9,7 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 
 import PageLayout from './components/layout/PageLayout';
 import YandexMetrika from './components/shared/YandexMetrika';
+import GoogleAnalytics from './components/shared/GoogleAnalytics';
 import Home from './pages/Home';
 import About from './pages/About';
 import Catalog from './pages/Catalog';
@@ -58,6 +59,7 @@ function App() {
         <QueryClientProvider client={queryClientInstance}>
           <Router>
             <YandexMetrika />
+            <GoogleAnalytics />
             <AuthenticatedApp />
           </Router>
           <Toaster />
