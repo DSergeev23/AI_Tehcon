@@ -42,7 +42,7 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-14">
+    <div className="min-h-screen bg-black pt-16">
       <SEOHead {...seo} schemaJson={productSchema} />
 
       {/* Breadcrumb */}
@@ -165,7 +165,7 @@ export default function ProductDetail() {
 
           {/* ── Sticky Sidebar ── */}
           <div className="lg:w-72 2xl:w-80 flex-shrink-0">
-            <div className="lg:sticky lg:top-14 pt-14 pb-8">
+            <div className="lg:sticky lg:top-16 pt-14 pb-8">
               {/* Price card */}
               <div className="border border-white/[0.08] rounded-sm bg-white/[0.02] p-6 mb-4">
                 <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-2">Стоимость</p>
