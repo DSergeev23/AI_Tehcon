@@ -133,7 +133,7 @@ const sections = [
 
 export default function TermsOfUse() {
   return (
-    <div className="min-h-screen bg-black pt-14">
+    <div className="min-h-screen bg-black">
       <SEOHead
         title="AI Tehcon"
         description="Условия использования сайта AI Tehcon: правила доступа к сайту, ограничения ответственности, интеллектуальная собственность и порядок взаимодействия с пользователями."

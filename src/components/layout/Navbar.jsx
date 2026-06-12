@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Plus } from 'lucide-react';
 
 const navLinks = [
-{ label: 'Главная', path: '/' },
-{ label: 'Каталог', path: '/catalog' },
-{ label: 'О компании', path: '/about' }];
-
+  { label: 'Главная', path: '/' },
+  { label: 'Каталог', path: '/catalog' },
+  { label: 'О компании', path: '/about' },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,13 +28,16 @@ export default function Navbar() {
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'border-b border-white/[0.06] bg-black/80 backdrop-blur-md' : 'bg-transparent'}`
-        }>
-        
-        <div className="w-full max-w-[1400px] 2xl:max-w-[1800px] 3xl:max-w-[2200px] mx-auto flex items-center justify-between px-6 md:px-12 2xl:px-16 h-16">
+        className={`sticky top-0 left-0 right-0 z-50 h-16 transition-all duration-300 ${
+          scrolled
+            ? 'border-b border-white/[0.06] bg-black/90 backdrop-blur-md'
+            : 'border-b border-white/[0.04] bg-black/60 backdrop-blur-sm'
+        }`}
+      >
+        <div className="mx-auto flex h-full max-w-[1600px] items-center justify-between px-6 lg:px-10">
+
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-2.5 group shrink-0">
             <img
               src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/b985f6d81_icon.png"
               alt="AI Tehcon"
@@ -44,66 +47,77 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => {const isActive = location.pathname === link.path;
+          <div className="hidden md:flex items-center gap-0.5">
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.path;
               return (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`bracket-link !text-sm !px-4 !py-1.5 ${isActive ? 'active' : ''}`}>
-                  
+                  className={[
+                    'inline-flex items-center h-9 px-4 rounded-md text-sm transition-colors duration-150',
+                    isActive
+                      ? 'text-white bg-white/[0.07] border border-white/[0.12]'
+                      : 'text-white/60 hover:text-white hover:bg-white/[0.05] border border-transparent',
+                  ].join(' ')}
+                >
                   {link.label}
-                </Link>);
-
+                </Link>
+              );
             })}
           </div>
 
           {/* CTA */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center shrink-0">
             <Link
               to="/contacts"
-              className="flex items-center gap-1.5 text-sm px-5 py-2 bg-white text-black font-medium rounded-md hover:bg-white/90 transition-colors">
-              
+              className="inline-flex items-center gap-1.5 h-9 px-5 text-sm font-medium bg-white text-black rounded-md hover:bg-white/90 transition-colors"
+            >
               Связаться
               <Plus className="w-3.5 h-3.5" />
             </Link>
           </div>
 
           {/* Mobile menu btn */}
-          <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-white/70 hover:text-white">
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden text-white/70 hover:text-white transition-colors"
+          >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </motion.nav>
 
+      {/* Mobile menu */}
       <AnimatePresence>
-        {mobileOpen &&
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-40 bg-black border-t border-white/[0.06] pt-14">
-          
-            <div className="p-5 flex flex-col gap-1">
-              {navLinks.map((link) =>
-            <Link
-              key={link.path}
-              to={link.path}
-              className="py-4 text-sm text-white/70 hover:text-white border-b border-white/[0.06] transition-colors">
-              
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-x-0 top-16 z-40 bg-black border-b border-white/[0.08]"
+          >
+            <div className="px-5 py-4 flex flex-col gap-0.5">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="py-3 text-sm text-white/70 hover:text-white border-b border-white/[0.06] last:border-0 transition-colors"
+                >
                   {link.label}
                 </Link>
-            )}
+              ))}
               <Link
-              to="/contacts"
-              className="mt-4 flex items-center justify-center gap-2 py-3 bg-white text-black text-sm font-semibold rounded-md">
-              
+                to="/contacts"
+                className="mt-4 flex items-center justify-center gap-2 h-11 bg-white text-black text-sm font-semibold rounded-md"
+              >
                 Связаться <Plus className="w-4 h-4" />
               </Link>
             </div>
           </motion.div>
-        }
+        )}
       </AnimatePresence>
-    </>);
-
+    </>
+  );
 }

@@ -148,7 +148,7 @@ Cookies могут включать технические файлы, необ�
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-black pt-14">
+    <div className="min-h-screen bg-black">
       <SEOHead
         title="AI Tehcon"
         description="Политика конфиденциальности AI Tehcon: порядок обработки персональных данных, cookies, заявки, коммуникации и права пользователей."

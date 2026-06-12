@@ -28,7 +28,7 @@ export default function Catalog() {
   const filtered = active === 'Все' ? catalogProducts : catalogProducts.filter(p => p.category === active);
 
   return (
-    <div className="min-h-screen bg-black pt-14">
+    <div className="min-h-screen bg-black">
       <SEOHead {...pageSEO.catalog} schemaJson={catalogSchema} />
       {/* Header */}
       <div className="border-b border-white/[0.08] relative">

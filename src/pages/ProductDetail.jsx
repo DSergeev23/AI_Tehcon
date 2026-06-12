@@ -42,7 +42,7 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-16">
+    <div className="min-h-screen bg-black">
       <SEOHead {...seo} schemaJson={productSchema} />
 
       {/* Breadcrumb */}

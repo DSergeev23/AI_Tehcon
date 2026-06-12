@@ -36,7 +36,7 @@ const orgSchema = {
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-black pt-14">
+    <div className="min-h-screen bg-black">
       <SEOHead {...pageSEO.about} schemaJson={orgSchema} />
       {/* Hero */}
       <div className="border-b border-white/[0.08] relative">
