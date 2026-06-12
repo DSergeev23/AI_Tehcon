@@ -35,12 +35,11 @@ export default function Navbar() {
         <div className="w-full max-w-[1400px] 2xl:max-w-[1800px] 3xl:max-w-[2200px] mx-auto flex items-center justify-between px-6 md:px-12 2xl:px-16 h-16 2xl:h-24 3xl:h-32">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 2xl:w-12 2xl:h-12 grid grid-cols-2 gap-1 2xl:gap-1.5">
-              <div className="bg-white rounded-[1px]" />
-              <div className="bg-white/40 rounded-[1px]" />
-              <div className="bg-white/40 rounded-[1px]" />
-              <div className="bg-white rounded-[1px]" />
-            </div>
+            <img
+              src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/b985f6d81_icon.png"
+              alt="AI Tehcon"
+              className="w-8 h-8 2xl:w-12 2xl:h-12 rounded-sm"
+            />
             <span className="text-xl 2xl:text-3xl 3xl:text-4xl font-semibold text-white tracking-tight">Tehcon AI</span>
           </Link>
 
