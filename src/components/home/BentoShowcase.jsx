@@ -72,7 +72,7 @@ export default function BentoShowcase() {
 
               <div className="relative z-10">
                 
-                <h3 className="text-white tracking-tight leading-tight mb-4 text-3xl normal-case opacity-100 [font-family:'Cabin',_sans-serif] font-normal">Операционный интеллект
+                <h3 className="text-white tracking-tight leading-tight mb-4 text-3xl normal-case opacity-100 [font-family:'Roboto',_sans-serif] font-normal">Операционный интеллект
 
                 </h3>
                 <p className="text-xs text-white/50 font-semibold mb-3">Что делает Tehcon AI</p>
