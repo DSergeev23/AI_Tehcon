@@ -10,7 +10,7 @@ import RevealOnScroll from '../components/shared/RevealOnScroll';
 
 export default function Contacts() {
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', message: '' });
   const [consent, setConsent] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -137,14 +137,27 @@ export default function Contacts() {
                     </div>
                   </div>
 
-                  <div>
-                    <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Компания</label>
-                    <Input
-                    value={form.company}
-                    onChange={(e) => setForm((p) => ({ ...p, company: e.target.value }))}
-                    placeholder="Название компании"
-                    className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm" />
-                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Телефон</label>
+                      <Input
+                      type="tel"
+                      value={form.phone}
+                      onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
+                      placeholder="+7 (999) 000-00-00"
+                      required
+                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm" />
+                    
+                    </div>
+                    <div>
+                      <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Компания</label>
+                      <Input
+                      value={form.company}
+                      onChange={(e) => setForm((p) => ({ ...p, company: e.target.value }))}
+                      placeholder="Название компании"
+                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm" />
+                    
+                    </div>
                   </div>
 
                   <div>
