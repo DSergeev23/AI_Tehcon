@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Plus, CheckCircle2, UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic, MessageSquare } from 'lucide-react';
+import { ArrowLeft, Plus, CheckCircle2, Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, Sparkles } from 'lucide-react';
 import { getProductById } from '../lib/catalogData';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
 import SEOHead from '../components/shared/SEOHead';
@@ -9,7 +9,7 @@ import { getProductSEO } from '../lib/seoConfig';
 import { createServiceSchema, createProductBreadcrumbSchema } from '../lib/structuredData';
 import SectionsRenderer from '../components/product/SectionsRenderer';
 
-const iconMap = { UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic, MessageSquare };
+const iconMap = { Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, Sparkles };
 
 export default function ProductDetail() {
   const { id } = useParams();

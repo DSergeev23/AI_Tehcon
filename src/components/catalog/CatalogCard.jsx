@@ -1,12 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Plus, UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic } from 'lucide-react';
+import {
+  Plus,
+  Send, Network,
+  Search, Database,
+  Activity, LineChart,
+  TrendingUp, Workflow,
+  Bot, Brain,
+  PieChart, BarChart3,
+  Megaphone, PenTool,
+  Image, Layers,
+  FileText, Share2,
+  UserCheck, Hexagon,
+  Sparkles,
+} from 'lucide-react';
 
-const iconMap = { UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic };
+const iconMap = { Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, Sparkles };
+const visualMap = { Network, Database, LineChart, Workflow, Brain, BarChart3, PenTool, Layers, Share2, Hexagon };
 
 export default function CatalogCard({ product, index }) {
   const Icon = iconMap[product.icon] || Sparkles;
+  const VisualIcon = visualMap[product.visual] || Hexagon;
 
   return (
     <motion.div
@@ -40,11 +55,7 @@ export default function CatalogCard({ product, index }) {
             <div className="w-10 h-10 border border-white/[0.1] rounded flex items-center justify-center">
               <Icon className="w-4 h-4 text-white/60" />
             </div>
-            {/* Small wireframe visual */}
-            <svg viewBox="0 0 60 60" className="w-12 h-12 opacity-20" fill="none" stroke="white" strokeWidth="0.6">
-              <polygon points="30,5 55,20 55,45 30,58 5,45 5,20" />
-              <circle cx="30" cy="30" r="12" strokeDasharray="2 3" />
-            </svg>
+            <VisualIcon className="w-12 h-12 text-white/10" />
           </div>
 
           {/* Category */}
