@@ -72,7 +72,7 @@ export default function Footer() {
             {/* Social */}
             <div className="flex items-center gap-3 mt-6">
               <motion.a
-                href="https://t.me/tehconai"
+                href="https://t.me/dmtr_sergeev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-white/40 hover:text-white/80 hover:border-white/25 transition-colors"
@@ -118,8 +118,8 @@ export default function Footer() {
           <div>
             <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Контакты</p>
             <div className="flex flex-col gap-3">
-              <FooterLink to="mailto:hello@tehcon.ai" external>hello@tehcon.ai</FooterLink>
-              <FooterLink to="https://t.me/tehconai" external>@tehconai в Telegram</FooterLink>
+              <FooterLink to="mailto:hello@it-tehcon.ru" external>hello@it-tehcon.ru</FooterLink>
+              <FooterLink to="https://t.me/dmtr_sergeev" external>@dmtr_sergeev</FooterLink>
             </div>
             <div className="mt-8">
               <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Правовое</p>
