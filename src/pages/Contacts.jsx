@@ -12,11 +12,29 @@ export default function Contacts() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
   const [consent, setConsent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!consent) return;
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      await fetch("https://formsubmit.co/ajax/hello@it-tehcon.ru", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          ...form,
+          _subject: "Новая заявка с сайта Tehcon AI!"
+        })
+      });
+      setSubmitted(true);
+    } catch (_) {
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -169,10 +187,10 @@ export default function Contacts() {
 
                   <button
                   type="submit"
-                  disabled={!consent}
+                  disabled={!consent || loading}
                   className="w-full flex items-center justify-center gap-2 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white">
                   
-                    Отправить заявку <Plus className="w-4 h-4" />
+                    {loading ? 'Отправка...' : <>Отправить заявку <Plus className="w-4 h-4" /></>}
                   </button>
                 </form>
               }
