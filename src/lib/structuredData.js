@@ -6,7 +6,7 @@ export const ORGANIZATION = {
   "name": SITE_NAME,
   "url": SITE_URL,
   "logo": `${SITE_URL}/og-image.jpg`,
-  "description": "AI Tehcon разрабатывает ИИ-агентов и автоматизирует бизнес-процессы компаний.",
+  "description": "AI TehCon разрабатывает ИИ-агентов и автоматизирует бизнес-процессы компаний.",
 };
 
 export function createOrganizationSchema() {
@@ -44,7 +44,7 @@ export function createCatalogItemListSchema(products) {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Каталог AI-решений AI Tehcon",
+    "name": "Каталог AI-решений AI TehCon",
     "description": "Каталог ИИ-агентов, автоматизаций и интеграционных решений для бизнеса.",
     "url": `${SITE_URL}/catalog`,
     "numberOfItems": products.length,

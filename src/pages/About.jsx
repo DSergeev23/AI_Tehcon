@@ -25,9 +25,9 @@ const techStack = ['Python', 'TypeScript', 'PyTorch', 'LangChain', 'GPT-4o', 'Cl
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Tehcon AI",
+  "name": "AI TehCon",
   "url": "https://ai-tehcon.ru",
-  "description": "Tehcon AI — агентство ИИ автоматизации бизнес-процессов. Разработка AI решений и интеграция нейросетей.",
+  "description": "AI TehCon — агентство ИИ автоматизации бизнес-процессов. Разработка AI решений и интеграция нейросетей.",
   "foundingDate": "2019",
   "numberOfEmployees": { "@type": "QuantitativeValue", "value": 40 },
   "areaServed": "RU",

@@ -27,7 +27,7 @@ export default function Contacts() {
         },
         body: JSON.stringify({
           ...form,
-          _subject: "Новая заявка с сайта Tehcon AI!"
+          _subject: "Новая заявка с сайта AI TehCon!"
         })
       });
       setSubmitted(true);
@@ -39,7 +39,7 @@ export default function Contacts() {
 
   return (
     <div className="min-h-screen bg-black">
-      <SEOHead title="Tehcon AI" description={pageSEO.contacts.description} canonical={pageSEO.contacts.canonical} />
+      <SEOHead title="AI TehCon" description={pageSEO.contacts.description} canonical={pageSEO.contacts.canonical} />
       {/* Header */}
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>

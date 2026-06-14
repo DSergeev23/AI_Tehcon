@@ -150,8 +150,8 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-black">
       <SEOHead
-        title="AI Tehcon"
-        description="Политика конфиденциальности AI Tehcon: порядок обработки персональных данных, cookies, заявки, коммуникации и права пользователей."
+        title="AI TehCon"
+        description="Политика конфиденциальности AI TehCon: порядок обработки персональных данных, cookies, заявки, коммуникации и права пользователей."
         canonical="/privacy-policy"
       />
 
@@ -190,7 +190,7 @@ export default function PrivacyPolicy() {
             className="mb-16"
           >
             <p className="text-[15px] text-white/45 leading-relaxed mb-6">
-              Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных пользователей сайта ai-tehcon.ru, принадлежащего AI Tehcon, далее — «Оператор».
+              Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных пользователей сайта ai-tehcon.ru, принадлежащего AI TehCon, далее — «Оператор».
             </p>
             <p className="text-[15px] text-white/45 leading-relaxed">
               Используя сайт, отправляя заявку, заполняя форму обратной связи или иным образом передавая свои данные через сайт, пользователь подтверждает, что ознакомился с настоящей Политикой конфиденциальности.

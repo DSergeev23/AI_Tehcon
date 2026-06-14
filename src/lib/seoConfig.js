@@ -1,5 +1,5 @@
 export const SITE_URL = 'https://ai-tehcon.ru';
-export const SITE_NAME = 'AI Tehcon';
+export const SITE_NAME = 'AI TehCon';
 export const DEFAULT_OG_IMAGE = 'https://ai-tehcon.ru/og-image.jpg';
 
 export const pageSEO = {

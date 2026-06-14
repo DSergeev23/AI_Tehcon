@@ -61,10 +61,10 @@ export default function Footer() {
             <Link to="/" className="inline-flex items-center gap-2.5 mb-5 group">
               <img
                 src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/b985f6d81_icon.png"
-                alt="AI Tehcon"
+                alt="AI TehCon"
                 className="w-5 h-5 rounded-sm transition-opacity group-hover:opacity-80"
               />
-              <span className="text-sm font-semibold text-white tracking-tight">Tehcon AI</span>
+              <span className="text-sm font-semibold text-white tracking-tight">AI TehCon</span>
             </Link>
             <p className="text-[13px] text-white/35 leading-relaxed max-w-[260px]">
               Внедряем автономных AI-агентов в 1С, CRM, Excel и Telegram. Бизнес работает быстрее, точнее и дешевле.
@@ -134,7 +134,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-          <p className="text-[11px] text-white/20">© 2026 Tehcon AI. Все права защищены.</p>
+          <p className="text-[11px] text-white/20">© 2026 AI TehCon. Все права защищены.</p>
           <div className="flex items-center gap-5">
             {legal.map((l) =>
             <motion.div key={l.to} whileHover={{ x: 1 }} transition={{ duration: 0.15 }}>

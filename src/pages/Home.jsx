@@ -17,7 +17,7 @@ const homeSchema = {
     {
       "@type": "Organization",
       "@id": "https://ai-tehcon.ru/#organization",
-      "name": "Tehcon AI",
+      "name": "AI TehCon",
       "url": "https://ai-tehcon.ru",
       "logo": "https://ai-tehcon.ru/logo.svg",
       "description": "Разработка ИИ агентов и автоматизация бизнес-процессов с помощью нейросетей",
@@ -32,7 +32,7 @@ const homeSchema = {
       "@type": "WebSite",
       "@id": "https://ai-tehcon.ru/#website",
       "url": "https://ai-tehcon.ru",
-      "name": "Tehcon AI",
+      "name": "AI TehCon",
       "publisher": { "@id": "https://ai-tehcon.ru/#organization" },
       "inLanguage": "ru-RU",
     },
