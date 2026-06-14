@@ -6,6 +6,7 @@ import { getProductById } from '../lib/catalogData';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
 import SEOHead from '../components/shared/SEOHead';
 import { getProductSEO } from '../lib/seoConfig';
+import { createServiceSchema, createProductBreadcrumbSchema } from '../lib/structuredData';
 import SectionsRenderer from '../components/product/SectionsRenderer';
 
 const iconMap = { UserCheck, Headphones, FileSearch, Sparkles, TrendingUp, Mic, MessageSquare };
@@ -18,28 +19,10 @@ export default function ProductDetail() {
   const Icon = iconMap[product.icon] || Sparkles;
   const seo = getProductSEO(product);
 
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://ai-tehcon.ru" },
-          { "@type": "ListItem", "position": 2, "name": "Каталог", "item": "https://ai-tehcon.ru/catalog" },
-          { "@type": "ListItem", "position": 3, "name": product.title, "item": `https://ai-tehcon.ru/catalog/${product.id}` },
-        ]
-      },
-      {
-        "@type": "Service",
-        "name": product.title,
-        "description": product.fullDescription,
-        "provider": { "@type": "Organization", "name": "Tehcon AI", "url": "https://ai-tehcon.ru" },
-        "serviceType": product.category,
-        "areaServed": "RU",
-        "url": `https://ai-tehcon.ru/catalog/${product.id}`,
-      }
-    ]
-  };
+  const productSchema = [
+    createServiceSchema(product),
+    createProductBreadcrumbSchema(product),
+  ];
 
   return (
     <div className="min-h-screen bg-black">

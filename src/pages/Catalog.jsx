@@ -5,23 +5,9 @@ import { catalogProducts } from '../lib/catalogData';
 import CatalogCard from '../components/catalog/CatalogCard';
 import SEOHead from '../components/shared/SEOHead';
 import { pageSEO } from '../lib/seoConfig';
+import { createCatalogItemListSchema, createCatalogBreadcrumbSchema } from '../lib/structuredData';
 
 const categories = ['Все', ...new Set(catalogProducts.map(p => p.category))];
-
-const catalogSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Каталог ИИ агентов для автоматизации бизнеса",
-  "description": "Готовые ИИ решения для бизнеса от Tehcon AI",
-  "numberOfItems": catalogProducts.length,
-  "itemListElement": catalogProducts.map((p, i) => ({
-    "@type": "ListItem",
-    "position": i + 1,
-    "name": p.title,
-    "description": p.shortDescription,
-    "url": `https://ai-tehcon.ru/catalog/${p.id}`,
-  }))
-};
 
 export default function Catalog() {
   const [active, setActive] = useState('Все');
@@ -29,7 +15,7 @@ export default function Catalog() {
 
   return (
     <div className="min-h-screen bg-black">
-      <SEOHead {...pageSEO.catalog} schemaJson={catalogSchema} />
+      <SEOHead {...pageSEO.catalog} schemaJson={[createCatalogItemListSchema(catalogProducts), createCatalogBreadcrumbSchema()]} />
       {/* Header */}
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>

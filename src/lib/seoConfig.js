@@ -37,30 +37,3 @@ export function getProductSEO(product) {
     keywords: `${product.title}, ${product.category}, ИИ агент, автоматизация бизнеса, ${product.tags?.join(', ')}`,
   };
 }
-
-export function getProductSchema(product) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": product.title,
-    "description": product.fullDescription,
-    "provider": {
-      "@type": "Organization",
-      "name": "AI Tehcon",
-      "url": SITE_URL,
-    },
-    "serviceType": "AI автоматизация",
-    "category": product.category,
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "RUB",
-      "price": product.pricing?.replace(/[^0-9]/g, '') || "0",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "price": product.pricing,
-        "priceCurrency": "RUB",
-      },
-    },
-    "url": `${SITE_URL}/catalog/${product.id}`,
-  };
-}
