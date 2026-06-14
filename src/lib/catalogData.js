@@ -49,7 +49,7 @@ export const catalogProducts = [
       },
       {
         type: 'image',
-        value: '/images/ai_schema.png',
+        value: '/images/telegram_lid.png',
         alt: 'Сравнение: ручная рассылка vs AI-агент'
       },
       {
@@ -66,11 +66,6 @@ export const catalogProducts = [
 * **Fittech:** 12 000 контактов, 450 горячих лидов, экономия 40+ часов/мес, CAC 2.38$.
 
 Из 40 Telegram-аккаунтов — около 15 200 касаний в месяц. При конверсии 1% это 152 целевых лида.`
-      },
-      {
-        type: 'image',
-        value: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=85',
-        alt: 'Дашборд аналитики и результаты'
       },
       {
         type: 'text',
