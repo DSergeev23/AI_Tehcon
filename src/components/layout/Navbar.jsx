@@ -39,8 +39,8 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group shrink-0">
             <img
-              src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/b985f6d81_icon.png"
-              alt="AI TehCon"
+              src="/image/icon.png"
+              alt="Tehcon AI"
               className="w-8 h-8 rounded-sm"
             />
             <span className="text-sm font-semibold text-white tracking-tight">AI TehCon</span>

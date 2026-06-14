@@ -60,8 +60,8 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Link to="/" className="inline-flex items-center gap-2.5 mb-5 group">
               <img
-                src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/b985f6d81_icon.png"
-                alt="AI TehCon"
+                src="/image/icon.png"
+                alt="Tehcon AI"
                 className="w-5 h-5 rounded-sm transition-opacity group-hover:opacity-80"
               />
               <span className="text-sm font-semibold text-white tracking-tight">AI TehCon</span>
