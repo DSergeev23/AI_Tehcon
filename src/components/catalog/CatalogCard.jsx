@@ -55,7 +55,7 @@ export default function CatalogCard({ product, index }) {
             <div className="w-10 h-10 border border-white/[0.1] rounded flex items-center justify-center">
               <Icon className="w-4 h-4 text-white/60" />
             </div>
-            <VisualIcon className="w-12 h-12 text-white/10" />
+            <VisualIcon className="w-12 h-12 text-white/[0.12]" strokeWidth={0.8} />
           </div>
 
           {/* Category */}
