@@ -119,7 +119,7 @@ export default function Footer() {
             <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Контакты</p>
             <div className="flex flex-col gap-3">
               <FooterLink to="mailto:hello@it-tehcon.ru" external>hello@it-tehcon.ru</FooterLink>
-              <FooterLink to="https://t.me/dmtr_sergeev" external>AI-TehCon</FooterLink>
+              <FooterLink to="https://t.me/dmtr_sergeev" external>AI-TehCon в Telegram</FooterLink>
             </div>
             <div className="mt-8">
               <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Правовое</p>
