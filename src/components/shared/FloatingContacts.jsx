@@ -23,7 +23,7 @@ export default function FloatingContacts() {
 
       {/* Telegram */}
       <motion.a
-        href="https://t.me/tehconai"
+        href="https://t.me/dmtr_sergeev"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ opacity: 0, scale: 0.8 }}
