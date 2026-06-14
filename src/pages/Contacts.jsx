@@ -70,13 +70,13 @@ export default function Contacts() {
                 <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-5">Контакты</p>
                 <div className="space-y-4">
                   {[
-                  { label: 'Email', val: 'hello@nexus-ai.ru' },
-                  { label: 'Телефон', val: '+7 (495) 123-45-67' },
-                  { label: 'Адрес', val: 'Москва, Пресненская наб. 12' }].
+                  { label: 'Email', val: 'hello@it-tehcon.ru' },
+                  { label: 'Телефон', val: '+7 (919) 213-71-11\n+7 (919) 273-35-52' },
+                  { label: 'Адрес', val: 'Москва, 2-й Вольный пер, д.11' }].
                   map((c, i) =>
                   <div key={i} className="py-3 border-b border-white/[0.06] last:border-0">
                       <p className="text-[10px] text-white/25 uppercase tracking-[0.12em] mb-0.5">{c.label}</p>
-                      <p className="text-sm text-white/60">{c.val}</p>
+                      <p className="text-sm text-white/60 whitespace-pre-line">{c.val}</p>
                     </div>
                   )}
                 </div>
