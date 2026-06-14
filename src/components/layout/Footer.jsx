@@ -60,7 +60,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Link to="/" className="inline-flex items-center gap-2.5 mb-5 group">
               <img
-                src="/image/icon.png"
+                src="/images/icon.png"
                 alt="Tehcon AI"
                 className="w-5 h-5 rounded-sm transition-opacity group-hover:opacity-80"
               />

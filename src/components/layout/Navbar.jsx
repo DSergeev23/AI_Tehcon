@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group shrink-0">
             <img
-              src="/image/icon.png"
+              src="/images/icon.png"
               alt="Tehcon AI"
               className="w-8 h-8 rounded-sm"
             />
