@@ -7,7 +7,7 @@ export default function FloatingContacts() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
       {/* WhatsApp */}
       <motion.a
-        href="https://wa.me/74951234567"
+        href="https://wa.me/79192137111"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ opacity: 0, scale: 0.8 }}
