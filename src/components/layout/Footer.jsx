@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Send, Linkedin } from 'lucide-react';
+import { Mail, Send } from 'lucide-react';
+import { catalogProducts } from '../../lib/catalogData';
 
 const navLinks = [
 { label: 'Главная', to: '/' },
@@ -10,14 +11,24 @@ const navLinks = [
 { label: 'Контакты', to: '/contacts' }];
 
 
-const solutions = [
-{ label: 'ИИ-Лидогенерация в Telegram', to: '/catalog/telegram-lead-generator' },
-{ label: 'Автоматизация поддержки', to: '/catalog/customer-support-automation' },
-{ label: 'Анализ документов', to: '/catalog/document-analyzer' },
-{ label: 'Генератор контента', to: '/catalog/content-generator' },
-{ label: 'Предиктивная аналитика', to: '/catalog/predictive-analytics' },
-{ label: 'ИИ-Агент для рассылок', to: '/catalog/outreach-ai-agent' },
-{ label: 'Голосовой ИИ-ассистент', to: '/catalog/voice-ai-assistant' }];
+function isOneCProduct(product) {
+  const searchable = [
+    product.title,
+    product.shortDescription,
+    product.category,
+    ...(product.tags || []),
+  ].join(' ').toLowerCase();
+
+  return searchable.includes('1с') || searchable.includes('1c');
+}
+
+const solutions = [...catalogProducts]
+  .sort((a, b) => Number(isOneCProduct(b)) - Number(isOneCProduct(a)))
+  .slice(0, 8)
+  .map((product) => ({
+    label: product.title,
+    to: `/catalog/${product.id}`,
+  }));
 
 
 const legal = [
@@ -75,22 +86,22 @@ export default function Footer() {
                 href="https://t.me/dmtr_sergeev"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="AI TehCon в Telegram"
                 className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-white/40 hover:text-white/80 hover:border-white/25 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.15 }}>
                 
                 <Send className="w-3.5 h-3.5" />
               </motion.a>
-              
-
-
-
-
-
-
-
-
-              
+              <motion.a
+                href="mailto:hello@it-tehcon.ru"
+                aria-label="Написать на hello@it-tehcon.ru"
+                className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-white/40 hover:text-white/80 hover:border-white/25 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.15 }}>
+                
+                <Mail className="w-3.5 h-3.5" />
+              </motion.a>
             </div>
           </div>
 

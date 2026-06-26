@@ -31,8 +31,8 @@ export const pageSEO = {
 
 export function getProductSEO(product) {
   return {
-    title: 'AI TehCon',
-    description: `${product.shortDescription} Цена: ${product.pricing}. Интеграция нейросетей, разработка AI решений и автоматизация бизнес-процессов с AI TehCon.`,
+    title: product.seoTitle || `${product.title} | AI TehCon`,
+    description: product.seoDescription || `${product.shortDescription} Цена: ${product.pricing}. Интеграция нейросетей, разработка AI решений и автоматизация бизнес-процессов с AI TehCon.`,
     canonical: `/catalog/${product.id}`,
     keywords: `${product.title}, ${product.category}, ИИ агент, автоматизация бизнеса, ${product.tags?.join(', ')}`,
   };

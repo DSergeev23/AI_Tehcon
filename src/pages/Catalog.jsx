@@ -7,15 +7,35 @@ import SEOHead from '../components/shared/SEOHead';
 import { pageSEO } from '../lib/seoConfig';
 import { createCatalogItemListSchema, createCatalogBreadcrumbSchema } from '../lib/structuredData';
 
-const categories = ['Все', ...new Set(catalogProducts.map(p => p.category))];
+const ONE_C_CATEGORY = '1С';
+
+function isOneCProduct(product) {
+  const searchable = [
+    product.title,
+    product.shortDescription,
+    product.category,
+    ...(product.tags || []),
+  ].join(' ').toLowerCase();
+
+  return searchable.includes('1с') || searchable.includes('1c');
+}
+
+const sortedCatalogProducts = [...catalogProducts].sort((a, b) => (
+  Number(isOneCProduct(b)) - Number(isOneCProduct(a))
+));
+const categories = ['Все', ONE_C_CATEGORY, ...new Set(sortedCatalogProducts.map(p => p.category))];
 
 export default function Catalog() {
   const [active, setActive] = useState('Все');
-  const filtered = active === 'Все' ? catalogProducts : catalogProducts.filter(p => p.category === active);
+  const filtered = active === 'Все'
+    ? sortedCatalogProducts
+    : active === ONE_C_CATEGORY
+      ? sortedCatalogProducts.filter(isOneCProduct)
+      : sortedCatalogProducts.filter(p => p.category === active);
 
   return (
     <div className="min-h-screen bg-black">
-      <SEOHead {...pageSEO.catalog} schemaJson={[createCatalogItemListSchema(catalogProducts), createCatalogBreadcrumbSchema()]} />
+      <SEOHead {...pageSEO.catalog} schemaJson={[createCatalogItemListSchema(sortedCatalogProducts), createCatalogBreadcrumbSchema()]} />
       {/* Header */}
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
