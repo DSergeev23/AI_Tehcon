@@ -1,7 +1,7 @@
 {
-  "name": "AI Tehcon",
-  "short_name": "AI Tehcon",
-  "description": "AI Tehcon — автономные ИИ агенты для автоматизации бизнес-процессов",
+  "name": "AI TehCon",
+  "short_name": "AI TehCon",
+  "description": "AI TehCon — автономные ИИ агенты для автоматизации бизнес-процессов",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",

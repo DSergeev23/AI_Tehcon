@@ -61,7 +61,7 @@ export default function Footer() {
             <Link to="/" className="inline-flex items-center gap-2.5 mb-5 group">
               <img
                 src="/images/icon.png"
-                alt="Tehcon AI"
+                alt="AI TehCon"
                 className="w-5 h-5 rounded-sm transition-opacity group-hover:opacity-80"
               />
               <span className="text-sm font-semibold text-white tracking-tight">AI TehCon</span>

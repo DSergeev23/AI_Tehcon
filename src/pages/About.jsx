@@ -14,13 +14,13 @@ const values = [
 ];
 
 const stats = [
-  { num: '150+', label: 'Проектов' },
-  { num: '40+', label: 'Экспертов' },
-  { num: '5 лет', label: 'На рынке' },
+  { num: '40+', label: 'Конфигураций 1С' },
+  { num: '20+', label: 'Моделей ИИ' },
+  { num: '12 лет', label: 'На рынке автоматизации' },
   { num: '98%', label: 'Рекомендуют' },
 ];
 
-const techStack = ['Python', 'TypeScript', 'PyTorch', 'LangChain', 'GPT-4o', 'Claude', 'PostgreSQL', 'Redis', 'Kubernetes', 'Docker', 'AWS', 'GCP'];
+const techStack = ['1С', 'SQL', 'Python', 'TypeScript', 'PyTorch', 'LangChain', 'GPT-4o', 'Claude', 'PostgreSQL', 'Redis', 'Kubernetes', 'Docker', 'AWS', 'GCP'];
 
 const orgSchema = {
   "@context": "https://schema.org",
@@ -28,8 +28,7 @@ const orgSchema = {
   "name": "AI TehCon",
   "url": "https://ai-tehcon.ru",
   "description": "AI TehCon — агентство ИИ автоматизации бизнес-процессов. Разработка AI решений и интеграция нейросетей.",
-  "foundingDate": "2019",
-  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 40 },
+  "foundingDate": "2014",
   "areaServed": "RU",
   "knowsAbout": ["ИИ агенты", "автоматизация бизнеса", "машинное обучение", "нейросети"]
 };
@@ -63,10 +62,10 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="text-sm text-white/50 leading-relaxed mb-6">
-              NEXUS.AI — агентство интеллектуальной автоматизации. Объединяем экспертизу в машинном обучении с глубоким пониманием бизнес-процессов.
+              Компания ТехКон занимается автоматизацией компаний с помощью ИИ с углублённым сопряжением с 1С.
             </p>
             <p className="text-sm text-white/35 leading-relaxed">
-              За 5 лет работы реализовали более 150 проектов для компаний от стартапов до enterprise. Накопили уникальную экспертизу на стыке ИИ и бизнеса.
+              Объединяем экспертизу в машинном обучении, разработке 1С и оптимизации бизнес-процессов, чтобы создавать решения, которые встраиваются в реальные процессы компании.
             </p>
           </motion.div>
         </div>

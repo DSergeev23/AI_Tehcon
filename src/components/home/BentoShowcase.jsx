@@ -17,7 +17,7 @@ export default function BentoShowcase() {
 
         {/* Section label */}
         <RevealOnScroll>
-          <p className="text-sm text-white uppercase tracking-[0.2em] mb-10 font-semibold">Почему Tehcon AI</p>
+          <p className="text-sm text-white uppercase tracking-[0.2em] mb-10 font-semibold">Почему AI TehCon</p>
         </RevealOnScroll>
 
         {/* Bento Grid */}
@@ -75,7 +75,7 @@ export default function BentoShowcase() {
                 <h3 className="text-white tracking-tight leading-tight mb-4 text-3xl normal-case opacity-100 [font-family:'Roboto',_sans-serif] font-normal">Операционный интеллект
 
                 </h3>
-                <p className="text-xs text-white/50 font-semibold mb-3">Что делает Tehcon AI</p>
+                <p className="text-xs text-white/50 font-semibold mb-3">Что делает AI TehCon</p>
                 <div className="space-y-3 text-xs text-white/40 leading-relaxed">
                   <p>Найдём процессы, где сотрудники тратят время вручную, и сделаем так, чтобы система выполняла их сама.</p>
                   <p>Подключимся к 1С и покажем не просто цифры, а выводы:</p>

@@ -19,6 +19,8 @@ import {
 import RevealOnScroll from '../shared/RevealOnScroll';
 
 const integrations = [
+  { icon: Server, title: '1С Предприятие', description: 'Читает и записывает данные в документы, справочники, синхронизирует номенклатуру и создаёт отчёты' },
+  { icon: Mic, title: 'Алиса от Яндекса', description: 'Создание кастомных приватных навыков для голосового помощника, управление бизнес-процессами голосом' },
   { icon: Calendar, title: 'Google Calendar', description: 'Читает расписание, создаёт события, проверяет занятость и блокирует время' },
   { icon: FileText, title: 'Google Docs', description: 'Создаёт и редактирует документы, вставляет таблицы, сохраняет отчёты' },
   { icon: Table, title: 'Google Sheets', description: 'Читает и записывает данные в таблицы, строит сводки, делает пакетные обновления' },
@@ -29,8 +31,6 @@ const integrations = [
   { icon: Mail, title: 'Email сервисы', description: 'Автоматические сообщения на почту, отчеты и многое другое' },
   { icon: Video, title: 'Zoom', description: 'Автоматическое создание конференций, транскрибация созвонов и генерация AI-саммари встреч' },
   { icon: Database, title: 'Базы данных SQL', description: 'Прямое подключение к PostgreSQL/MySQL, выполнение сложных запросов и аналитика больших данных' },
-  { icon: Mic, title: 'Алиса от Яндекса', description: 'Создание кастомных приватных навыков для голосового помощника, управление бизнес-процессами голосом' },
-  { icon: Server, title: '1C Предприятие', description: 'Читает и записывает данные в документы, справочники, синхронизирует номенклатуру и создаёт отчёты' },
   { icon: BookOpen, title: 'Notion', description: 'Создаёт страницы и базы данных, ищет по воркспейсу, обновляет записи' },
   { icon: Blocks, title: 'И многое другое', description: 'Тысячи интеграций через API, Webhooks и MCP-серверы под любые задачи вашего бизнеса' },
 ];
@@ -46,7 +46,7 @@ export default function IntegrationsSection() {
               <span className="[font-family:'Instrument_Serif',_serif] not-italic">что вы уже используете</span>
             </h2>
             <p className="text-sm text-white/45 max-w-md leading-relaxed">
-              Tehcon AI работает с вашими инструментами через MCP и API.{' '}
+              AI TehCon работает с вашими инструментами через MCP и API.{' '}
               Никакой ручной настройки — просто скажите агенту подключиться.
             </p>
           </div>
