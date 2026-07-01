@@ -30,10 +30,12 @@ export const pageSEO = {
 };
 
 export function getProductSEO(product) {
+  const seo = product.seo || {};
+
   return {
-    title: product.seoTitle || `${product.title} | AI TehCon`,
-    description: product.seoDescription || `${product.shortDescription} Цена: ${product.pricing}. Интеграция нейросетей, разработка AI решений и автоматизация бизнес-процессов с AI TehCon.`,
-    canonical: `/catalog/${product.id}`,
-    keywords: `${product.title}, ${product.category}, ИИ агент, автоматизация бизнеса, ${product.tags?.join(', ')}`,
+    title: seo.title || `${product.title} | AI TehCon`,
+    description: seo.description || `${product.shortDescription} Цена: ${product.pricing}. Интеграция нейросетей, разработка AI решений и автоматизация бизнес-процессов с AI TehCon.`,
+    canonical: seo.canonical || `/catalog/${product.id}`,
+    keywords: seo.keywords || `${product.title}, ${product.category}, ИИ агент, автоматизация бизнеса, ${product.tags?.join(', ')}`,
   };
 }

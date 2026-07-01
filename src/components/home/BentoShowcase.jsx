@@ -1,7 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Plus, Zap, Shield, Layers, ArrowUpRight } from 'lucide-react';
+import { Zap, Layers, ArrowUpRight } from 'lucide-react';
 import RevealOnScroll from '../shared/RevealOnScroll';
 
 const metrics = [

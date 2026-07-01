@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Plus } from 'lucide-react';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
 import CTASection from '../components/home/CTASection';
 import SEOHead from '../components/shared/SEOHead';

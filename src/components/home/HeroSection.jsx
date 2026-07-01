@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Plus } from 'lucide-react';
 import WireframeGlobe from './WireframeGlobe';
-import CornerMark from '../shared/CornerMark';
 
 export default function HeroSection() {
   return (

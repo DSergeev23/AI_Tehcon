@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Send } from 'lucide-react';
-import { catalogProducts } from '../../lib/catalogData';
+import { catalogProducts } from '../../lib/catalog';
 
 const navLinks = [
 { label: 'Главная', to: '/' },

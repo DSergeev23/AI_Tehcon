@@ -29,3 +29,11 @@ dist-ssr
 
 .env
 .vite
+
+# Local Codex/agent workspace files
+.agents/
+.codex/
+.docs/
+docs/
+AGENTS.md
+Agents.md

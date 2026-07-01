@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Plus } from 'lucide-react';
-import { catalogProducts } from '../lib/catalogData';
+import { catalogProducts } from '../lib/catalog';
 import CatalogCard from '../components/catalog/CatalogCard';
 import SEOHead from '../components/shared/SEOHead';
 import { pageSEO } from '../lib/seoConfig';

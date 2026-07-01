@@ -39,6 +39,10 @@ function createOffer(product) {
   return offer;
 }
 
+function getProductDescription(product) {
+  return product.seo?.description || product.shortDescription;
+}
+
 // ── Catalog: ItemList ──
 export function createCatalogItemListSchema(products) {
   return {
@@ -55,7 +59,7 @@ export function createCatalogItemListSchema(products) {
       "item": {
         "@type": "Service",
         "name": p.title,
-        "description": p.shortDescription,
+        "description": getProductDescription(p),
         "provider": { ...ORGANIZATION },
         "serviceType": p.category,
         "category": p.category,
@@ -83,7 +87,7 @@ export function createServiceSchema(product) {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": product.title,
-    "description": product.shortDescription,
+    "description": getProductDescription(product),
     "url": `${SITE_URL}/catalog/${product.id}`,
     "provider": { ...ORGANIZATION },
     "areaServed": {
