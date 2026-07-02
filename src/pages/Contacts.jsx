@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Plus, CheckCircle2 } from 'lucide-react';
@@ -11,27 +11,72 @@ import RevealOnScroll from '../components/shared/RevealOnScroll';
 export default function Contacts() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', message: '' });
+  const [website, setWebsite] = useState('');
   const [consent, setConsent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const formOpenedAt = useRef(Date.now());
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!consent) return;
     setLoading(true);
+    setSubmitError('');
+
+    if (website.trim()) {
+      setSubmitted(true);
+      setLoading(false);
+      return;
+    }
+
+    if (Date.now() - formOpenedAt.current < 3000) {
+      setSubmitError('Форма отправлена слишком быстро. Проверьте данные и попробуйте ещё раз.');
+      setLoading(false);
+      return;
+    }
+
+    const lastSubmitAt = Number(window.localStorage.getItem('aiTehConContactLastSubmitAt') || 0);
+    if (Date.now() - lastSubmitAt < 60000) {
+      setSubmitError('Заявка уже отправлялась недавно. Попробуйте повторить через минуту.');
+      setLoading(false);
+      return;
+    }
+
+    const submittedAt = new Date().toLocaleString('ru-RU', {
+      timeZone: 'Europe/Moscow'
+    });
+    const subjectName = form.name.trim() || 'Без имени';
+    const subjectCompany = form.company.trim() || 'Без компании';
+
     try {
-      await fetch("https://formsubmit.co/ajax/hello@it-tehcon.ru", {
+      const response = await fetch("https://formsubmit.co/ajax/hello@it-tehcon.ru", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          ...form,
-          _subject: "Новая заявка с сайта AI TehCon!"
+          _subject: `Новая заявка AI TehCon: ${subjectName} / ${subjectCompany}`,
+          _template: 'table',
+          _replyto: form.email,
+          'Имя': form.name,
+          'Email': form.email,
+          'Телефон': form.phone,
+          'Компания': form.company || 'Не указана',
+          'Задача': form.message,
+          'Источник': 'Сайт AI TehCon',
+          'Страница': window.location.href,
+          'Дата отправки': submittedAt,
+          'Тип заявки': 'Консультация'
         })
       });
+      if (!response.ok) {
+        throw new Error('FormSubmit request failed');
+      }
+      window.localStorage.setItem('aiTehConContactLastSubmitAt', String(Date.now()));
       setSubmitted(true);
     } catch (_) {
+      setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз или напишите напрямую на hello@it-tehcon.ru.');
     } finally {
       setLoading(false);
     }
@@ -112,6 +157,21 @@ export default function Contacts() {
 
               <form onSubmit={handleSubmit} className="space-y-4">
                   <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-6">Форма обратной связи</p>
+                  <input
+                    type="text"
+                    name="website"
+                    value={website}
+                    onChange={(e) => setWebsite(e.target.value)}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden opacity-0"
+                  />
+                  {submitError &&
+                    <div className="border border-primary/35 bg-primary/10 text-white rounded-sm px-4 py-3 text-sm leading-relaxed">
+                      {submitError}
+                    </div>
+                  }
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
