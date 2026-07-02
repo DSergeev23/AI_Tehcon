@@ -15,6 +15,8 @@ import {
   Server,
   BookOpen,
   Blocks,
+  ShoppingBag,
+  Users,
 } from 'lucide-react';
 import RevealOnScroll from '../shared/RevealOnScroll';
 
@@ -26,12 +28,14 @@ const integrations = [
   { icon: Table, title: 'Google Sheets', description: 'Читает и записывает данные в таблицы, строит сводки, делает пакетные обновления' },
   { icon: Send, title: 'Telegram', description: 'Отправляет и получает сообщения, управляет каналами, ботами и уведомлениями' },
   { icon: MessageCircle, title: 'WhatsApp', description: 'Интеграция с WhatsApp Business API, рассылки, автоответы и умная маршрутизация диалогов' },
-  { icon: Briefcase, title: 'Битрикс24 / CRM', description: 'Полная интеграция: создание лидов, постановка задач, обновление статусов сделок и карточек клиентов' },
+  { icon: Users, title: 'CRM-системы', description: 'Создаёт лиды и сделки, обновляет воронки, фиксирует касания и передаёт данные в отчёты' },
   { icon: FileSpreadsheet, title: 'Excel & Word', description: 'Парсинг сложных таблиц, автоматическая генерация договоров, актов и отчетов по шаблонам' },
   { icon: Mail, title: 'Email сервисы', description: 'Автоматические сообщения на почту, отчеты и многое другое' },
   { icon: Video, title: 'Zoom', description: 'Автоматическое создание конференций, транскрибация созвонов и генерация AI-саммари встреч' },
   { icon: Database, title: 'Базы данных SQL', description: 'Прямое подключение к PostgreSQL/MySQL, выполнение сложных запросов и аналитика больших данных' },
   { icon: BookOpen, title: 'Notion', description: 'Создаёт страницы и базы данных, ищет по воркспейсу, обновляет записи' },
+  { icon: ShoppingBag, title: 'Ozon / Wildberries', description: 'Собирает заказы, остатки, цены, отзывы и аналитику продаж с маркетплейсов' },
+  { icon: Briefcase, title: 'Битрикс24', description: 'Создаёт лиды, ставит задачи, обновляет сделки, статусы и карточки клиентов' },
   { icon: Blocks, title: 'И многое другое', description: 'Тысячи интеграций через API, Webhooks и MCP-серверы под любые задачи вашего бизнеса' },
 ];
 

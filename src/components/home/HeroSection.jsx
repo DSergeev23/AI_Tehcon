@@ -64,29 +64,6 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll down indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/55 hover:text-white transition-colors cursor-default"
-      >
-        <span className="text-[10px] uppercase tracking-[0.2em]">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 5, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <rect x="1" y="1" width="14" height="22" rx="7" />
-            <motion.line
-              x1="8" y1="6" x2="8" y2="10"
-              animate={{ opacity: [1, 0, 1], y: [0, 2, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-            />
-          </svg>
-        </motion.div>
-      </motion.div>
     </section>);
 
 }

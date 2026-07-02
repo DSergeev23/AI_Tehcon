@@ -47,8 +47,8 @@ export default function BentoShowcase() {
                 </p>
               </div>
 
-              <div className="relative z-10 flex items-center justify-between mt-8">
-                <div className="flex gap-6">
+              <div className="relative z-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mt-8">
+                <div className="grid grid-cols-3 gap-4 sm:flex sm:gap-6 w-full sm:w-auto">
                   {metrics.map((m, i) =>
                   <div key={i}>
                       <div className="text-2xl font-serif text-signal tracking-tight">{m.value}</div>
@@ -58,7 +58,7 @@ export default function BentoShowcase() {
                 </div>
                 <Link
                   to="/contacts"
-                  className="flex items-center gap-1.5 px-4 py-2 signal-button text-xs font-semibold rounded-sm transition-colors flex-shrink-0">Рассчитать потенциал</Link>
+                  className="flex w-full sm:w-auto items-center justify-center gap-1.5 px-4 py-2 signal-button text-xs font-semibold rounded-sm transition-colors text-center whitespace-normal sm:whitespace-nowrap">Рассчитать потенциал</Link>
               </div>
             </div>
           </RevealOnScroll>
