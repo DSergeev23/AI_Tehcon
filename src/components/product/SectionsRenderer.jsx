@@ -15,8 +15,8 @@ function ImageBlock({ src, alt }) {
 
   if (errored && isLocal) {
     return (
-      <div className="my-10 w-full rounded-2xl border border-white/10 bg-white/[0.03] flex items-center justify-center py-14 text-sm text-white/30">
-        Ожидается файл: <span className="ml-1.5 font-mono text-white/50">{filename}</span>
+      <div className="my-10 w-full rounded-2xl border border-primary/30 bg-primary/10 flex items-center justify-center py-14 text-sm text-white/75">
+        Ожидается файл: <span className="ml-1.5 font-mono text-white">{filename}</span>
       </div>
     );
   }
@@ -41,7 +41,7 @@ const markdownComponents = {
     <h3 className="font-serif text-xl md:text-2xl text-white tracking-tight leading-tight mt-8 mb-3">{children}</h3>
   ),
   p: ({ children }) => (
-    <p className="text-lg leading-relaxed text-gray-300 mb-6">{children}</p>
+    <p className="text-lg leading-relaxed text-white/80 mb-6">{children}</p>
   ),
   strong: ({ children }) => (
     <strong className="text-white font-semibold">{children}</strong>
@@ -53,8 +53,8 @@ const markdownComponents = {
     <ol className="space-y-2 my-5 ml-1 list-decimal list-inside">{children}</ol>
   ),
   li: ({ children }) => (
-    <li className="flex items-start gap-3 text-gray-300 text-base leading-relaxed list-none">
-      <span className="mt-[9px] w-1.5 h-1.5 rounded-full bg-white/30 flex-shrink-0" />
+    <li className="flex items-start gap-3 text-white/80 text-base leading-relaxed list-none">
+      <span className="mt-[9px] w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
       <span className="flex-1">{children}</span>
     </li>
   ),
@@ -62,7 +62,7 @@ const markdownComponents = {
     <hr className="my-10 border-white/[0.08]" />
   ),
   blockquote: ({ children }) => (
-    <blockquote className="border-l-2 border-white/20 pl-6 my-8 text-white/50 italic text-lg">{children}</blockquote>
+    <blockquote className="border-l-2 border-primary/45 pl-6 my-8 text-white/80 italic text-lg">{children}</blockquote>
   ),
 };
 
@@ -70,7 +70,7 @@ export default function SectionsRenderer({ content, fallbackText }) {
   // Fallback: render fullDescription as markdown if no content array provided
   if (!content || content.length === 0) {
     return (
-      <div className="max-w-3xl mb-8 text-lg leading-relaxed text-gray-300">
+      <div className="max-w-3xl mb-8 text-lg leading-relaxed text-white/80">
         <ReactMarkdown components={markdownComponents}>{fallbackText || ''}</ReactMarkdown>
       </div>
     );
@@ -90,7 +90,7 @@ export default function SectionsRenderer({ content, fallbackText }) {
             <ImageBlock src={block.value} alt={block.alt || ''} />
           
           ) : (
-            <div className="max-w-3xl mb-8 text-lg leading-relaxed text-gray-300">
+            <div className="max-w-3xl mb-8 text-lg leading-relaxed text-white/80">
               <ReactMarkdown components={markdownComponents}>{block.value}</ReactMarkdown>
             </div>
           )}

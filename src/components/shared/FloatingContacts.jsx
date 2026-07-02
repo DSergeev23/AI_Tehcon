@@ -15,10 +15,10 @@ export default function FloatingContacts() {
         transition={{ delay: 0.5, duration: 0.4 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="w-12 h-12 rounded-full border border-white/[0.2] bg-white/[0.05] hover:bg-white/[0.1] flex items-center justify-center transition-colors"
+        className="w-12 h-12 rounded-full border border-primary/45 bg-primary/10 hover:bg-primary/15 flex items-center justify-center transition-colors"
         title="WhatsApp"
       >
-        <MessageCircle className="w-5 h-5 text-white/80" />
+        <MessageCircle className="w-5 h-5 text-primary" />
       </motion.a>
 
       {/* Telegram */}
@@ -31,10 +31,10 @@ export default function FloatingContacts() {
         transition={{ delay: 0.65, duration: 0.4 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="w-12 h-12 rounded-full border border-white/[0.2] bg-white/[0.05] hover:bg-white/[0.1] flex items-center justify-center transition-colors"
+        className="w-12 h-12 rounded-full border border-primary/45 bg-primary/10 hover:bg-primary/15 flex items-center justify-center transition-colors"
         title="Telegram"
       >
-        <Send className="w-5 h-5 text-white/80" />
+        <Send className="w-5 h-5 text-primary" />
       </motion.a>
     </div>
   );

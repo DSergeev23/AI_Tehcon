@@ -11,7 +11,7 @@ export default function TrustedSection() {
     <section className="relative py-20 border-y border-white/[0.04]">
       <div className="max-w-7xl mx-auto px-6">
         <RevealOnScroll>
-          <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground mb-10">
+          <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-signal mb-10">
             Нам доверяют лидеры рынка
           </p>
         </RevealOnScroll>

@@ -68,7 +68,7 @@ function BentoCard({ item, index }) {
             <Icon className="w-5 h-5 text-primary" />
           </div>
           <h3 className="text-xl font-bold tracking-tight text-foreground mb-3">{item.title}</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+          <p className="text-sm text-white/80 leading-relaxed">{item.description}</p>
         </div>
 
         {/* Corner accent */}

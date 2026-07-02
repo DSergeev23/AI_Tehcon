@@ -8,6 +8,6 @@ export default function CornerMark({ position = 'top-left', className = '' }) {
     'bottom-right': '-bottom-2 -right-2',
   };
   return (
-    <span className={`absolute ${positions[position]} text-white/20 text-xs leading-none pointer-events-none select-none ${className}`}>+</span>
+    <span className={`absolute ${positions[position]} text-primary/55 text-xs leading-none pointer-events-none select-none ${className}`}>+</span>
   );
 }

@@ -164,14 +164,14 @@ export default function PrivacyPolicy() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.1] rounded-sm text-[11px] text-white/40 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 border signal-badge rounded-sm text-[11px] mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
               Правовые документы
             </div>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-tight mb-4">
               Политика конфиденциальности
             </h1>
-            <p className="text-[13px] text-white/30 mt-4">
+            <p className="text-[13px] text-white/75 mt-4">
               Дата публикации: 03.06.2026
             </p>
           </motion.div>
@@ -189,10 +189,10 @@ export default function PrivacyPolicy() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mb-16"
           >
-            <p className="text-[15px] text-white/45 leading-relaxed mb-6">
+            <p className="text-[15px] text-white/80 leading-relaxed mb-6">
               Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных пользователей сайта ai-tehcon.ru, принадлежащего AI TehCon, далее — «Оператор».
             </p>
-            <p className="text-[15px] text-white/45 leading-relaxed">
+            <p className="text-[15px] text-white/80 leading-relaxed">
               Используя сайт, отправляя заявку, заполняя форму обратной связи или иным образом передавая свои данные через сайт, пользователь подтверждает, что ознакомился с настоящей Политикой конфиденциальности.
             </p>
           </motion.div>
@@ -208,12 +208,12 @@ export default function PrivacyPolicy() {
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               >
                 <div className="flex items-start gap-5 mb-4">
-                  <span className="text-[10px] text-white/20 tracking-widest font-mono mt-1.5 shrink-0">{s.num}</span>
+                  <span className="text-[10px] text-signal tracking-widest font-mono mt-1.5 shrink-0">{s.num}</span>
                   <h2 className="font-serif text-xl md:text-2xl text-white tracking-tight">{s.title}</h2>
                 </div>
                 <div className="pl-10">
                   {s.body.split('\n\n').map((para, j) => (
-                    <p key={j} className="text-[15px] text-white/45 leading-relaxed mb-4 last:mb-0 whitespace-pre-line">
+                    <p key={j} className="text-[15px] text-white/80 leading-relaxed mb-4 last:mb-0 whitespace-pre-line">
                       {para}
                     </p>
                   ))}
@@ -224,10 +224,10 @@ export default function PrivacyPolicy() {
 
           {/* Back link */}
           <div className="mt-20 pt-10 border-t border-white/[0.08] flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
-            <Link to="/" className="text-[13px] text-white/35 hover:text-white/70 transition-colors">
+            <Link to="/" className="text-[13px] text-white/75 hover:text-white transition-colors">
               ← На главную
             </Link>
-            <Link to="/terms-of-use" className="text-[13px] text-white/35 hover:text-white/70 transition-colors">
+            <Link to="/terms-of-use" className="text-[13px] text-white/75 hover:text-white transition-colors">
               Условия использования →
             </Link>
           </div>

@@ -37,7 +37,7 @@ const legal = [
 
 
 function FooterLink({ to, children, external }) {
-  const base = "text-[13px] text-white/40 leading-snug transition-colors duration-200 hover:text-white/80";
+  const base = "text-[13px] text-white/75 leading-snug transition-colors duration-200 hover:text-white";
   if (external) {
     return (
       <motion.a
@@ -77,7 +77,7 @@ export default function Footer() {
               />
               <span className="text-sm font-semibold text-white tracking-tight">AI TehCon</span>
             </Link>
-            <p className="text-[13px] text-white/35 leading-relaxed max-w-[260px]">
+            <p className="text-[13px] text-white/75 leading-relaxed max-w-[260px]">
               Внедряем автономных AI-агентов в 1С, CRM, Excel и Telegram. Бизнес работает быстрее, точнее и дешевле.
             </p>
             {/* Social */}
@@ -87,7 +87,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="AI TehCon в Telegram"
-                className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-white/40 hover:text-white/80 hover:border-white/25 transition-colors"
+                className="w-8 h-8 rounded-md border border-primary/35 bg-primary/10 flex items-center justify-center text-primary hover:text-white hover:border-primary/60 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.15 }}>
                 
@@ -96,7 +96,7 @@ export default function Footer() {
               <motion.a
                 href="mailto:hello@it-tehcon.ru"
                 aria-label="Написать на hello@it-tehcon.ru"
-                className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-white/40 hover:text-white/80 hover:border-white/25 transition-colors"
+                className="w-8 h-8 rounded-md border border-primary/35 bg-primary/10 flex items-center justify-center text-primary hover:text-white hover:border-primary/60 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.15 }}>
                 
@@ -107,7 +107,7 @@ export default function Footer() {
 
           {/* Col 2 — Navigation */}
           <div>
-            <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Навигация</p>
+            <p className="text-[10px] font-semibold text-signal uppercase tracking-[0.16em] mb-5">Навигация</p>
             <div className="flex flex-col gap-3">
               {navLinks.map((l) =>
               <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
@@ -117,7 +117,7 @@ export default function Footer() {
 
           {/* Col 3 — Solutions */}
           <div>
-            <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Решения</p>
+            <p className="text-[10px] font-semibold text-signal uppercase tracking-[0.16em] mb-5">Решения</p>
             <div className="flex flex-col gap-3">
               {solutions.map((l) =>
               <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
@@ -127,13 +127,13 @@ export default function Footer() {
 
           {/* Col 4 — Contact */}
           <div>
-            <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Контакты</p>
+            <p className="text-[10px] font-semibold text-signal uppercase tracking-[0.16em] mb-5">Контакты</p>
             <div className="flex flex-col gap-3">
               <FooterLink to="mailto:hello@it-tehcon.ru" external>hello@it-tehcon.ru</FooterLink>
               <FooterLink to="https://t.me/dmtr_sergeev" external>AI-TehCon в Telegram</FooterLink>
             </div>
             <div className="mt-8">
-              <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.16em] mb-5">Правовое</p>
+              <p className="text-[10px] font-semibold text-signal uppercase tracking-[0.16em] mb-5">Правовое</p>
               <div className="flex flex-col gap-3">
                 {legal.map((l) =>
                 <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
@@ -145,11 +145,11 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-          <p className="text-[11px] text-white/20">© 2026 AI TehCon. Все права защищены.</p>
+          <p className="text-[11px] text-white/55">© 2026 AI TehCon. Все права защищены.</p>
           <div className="flex items-center gap-5">
             {legal.map((l) =>
             <motion.div key={l.to} whileHover={{ x: 1 }} transition={{ duration: 0.15 }}>
-                <Link to={l.to} className="text-[11px] text-white/20 hover:text-white/45 transition-colors">
+                <Link to={l.to} className="text-[11px] text-white/55 hover:text-white transition-colors">
                   {l.label}
                 </Link>
               </motion.div>

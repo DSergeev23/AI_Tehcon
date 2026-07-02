@@ -57,8 +57,8 @@ export default function Navbar() {
                   className={[
                     'inline-flex items-center h-9 px-4 rounded-md text-sm transition-colors duration-150',
                     isActive
-                      ? 'text-white bg-white/[0.07] border border-white/[0.12]'
-                      : 'text-white/60 hover:text-white hover:bg-white/[0.05] border border-transparent',
+                      ? 'text-white bg-white/[0.07] border border-primary/45'
+                      : 'text-white/75 hover:text-white hover:bg-white/[0.05] border border-transparent',
                   ].join(' ')}
                 >
                   {link.label}
@@ -71,7 +71,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center shrink-0">
             <Link
               to="/contacts"
-              className="inline-flex items-center gap-1.5 h-9 px-5 text-sm font-medium bg-white text-black rounded-md hover:bg-white/90 transition-colors"
+              className="inline-flex items-center gap-1.5 h-9 px-5 text-sm font-medium signal-button rounded-md transition-colors"
             >
               Связаться
               <Plus className="w-3.5 h-3.5" />
@@ -81,7 +81,7 @@ export default function Navbar() {
           {/* Mobile menu btn */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden text-white/70 hover:text-white transition-colors"
+            className="md:hidden text-primary hover:text-white transition-colors"
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -103,14 +103,14 @@ export default function Navbar() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="py-3 text-sm text-white/70 hover:text-white border-b border-white/[0.06] last:border-0 transition-colors"
+                  className="py-3 text-sm text-white/75 hover:text-white border-b border-white/[0.06] last:border-0 transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
                 to="/contacts"
-                className="mt-4 flex items-center justify-center gap-2 h-11 bg-white text-black text-sm font-semibold rounded-md"
+                className="mt-4 flex items-center justify-center gap-2 h-11 signal-button text-sm font-semibold rounded-md"
               >
                 Связаться <Plus className="w-4 h-4" />
               </Link>

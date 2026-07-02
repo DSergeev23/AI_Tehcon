@@ -46,8 +46,8 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.1] rounded-sm text-[11px] text-white/40 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 border signal-badge rounded-sm text-[11px] mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
               О компании
             </div>
             <h1 className="font-serif text-5xl md:text-6xl 2xl:text-7xl text-white tracking-tight leading-tight">
@@ -60,10 +60,10 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-sm text-white/50 leading-relaxed mb-6">
+            <p className="text-sm text-white leading-relaxed mb-6">
               Компания AI TehCon занимается автоматизацией компаний с помощью ИИ с углублённым сопряжением с 1С.
             </p>
-            <p className="text-sm text-white/35 leading-relaxed">
+            <p className="text-sm text-white/80 leading-relaxed">
               Объединяем экспертизу в машинном обучении, разработке 1С и оптимизации бизнес-процессов, чтобы создавать решения, которые встраиваются в реальные процессы компании.
             </p>
           </motion.div>
@@ -77,8 +77,8 @@ export default function About() {
             {stats.map((s, i) => (
               <RevealOnScroll key={i} delay={i * 0.06}>
                 <div className={`py-10 px-7 text-center ${i < 3 ? 'border-r border-white/[0.08]' : ''}`}>
-                  <div className="text-3xl font-serif text-white tracking-tight mb-1">{s.num}</div>
-                  <div className="text-xs text-white/35">{s.label}</div>
+                  <div className="text-3xl font-serif text-signal tracking-tight mb-1">{s.num}</div>
+                  <div className="text-xs text-white/75">{s.label}</div>
                 </div>
               </RevealOnScroll>
             ))}
@@ -92,11 +92,11 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2">
             <RevealOnScroll>
               <div className="p-10 border-r border-white/[0.08]">
-                <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-6">Миссия</p>
+                <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-6">Миссия</p>
                 <h2 className="font-serif text-3xl text-white tracking-tight leading-tight mb-5">
                   Делаем ИИ доступным<br />для каждого бизнеса
                 </h2>
-                <p className="text-sm text-white/45 leading-relaxed">
+                <p className="text-sm text-white/80 leading-relaxed">
                   Верим, что искусственный интеллект — это не привилегия корпораций, а инструмент для бизнеса любого масштаба. Создаём решения, которые встраиваются в существующие процессы без болезненных трансформаций.
                 </p>
               </div>
@@ -105,16 +105,16 @@ export default function About() {
             {/* Values */}
             <RevealOnScroll delay={0.1}>
               <div className="p-10">
-                <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-6">Принципы</p>
+                <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-6">Принципы</p>
                 <div className="space-y-5">
                   {values.map((v, i) => (
                     <div key={i} className="flex gap-4 py-4 border-b border-white/[0.06] last:border-0">
-                      <div className="w-6 h-6 border border-white/[0.1] rounded flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-[10px] font-mono text-white/40">{String(i + 1).padStart(2, '0')}</span>
+                      <div className="w-6 h-6 border border-primary/35 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-[10px] font-mono text-signal">{String(i + 1).padStart(2, '0')}</span>
                       </div>
                       <div>
                         <h3 className="text-sm font-semibold text-white mb-1">{v.title}</h3>
-                        <p className="text-xs text-white/40 leading-relaxed">{v.desc}</p>
+                        <p className="text-xs text-white/80 leading-relaxed">{v.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -129,7 +129,7 @@ export default function About() {
       <div className="border-b border-white/[0.08]">
         <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-12">
           <RevealOnScroll>
-            <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-6">Технологический стек</p>
+            <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-6">Технологический стек</p>
             <div className="flex flex-wrap gap-2">
               {techStack.map((tech, i) => (
                 <motion.span
@@ -138,7 +138,7 @@ export default function About() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.04 }}
-                  className="px-3 py-1.5 border border-white/[0.08] rounded-sm text-xs text-white/50 hover:text-white/80 hover:border-white/[0.15] transition-colors"
+                  className="px-3 py-1.5 border border-white/[0.12] rounded-sm text-xs text-white/75 hover:text-white hover:border-primary/45 transition-colors"
                 >
                   {tech}
                 </motion.span>

@@ -44,14 +44,14 @@ export default function Catalog() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.1] rounded-sm text-[11px] text-white/40 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 border signal-badge rounded-sm text-[11px] mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
               Каталог решений
             </div>
             <h1 className="font-serif text-5xl md:text-6xl 2xl:text-7xl text-white tracking-tight leading-tight mb-4">
               ИИ-решения<br />для бизнеса
             </h1>
-            <p className="text-sm text-white/40 max-w-md leading-relaxed">
+            <p className="text-sm text-white max-w-md leading-relaxed">
               Готовые продукты и кастомные решения для автоматизации любых бизнес-процессов
             </p>
           </motion.div>
@@ -68,8 +68,8 @@ export default function Catalog() {
                 onClick={() => setActive(cat)}
                 className={`px-3 py-1.5 text-xs rounded-sm whitespace-nowrap transition-colors ${
                   active === cat
-                    ? 'border border-white/[0.2] text-white bg-white/[0.05]'
-                    : 'border border-transparent text-white/40 hover:text-white/70'
+                    ? 'border border-primary/50 text-white bg-primary/15'
+                    : 'border border-transparent text-white/75 hover:text-white'
                 }`}
               >
                 {active === cat ? `[${cat}]` : cat}

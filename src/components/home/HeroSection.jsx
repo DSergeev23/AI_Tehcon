@@ -11,10 +11,10 @@ export default function HeroSection() {
       <div className="absolute inset-0 grid-lines opacity-100" />
 
       {/* Corner marks */}
-      <span className="absolute top-[56px] left-5 text-white/20 text-xs">+</span>
-      <span className="absolute top-[56px] right-5 text-white/20 text-xs">+</span>
-      <span className="absolute bottom-12 left-5 text-white/20 text-xs">+</span>
-      <span className="absolute bottom-12 right-5 text-white/20 text-xs">+</span>
+      <span className="absolute top-[56px] left-5 text-primary/55 text-xs">+</span>
+      <span className="absolute top-[56px] right-5 text-primary/55 text-xs">+</span>
+      <span className="absolute bottom-12 left-5 text-primary/55 text-xs">+</span>
+      <span className="absolute bottom-12 right-5 text-primary/55 text-xs">+</span>
 
       <div className="relative z-10 w-full mx-auto px-6 md:px-12 lg:px-20 2xl:px-28 3xl:px-40 flex flex-col items-center py-16">
         {/* Globe - centered at top */}
@@ -47,14 +47,16 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col justify-end">
 
-            <p className="text-sm lg:text-base 2xl:text-lg text-white/50 leading-relaxed mb-4 max-w-none">Превращаем 1С, CRM, Excel, Telegram и внутренние системы в единую AI-инфраструктуру управления бизнесом. 
-AI TehCon внедряет автономных AI-агентов, которые самостоятельно анализируют данные, контролируют процессы, запускают действия и помогают бизнесу работать быстрее, точнее и дешевле.</p>
-            <p className="text-sm lg:text-base 2xl:text-lg text-white/50 leading-relaxed mb-6 max-w-none">
+            <p className="text-sm lg:text-base 2xl:text-lg text-white leading-relaxed mb-4 max-w-none">
+              Превращаем 1С, CRM, Excel, Telegram и внутренние системы в единую AI-инфраструктуру управления бизнесом.
+              AI TehCon внедряет автономных AI-агентов, которые самостоятельно анализируют данные, контролируют процессы, запускают действия и помогают бизнесу работать быстрее, точнее и дешевле.
+            </p>
+            <p className="text-sm lg:text-base 2xl:text-lg text-white leading-relaxed mb-6 max-w-none">
               Результат — на ваш мобильный телефон, почту или в мессенджер.
             </p>
             <div>
               <Link to="/catalog"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-md hover:bg-white/90 transition-colors">
+              className="inline-flex items-center gap-2 px-5 py-2.5 signal-button text-sm font-semibold rounded-md transition-colors">
                 Смотреть каталог
                 <Plus className="w-4 h-4" />
               </Link>
@@ -68,7 +70,7 @@ AI TehCon внедряет автономных AI-агентов, которы�
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/30 hover:text-white/70 transition-colors cursor-default"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/55 hover:text-white transition-colors cursor-default"
       >
         <span className="text-[10px] uppercase tracking-[0.2em]">Scroll</span>
         <motion.div

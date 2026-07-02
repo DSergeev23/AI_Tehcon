@@ -37,22 +37,22 @@ export default function AutomationBlock() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col order-1 lg:order-2">
 
-            <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] mb-6">Автоматизация для корпораций</p>
+            <p className="text-[10px] text-white/75 uppercase tracking-[0.2em] mb-6">Автоматизация для корпораций</p>
 
             <h2 className="font-serif text-4xl md:text-5xl xl:text-6xl text-white leading-tight tracking-tight mb-6">
               Автоматизация<br />под ключ
             </h2>
 
-            <div className="w-8 h-px bg-white/20 mb-6" />
+            <div className="w-8 h-px bg-primary mb-6" />
 
-            <p className="text-sm md:text-base text-white/50 leading-relaxed mb-10 max-w-lg">
+            <p className="text-sm md:text-base text-white leading-relaxed mb-10 max-w-lg">
               Неважно, какой сложности ваш бизнес — наш Enterprise план создан для тех, кому нужны готовые автоматизированные решения под ключ. Вы описываете свою задачу, а наши специалисты реализуют её с полной поддержкой в минимальные сроки с почасовой оплатой.
             </p>
 
             <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
               <Link
                 to="/contacts"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors">
+                className="inline-flex items-center gap-2 px-6 py-3 signal-button text-sm font-semibold rounded-sm transition-colors">
                 Связаться с отделом продаж
                 <ArrowUpRight className="w-4 h-4" />
               </Link>

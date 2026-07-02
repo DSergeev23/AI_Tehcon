@@ -45,7 +45,7 @@ export default function IntegrationsSection() {
               Подключается ко всему,<br />
               <span className="[font-family:'Instrument_Serif',_serif] not-italic">что вы уже используете</span>
             </h2>
-            <p className="text-sm text-white/45 max-w-md leading-relaxed">
+            <p className="text-sm text-white max-w-md leading-relaxed">
               AI TehCon работает с вашими инструментами через MCP и API.{' '}
               Никакой ручной настройки — просто скажите агенту подключиться.
             </p>
@@ -60,13 +60,13 @@ export default function IntegrationsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-20px' }}
               transition={{ duration: 0.4, delay: i * 0.03 }}
-              className="group bg-neutral-950 border border-white/5 rounded-lg p-6 hover:bg-white/[0.02] hover:border-white/10 transition-all duration-300"
+              className="group bg-neutral-950 border border-white/10 rounded-lg p-6 hover:bg-white/[0.03] hover:border-primary/45 transition-all duration-300"
             >
-              <div className="p-3 rounded-lg bg-white/5 text-neutral-300 w-fit mb-4 group-hover:bg-white/10 transition-colors duration-300">
+              <div className="p-3 rounded-lg bg-primary/10 text-primary w-fit mb-4 group-hover:bg-primary/15 transition-colors duration-300">
                 <item.icon className="w-5 h-5" />
               </div>
               <h3 className="text-white font-medium text-lg mb-2">{item.title}</h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{item.description}</p>
+              <p className="text-white/80 text-sm leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </div>

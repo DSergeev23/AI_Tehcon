@@ -47,18 +47,18 @@ export default function CatalogCard({ product, index }) {
     >
       <Link to={`/catalog/${product.id}`} className="block group">
         <motion.div
-          whileHover={{ backgroundColor: 'rgba(255,255,255,0.025)' }}
-          className="relative border border-white/[0.08] rounded-sm p-7 transition-colors duration-200 bg-black h-full"
+          whileHover={{ backgroundColor: 'rgba(255,255,255,0.035)' }}
+          className="relative border border-white/[0.1] rounded-sm p-7 transition-colors duration-200 bg-black h-full group-hover:border-primary/45"
         >
           {/* Corner pluses */}
-          <Plus className="absolute top-3 right-3 w-3.5 h-3.5 text-white/15 group-hover:text-white/30 transition-colors" />
+          <Plus className="absolute top-3 right-3 w-3.5 h-3.5 text-primary/45 group-hover:text-primary transition-colors" />
 
           {/* Tags */}
           <div className="flex flex-wrap gap-1.5 mb-6">
             {product.tags.map((tag, i) => (
               <span
                 key={i}
-                className="px-2 py-0.5 border border-white/[0.1] rounded-sm text-[10px] font-medium text-white/40 uppercase tracking-wide"
+                className="px-2 py-0.5 border border-white/[0.14] rounded-sm text-[10px] font-medium text-white/75 uppercase tracking-wide"
               >
                 {tag}
               </span>
@@ -68,13 +68,13 @@ export default function CatalogCard({ product, index }) {
           {/* Icon + visual placeholder */}
           <div className="mb-6 flex items-end justify-between">
             <div className="w-10 h-10 border border-white/[0.1] rounded flex items-center justify-center">
-              <Icon className="w-4 h-4 text-white/60" />
+              <Icon className="w-4 h-4 text-white" />
             </div>
-            <VisualIcon className="w-12 h-12 text-white/[0.12]" strokeWidth={0.8} />
+            <VisualIcon className="w-12 h-12 text-white/[0.22]" strokeWidth={0.8} />
           </div>
 
           {/* Category */}
-          <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-1.5">{product.category}</p>
+          <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-1.5">{product.category}</p>
 
           {/* Title */}
           <h3 className="text-sm font-semibold text-white mb-3 leading-snug tracking-tight group-hover:text-white transition-colors">
@@ -82,14 +82,14 @@ export default function CatalogCard({ product, index }) {
           </h3>
 
           {/* Description */}
-          <p className="text-xs text-white/40 leading-relaxed mb-6 line-clamp-2">
+          <p className="text-xs text-white/80 leading-relaxed mb-6 line-clamp-2">
             {product.shortDescription}
           </p>
 
           {/* Bottom row */}
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-white/70">{product.pricing}</span>
-            <span className="text-[11px] text-white/40 group-hover:text-white/80 transition-colors flex items-center gap-1">
+            <span className="text-xs font-semibold text-white">{product.pricing}</span>
+            <span className="text-[11px] text-white/75 group-hover:text-white transition-colors flex items-center gap-1">
               Подробнее →
             </span>
           </div>

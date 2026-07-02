@@ -17,7 +17,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#666', marginBottom: '28px' }}
+          style={{ fontSize: '11px', letterSpacing: '0.14em', color: 'rgba(255,255,255,0.75)', marginBottom: '28px' }}
           className="uppercase">
           
           Никакого хайпа вокруг ИИ. Только результаты.
@@ -51,9 +51,9 @@ export default function CTASection() {
             { num: '03', text: 'За 30–60 минут — процессы, которые сократятся в 5–10 раз' }].
             map(({ num, text }) =>
             <div key={num} className="flex items-start gap-5 text-left">
-                <span className="text-[10px] text-white/20 tracking-widest mt-0.5 font-mono shrink-0">{num}</span>
+                <span className="text-[10px] text-signal tracking-widest mt-0.5 font-mono shrink-0">{num}</span>
                 
-                <p className="text-white/45 leading-relaxed opacity-100 text-base text-justify">{text}</p>
+                <p className="text-white leading-relaxed opacity-100 text-base text-justify">{text}</p>
               </div>
             )}
           </div>
@@ -68,7 +68,7 @@ export default function CTASection() {
           
           <Link
             to="/contacts"
-            className="inline-flex items-center gap-2 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors"
+            className="inline-flex items-center gap-2 signal-button text-sm font-semibold rounded-sm transition-colors"
             style={{ padding: '12px 36px' }}>
             
             Получить аудит

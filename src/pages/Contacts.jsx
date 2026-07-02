@@ -49,8 +49,8 @@ export default function Contacts() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}>
             
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.1] rounded-sm text-[11px] text-white/40 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 border signal-badge rounded-sm text-[11px] mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
               Связаться
             </div>
             <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">Давайте обсудим 
@@ -67,7 +67,7 @@ export default function Contacts() {
           <div className="lg:col-span-2 border-r border-white/[0.08]">
             <RevealOnScroll>
               <div className="p-8 border-b border-white/[0.08]">
-                <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-5">Контакты</p>
+                <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-5">Контакты</p>
                 <div className="space-y-4">
                   {[
                   { label: 'Email', val: 'hello@it-tehcon.ru' },
@@ -75,8 +75,8 @@ export default function Contacts() {
                   { label: 'Адрес', val: 'Москва, 2-й Вольный пер, д.11' }].
                   map((c, i) =>
                   <div key={i} className="py-3 border-b border-white/[0.06] last:border-0">
-                      <p className="text-[10px] text-white/25 uppercase tracking-[0.12em] mb-0.5">{c.label}</p>
-                      <p className="text-sm text-white/60 whitespace-pre-line">{c.val}</p>
+                      <p className="text-[10px] text-white/75 uppercase tracking-[0.12em] mb-0.5">{c.label}</p>
+                      <p className="text-sm text-white whitespace-pre-line">{c.val}</p>
                     </div>
                   )}
                 </div>
@@ -85,8 +85,8 @@ export default function Contacts() {
 
             <RevealOnScroll delay={0.1}>
               <div className="p-8">
-                <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-4">Время работы</p>
-                <p className="text-sm text-white/45 leading-relaxed">
+                <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-4">Время работы</p>
+                <p className="text-sm text-white/80 leading-relaxed">
                   Пн — Пт: 10:00 — 19:00 (МСК)<br />
                   Ответ на заявку — в течение 2 часов.
                 </p>
@@ -103,72 +103,72 @@ export default function Contacts() {
                 animate={{ opacity: 1, y: 0 }}
                 className="flex flex-col items-center justify-center py-20 text-center">
                 
-                  <div className="w-12 h-12 border border-white/[0.12] rounded flex items-center justify-center mb-6">
-                    <CheckCircle2 className="w-5 h-5 text-white/60" />
+                  <div className="w-12 h-12 border border-primary/40 bg-primary/10 rounded flex items-center justify-center mb-6">
+                    <CheckCircle2 className="w-5 h-5 text-primary" />
                   </div>
                   <h3 className="text-xl font-serif text-white mb-2">Заявка отправлена</h3>
-                  <p className="text-sm text-white/40">Свяжемся с вами в течение 2 часов.</p>
+                  <p className="text-sm text-white/80">Свяжемся с вами в течение 2 часов.</p>
                 </motion.div> :
 
               <form onSubmit={handleSubmit} className="space-y-4">
-                  <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-6">Форма обратной связи</p>
+                  <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-6">Форма обратной связи</p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Имя</label>
+                      <label className="block text-[10px] text-white/75 uppercase tracking-[0.12em] mb-2">Имя</label>
                       <Input
                       value={form.name}
                       onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
                       placeholder="Ваше имя"
                       required
-                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm" />
+                      className="bg-white/[0.02] border-white/[0.12] text-white placeholder:text-white/35 focus:border-primary/50 rounded-sm h-10 text-sm" />
                     
                     </div>
                     <div>
-                      <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Email</label>
+                      <label className="block text-[10px] text-white/75 uppercase tracking-[0.12em] mb-2">Email</label>
                       <Input
                       type="email"
                       value={form.email}
                       onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
                       placeholder="email@company.ru"
                       required
-                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm" />
+                      className="bg-white/[0.02] border-white/[0.12] text-white placeholder:text-white/35 focus:border-primary/50 rounded-sm h-10 text-sm" />
                     
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Телефон</label>
+                      <label className="block text-[10px] text-white/75 uppercase tracking-[0.12em] mb-2">Телефон</label>
                       <Input
                       type="tel"
                       value={form.phone}
                       onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
                       placeholder="+7 (999) 000-00-00"
                       required
-                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm" />
+                      className="bg-white/[0.02] border-white/[0.12] text-white placeholder:text-white/35 focus:border-primary/50 rounded-sm h-10 text-sm" />
                     
                     </div>
                     <div>
-                      <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Компания</label>
+                      <label className="block text-[10px] text-white/75 uppercase tracking-[0.12em] mb-2">Компания</label>
                       <Input
                       value={form.company}
                       onChange={(e) => setForm((p) => ({ ...p, company: e.target.value }))}
                       placeholder="Название компании"
-                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm h-10 text-sm" />
+                      className="bg-white/[0.02] border-white/[0.12] text-white placeholder:text-white/35 focus:border-primary/50 rounded-sm h-10 text-sm" />
                     
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-[10px] text-white/30 uppercase tracking-[0.12em] mb-2">Сообщение</label>
+                    <label className="block text-[10px] text-white/75 uppercase tracking-[0.12em] mb-2">Сообщение</label>
                     <Textarea
                     value={form.message}
                     onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
                     placeholder="Опишите вашу задачу..."
                     rows={6}
                     required
-                    className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-white/20 focus:border-white/[0.2] rounded-sm text-sm resize-none" />
+                    className="bg-white/[0.02] border-white/[0.12] text-white placeholder:text-white/35 focus:border-primary/50 rounded-sm text-sm resize-none" />
                   
                   </div>
 
@@ -181,7 +181,7 @@ export default function Contacts() {
                         onChange={(e) => setConsent(e.target.checked)}
                         className="sr-only"
                       />
-                      <div className={`w-4 h-4 rounded-[3px] border transition-colors ${consent ? 'bg-white border-white' : 'border-white/20 bg-white/[0.03] group-hover:border-white/35'}`}>
+                      <div className={`w-4 h-4 rounded-[3px] border transition-colors ${consent ? 'bg-primary border-primary' : 'border-white/25 bg-white/[0.03] group-hover:border-primary/45'}`}>
                         {consent && (
                           <svg className="w-4 h-4 text-black" viewBox="0 0 16 16" fill="none">
                             <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
@@ -189,9 +189,9 @@ export default function Contacts() {
                         )}
                       </div>
                     </div>
-                    <span className="text-[12px] text-white/35 leading-relaxed">
+                    <span className="text-[12px] text-white/75 leading-relaxed">
                       Я соглашаюсь с{' '}
-                      <Link to="/privacy-policy" className="text-white/55 underline underline-offset-2 hover:text-white/80 transition-colors">
+                      <Link to="/privacy-policy" className="text-white underline underline-offset-2 hover:text-primary transition-colors">
                         Политикой конфиденциальности
                       </Link>{' '}
                       и даю согласие на обработку персональных данных.
@@ -201,7 +201,7 @@ export default function Contacts() {
                   <button
                   type="submit"
                   disabled={!consent || loading}
-                  className="w-full flex items-center justify-center gap-2 py-3 bg-white text-black text-sm font-semibold rounded-sm hover:bg-white/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white">
+                  className="w-full flex items-center justify-center gap-2 py-3 signal-button text-sm font-semibold rounded-sm transition-colors disabled:opacity-40 disabled:cursor-not-allowed">
                   
                     {loading ? 'Отправка...' : <>Отправить заявку <Plus className="w-4 h-4" /></>}
                   </button>

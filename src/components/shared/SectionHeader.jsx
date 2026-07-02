@@ -6,7 +6,7 @@ export default function SectionHeader({ badge, title, description }) {
     <div className="text-center mb-16 md:mb-20">
       {badge && (
         <RevealOnScroll>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.03] text-xs font-medium text-muted-foreground mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border signal-badge text-xs font-medium mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             {badge}
           </div>
@@ -19,7 +19,7 @@ export default function SectionHeader({ badge, title, description }) {
       </RevealOnScroll>
       {description && (
         <RevealOnScroll delay={0.2}>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
             {description}
           </p>
         </RevealOnScroll>

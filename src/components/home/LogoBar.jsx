@@ -17,7 +17,7 @@ export default function LogoBar() {
             transition={{ duration: 0.4, delay: i * 0.06 }}
             className={`py-5 flex items-center justify-center border-r border-white/[0.08] last:border-r-0 hidden ${i >= 3 ? 'md:border-t-0 border-t border-white/[0.08]' : ''}`}>
             
-              <span className="text-xs font-semibold text-white/25 tracking-wide uppercase">{name}</span>
+              <span className="text-xs font-semibold text-white/75 tracking-wide uppercase">{name}</span>
             </motion.div>
           )}
         </div>

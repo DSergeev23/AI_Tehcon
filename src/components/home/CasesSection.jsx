@@ -52,7 +52,7 @@ export default function CasesSection() {
             <h2 className="font-serif text-5xl md:text-6xl 2xl:text-7xl text-white tracking-tight mb-4">
               Кейсы клиентов
             </h2>
-            <p className="text-sm text-white/40">
+            <p className="text-sm text-white/75">
               Те, кто уже автоматизировал рутину и считает результаты в цифрах
             </p>
           </div>
@@ -65,7 +65,7 @@ export default function CasesSection() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative border border-white/[0.1] rounded-sm bg-white/[0.02] p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-10"
+            className="relative border premium-panel rounded-sm p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-10"
           >
             {/* Corner marks */}
             <span className="absolute top-4 left-4 text-white/15 text-xs">+</span>
@@ -83,8 +83,8 @@ export default function CasesSection() {
               <div className="flex gap-8 flex-wrap">
                 {current.stats.map((s, i) => (
                   <div key={i}>
-                    <div className="text-3xl font-semibold text-white tracking-tight">{s.value}</div>
-                    <div className="text-xs text-white/40 mt-1 leading-tight max-w-[90px]">{s.label}</div>
+                    <div className="text-3xl font-semibold text-signal tracking-tight">{s.value}</div>
+                    <div className="text-xs text-white/75 mt-1 leading-tight max-w-[90px]">{s.label}</div>
                   </div>
                 ))}
               </div>
@@ -92,7 +92,7 @@ export default function CasesSection() {
               {/* Client info */}
               <div className="border-t border-white/[0.08] pt-5">
                 <div className="text-sm font-semibold text-white">{current.client}</div>
-                <div className="text-xs text-white/40 mt-0.5">{current.type}</div>
+                <div className="text-xs text-white/75 mt-0.5">{current.type}</div>
               </div>
             </div>
 
@@ -115,20 +115,20 @@ export default function CasesSection() {
               <button
                 key={i}
                 onClick={() => setActive(i)}
-                className={`w-6 h-0.5 transition-colors duration-200 ${i === active ? 'bg-white' : 'bg-white/20 hover:bg-white/40'}`}
+                className={`w-6 h-0.5 transition-colors duration-200 ${i === active ? 'bg-primary' : 'bg-white/40 hover:bg-white/75'}`}
               />
             ))}
           </div>
           <div className="flex gap-2">
             <button
               onClick={() => setActive((active - 1 + cases.length) % cases.length)}
-              className="w-9 h-9 border border-white/[0.1] rounded-sm flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-colors"
+              className="w-9 h-9 border border-white/[0.16] rounded-sm flex items-center justify-center text-white/75 hover:text-white hover:border-primary/45 transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
             <button
               onClick={() => setActive((active + 1) % cases.length)}
-              className="w-9 h-9 border border-white/[0.1] rounded-sm flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-colors"
+              className="w-9 h-9 border border-white/[0.16] rounded-sm flex items-center justify-center text-white/75 hover:text-white hover:border-primary/45 transition-colors"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
