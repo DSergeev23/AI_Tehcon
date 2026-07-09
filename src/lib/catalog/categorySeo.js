@@ -1,0 +1,85 @@
+export const catalogCategoryPages = {
+  '1c': {
+    slug: '1c',
+    label: '1С',
+    title: 'ИИ-агенты и автоматизация 1С для бизнеса | AI TehCon',
+    description: 'Каталог ИИ-решений для 1С: аналитика по данным, автоматизация отчетов, интеграции, чат- и голосовые сценарии для бизнеса.',
+    h1: 'ИИ-агенты и автоматизация 1С',
+    intro: 'Решения для руководителей и команд, которым нужно получать данные из 1С, автоматизировать отчеты и запускать сценарии без ручной рутины.',
+    canonical: '/catalog/1c',
+    keywords: 'ИИ агент для 1С, автоматизация 1С, аналитика 1С, интеграция 1С, чат-бот для 1С',
+  },
+  marketing: {
+    slug: 'marketing',
+    label: 'Маркетинг',
+    title: 'ИИ-агенты для маркетинга, SEO и контента | AI TehCon',
+    description: 'ИИ-решения для маркетинга: генерация контента, SEO-автоматизация, Telegram-воронки, Pinterest, лидогенерация и автопубликация.',
+    h1: 'ИИ-агенты для маркетинга',
+    intro: 'Автоматизируйте контент, лидогенерацию, SEO-продвижение, Telegram-воронки и работу с маркетинговыми данными.',
+    canonical: '/catalog/marketing',
+    keywords: 'ИИ агенты для маркетинга, SEO автоматизация, генерация контента AI, Telegram воронка, лидогенерация',
+  },
+  analytics: {
+    slug: 'analytics',
+    label: 'Аналитика',
+    title: 'ИИ-аналитика и агенты для бизнес-данных | AI TehCon',
+    description: 'ИИ-агенты для аналитики: ответы по данным бизнеса, дашборды, мониторинг показателей, саммари новостей и автоматизация отчетов.',
+    h1: 'ИИ-аналитика для бизнеса',
+    intro: 'Собирайте данные из систем, получайте ответы на вопросы, отслеживайте показатели и превращайте разрозненную информацию в решения.',
+    canonical: '/catalog/analytics',
+    keywords: 'ИИ аналитика, AI аналитик для бизнеса, автоматизация отчетов, бизнес-аналитика AI, дашборды AI',
+  },
+  finance: {
+    slug: 'finance',
+    label: 'Финансы',
+    title: 'ИИ-агенты для финансов и инвестиционного консалтинга | AI TehCon',
+    description: 'ИИ-решения для финансов: ассистенты по активам, контроль пополнений, напоминания клиентам, автоматизация финансового планирования.',
+    h1: 'ИИ-агенты для финансов',
+    intro: 'Автоматизируйте клиентские коммуникации, контроль пополнений, финансовые планы и рутинные вопросы в инвестиционном консалтинге.',
+    canonical: '/catalog/finance',
+    keywords: 'ИИ агент для финансов, финансовый ассистент AI, автоматизация инвестиций, инвестиционный консалтинг, финтех автоматизация',
+  },
+  ecommerce: {
+    slug: 'ecommerce',
+    label: 'E-commerce',
+    title: 'ИИ-агенты для e-commerce, WB и Ozon | AI TehCon',
+    description: 'ИИ-решения для e-commerce: аналитика Wildberries и Ozon, парсинг инфлюенсеров, маркетплейсы, дашборды и автоматизация продаж.',
+    h1: 'ИИ-агенты для e-commerce',
+    intro: 'Подключайте аналитику маркетплейсов, автоматизируйте сбор данных, поиск инфлюенсеров и принятие решений по продажам.',
+    canonical: '/catalog/ecommerce',
+    keywords: 'ИИ для e-commerce, аналитика Wildberries, аналитика Ozon, AI для маркетплейсов, автоматизация e-commerce',
+  },
+};
+
+export const catalogCategoryNav = Object.values(catalogCategoryPages);
+
+export function isOneCProduct(product) {
+  const searchable = [
+    product.title,
+    product.shortDescription,
+    product.category,
+    ...(product.tags || []),
+  ].join(' ').toLowerCase();
+
+  return searchable.includes('1с') || searchable.includes('1c');
+}
+
+export function productMatchesCatalogCategory(slug, product) {
+  if (slug === '1c') return isOneCProduct(product);
+  if (slug === 'ecommerce') {
+    const searchable = [
+      product.title,
+      product.shortDescription,
+      product.category,
+      ...(product.tags || []),
+    ].join(' ').toLowerCase();
+
+    return searchable.includes('e-commerce')
+      || searchable.includes('маркетплейс')
+      || searchable.includes('wildberries')
+      || searchable.includes('ozon');
+  }
+
+  const categoryPage = catalogCategoryPages[slug];
+  return Boolean(categoryPage) && product.category === categoryPage.label;
+}

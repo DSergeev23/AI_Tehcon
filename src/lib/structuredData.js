@@ -44,13 +44,17 @@ function getProductDescription(product) {
 }
 
 // ── Catalog: ItemList ──
-export function createCatalogItemListSchema(products) {
+export function createCatalogItemListSchema(products, options = {}) {
+  const url = options.url || `${SITE_URL}/catalog`;
+  const name = options.name || "Каталог AI-решений AI TehCon";
+  const description = options.description || "Каталог ИИ-агентов, автоматизаций и интеграционных решений для бизнеса.";
+
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Каталог AI-решений AI TehCon",
-    "description": "Каталог ИИ-агентов, автоматизаций и интеграционных решений для бизнеса.",
-    "url": `${SITE_URL}/catalog`,
+    "name": name,
+    "description": description,
+    "url": url,
     "numberOfItems": products.length,
     "itemListElement": products.map((p, i) => ({
       "@type": "ListItem",
@@ -70,14 +74,25 @@ export function createCatalogItemListSchema(products) {
 }
 
 // ── Catalog: BreadcrumbList ──
-export function createCatalogBreadcrumbSchema() {
+export function createCatalogBreadcrumbSchema(categoryPage) {
+  const itemListElement = [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": SITE_URL },
+    { "@type": "ListItem", "position": 2, "name": "Каталог", "item": `${SITE_URL}/catalog` },
+  ];
+
+  if (categoryPage) {
+    itemListElement.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": categoryPage.label,
+      "item": `${SITE_URL}${categoryPage.canonical}`,
+    });
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Главная", "item": SITE_URL },
-      { "@type": "ListItem", "position": 2, "name": "Каталог", "item": `${SITE_URL}/catalog` },
-    ],
+    "itemListElement": itemListElement,
   };
 }
 

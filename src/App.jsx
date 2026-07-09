@@ -41,6 +41,11 @@ const AuthenticatedApp = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/catalog" element={<Catalog />} />
+        <Route path="/catalog/1c" element={<Catalog />} />
+        <Route path="/catalog/marketing" element={<Catalog />} />
+        <Route path="/catalog/analytics" element={<Catalog />} />
+        <Route path="/catalog/finance" element={<Catalog />} />
+        <Route path="/catalog/ecommerce" element={<Catalog />} />
         <Route path="/catalog/:id" element={<ProductDetail />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
