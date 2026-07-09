@@ -41,15 +41,47 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
-      - name: Upload dist to Timeweb
+      - name: Check FTP connection
+        timeout-minutes: 2
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
+          : "${FTP_HOST:?FTP_HOST is not set}"
+          : "${FTP_USERNAME:?FTP_USERNAME is not set}"
+          : "${FTP_PASSWORD:?FTP_PASSWORD is not set}"
+
           lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_HOST" -e "
-            set ftp:ssl-allow true;
-            set ssl:verify-certificate false;
+            set cmd:fail-exit true;
+            set ftp:ssl-allow false;
+            set ftp:passive-mode true;
+            set net:timeout 20;
+            set net:max-retries 1;
+            set net:reconnect-interval-base 5;
+            cd public_html;
+            pwd;
+            bye
+          "
+
+      - name: Upload dist to Timeweb
+        timeout-minutes: 10
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          : "${FTP_HOST:?FTP_HOST is not set}"
+          : "${FTP_USERNAME:?FTP_USERNAME is not set}"
+          : "${FTP_PASSWORD:?FTP_PASSWORD is not set}"
+
+          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_HOST" -e "
+            set cmd:fail-exit true;
+            set ftp:ssl-allow false;
+            set ftp:passive-mode true;
+            set net:timeout 20;
+            set net:max-retries 2;
+            set net:reconnect-interval-base 5;
             mirror -R --verbose dist/ public_html/;
             bye
           "
