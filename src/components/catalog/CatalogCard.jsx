@@ -11,7 +11,7 @@ import {
   PieChart, BarChart3,
   Megaphone, PenTool,
   Image, Layers,
-  FileText, Share2,
+  FileText, FileSearch, Share2,
   UserCheck, Hexagon,
   Sparkles,
 } from 'lucide-react';
@@ -32,7 +32,7 @@ function OneCIcon({ className }) {
 }
 
 const iconMap = { Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, Sparkles, OneC: OneCIcon };
-const visualMap = { Network, Database, LineChart, Workflow, Brain, BarChart3, PenTool, Layers, Share2, Hexagon };
+const visualMap = { Network, Database, LineChart, Workflow, Brain, BarChart3, PenTool, Layers, Share2, Hexagon, FileSearch };
 
 export default function CatalogCard({ product, index }) {
   const Icon = iconMap[product.icon] || Sparkles;

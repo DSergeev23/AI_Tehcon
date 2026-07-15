@@ -9,6 +9,16 @@ export const catalogCategoryPages = {
     canonical: '/catalog/1c',
     keywords: 'ИИ агент для 1С, автоматизация 1С, аналитика 1С, интеграция 1С, чат-бот для 1С',
   },
+  'image-analysis': {
+    slug: 'image-analysis',
+    label: 'Анализ изображений',
+    title: 'ИИ для анализа изображений и проверки документов в 1С | AI TehCon',
+    description: 'ИИ-решения для анализа сканов и документов в 1С: проверка путевых листов, медосмотров, кадровых и первичных документов, поиск пропусков и расхождений.',
+    h1: 'ИИ для анализа изображений и проверки документов',
+    intro: 'Автоматически распознавайте сканы, контролируйте обязательные поля, подписи и даты, сверяйте данные с 1С и получайте уведомления о найденных ошибках.',
+    canonical: '/catalog/image-analysis',
+    keywords: 'ИИ анализ изображений, распознавание документов 1С, проверка сканов документов, OCR для 1С, автоматическая проверка документов',
+  },
   marketing: {
     slug: 'marketing',
     label: 'Маркетинг',
@@ -66,6 +76,9 @@ export function isOneCProduct(product) {
 
 export function productMatchesCatalogCategory(slug, product) {
   if (slug === '1c') return isOneCProduct(product);
+  if (slug === 'image-analysis') {
+    return (product.tags || []).some((tag) => tag.toLowerCase() === 'анализ изображений');
+  }
   if (slug === 'ecommerce') {
     const searchable = [
       product.title,

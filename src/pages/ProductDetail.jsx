@@ -9,7 +9,16 @@ import { getProductSEO } from '../lib/seoConfig';
 import { createServiceSchema, createProductBreadcrumbSchema } from '../lib/structuredData';
 import SectionsRenderer from '../components/product/SectionsRenderer';
 
-const iconMap = { Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, Sparkles };
+function OneCIcon({ className }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <path d="M4 15.5H7.2V9.1H4.7V7.2C6.1 7 7 6.7 7.9 6.1H10.1V15.5H12.8V18H4V15.5Z" fill="currentColor" />
+      <path d="M19.9 14.1C19.4 16.6 17.6 18.3 14.8 18.3C11.7 18.3 9.7 15.9 9.7 12.1C9.7 8.3 11.8 5.8 15 5.8C17.6 5.8 19.4 7.3 19.9 9.8L17.2 10.2C16.9 8.9 16.2 8.2 15 8.2C13.4 8.2 12.6 9.6 12.6 12.1C12.6 14.6 13.4 15.9 14.9 15.9C16.1 15.9 16.9 15.2 17.2 13.8L19.9 14.1Z" fill="currentColor" />
+    </svg>
+  );
+}
+
+const iconMap = { Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, Sparkles, OneC: OneCIcon };
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -87,7 +96,7 @@ export default function ProductDetail() {
               {/* How it works */}
               <RevealOnScroll delay={0.05}>
                 <div className="mt-16 pt-12 border-t border-white/[0.08]">
-                  <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-8">Как это работает</p>
+                  <p className="text-[12px] text-signal uppercase tracking-[0.15em] mb-8">Как это работает</p>
                   <div className="space-y-0">
                     {product.howItWorks.map((step, i) => (
                       <motion.div
@@ -114,7 +123,7 @@ export default function ProductDetail() {
               {/* Benefits */}
               <RevealOnScroll delay={0.1}>
                 <div className="mt-12 pt-12 border-t border-white/[0.08]">
-                  <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-6">Преимущества</p>
+                  <p className="text-[12px] text-signal uppercase tracking-[0.15em] mb-6">Преимущества</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {product.benefits.map((b, i) => (
                       <div key={i} className="flex items-start gap-3 border border-white/[0.07] rounded-sm p-4">

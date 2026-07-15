@@ -15,6 +15,11 @@ import oneCCompetitorPriceAnalysis from './products/1c-competitor-price-analysis
 import oneCMarketplaceProcurementAssistant from './products/1c-marketplace-procurement-assistant.js';
 import oneCProductionQualityDefectsAssistant from './products/1c-production-quality-defects-assistant.js';
 import oneCMaterialConsumptionNormsAnalysis from './products/1c-material-consumption-norms-analysis.js';
+import oneCSmartDocumentScanCheck from './products/1c-smart-document-scan-check.js';
+import oneCSmartTripSheetCheck from './products/1c-smart-trip-sheet-check.js';
+import oneCHrDocumentCheck from './products/1c-hr-document-check.js';
+import oneCMedicalExamCheck from './products/1c-medical-exam-check.js';
+import oneCAiWarehouseInventory from './products/1c-ai-warehouse-inventory.js';
 
 export const catalogProducts = [
   telegramLeadGenerator,
@@ -33,6 +38,11 @@ export const catalogProducts = [
   oneCMarketplaceProcurementAssistant,
   oneCProductionQualityDefectsAssistant,
   oneCMaterialConsumptionNormsAnalysis,
+  oneCSmartDocumentScanCheck,
+  oneCSmartTripSheetCheck,
+  oneCHrDocumentCheck,
+  oneCMedicalExamCheck,
+  oneCAiWarehouseInventory,
   telegramLeadMagnetFunnel,
 ];
 
