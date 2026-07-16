@@ -18,15 +18,11 @@ import {
 
 function OneCIcon({ className }) {
   return (
-    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
-      <path
-        d="M4 15.5H7.2V9.1H4.7V7.2C6.1 7 7 6.7 7.9 6.1H10.1V15.5H12.8V18H4V15.5Z"
-        fill="currentColor"
-      />
-      <path
-        d="M19.9 14.1C19.4 16.6 17.6 18.3 14.8 18.3C11.7 18.3 9.7 15.9 9.7 12.1C9.7 8.3 11.8 5.8 15 5.8C17.6 5.8 19.4 7.3 19.9 9.8L17.2 10.2C16.9 8.9 16.2 8.2 15 8.2C13.4 8.2 12.6 9.6 12.6 12.1C12.6 14.6 13.4 15.9 14.9 15.9C16.1 15.9 16.9 15.2 17.2 13.8L19.9 14.1Z"
-        fill="currentColor"
-      />
+    <svg viewBox="0 0 32 32" className={className} aria-hidden="true">
+      <rect x="4" y="7" width="24" height="18" rx="4" fill="currentColor" opacity="0.14" />
+      <rect x="4.75" y="7.75" width="22.5" height="16.5" rx="3.25" fill="none" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M10.1 18.5H12.1V13.2H10.45V11.7C11.35 11.55 11.95 11.35 12.55 10.95H14.25V18.5H16V20.25H10.1V18.5Z" fill="currentColor" />
+      <path d="M23.25 17.15C22.95 19.05 21.55 20.45 19.35 20.45C16.85 20.45 15.25 18.55 15.25 15.7C15.25 12.85 16.95 10.85 19.45 10.85C21.55 10.85 22.9 12 23.25 13.9L21.15 14.2C20.95 13.25 20.4 12.75 19.45 12.75C18.2 12.75 17.55 13.8 17.55 15.7C17.55 17.55 18.2 18.55 19.4 18.55C20.35 18.55 20.95 18 21.15 16.9L23.25 17.15Z" fill="currentColor" />
     </svg>
   );
 }
@@ -37,6 +33,7 @@ const visualMap = { Network, Database, LineChart, Workflow, Brain, BarChart3, Pe
 export default function CatalogCard({ product, index }) {
   const Icon = iconMap[product.icon] || Sparkles;
   const VisualIcon = visualMap[product.visual] || Hexagon;
+  const isOneCIcon = product.icon === 'OneC';
 
   return (
     <motion.div
@@ -51,7 +48,7 @@ export default function CatalogCard({ product, index }) {
           className="relative border border-white/[0.1] rounded-sm p-7 transition-colors duration-200 bg-black h-full group-hover:border-primary/45"
         >
           {/* Corner pluses */}
-          <Plus className="absolute top-3 right-3 w-3.5 h-3.5 text-primary/45 group-hover:text-primary transition-colors" />
+          <Plus className="absolute top-3 right-3 w-3.5 h-3.5 text-primary/70 group-hover:text-primary transition-colors" />
 
           {/* Tags */}
           <div className="flex flex-wrap gap-1.5 mb-6">
@@ -67,14 +64,20 @@ export default function CatalogCard({ product, index }) {
 
           {/* Icon + visual placeholder */}
           <div className="mb-6 flex items-end justify-between">
-            <div className="w-10 h-10 border border-white/[0.1] rounded flex items-center justify-center">
-              <Icon className="w-4 h-4 text-white" />
+            <div
+              className={`w-10 h-10 border rounded flex items-center justify-center ${
+                isOneCIcon
+                  ? 'border-primary/45 bg-primary/10 shadow-[0_0_18px_rgba(165,29,52,0.16)]'
+                  : 'border-primary/30 bg-primary/5'
+              }`}
+            >
+              <Icon className={`${isOneCIcon ? 'w-6 h-6' : 'w-4 h-4'} text-primary`} />
             </div>
-            <VisualIcon className="w-12 h-12 text-white/[0.22]" strokeWidth={0.8} />
+            <VisualIcon className="w-12 h-12 text-primary/70" strokeWidth={1} />
           </div>
 
           {/* Category */}
-          <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-1.5">{product.category}</p>
+          <p className="text-[10px] text-white/75 uppercase tracking-[0.15em] font-semibold mb-1.5">{product.category}</p>
 
           {/* Title */}
           <h3 className="text-sm font-semibold text-white mb-3 leading-snug tracking-tight group-hover:text-white transition-colors">
@@ -89,7 +92,7 @@ export default function CatalogCard({ product, index }) {
           {/* Bottom row */}
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-white">{product.pricing}</span>
-            <span className="text-[11px] text-white/75 group-hover:text-white transition-colors flex items-center gap-1">
+            <span className="text-[11px] text-primary/90 group-hover:text-primary transition-colors flex items-center gap-1">
               Подробнее →
             </span>
           </div>

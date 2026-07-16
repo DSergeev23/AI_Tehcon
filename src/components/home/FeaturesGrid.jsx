@@ -37,9 +37,10 @@ const features = [
 
 
 function Visual({ type }) {
-  const base = "text-primary/70 opacity-80";
+  const base = "text-primary/90 opacity-100 drop-shadow-[0_0_10px_rgba(165,29,52,0.22)]";
+  const strokeWidth = 0.95;
   if (type === 'icosahedron') return (
-    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth="0.7">
+    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth={strokeWidth}>
       <polygon points="40,8 70,28 70,52 40,72 10,52 10,28" />
       <line x1="40" y1="8" x2="40" y2="72" />
       <line x1="10" y1="28" x2="70" y2="52" />
@@ -48,7 +49,7 @@ function Visual({ type }) {
     </svg>);
 
   if (type === 'diamond') return (
-    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth="0.7">
+    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth={strokeWidth}>
       <polygon points="40,5 75,35 40,75 5,35" />
       <line x1="5" y1="35" x2="75" y2="35" />
       <line x1="40" y1="5" x2="5" y2="35" />
@@ -56,7 +57,7 @@ function Visual({ type }) {
     </svg>);
 
   if (type === 'sphere') return (
-    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth="0.7">
+    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth={strokeWidth}>
       <rect x="12" y="18" width="56" height="44" rx="6" />
       <path d="M24 31h8v18" />
       <path d="M22 49h14" />
@@ -66,7 +67,7 @@ function Visual({ type }) {
     </svg>);
 
   if (type === 'cube') return (
-    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth="0.7">
+    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth={strokeWidth}>
       <rect x="20" y="20" width="40" height="40" />
       <rect x="12" y="12" width="40" height="40" />
       <line x1="12" y1="12" x2="20" y2="20" />
@@ -76,14 +77,14 @@ function Visual({ type }) {
     </svg>);
 
   if (type === 'ring') return (
-    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth="0.7">
+    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth={strokeWidth}>
       <circle cx="40" cy="40" r="28" />
       <circle cx="40" cy="40" r="18" />
       <ellipse cx="40" cy="40" rx="28" ry="10" />
     </svg>);
 
   return (
-    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth="0.7">
+    <svg viewBox="0 0 80 80" className={`w-16 h-16 ${base}`} fill="none" stroke="currentColor" strokeWidth={strokeWidth}>
       {[0, 1, 2, 3].map((i) => [0, 1, 2, 3].map((j) =>
       <circle key={`${i}-${j}`} cx={15 + i * 17} cy={15 + j * 17} r="2" fill="currentColor" />
       ))}
