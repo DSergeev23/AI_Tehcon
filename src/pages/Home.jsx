@@ -21,7 +21,7 @@ const homeSchema = {
       "url": "https://ai-tehcon.ru",
       "logo": "https://ai-tehcon.ru/logo.svg",
       "description": "Разработка ИИ агентов и автоматизация бизнес-процессов с помощью нейросетей",
-      "sameAs": ["https://t.me/tehconai"],
+      "sameAs": ["https://t.me/ai_tehcon_business"],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "sales",

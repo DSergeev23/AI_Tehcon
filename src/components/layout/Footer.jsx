@@ -83,7 +83,7 @@ export default function Footer() {
             {/* Social */}
             <div className="flex items-center gap-3 mt-6">
               <motion.a
-                href="https://t.me/dmtr_sergeev"
+                href="https://t.me/ai_tehcon_business"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="AI TehCon в Telegram"
@@ -130,7 +130,7 @@ export default function Footer() {
             <p className="text-[10px] font-semibold text-signal uppercase tracking-[0.16em] mb-5">Контакты</p>
             <div className="flex flex-col gap-3">
               <FooterLink to="mailto:hello@it-tehcon.ru" external>hello@it-tehcon.ru</FooterLink>
-              <FooterLink to="https://t.me/dmtr_sergeev" external>AI-TehCon в Telegram</FooterLink>
+              <FooterLink to="https://t.me/ai_tehcon_business" external>AI-TehCon в Telegram</FooterLink>
             </div>
             <div className="mt-8">
               <p className="text-[10px] font-semibold text-signal uppercase tracking-[0.16em] mb-5">Правовое</p>
