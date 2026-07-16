@@ -1,39 +1,60 @@
-**Welcome to your Base44 project** 
+# AI TehCon
 
-**About**
+Публичный сайт AI TehCon: витрина услуг и готовых решений по AI-автоматизации бизнеса и интеграциям с 1С.
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+## Стек
 
-This project contains everything you need to run your app locally.
+- React 18;
+- Vite;
+- React Router;
+- Tailwind CSS;
+- Framer Motion;
+- React Helmet Async.
 
-**Edit the code in your local development environment**
+Сайт является автономным статическим React/Vite-приложением и не использует Base44 SDK, backend, authentication или CDN.
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+## Локальная разработка
 
-**Prerequisites:** 
+Требуется Node.js 24 и npm.
 
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
-
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
-
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
+```bash
+npm ci
+npm run dev
 ```
 
-Run the app: `npm run dev`
+Production-сборка и локальный preview:
 
-**Publish your changes**
+```bash
+npm run build
+npm run preview
+```
 
-Open [Base44.com](http://Base44.com) and click on Publish.
+## Проверка
 
-**Docs & Support**
+```bash
+npm run lint
+npm run typecheck
+npm run build
+```
 
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
+## Deployment
 
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+Production размещается на Timeweb.
+
+GitHub Actions workflow `.github/workflows/deploy-timeweb.yml` вручную запускает проверки, собирает `dist/` и загружает его по FTP в `public_html/`.
+
+Для workflow нужны GitHub Environment secrets:
+
+- `FTP_HOST`;
+- `FTP_USERNAME`;
+- `FTP_PASSWORD`.
+
+Не коммитьте `.env`, credentials, FTP-доступы и содержимое `dist/`.
+
+## Внешние сервисы
+
+- FormSubmit — отправка заявок с контактной формы;
+- Google Analytics — web analytics;
+- Yandex Metrika — web analytics.
+
+Изменения формы, аналитики, SEO, маршрутов и deployment требуют отдельной проверки перед публикацией.

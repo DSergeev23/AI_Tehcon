@@ -21,7 +21,7 @@ export default function AutomationBlock() {
               style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(255,255,255,0.04) 0%, transparent 70%)' }} />
 
             <motion.img
-              src="https://media.base44.com/images/public/6a12ce8c6eb2615f598d6ab7/46a529f43_image.png"
+              src="/images/automation-enterprise.png"
               alt="AI Автоматизация"
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
