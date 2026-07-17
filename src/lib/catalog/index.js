@@ -20,6 +20,16 @@ import oneCSmartTripSheetCheck from './products/1c-smart-trip-sheet-check.js';
 import oneCHrDocumentCheck from './products/1c-hr-document-check.js';
 import oneCMedicalExamCheck from './products/1c-medical-exam-check.js';
 import oneCAiWarehouseInventory from './products/1c-ai-warehouse-inventory.js';
+import oneCSalesForecastingService from './products/1c-sales-forecasting-service.js';
+import oneCAccountsReceivableAiAnalysis from './products/1c-accounts-receivable-ai-analysis.js';
+import oneCInventoryTurnoverAiControl from './products/1c-inventory-turnover-ai-control.js';
+import oneCSalesManagerEffectivenessAiAnalysis from './products/1c-sales-manager-effectiveness-ai-analysis.js';
+import oneCProjectOrderProfitabilityAiAnalytics from './products/1c-project-order-profitability-ai-analytics.js';
+import oneCAdCampaignsAiAnalyst from './products/1c-ad-campaigns-ai-analyst.js';
+import aiAdLeadQualification from './products/ai-ad-lead-qualification.js';
+import aiYandexDirectKeywordResearch from './products/ai-yandex-direct-keyword-research.js';
+import aiLeadCallChatAnalysis from './products/ai-lead-call-chat-analysis.js';
+import aiCompetitorSearchAdMonitoring from './products/ai-competitor-search-ad-monitoring.js';
 
 export const catalogProducts = [
   telegramLeadGenerator,
@@ -43,6 +53,16 @@ export const catalogProducts = [
   oneCHrDocumentCheck,
   oneCMedicalExamCheck,
   oneCAiWarehouseInventory,
+  oneCSalesForecastingService,
+  oneCAccountsReceivableAiAnalysis,
+  oneCInventoryTurnoverAiControl,
+  oneCSalesManagerEffectivenessAiAnalysis,
+  oneCProjectOrderProfitabilityAiAnalytics,
+  oneCAdCampaignsAiAnalyst,
+  aiAdLeadQualification,
+  aiYandexDirectKeywordResearch,
+  aiLeadCallChatAnalysis,
+  aiCompetitorSearchAdMonitoring,
   telegramLeadMagnetFunnel,
 ];
 
