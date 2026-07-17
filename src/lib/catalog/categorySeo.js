@@ -19,6 +19,16 @@ export const catalogCategoryPages = {
     canonical: '/catalog/image-analysis',
     keywords: 'ИИ анализ изображений, распознавание документов 1С, проверка сканов документов, OCR для 1С, автоматическая проверка документов',
   },
+  'content-factory': {
+    slug: 'content-factory',
+    label: 'Контент завод',
+    title: 'Контент завод: ИИ-агенты для создания контента | AI TehCon',
+    description: 'ИИ-решения для регулярного создания экспертного контента: подготовка постов, статей и публикаций для бизнеса.',
+    h1: 'Контент завод',
+    intro: 'ИИ-агенты превращают идеи, голосовые сообщения и данные компании в готовый контент для регулярных публикаций.',
+    canonical: '/catalog/content-factory',
+    keywords: 'контент завод, ИИ генерация контента, AI редактор, автоматизация создания контента',
+  },
   marketing: {
     slug: 'marketing',
     label: 'Маркетинг',
@@ -49,14 +59,14 @@ export const catalogCategoryPages = {
     canonical: '/catalog/finance',
     keywords: 'ИИ агент для финансов, финансовый ассистент AI, автоматизация инвестиций, инвестиционный консалтинг, финтех автоматизация',
   },
-  ecommerce: {
-    slug: 'ecommerce',
-    label: 'E-commerce',
-    title: 'ИИ-агенты для e-commerce, WB и Ozon | AI TehCon',
+  marketplace: {
+    slug: 'marketplace',
+    label: 'Маркетплейс',
+    title: 'ИИ-агенты для маркетплейсов, WB и Ozon | AI TehCon',
     description: 'ИИ-решения для e-commerce: аналитика Wildberries и Ozon, парсинг инфлюенсеров, маркетплейсы, дашборды и автоматизация продаж.',
-    h1: 'ИИ-агенты для e-commerce',
+    h1: 'ИИ-агенты для маркетплейсов',
     intro: 'Подключайте аналитику маркетплейсов, автоматизируйте сбор данных, поиск инфлюенсеров и принятие решений по продажам.',
-    canonical: '/catalog/ecommerce',
+    canonical: '/catalog/marketplace',
     keywords: 'ИИ для e-commerce, аналитика Wildberries, аналитика Ozon, AI для маркетплейсов, автоматизация e-commerce',
   },
 };
@@ -79,7 +89,10 @@ export function productMatchesCatalogCategory(slug, product) {
   if (slug === 'image-analysis') {
     return (product.tags || []).some((tag) => tag.toLowerCase() === 'анализ изображений');
   }
-  if (slug === 'ecommerce') {
+  if (slug === 'content-factory') {
+    return (product.tags || []).some((tag) => tag.toLowerCase() === 'контент завод');
+  }
+  if (slug === 'marketplace') {
     const searchable = [
       product.title,
       product.shortDescription,

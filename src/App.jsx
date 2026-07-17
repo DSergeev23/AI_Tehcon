@@ -1,5 +1,5 @@
 import { Toaster } from "@/components/ui/toaster"
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import PageNotFound from './lib/PageNotFound';
 
@@ -23,10 +23,12 @@ const PublicApp = () => {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/catalog/1c" element={<Catalog />} />
         <Route path="/catalog/image-analysis" element={<Catalog />} />
+        <Route path="/catalog/content-factory" element={<Catalog />} />
         <Route path="/catalog/marketing" element={<Catalog />} />
         <Route path="/catalog/analytics" element={<Catalog />} />
         <Route path="/catalog/finance" element={<Catalog />} />
-        <Route path="/catalog/ecommerce" element={<Catalog />} />
+        <Route path="/catalog/ecommerce" element={<Navigate to="/catalog/marketplace" replace />} />
+        <Route path="/catalog/marketplace" element={<Catalog />} />
         <Route path="/catalog/:id" element={<ProductDetail />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

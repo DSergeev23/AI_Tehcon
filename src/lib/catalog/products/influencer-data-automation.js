@@ -10,7 +10,7 @@ const influencerDataAutomation = {
     "Парсинг данных",
     "Google Таблицы",
     "Инфлюенс-маркетинг",
-    "E-commerce"
+    "Маркетплейс"
   ],
   "color": "purple",
   "specs": {

@@ -7,6 +7,7 @@ const oneCMarketplaceProcurementAssistant = {
   "category": "Автоматизация",
   "tags": [
     "1С",
+    "Маркетплейс",
     "Автоматизация",
     "Закупки",
     "Ozon",

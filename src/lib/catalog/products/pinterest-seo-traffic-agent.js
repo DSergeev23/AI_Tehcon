@@ -8,6 +8,7 @@ const pinterestSeoTrafficAgent = {
   "tags": [
     "Pinterest",
     "SEO-трафик",
+    "Контент завод",
     "Генерация изображений",
     "Автопостинг",
     "EdTech / E-commerce"

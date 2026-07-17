@@ -30,6 +30,9 @@ import aiAdLeadQualification from './products/ai-ad-lead-qualification.js';
 import aiYandexDirectKeywordResearch from './products/ai-yandex-direct-keyword-research.js';
 import aiLeadCallChatAnalysis from './products/ai-lead-call-chat-analysis.js';
 import aiCompetitorSearchAdMonitoring from './products/ai-competitor-search-ad-monitoring.js';
+import contentFactoryProducts from './products/content-factory-products.js';
+import financeAiProducts from './products/finance-ai-products.js';
+import ecommerceAiProducts from './products/ecommerce-ai-products.js';
 
 export const catalogProducts = [
   telegramLeadGenerator,
@@ -64,6 +67,9 @@ export const catalogProducts = [
   aiLeadCallChatAnalysis,
   aiCompetitorSearchAdMonitoring,
   telegramLeadMagnetFunnel,
+  ...contentFactoryProducts,
+  ...financeAiProducts,
+  ...ecommerceAiProducts,
 ];
 
 export function getProductById(id) {

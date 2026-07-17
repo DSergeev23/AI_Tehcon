@@ -4,8 +4,9 @@ const marketplaceCustomAiAnalyst = {
   "shortDescription": "Индивидуальная разработка аналитической панели под запросы вашего бизнеса. Вы ставите задачу — мы собираем дашборд, а ИИ-агент помогает интерпретировать данные.",
   "icon": "PieChart",
   "visual": "BarChart3",
-  "category": "E-commerce",
+  "category": "Маркетплейс",
   "tags": [
+    "Маркетплейс",
     "Wildberries",
     "Ozon",
     "Кастомная разработка",

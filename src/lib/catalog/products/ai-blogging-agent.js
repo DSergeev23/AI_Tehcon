@@ -9,7 +9,7 @@ const aiBloggingAgent = {
     "Личный бренд",
     "Telegram-канал",
     "LinkedIn",
-    "Генерация контента",
+    "Контент завод",
     "Voice-to-Text"
   ],
   "color": "blue",

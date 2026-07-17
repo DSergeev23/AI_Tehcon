@@ -78,7 +78,7 @@ export default function Catalog() {
       {/* Filter */}
       <div className="border-b border-white/[0.08]">
         <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24">
-          <div className="flex items-center gap-1 py-3 overflow-x-auto">
+          <div className="flex flex-wrap items-center gap-1 py-3 md:flex-nowrap">
             {categoryLinks.map((cat) => {
               const active = activeSlug === cat.slug;
               return (
