@@ -5,7 +5,7 @@ export const ORGANIZATION = {
   "@type": "Organization",
   "name": SITE_NAME,
   "url": SITE_URL,
-  "logo": `${SITE_URL}/og-image.jpg`,
+  "logo": `${SITE_URL}/images/icon.png`,
   "description": "AI TehCon разрабатывает ИИ-агентов и автоматизирует бизнес-процессы компаний.",
 };
 

@@ -9,6 +9,8 @@ import IntegrationsSection from '../components/home/IntegrationsSection';
 import AutomationBlock from '../components/home/AutomationBlock';
 import CasesSection from '../components/home/CasesSection';
 import CTASection from '../components/home/CTASection';
+import SolutionsSection from '../components/home/SolutionsSection';
+import FAQSection, { homeFaq } from '../components/home/FAQSection';
 import FloatingContacts from '../components/shared/FloatingContacts';
 
 const homeSchema = {
@@ -19,14 +21,23 @@ const homeSchema = {
       "@id": "https://ai-tehcon.ru/#organization",
       "name": "AI TehCon",
       "url": "https://ai-tehcon.ru",
-      "logo": "https://ai-tehcon.ru/logo.svg",
+      "logo": "https://ai-tehcon.ru/images/icon.png",
       "description": "Разработка ИИ агентов и автоматизация бизнес-процессов с помощью нейросетей",
       "sameAs": ["https://t.me/ai_tehcon_business"],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "sales",
+        "telephone": "+7-919-213-71-11",
+        "email": "hello@it-tehcon.ru",
         "availableLanguage": "Russian",
-      }
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2-й Вольный переулок, 11",
+        "addressLocality": "Москва",
+        "addressCountry": "RU"
+      },
+      "areaServed": "RU"
     },
     {
       "@type": "WebSite",
@@ -43,6 +54,17 @@ const homeSchema = {
       "serviceType": "AI автоматизация бизнеса",
       "description": "Разрабатываем автономных ИИ агентов, которые управляют процессами в 1С, CRM и мессенджерах без участия человека",
       "areaServed": "RU",
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": homeFaq.map(({ question, answer }) => ({
+        "@type": "Question",
+        "name": question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": answer
+        }
+      }))
     }
   ]
 };
@@ -54,11 +76,13 @@ export default function Home() {
       <main>
         <HeroSection />
         <LogoBar />
+        <SolutionsSection />
         <FeaturesGrid />
         <BentoShowcase />
         <AutomationBlock />
         <CasesSection />
         <IntegrationsSection />
+        <FAQSection />
         <CTASection />
       </main>
       <FloatingContacts />

@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import { Toaster } from "@/components/ui/toaster"
 import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -9,12 +10,13 @@ import GoogleAnalytics from './components/shared/GoogleAnalytics';
 import Home from './pages/Home';
 import About from './pages/About';
 import Catalog from './pages/Catalog';
-import ProductDetail from './pages/ProductDetail';
 import Contacts from './pages/Contacts';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
 
-const PublicApp = () => {
+const ProductDetail = React.lazy(() => import('./pages/ProductDetail'));
+
+export const PublicApp = () => {
   return (
     <Routes>
       <Route element={<PageLayout />}>
@@ -29,7 +31,7 @@ const PublicApp = () => {
         <Route path="/catalog/finance" element={<Catalog />} />
         <Route path="/catalog/ecommerce" element={<Navigate to="/catalog/marketplace" replace />} />
         <Route path="/catalog/marketplace" element={<Catalog />} />
-        <Route path="/catalog/:id" element={<ProductDetail />} />
+        <Route path="/catalog/:id" element={<Suspense fallback={null}><ProductDetail /></Suspense>} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
