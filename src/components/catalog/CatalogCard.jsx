@@ -12,7 +12,7 @@ import {
   Megaphone, PenTool,
   Image, Layers,
   FileText, FileSearch, Share2,
-  UserCheck, Hexagon,
+  UserCheck, MessageSquare, Hexagon,
   Sparkles,
 } from 'lucide-react';
 
@@ -27,7 +27,7 @@ function OneCIcon({ className }) {
   );
 }
 
-const iconMap = { Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, Sparkles, OneC: OneCIcon };
+const iconMap = { Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, MessageSquare, Sparkles, OneC: OneCIcon };
 const visualMap = { Network, Database, LineChart, Workflow, Brain, BarChart3, PenTool, Layers, Share2, Hexagon, FileSearch };
 
 export default function CatalogCard({ product, index }) {
@@ -88,6 +88,13 @@ export default function CatalogCard({ product, index }) {
           <p className="text-xs text-white/80 leading-relaxed mb-6 line-clamp-2">
             {product.shortDescription}
           </p>
+
+          {product.cardMeta && (
+            <div className="mb-6 border-l border-primary/50 pl-3 text-[11px] leading-relaxed">
+              <p className="text-white/75">Для: <span className="text-white">{product.cardMeta.audience}</span></p>
+              <p className="text-white/75">Контроль: <span className="text-white">{product.cardMeta.signal}</span></p>
+            </div>
+          )}
 
           {/* Bottom row */}
           <div className="flex items-center justify-between">
