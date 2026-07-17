@@ -16,6 +16,27 @@ export default function Contacts() {
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const formOpenedAt = useRef(Date.now());
+  const contactDetails = [
+    {
+      label: 'Email',
+      value: 'hello@it-tehcon.ru',
+      href: 'mailto:hello@it-tehcon.ru',
+    },
+    {
+      label: 'Телефон',
+      values: [
+        { value: '+7 (919) 213-71-11', href: 'tel:+79192137111' },
+        { value: '+7 (919) 273-35-52', href: 'tel:+79192733552' },
+      ],
+    },
+    {
+      label: 'Адрес',
+      value: 'Москва, 2-й Вольный пер, д. 11',
+      href: 'https://yandex.ru/maps/?rtext=~Москва,+2-й+Вольный+переулок,+11&rtt=auto',
+      external: true,
+      hint: 'Построить маршрут',
+    },
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -94,8 +115,8 @@ export default function Contacts() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}>
             
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 border signal-badge rounded-sm text-[11px] mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 border signal-badge rounded-sm text-sm mb-8">
+              <span className="w-2 h-2 rounded-full bg-primary" />
               Связаться
             </div>
             <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">Давайте обсудим 
@@ -112,26 +133,40 @@ export default function Contacts() {
           <div className="lg:col-span-2 border-r border-white/[0.08]">
             <RevealOnScroll>
               <div className="p-8 border-b border-white/[0.08]">
-                <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-5">Контакты</p>
+                <h2 className="text-xs text-signal uppercase tracking-[0.15em] mb-5">Контакты</h2>
                 <div className="space-y-4">
-                  {[
-                  { label: 'Email', val: 'hello@it-tehcon.ru' },
-                  { label: 'Телефон', val: '+7 (919) 213-71-11\n+7 (919) 273-35-52' },
-                  { label: 'Адрес', val: 'Москва, 2-й Вольный пер, д.11' }].
-                  map((c, i) =>
-                  <div key={i} className="py-3 border-b border-white/[0.06] last:border-0">
-                      <p className="text-[10px] text-white/75 uppercase tracking-[0.12em] mb-0.5">{c.label}</p>
-                      <p className="text-sm text-white whitespace-pre-line">{c.val}</p>
+                  {contactDetails.map((contact) => (
+                    <div key={contact.label} className="py-3 border-b border-white/[0.06] last:border-0">
+                      <p className="text-[10px] text-white/75 uppercase tracking-[0.12em] mb-1">{contact.label}</p>
+                      {contact.values ? (
+                        <div className="flex flex-col items-start gap-1">
+                          {contact.values.map((phone) => (
+                            <a key={phone.href} href={phone.href} className="text-base text-white hover:text-primary transition-colors">
+                              {phone.value}
+                            </a>
+                          ))}
+                        </div>
+                      ) : (
+                        <a
+                          href={contact.href}
+                          target={contact.external ? '_blank' : undefined}
+                          rel={contact.external ? 'noopener noreferrer' : undefined}
+                          className="inline-flex flex-col items-start text-base text-white hover:text-primary transition-colors"
+                        >
+                          <span>{contact.value}</span>
+                          {contact.hint && <span className="mt-1 text-xs text-primary">{contact.hint} →</span>}
+                        </a>
+                      )}
                     </div>
-                  )}
+                  ))}
                 </div>
               </div>
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.1}>
               <div className="p-8">
-                <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-4">Время работы</p>
-                <p className="text-sm text-white/80 leading-relaxed">
+                <h2 className="text-xs text-signal uppercase tracking-[0.15em] mb-4">Время работы</h2>
+                <p className="text-base text-white/80 leading-relaxed">
                   Пн — Пт: 10:00 — 19:00 (МСК)<br />
                   Ответ на заявку — в течение 2 часов.
                 </p>
@@ -156,7 +191,7 @@ export default function Contacts() {
                 </motion.div> :
 
               <form onSubmit={handleSubmit} className="space-y-4">
-                  <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-6">Форма обратной связи</p>
+                  <h2 className="text-xs text-signal uppercase tracking-[0.15em] mb-6">Форма обратной связи</h2>
                   <input
                     type="text"
                     name="website"

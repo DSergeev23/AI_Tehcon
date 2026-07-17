@@ -71,10 +71,10 @@ export default function Navbar() {
           <div className="hidden md:flex items-center shrink-0">
             <Link
               to="/contacts"
-              className="inline-flex items-center gap-1.5 h-9 px-5 text-sm font-medium signal-button rounded-md transition-colors"
+              className="inline-flex items-center gap-2 h-11 px-6 text-base font-medium signal-button rounded-md transition-colors"
             >
               Связаться
-              <Plus className="w-3.5 h-3.5" />
+              <Plus className="w-4 h-4" />
             </Link>
           </div>
 

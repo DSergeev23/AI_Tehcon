@@ -39,11 +39,12 @@ const legal = [
 function FooterLink({ to, children, external }) {
   const base = "text-[13px] text-white/75 leading-snug transition-colors duration-200 hover:text-white";
   if (external) {
+    const opensInNewTab = /^https?:/.test(to);
     return (
       <motion.a
         href={to}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={opensInNewTab ? '_blank' : undefined}
+        rel={opensInNewTab ? 'noopener noreferrer' : undefined}
         className={base}
         whileHover={{ x: 2 }}
         transition={{ duration: 0.15 }}>
@@ -107,7 +108,7 @@ export default function Footer() {
 
           {/* Col 2 — Navigation */}
           <div>
-            <p className="text-[10px] font-semibold text-signal uppercase tracking-[0.16em] mb-5">Навигация</p>
+            <h2 className="text-xs font-semibold text-signal uppercase tracking-[0.16em] mb-5">Навигация</h2>
             <div className="flex flex-col gap-3">
               {navLinks.map((l) =>
               <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
@@ -117,7 +118,7 @@ export default function Footer() {
 
           {/* Col 3 — Solutions */}
           <div>
-            <p className="text-[10px] font-semibold text-signal uppercase tracking-[0.16em] mb-5">Решения</p>
+            <h2 className="text-xs font-semibold text-signal uppercase tracking-[0.16em] mb-5">Решения</h2>
             <div className="flex flex-col gap-3">
               {solutions.map((l) =>
               <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
@@ -127,13 +128,13 @@ export default function Footer() {
 
           {/* Col 4 — Contact */}
           <div>
-            <p className="text-[10px] font-semibold text-signal uppercase tracking-[0.16em] mb-5">Контакты</p>
+            <h2 className="text-xs font-semibold text-signal uppercase tracking-[0.16em] mb-5">Контакты</h2>
             <div className="flex flex-col gap-3">
               <FooterLink to="mailto:hello@it-tehcon.ru" external>hello@it-tehcon.ru</FooterLink>
               <FooterLink to="https://t.me/ai_tehcon_business" external>AI-TehCon в Telegram</FooterLink>
             </div>
             <div className="mt-8">
-              <p className="text-[10px] font-semibold text-signal uppercase tracking-[0.16em] mb-5">Правовое</p>
+              <h2 className="text-xs font-semibold text-signal uppercase tracking-[0.16em] mb-5">Правовое</h2>
               <div className="flex flex-col gap-3">
                 {legal.map((l) =>
                 <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
