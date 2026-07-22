@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Send } from 'lucide-react';
 import { catalogProducts } from '../../lib/catalog';
+import { solutionLandingList } from '../../lib/solutionLandings';
 
 const navLinks = [
 { label: 'Главная', to: '/' },
@@ -22,13 +23,20 @@ function isOneCProduct(product) {
   return searchable.includes('1с') || searchable.includes('1c');
 }
 
-const solutions = [...catalogProducts]
+const campaignSolutions = solutionLandingList.map((landing) => ({
+  label: landing.breadcrumb,
+  to: landing.seo.canonical,
+}));
+
+const catalogSolutions = [...catalogProducts]
   .sort((a, b) => Number(isOneCProduct(b)) - Number(isOneCProduct(a)))
-  .slice(0, 8)
+  .slice(0, 5)
   .map((product) => ({
     label: product.title,
     to: `/catalog/${product.id}`,
   }));
+
+const solutions = [...campaignSolutions, ...catalogSolutions];
 
 
 const legal = [

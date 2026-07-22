@@ -12,6 +12,7 @@ import About from './pages/About';
 import Catalog from './pages/Catalog';
 import Contacts from './pages/Contacts';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import SolutionLanding from './pages/SolutionLanding';
 import TermsOfUse from './pages/TermsOfUse';
 
 const ProductDetail = React.lazy(() => import('./pages/ProductDetail'));
@@ -32,6 +33,7 @@ export const PublicApp = () => {
         <Route path="/catalog/ecommerce" element={<Navigate to="/catalog/marketplace" replace />} />
         <Route path="/catalog/marketplace" element={<Catalog />} />
         <Route path="/catalog/:id" element={<Suspense fallback={null}><ProductDetail /></Suspense>} />
+        <Route path="/solutions/:slug" element={<SolutionLanding />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />

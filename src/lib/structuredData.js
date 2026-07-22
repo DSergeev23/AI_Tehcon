@@ -128,3 +128,34 @@ export function createProductBreadcrumbSchema(product) {
     ],
   };
 }
+
+// ── Commercial solution landing: Service + BreadcrumbList ──
+export function createSolutionLandingSchema(landing) {
+  const url = `${SITE_URL}${landing.seo.canonical}`;
+
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": landing.breadcrumb,
+      "description": landing.seo.description,
+      "url": url,
+      "provider": { ...ORGANIZATION },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Россия",
+      },
+      "serviceType": landing.requestType,
+      "keywords": landing.seo.keywords,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": SITE_URL },
+        { "@type": "ListItem", "position": 2, "name": "Решения", "item": `${SITE_URL}/catalog` },
+        { "@type": "ListItem", "position": 3, "name": landing.breadcrumb, "item": url },
+      ],
+    },
+  ];
+}

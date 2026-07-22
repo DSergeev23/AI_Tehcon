@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { ArrowRight, BrainCircuit } from 'lucide-react';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
 import CTASection from '../components/home/CTASection';
 import SEOHead from '../components/shared/SEOHead';
@@ -13,18 +14,173 @@ const values = [
   { title: 'Надёжность', desc: 'Enterprise-grade безопасность и SLA 99.9% для всех систем.' },
 ];
 
-const stats = [
-  { num: '40+', label: 'Конфигураций 1С' },
-  { num: '20+', label: 'Моделей ИИ' },
-  { num: '12 лет', label: 'На рынке автоматизации' },
-  { num: '98%', label: 'Рекомендуют' },
+const expertise = [
+  {
+    value: '40+',
+    title: 'конфигураций 1С',
+    caption: 'Видим логику учёта целиком',
+    area: '1С и учёт',
+    visual: 'one-c',
+    markers: ['Документы', 'Регистры', 'Роли'],
+  },
+  {
+    value: '20+',
+    title: 'моделей ИИ',
+    caption: 'Выбираем модель под задачу',
+    area: 'ИИ-инструменты',
+    visual: 'ai',
+    markers: ['LLM', 'OCR', 'RAG'],
+  },
+  {
+    value: '12 лет',
+    title: 'в автоматизации',
+    caption: 'Понимаем процессы бизнеса',
+    area: 'Опыт внедрений',
+    visual: 'experience',
+    markers: ['Процессы', 'Интеграции', 'Контроль'],
+  },
 ];
 
-const techGroups = [
-  { title: 'Учёт и данные', items: ['1С', 'SQL', 'PostgreSQL', 'Excel', 'REST API'] },
-  { title: 'ИИ и документы', items: ['LLM', 'OCR', 'Компьютерное зрение', 'RAG', 'Классификация'] },
-  { title: 'Интеграции и эксплуатация', items: ['Python', 'TypeScript', 'Email (IMAP/SMTP)', 'Docker', 'Очереди задач', 'Мониторинг'] },
+const implementationSteps = [
+  {
+    title: 'Находим потери',
+    caption: 'Ручная работа · задержки · ошибки',
+    result: 'Точка роста',
+    visual: 'process',
+  },
+  {
+    title: 'Соединяем системы',
+    caption: '1С · CRM · Excel · документы',
+    result: 'Единые данные',
+    visual: 'data',
+  },
+  {
+    title: 'Добавляем интеллект',
+    caption: 'Распознать · проверить · решить',
+    result: 'ИИ-сценарий',
+    visual: 'ai',
+  },
+  {
+    title: 'Получаем эффект',
+    caption: 'Быстрее · точнее · под контролем',
+    result: 'Измеримый результат',
+    visual: 'result',
+  },
 ];
+
+const atlasPositions = {
+  process: '0% 0%',
+  data: '100% 0%',
+  ai: '0% 100%',
+  result: '100% 100%',
+};
+
+function AtlasVisual({ type, size = 'step', blend = false }) {
+  return (
+    <div
+      className={`relative overflow-hidden ${size === 'expertise' ? 'w-36 h-36 md:w-44 md:h-44' : 'w-44 h-44 2xl:w-52 2xl:h-52'} ${blend ? 'mix-blend-screen' : ''}`}
+      aria-hidden="true"
+    >
+      <motion.div
+        className="absolute inset-0 bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/images/about-automation-atlas.png)',
+          backgroundPosition: atlasPositions[type],
+          backgroundSize: '200% 200%',
+        }}
+        whileHover={{ scale: 1.04 }}
+        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+      />
+    </div>
+  );
+}
+
+function ExpertiseVisual({ type }) {
+  if (type === 'one-c') {
+    return (
+      <div className="relative w-36 h-32" aria-hidden="true">
+        <div className="absolute left-0 top-0 w-20 h-16 border border-black/35 bg-black/10" />
+        <div className="absolute left-2 top-2 w-20 h-16 border border-black/55 bg-white/[0.08]" />
+        <motion.div
+          className="absolute left-4 top-4 w-20 h-16 border-2 border-black bg-[#d9d9d7] text-black shadow-[6px_6px_0_rgba(0,0,0,0.24)]"
+          whileHover={{ x: 3, y: 3 }}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <div className="h-3 px-1 flex items-center gap-1 border-b border-black/30 bg-white/40">
+            <span className="w-1.5 h-1.5 bg-primary" />
+            <span className="w-1.5 h-1.5 bg-black/25" />
+            <span className="w-1.5 h-1.5 bg-black/25" />
+          </div>
+          <div className="h-[49px] flex items-center justify-center gap-2">
+            <span className="font-mono text-lg font-bold">1С</span>
+            <span className="w-5 space-y-1">
+              <span className="block h-px bg-black/50" />
+              <span className="block h-px bg-black/30" />
+              <span className="block h-px bg-black/20" />
+            </span>
+          </div>
+        </motion.div>
+        <span className="absolute right-0 bottom-1 w-4 h-4 border border-black bg-white/35" />
+      </div>
+    );
+  }
+
+  if (type === 'ai') {
+    return (
+      <div className="relative w-36 h-36 flex items-center justify-center" aria-hidden="true">
+        <div className="absolute inset-5 border border-white/15 rotate-45" />
+        <div className="absolute left-0 right-0 top-1/2 h-px bg-white/20" />
+        <div className="absolute top-0 bottom-0 left-1/2 w-px bg-white/20" />
+        <motion.div
+          className="relative z-10 w-[72px] h-[72px] border border-primary/70 bg-black shadow-[0_0_24px_rgba(165,29,52,0.18)] flex items-center justify-center"
+          animate={{ borderColor: ['rgba(165,29,52,0.5)', 'rgba(190,42,64,1)', 'rgba(165,29,52,0.5)'] }}
+          transition={{ duration: 2.8, repeat: Infinity }}
+        >
+          <BrainCircuit className="w-9 h-9 text-white" strokeWidth={1.25} />
+        </motion.div>
+        {['left-0 top-[58px]', 'right-0 top-[58px]', 'left-[58px] top-0', 'left-[58px] bottom-0'].map((position, index) => (
+          <motion.span
+            key={position}
+            className={`absolute ${position} w-3 h-3 border ${index === 1 ? 'border-primary bg-primary' : 'border-white/50 bg-black'}`}
+            animate={{ scale: [1, 1.35, 1] }}
+            transition={{ duration: 2, delay: index * 0.28, repeat: Infinity }}
+          />
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative w-44 h-32" aria-hidden="true">
+      <div className="absolute left-0 right-0 bottom-6 h-px bg-white/30" />
+      <div className="absolute inset-x-0 bottom-7 h-16 flex items-end gap-2">
+        {[24, 36, 48, 62, 78, 96].map((height, index) => (
+          <motion.div
+            key={height}
+            className="relative flex-1 border border-white/30 bg-white/[0.04]"
+            style={{ height: `${height}%` }}
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: index * 0.08 }}
+          >
+            <span className={`absolute inset-x-0 top-0 h-1 ${index === 5 ? 'bg-primary' : 'bg-white/65'}`} />
+          </motion.div>
+        ))}
+      </div>
+      <span className="absolute left-0 bottom-0 font-mono text-[9px] text-white/45">2014</span>
+      <span className="absolute right-0 bottom-0 font-mono text-[9px] text-white/70">2026</span>
+    </div>
+  );
+}
+
+function StepIllustration({ type }) {
+  return (
+    <div className="relative h-52 flex items-center justify-center" aria-hidden="true">
+      <AtlasVisual type={type} />
+    </div>
+  );
+}
 
 const oneCExpertise = [
   { title: 'Понимаем логику учёта', description: 'Работаем с документами, справочниками, регистрами, ролями, складскими и кадровыми процессами — учитываем не только интерфейс, но и правила, по которым живёт база.' },
@@ -90,21 +246,96 @@ export default function About() {
         </div>
       </div>
 
-      {/* Stats row */}
-      <div className="border-b border-white/[0.08]">
-        <div className="w-full max-w-[1920px] mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4">
-            {stats.map((s, i) => (
-              <RevealOnScroll key={i} delay={i * 0.06}>
-                <div className={`py-10 px-7 text-center ${i < 3 ? 'border-r border-white/[0.08]' : ''}`}>
-                  <div className="text-3xl font-serif text-signal tracking-tight mb-1">{s.num}</div>
-                  <div className="text-xs text-white/75">{s.label}</div>
-                </div>
+      {/* Expertise and implementation infographic */}
+      <section className="border-b border-white/[0.08] overflow-hidden" aria-label="Экспертиза и процесс внедрения">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-12 md:py-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 border border-white/[0.12]">
+            {expertise.map((item, index) => (
+              <RevealOnScroll key={item.area} delay={index * 0.08}>
+                <article className={`h-full min-h-[250px] md:min-h-[270px] p-5 md:p-6 flex flex-col relative overflow-hidden ${index === 0 ? 'bg-primary' : 'bg-black'} text-white ${index < 2 ? 'border-b md:border-b-0 md:border-r border-white/[0.16]' : ''}`}>
+                  <div className="flex items-center gap-3">
+                    <span className={`w-2 h-2 ${index === 0 ? 'bg-black' : 'bg-primary'}`} aria-hidden="true" />
+                    <span className="text-[11px] uppercase tracking-[0.15em] text-white/70">{item.area}</span>
+                  </div>
+
+                  <div className="flex flex-1 items-center justify-between gap-2 py-3 md:py-2">
+                    <div className="relative z-10 min-w-0 max-w-[54%]">
+                      <div className="font-serif text-5xl lg:text-[3.4rem] 2xl:text-6xl leading-none mb-2 text-white whitespace-nowrap">
+                        {item.value}
+                      </div>
+                      <h3 className="text-sm 2xl:text-base font-semibold mb-2 text-white">{item.title}</h3>
+                      <p className="text-xs 2xl:text-sm leading-snug text-white/75">{item.caption}</p>
+                    </div>
+                    <div className="flex flex-1 justify-end scale-[0.92] lg:scale-100 origin-right">
+                      <ExpertiseVisual type={item.visual} />
+                    </div>
+                  </div>
+
+                  <div className="border-t border-white/20 pt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5" aria-label={`Компетенции: ${item.markers.join(', ')}`}>
+                    {item.markers.map((marker) => (
+                      <span key={marker} className="inline-flex items-center gap-1.5 text-[10px] 2xl:text-[11px] uppercase tracking-[0.08em] text-white/75">
+                        <span className={`w-1 h-1 ${index === 0 ? 'bg-black/70' : 'bg-primary'}`} aria-hidden="true" />
+                        {marker}
+                      </span>
+                    ))}
+                  </div>
+                </article>
               </RevealOnScroll>
             ))}
           </div>
+
+          <RevealOnScroll>
+            <div className="mt-10 md:mt-14 bg-black text-white border border-white/[0.12] overflow-hidden">
+              <div className="p-7 md:p-10 flex flex-col md:flex-row md:items-end md:justify-between gap-5 border-b border-white/[0.12]">
+                <div>
+                  <div className="text-[11px] text-primary uppercase tracking-[0.15em] mb-4">Как запускаем решение</div>
+                  <h3 className="font-serif text-4xl md:text-5xl text-white leading-tight">От задачи до эффекта</h3>
+                </div>
+                <div className="font-mono text-xs uppercase text-white/55">4 шага · 1 рабочий контур</div>
+              </div>
+
+              <div className="relative grid grid-cols-1 lg:grid-cols-4">
+                <div className="hidden lg:block absolute left-[12.5%] right-[12.5%] top-20 h-1 bg-white/10" aria-hidden="true">
+                  <motion.div
+                    className="h-full bg-primary origin-left"
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                  />
+                </div>
+
+                {implementationSteps.map((step, index) => (
+                  <motion.article
+                    key={step.title}
+                    initial={{ opacity: 0, y: 18 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.35 }}
+                    transition={{ duration: 0.55, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                    className={`relative p-6 md:p-8 ${index < 3 ? 'border-b lg:border-b-0 lg:border-r border-white/[0.12]' : ''}`}
+                  >
+                    <div className="absolute top-4 left-4 w-7 h-7 bg-white text-black font-mono text-[10px] flex items-center justify-center z-10">
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    {index < 3 && (
+                      <ArrowRight className="hidden lg:block absolute z-20 top-[70px] -right-3 w-6 h-6 p-1 bg-primary text-white" aria-hidden="true" />
+                    )}
+
+                    <StepIllustration type={step.visual} />
+
+                    <h4 className="font-serif text-2xl text-white mb-2">{step.title}</h4>
+                    <p className="text-xs text-white/60 min-h-8">{step.caption}</p>
+                    <div className="mt-6 pt-4 border-t border-white/[0.12] flex items-center gap-2 text-sm font-semibold text-white">
+                      <span className="w-2 h-2 bg-primary" aria-hidden="true" />
+                      {step.result}
+                    </div>
+                  </motion.article>
+                ))}
+              </div>
+            </div>
+          </RevealOnScroll>
         </div>
-      </div>
+      </section>
 
       {/* Mission */}
       <div className="border-b border-white/[0.08]">
@@ -192,36 +423,6 @@ export default function About() {
                   </div>
                 ))}
               </div>
-            </div>
-          </RevealOnScroll>
-        </div>
-      </div>
-
-      {/* Tech stack */}
-      <div className="border-b border-white/[0.08]">
-        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-12">
-          <RevealOnScroll>
-            <h2 className="text-[12px] text-signal uppercase tracking-[0.15em] mb-6">Технологический стек</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              {techGroups.map((group, i) => (
-                <motion.div
-                  key={group.title}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
-                  className="border border-white/[0.1] p-7"
-                >
-                  <h3 className="text-sm font-semibold text-white mb-5">{group.title}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {group.items.map((item) => (
-                      <span key={item} className="px-2.5 py-1.5 border border-white/[0.12] rounded-sm text-xs text-white/75">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
             </div>
           </RevealOnScroll>
         </div>
