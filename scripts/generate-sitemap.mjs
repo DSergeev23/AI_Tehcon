@@ -2,7 +2,6 @@ import { writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { catalogProducts } from '../src/lib/catalog/index.js';
 import { catalogCategoryNav } from '../src/lib/catalog/categorySeo.js';
-import { solutionLandings } from '../src/lib/solutionLandings.js';
 
 const SITE_URL = 'https://ai-tehcon.ru';
 
@@ -10,7 +9,6 @@ const staticPages = [
   { path: '/', priority: '1.0' },
   { path: '/catalog', priority: '0.9' },
   ...catalogCategoryNav.map(({ slug }) => ({ path: `/catalog/${slug}`, priority: '0.85' })),
-  ...Object.keys(solutionLandings).map((slug) => ({ path: `/solutions/${slug}`, priority: '0.9' })),
   { path: '/about', priority: '0.7' },
   { path: '/contacts', priority: '0.7' },
   { path: '/privacy-policy', priority: '0.3' },

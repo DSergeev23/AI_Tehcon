@@ -4,14 +4,12 @@ import { fileURLToPath, URL } from 'node:url'
 import { vitePrerenderPlugin } from 'vite-prerender-plugin'
 import { catalogProducts } from './src/lib/catalog/index.js'
 import { catalogCategoryNav } from './src/lib/catalog/categorySeo.js'
-import { solutionLandings } from './src/lib/solutionLandings.js'
 
 const prerenderRoutes = [
   '/about',
   '/catalog',
   ...catalogCategoryNav.map(({ slug }) => `/catalog/${slug}`),
   ...catalogProducts.map(({ id }) => `/catalog/${id}`),
-  ...Object.keys(solutionLandings).map((slug) => `/solutions/${slug}`),
   '/contacts',
   '/privacy-policy',
   '/terms-of-use',
