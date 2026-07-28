@@ -15,6 +15,7 @@ import oneCCompetitorPriceAnalysis from './products/1c-competitor-price-analysis
 import oneCMarketplaceProcurementAssistant from './products/1c-marketplace-procurement-assistant.js';
 import oneCProductionQualityDefectsAssistant from './products/1c-production-quality-defects-assistant.js';
 import oneCMaterialConsumptionNormsAnalysis from './products/1c-material-consumption-norms-analysis.js';
+import oneCSupplierContractPenaltyAnalysis from './products/1c-supplier-contract-penalty-analysis.js';
 import oneCSmartDocumentScanCheck from './products/1c-smart-document-scan-check.js';
 import oneCSmartTripSheetCheck from './products/1c-smart-trip-sheet-check.js';
 import oneCHrDocumentCheck from './products/1c-hr-document-check.js';
@@ -44,13 +45,14 @@ export const catalogProducts = [
   aiBloggingAgent,
   pinterestSeoTrafficAgent,
   aiAgentFor1cChatVoiceAnalytics,
-  oneCSeoBlogAutomation,
+  oneCSupplierContractPenaltyAnalysis,
   oneCProcurementAiAutomation,
   oneCDailyDeviationReports,
   oneCCompetitorPriceAnalysis,
   oneCMarketplaceProcurementAssistant,
   oneCProductionQualityDefectsAssistant,
   oneCMaterialConsumptionNormsAnalysis,
+  oneCSeoBlogAutomation,
   oneCSmartDocumentScanCheck,
   oneCSmartTripSheetCheck,
   oneCHrDocumentCheck,
