@@ -101,7 +101,7 @@ export default function Catalog() {
 
       {/* Grid */}
       <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-12">
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3">
+        <motion.div layout className="grid auto-rows-fr grid-cols-1 items-stretch gap-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {filtered.map((product, i) => (
             <CatalogCard key={product.id} product={product} index={i} />
           ))}

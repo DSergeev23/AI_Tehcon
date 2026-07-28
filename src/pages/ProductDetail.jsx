@@ -82,11 +82,11 @@ export default function ProductDetail() {
       </div>
 
       {/* Main layout: article + sticky sidebar */}
-      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24">
-        <div className="flex flex-col lg:flex-row gap-0">
+      <div className="mx-auto w-full max-w-[1280px] px-5 md:px-8">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,780px)_340px] lg:gap-16">
 
           {/* ── Article column ── */}
-          <div className="flex-1 min-w-0 border-r border-white/[0.08] py-14 pr-0 lg:pr-16 2xl:pr-24">
+          <div className="min-w-0 py-14">
             {/* Long-read content constrained to readable width */}
             <div className="max-w-3xl">
               <RevealOnScroll>
@@ -156,7 +156,7 @@ export default function ProductDetail() {
           </div>
 
           {/* ── Sticky Sidebar ── */}
-          <div className="lg:w-72 2xl:w-80 flex-shrink-0">
+          <div className="min-w-0">
             <div className="lg:sticky lg:top-16 pt-14 pb-8">
               {/* Price card */}
               <div className="border premium-panel rounded-sm p-6 mb-4">
