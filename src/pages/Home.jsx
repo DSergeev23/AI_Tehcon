@@ -28,7 +28,7 @@ const homeSchema = {
         "@type": "ContactPoint",
         "contactType": "sales",
         "telephone": "+7-919-213-71-11",
-        "email": "hello@it-tehcon.ru",
+        "email": "hello@ai-tehcon.ru",
         "availableLanguage": "Russian",
       },
       "address": {

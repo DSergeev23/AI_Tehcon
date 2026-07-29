@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 const RECIPIENT = 'hello@ai-tehcon.ru';
-const SENDER = 'hello@it-tehcon.ru';
+const SENDER = 'hello@ai-tehcon.ru';
 
 header('Content-Type: application/json; charset=UTF-8');
 header('Cache-Control: no-store');

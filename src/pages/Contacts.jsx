@@ -19,8 +19,8 @@ export default function Contacts() {
   const contactDetails = [
     {
       label: 'Email',
-      value: 'hello@it-tehcon.ru',
-      href: 'mailto:hello@it-tehcon.ru',
+      value: 'hello@ai-tehcon.ru',
+      href: 'mailto:hello@ai-tehcon.ru',
     },
     {
       label: 'Телефон',
@@ -83,7 +83,7 @@ export default function Contacts() {
       window.localStorage.setItem('aiTehConContactLastSubmitAt', String(Date.now()));
       setSubmitted(true);
     } catch (_) {
-      setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз или напишите напрямую на hello@it-tehcon.ru.');
+      setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз или напишите напрямую на hello@ai-tehcon.ru.');
     } finally {
       setLoading(false);
     }

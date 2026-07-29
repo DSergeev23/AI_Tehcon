@@ -94,8 +94,8 @@ export default function Footer() {
                 <Send className="w-3.5 h-3.5" />
               </motion.a>
               <motion.a
-                href="mailto:hello@it-tehcon.ru"
-                aria-label="Написать на hello@it-tehcon.ru"
+                href="mailto:hello@ai-tehcon.ru"
+                aria-label="Написать на hello@ai-tehcon.ru"
                 className="w-8 h-8 rounded-md border border-primary/35 bg-primary/10 flex items-center justify-center text-primary hover:text-white hover:border-primary/60 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.15 }}>
@@ -129,7 +129,7 @@ export default function Footer() {
           <div>
             <h2 className="text-xs font-semibold text-signal uppercase tracking-[0.16em] mb-5">Контакты</h2>
             <div className="flex flex-col gap-3">
-              <FooterLink to="mailto:hello@it-tehcon.ru" external>hello@it-tehcon.ru</FooterLink>
+              <FooterLink to="mailto:hello@ai-tehcon.ru" external>hello@ai-tehcon.ru</FooterLink>
               <FooterLink to="https://t.me/ai_tehcon_business" external>AI-TehCon в Telegram</FooterLink>
             </div>
             <div className="mt-8">
