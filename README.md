@@ -11,7 +11,7 @@
 - Framer Motion;
 - React Helmet Async.
 
-Сайт является автономным статическим React/Vite-приложением и не использует Base44 SDK, backend, authentication или CDN.
+Сайт является React/Vite-приложением. Контактная форма обрабатывается серверным PHP-скриптом, который размещается вместе со статической сборкой на виртуальном хостинге Timeweb.
 
 ## Локальная разработка
 
@@ -51,9 +51,16 @@ GitHub Actions workflow `.github/workflows/deploy-timeweb.yml` вручную з
 
 Не коммитьте `.env`, credentials, FTP-доступы и содержимое `dist/`.
 
+## Контактная форма
+
+Форма отправляет JSON на `/api/contact.php`. Скрипт использует почтовый агент Timeweb через PHP `mail()` и отправляет заявки на `hello@it-tehcon.ru`.
+
+Перед публикацией убедитесь в панели Timeweb, что ящик `hello@it-tehcon.ru` создан и домен имеет корректные SPF, DKIM и DMARC-записи. Пароль ящика в проекте не используется и не хранится.
+
+Локальный Vite-сервер PHP не выполняет: полноценную проверку отправки нужно проводить после публикации на Timeweb.
+
 ## Внешние сервисы
 
-- FormSubmit — отправка заявок с контактной формы;
 - Google Analytics — web analytics;
 - Yandex Metrika — web analytics.
 

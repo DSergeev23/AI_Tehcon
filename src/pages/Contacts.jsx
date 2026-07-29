@@ -63,36 +63,22 @@ export default function Contacts() {
       return;
     }
 
-    const submittedAt = new Date().toLocaleString('ru-RU', {
-      timeZone: 'Europe/Moscow'
-    });
-    const subjectName = form.name.trim() || 'Без имени';
-    const subjectCompany = form.company.trim() || 'Без компании';
-
     try {
-      const response = await fetch("https://formsubmit.co/ajax/hello@it-tehcon.ru", {
+      const response = await fetch('/api/contact.php', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          _subject: `Новая заявка AI TehCon: ${subjectName} / ${subjectCompany}`,
-          _template: 'table',
-          _replyto: form.email,
-          'Имя': form.name,
-          'Email': form.email,
-          'Телефон': form.phone,
-          'Компания': form.company || 'Не указана',
-          'Задача': form.message,
-          'Источник': 'Сайт AI TehCon',
-          'Страница': window.location.href,
-          'Дата отправки': submittedAt,
-          'Тип заявки': 'Консультация'
+          ...form,
+          website,
+          pageUrl: window.location.href,
         })
       });
-      if (!response.ok) {
-        throw new Error('FormSubmit request failed');
+      const result = await response.json().catch(() => null);
+      if (!response.ok || !result?.success) {
+        throw new Error('Contact form request failed');
       }
       window.localStorage.setItem('aiTehConContactLastSubmitAt', String(Date.now()));
       setSubmitted(true);

@@ -46,13 +46,13 @@ export default function CatalogCard({ product, index }) {
       <Link to={`/catalog/${product.id}`} className="block h-full group">
         <motion.div
           whileHover={{ backgroundColor: 'rgba(255,255,255,0.035)' }}
-          className="relative flex h-full min-h-[360px] flex-col border border-white/[0.1] rounded-sm p-7 transition-colors duration-200 bg-black group-hover:border-primary/45"
+          className="relative flex h-full flex-col overflow-hidden border border-white/[0.1] rounded-sm p-6 transition-colors duration-200 bg-black group-hover:border-primary/45"
         >
           {/* Corner pluses */}
           <Plus className="absolute top-3 right-3 w-3.5 h-3.5 text-primary/70 group-hover:text-primary transition-colors" />
 
           {/* Tags */}
-          <div className="flex h-[68px] flex-wrap content-start gap-1.5 mb-6 overflow-hidden">
+          <div className="mb-5 flex h-14 shrink-0 flex-wrap content-start gap-1.5 overflow-hidden">
             {product.tags.map((tag, i) => (
               <span
                 key={i}
@@ -64,7 +64,7 @@ export default function CatalogCard({ product, index }) {
           </div>
 
           {/* Icon + visual placeholder */}
-          <div className="mb-6 flex items-end justify-between">
+          <div className="mb-5 flex shrink-0 items-end justify-between">
             <div
               className={`w-10 h-10 border rounded flex items-center justify-center ${
                 isOneCIcon
@@ -81,24 +81,24 @@ export default function CatalogCard({ product, index }) {
           <p className="text-[10px] text-white/75 uppercase tracking-[0.15em] font-semibold mb-1.5">{product.category}</p>
 
           {/* Title */}
-          <h3 className="min-h-[2.5rem] text-sm font-semibold text-white mb-3 leading-snug tracking-tight group-hover:text-white transition-colors line-clamp-2">
+          <h3 className="mb-3 h-10 overflow-hidden text-sm font-semibold text-white leading-snug tracking-tight group-hover:text-white transition-colors line-clamp-2">
             {product.title}
           </h3>
 
           {/* Description */}
-          <p className="min-h-[2.5rem] text-xs text-white/80 leading-relaxed mb-6 line-clamp-2">
+          <p className="mb-4 h-10 overflow-hidden text-xs text-white/80 leading-relaxed line-clamp-2">
             {product.shortDescription}
           </p>
 
           {product.cardMeta && (
-            <div className="mb-6 max-h-[3.25rem] overflow-hidden border-l border-primary/50 pl-3 text-[11px] leading-relaxed">
+            <div className="mb-4 h-[46px] overflow-hidden border-l border-primary/50 pl-3 text-[11px] leading-relaxed">
               <p className="text-white/75">Для: <span className="text-white">{product.cardMeta.audience}</span></p>
               <p className="text-white/75">Контроль: <span className="text-white">{product.cardMeta.signal}</span></p>
             </div>
           )}
 
           {/* Bottom row */}
-          <div className="mt-auto flex items-center justify-between">
+          <div className="mt-auto flex shrink-0 items-center justify-between">
             <span className="text-xs font-semibold text-white">{product.pricing}</span>
             <span className="text-[11px] text-primary/90 group-hover:text-primary transition-colors flex items-center gap-1">
               Подробнее →
