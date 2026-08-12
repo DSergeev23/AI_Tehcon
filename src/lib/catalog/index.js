@@ -34,6 +34,8 @@ import aiCompetitorSearchAdMonitoring from './products/ai-competitor-search-ad-m
 import contentFactoryProducts from './products/content-factory-products.js';
 import financeAiProducts from './products/finance-ai-products.js';
 import ecommerceAiProducts from './products/ecommerce-ai-products.js';
+import marketplaceAutomaticReviewReplies from './products/marketplace-automatic-review-replies.js';
+import marketplaceOrderCancellationControl from './products/marketplace-order-cancellation-control.js';
 
 export const catalogProducts = [
   telegramLeadGenerator,
@@ -69,6 +71,8 @@ export const catalogProducts = [
   aiLeadCallChatAnalysis,
   aiCompetitorSearchAdMonitoring,
   telegramLeadMagnetFunnel,
+  marketplaceAutomaticReviewReplies,
+  marketplaceOrderCancellationControl,
   ...contentFactoryProducts,
   ...financeAiProducts,
   ...ecommerceAiProducts,
