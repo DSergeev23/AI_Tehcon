@@ -36,6 +36,9 @@ import financeAiProducts from './products/finance-ai-products.js';
 import ecommerceAiProducts from './products/ecommerce-ai-products.js';
 import marketplaceAutomaticReviewReplies from './products/marketplace-automatic-review-replies.js';
 import marketplaceOrderCancellationControl from './products/marketplace-order-cancellation-control.js';
+import yandexZenRssAutopublish from './products/yandex-zen-rss-autopublish.js';
+import instagramAiContentManager from './products/instagram-ai-content-manager.js';
+import aiVisualQualityControl from './products/ai-visual-quality-control.js';
 
 export const catalogProducts = [
   telegramLeadGenerator,
@@ -73,6 +76,9 @@ export const catalogProducts = [
   telegramLeadMagnetFunnel,
   marketplaceAutomaticReviewReplies,
   marketplaceOrderCancellationControl,
+  yandexZenRssAutopublish,
+  instagramAiContentManager,
+  aiVisualQualityControl,
   ...contentFactoryProducts,
   ...financeAiProducts,
   ...ecommerceAiProducts,
