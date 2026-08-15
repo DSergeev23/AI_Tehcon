@@ -162,3 +162,71 @@
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #000; }
 ::-webkit-scrollbar-thumb { background: #222; border-radius: 2px; }
+
+/* Lightweight motion: CSS keeps simple effects off the React render path. */
+@keyframes page-enter {
+  from { opacity: 0; transform: translate3d(0, 18px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes fade-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -8px, 0); }
+}
+
+@keyframes signal-pulse {
+  0%, 100% { border-color: rgba(165, 29, 52, 0.5); transform: scale(1); }
+  50% { border-color: rgba(190, 42, 64, 1); transform: scale(1.08); }
+}
+
+.page-enter {
+  animation: page-enter 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.page-enter-delay {
+  animation-delay: 140ms;
+}
+
+.fade-enter {
+  animation: fade-enter 800ms ease-out both;
+}
+
+.gentle-float {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+.signal-pulse {
+  animation: signal-pulse 2.8s ease-in-out infinite;
+}
+
+.hover-lift {
+  transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
+}
+
+.hover-lift:hover {
+  transform: translate3d(0, -3px, 0);
+}
+
+/* Skip layout and paint work for long sections until they approach the viewport. */
+.render-deferred {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hover-lift:hover { transform: none; }
+}

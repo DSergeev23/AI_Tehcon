@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 const contentByVariant = {
   default: {
@@ -31,7 +30,7 @@ export default function CTASection({ variant = 'default' }) {
   const content = contentByVariant[variant] || contentByVariant.default;
 
   return (
-    <section className="border-t border-white/[0.08]">
+    <section className="border-t border-white/[0.08] render-deferred">
       <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-24 2xl:py-36 text-center relative">
         <span className="absolute top-5 left-5 text-white/15 text-xs">+</span>
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
@@ -39,35 +38,23 @@ export default function CTASection({ variant = 'default' }) {
         <span className="absolute bottom-5 right-5 text-white/15 text-xs">+</span>
 
         {/* Overline */}
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        <p
           style={{ fontSize: '11px', letterSpacing: '0.14em', color: 'rgba(255,255,255,0.75)', marginBottom: '28px' }}
           className="uppercase">
           
           {content.overline}
-        </motion.p>
+        </p>
 
         {/* Headline */}
-        <motion.h2
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        <h2
           className="font-serif text-white"
           style={{ fontSize: 'clamp(48px, 5vw, 100px)', lineHeight: '1.1', letterSpacing: '-0.02em', marginBottom: '40px' }}>
           
           {content.heading}
-        </motion.h2>
+        </h2>
 
         {/* Body */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+        <div
           className="mx-auto mb-14"
           style={{ maxWidth: '560px' }}>
           
@@ -80,14 +67,10 @@ export default function CTASection({ variant = 'default' }) {
               </div>
             )}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>
+        <div>
           
           <Link
             to="/contacts"
@@ -96,7 +79,7 @@ export default function CTASection({ variant = 'default' }) {
             
             {content.button}
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>);
 

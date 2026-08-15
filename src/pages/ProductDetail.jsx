@@ -1,6 +1,5 @@
 import React from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Plus, CheckCircle2, Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, Sparkles } from 'lucide-react';
 import { getProductById } from '../lib/catalog';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
@@ -8,6 +7,7 @@ import SEOHead from '../components/shared/SEOHead';
 import { getProductSEO } from '../lib/seoConfig';
 import { createServiceSchema, createProductBreadcrumbSchema } from '../lib/structuredData';
 import SectionsRenderer from '../components/product/SectionsRenderer';
+import PageNotFound from '../lib/PageNotFound';
 
 function OneCIcon({ className }) {
   return (
@@ -23,7 +23,7 @@ const iconMap = { Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, 
 export default function ProductDetail() {
   const { id } = useParams();
   const product = getProductById(id);
-  if (!product) return <Navigate to="/catalog" replace />;
+  if (!product) return <PageNotFound />;
 
   const Icon = iconMap[product.icon] || Sparkles;
   const seo = getProductSEO(product);
@@ -53,11 +53,7 @@ export default function ProductDetail() {
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
         <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-14">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          >
+          <div className="page-enter">
             <div className="flex flex-wrap gap-1.5 mb-6">
               {product.tags.map((tag, i) => (
                 <span key={i} className="px-2 py-0.5 border border-white/[0.14] rounded-sm text-[10px] font-medium text-white/75 uppercase tracking-wide">
@@ -77,7 +73,7 @@ export default function ProductDetail() {
             </div>
 
             <p className="text-base text-white/80 max-w-2xl leading-relaxed">{product.shortDescription}</p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -86,7 +82,7 @@ export default function ProductDetail() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,780px)_340px] lg:gap-16">
 
           {/* ── Article column ── */}
-          <div className="min-w-0 py-14">
+          <div className="min-w-0 py-14 render-deferred">
             {/* Long-read content constrained to readable width */}
             <div className="max-w-3xl">
               <RevealOnScroll>
@@ -99,12 +95,8 @@ export default function ProductDetail() {
                   <p className="text-[12px] text-signal uppercase tracking-[0.15em] mb-8">Как это работает</p>
                   <div className="space-y-0">
                     {product.howItWorks.map((step, i) => (
-                      <motion.div
+                      <div
                         key={i}
-                        initial={{ opacity: 0, x: -16 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: i * 0.08 }}
                         className="flex gap-5 py-6 border-b border-white/[0.06] last:border-0"
                       >
                         <div className="w-8 h-8 border border-primary/35 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -114,7 +106,7 @@ export default function ProductDetail() {
                           <h3 className="text-sm font-semibold text-white mb-1.5">{step.title}</h3>
                           <p className="text-sm text-white/80 leading-relaxed">{step.description}</p>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>

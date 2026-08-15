@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Plus } from 'lucide-react';
 
 const navLinks = [
@@ -24,10 +23,7 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -60, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+      <nav
         className={`sticky top-0 left-0 right-0 z-50 h-16 transition-all duration-300 ${
           scrolled
             ? 'border-b border-white/[0.06] bg-black/90 backdrop-blur-md'
@@ -39,8 +35,11 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group shrink-0">
             <img
-              src="/images/icon.png"
+              src="/images/icon-32.png"
+              srcSet="/images/icon-32.png 1x, /images/icon-64.png 2x"
               alt="AI TehCon"
+              width="32"
+              height="32"
               className="w-8 h-8 rounded-sm"
             />
             <span className="text-sm font-semibold text-white tracking-tight">AI TehCon</span>
@@ -86,18 +85,11 @@ export default function Navbar() {
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Mobile menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-16 z-40 bg-black border-b border-white/[0.08]"
-          >
+      {mobileOpen && (
+          <div className="fixed inset-x-0 top-16 z-40 border-b border-white/[0.08] bg-black animate-in fade-in slide-in-from-top-2 duration-200">
             <div className="px-5 py-4 flex flex-col gap-0.5">
               {navLinks.map((link) => (
                 <Link
@@ -115,9 +107,8 @@ export default function Navbar() {
                 Связаться <Plus className="w-4 h-4" />
               </Link>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+      )}
     </>
   );
 }

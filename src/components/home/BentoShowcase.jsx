@@ -11,7 +11,7 @@ const metrics = [
 
 export default function BentoShowcase() {
   return (
-    <section className="border-t border-white/[0.08]">
+    <section className="border-t border-white/[0.08] render-deferred">
       <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-16 2xl:py-24">
 
         {/* Section label */}

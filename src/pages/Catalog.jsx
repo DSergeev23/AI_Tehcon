@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { catalogProducts } from '../lib/catalog';
 import {
   catalogCategoryNav,
@@ -56,11 +55,7 @@ export default function Catalog() {
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
         <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 pt-16 pb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          >
+          <div className="page-enter">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 border signal-badge rounded-sm text-[11px] mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-primary" />
               {categoryPage ? `${categoryPage.label}: решения` : 'Каталог решений'}
@@ -71,7 +66,7 @@ export default function Catalog() {
             <p className="text-sm text-white max-w-xl leading-relaxed">
               {intro}
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -100,12 +95,12 @@ export default function Catalog() {
       </div>
 
       {/* Grid */}
-      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-12">
-        <motion.div layout className="grid auto-rows-[400px] grid-cols-1 items-stretch gap-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-          {filtered.map((product, i) => (
-            <CatalogCard key={product.id} product={product} index={i} />
+      <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-12 render-deferred">
+        <div className="grid auto-rows-[400px] grid-cols-1 items-stretch gap-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          {filtered.map((product) => (
+            <CatalogCard key={product.id} product={product} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );

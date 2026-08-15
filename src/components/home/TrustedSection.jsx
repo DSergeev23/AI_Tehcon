@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import RevealOnScroll from '../shared/RevealOnScroll';
 
 const logos = [
@@ -18,13 +17,12 @@ export default function TrustedSection() {
         <RevealOnScroll delay={0.1}>
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 items-center">
             {logos.map((name, i) => (
-              <motion.div
+              <div
                 key={i}
-                whileHover={{ opacity: 1 }}
                 className="text-lg font-bold text-white/[0.15] hover:text-white/[0.35] transition-colors duration-500 tracking-tight cursor-default"
               >
                 {name}
-              </motion.div>
+              </div>
             ))}
           </div>
         </RevealOnScroll>

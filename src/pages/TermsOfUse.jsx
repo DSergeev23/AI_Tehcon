@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import SEOHead from '../components/shared/SEOHead';
 
 const sections = [
@@ -144,11 +143,7 @@ export default function TermsOfUse() {
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
         <div className="w-full mx-auto px-6 md:px-12 lg:px-20 2xl:px-28 3xl:px-40 pt-16 pb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="page-enter">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 border signal-badge rounded-sm text-[11px] mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-primary" />
               Правовые документы
@@ -159,7 +154,7 @@ export default function TermsOfUse() {
             <p className="text-[13px] text-white/75 mt-4">
               Дата публикации: 03.06.2026
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -168,30 +163,19 @@ export default function TermsOfUse() {
         <div className="max-w-3xl">
 
           {/* Intro */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-16"
-          >
+          <div className="mb-16 page-enter page-enter-delay">
             <p className="text-[15px] text-white/80 leading-relaxed mb-6">
               Настоящие Условия использования регулируют порядок доступа к сайту tehcon.ai.
             </p>
             <p className="text-[15px] text-white/80 leading-relaxed">
               Используя сайт, пользователь подтверждает, что ознакомился с настоящими Условиями и принимает их. Если пользователь не согласен с Условиями, он должен прекратить использование сайта.
             </p>
-          </motion.div>
+          </div>
 
           {/* Sections */}
           <div className="space-y-16">
             {sections.map((s) => (
-              <motion.div
-                key={s.num}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              >
+              <section key={s.num} className="render-deferred">
                 <div className="flex items-start gap-5 mb-4">
                   <span className="text-[10px] text-signal tracking-widest font-mono mt-1.5 shrink-0">{s.num}</span>
                   <h2 className="font-serif text-xl md:text-2xl text-white tracking-tight">{s.title}</h2>
@@ -203,7 +187,7 @@ export default function TermsOfUse() {
                     </p>
                   ))}
                 </div>
-              </motion.div>
+              </section>
             ))}
           </div>
 

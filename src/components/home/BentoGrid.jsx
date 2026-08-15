@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Bot, Brain, Cpu, Shield, Workflow, BarChart3 } from 'lucide-react';
 import RevealOnScroll from '../shared/RevealOnScroll';
 import SectionHeader from '../shared/SectionHeader';
@@ -55,11 +54,7 @@ function BentoCard({ item, index }) {
 
   return (
     <RevealOnScroll delay={index * 0.08} className={isLarge ? 'md:col-span-2' : ''}>
-      <motion.div
-        whileHover={{ y: -4, scale: 1.01 }}
-        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-        className="glass-card rounded-2xl p-8 h-full relative overflow-hidden group cursor-default"
-      >
+      <div className="glass-card rounded-2xl p-8 h-full relative overflow-hidden group cursor-default hover-lift">
         {/* Glow on hover */}
         <div className={`absolute -top-20 -right-20 w-60 h-60 rounded-full bg-gradient-radial ${item.glowColor} to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
 
@@ -73,7 +68,7 @@ function BentoCard({ item, index }) {
 
         {/* Corner accent */}
         <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-white/[0.02] to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      </motion.div>
+      </div>
     </RevealOnScroll>
   );
 }

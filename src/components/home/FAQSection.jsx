@@ -23,7 +23,7 @@ export const homeFaq = [
 
 export default function FAQSection() {
   return (
-    <section className="border-t border-white/[0.08]" aria-labelledby="home-faq-title">
+    <section className="border-t border-white/[0.08] render-deferred" aria-labelledby="home-faq-title">
       <div className="w-full max-w-[1280px] mx-auto px-5 md:px-8 py-16 2xl:py-24">
         <RevealOnScroll>
           <div className="max-w-2xl mb-10">

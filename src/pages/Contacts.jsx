@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { Plus, CheckCircle2 } from 'lucide-react';
 import SEOHead from '../components/shared/SEOHead';
 import { pageSEO } from '../lib/seoConfig';
@@ -96,10 +95,7 @@ export default function Contacts() {
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
         <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 pt-16 pb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}>
+          <div className="page-enter">
             
             <div className="inline-flex items-center gap-2 px-4 py-2 border signal-badge rounded-sm text-sm mb-8">
               <span className="w-2 h-2 rounded-full bg-primary" />
@@ -108,7 +104,7 @@ export default function Contacts() {
             <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">Давайте обсудим 
 Ваш проект
             </h1>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -164,17 +160,14 @@ export default function Contacts() {
           <div className="lg:col-span-3 p-8">
             <RevealOnScroll delay={0.1}>
               {submitted ?
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="flex flex-col items-center justify-center py-20 text-center">
+              <div className="flex flex-col items-center justify-center py-20 text-center page-enter">
                 
                   <div className="w-12 h-12 border border-primary/40 bg-primary/10 rounded flex items-center justify-center mb-6">
                     <CheckCircle2 className="w-5 h-5 text-primary" />
                   </div>
                   <h3 className="text-xl font-serif text-white mb-2">Заявка отправлена</h3>
                   <p className="text-sm text-white/80">Свяжемся с вами в течение 2 часов.</p>
-                </motion.div> :
+                </div> :
 
               <form onSubmit={handleSubmit} className="space-y-4">
                   <h2 className="text-xs text-signal uppercase tracking-[0.15em] mb-6">Форма обратной связи</h2>

@@ -21,7 +21,7 @@ const homeSchema = {
       "@id": "https://ai-tehcon.ru/#organization",
       "name": "AI TehCon",
       "url": "https://ai-tehcon.ru",
-      "logo": "https://ai-tehcon.ru/images/icon.png",
+      "logo": "https://ai-tehcon.ru/images/icon-512.png",
       "description": "Разработка ИИ агентов и автоматизация бизнес-процессов с помощью нейросетей",
       "sameAs": ["https://t.me/ai_tehcon_business"],
       "contactPoint": {

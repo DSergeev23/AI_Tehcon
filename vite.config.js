@@ -29,6 +29,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      // The prerender entry is executed in Node, so react-markdown must use
+      // the DOM-free decoder implementation instead of index.dom.js.
+      'decode-named-character-reference': fileURLToPath(
+        new URL('./node_modules/decode-named-character-reference/index.js', import.meta.url),
+      ),
     },
   },
 });

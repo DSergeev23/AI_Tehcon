@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { ArrowRight, BrainCircuit } from 'lucide-react';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
 import CTASection from '../components/home/CTASection';
 import SEOHead from '../components/shared/SEOHead';
+import { getOptimizedImageUrl } from '../components/shared/ResponsiveImage';
 import { pageSEO } from '../lib/seoConfig';
 
 const values = [
@@ -81,15 +81,13 @@ function AtlasVisual({ type, size = 'step', blend = false }) {
       className={`relative overflow-hidden ${size === 'expertise' ? 'w-36 h-36 md:w-44 md:h-44' : 'w-44 h-44 2xl:w-52 2xl:h-52'} ${blend ? 'mix-blend-screen' : ''}`}
       aria-hidden="true"
     >
-      <motion.div
-        className="absolute inset-0 bg-no-repeat"
+      <div
+        className="absolute inset-0 bg-no-repeat transition-transform duration-500 hover:scale-[1.04]"
         style={{
-          backgroundImage: 'url(/images/about-automation-atlas.png)',
+          backgroundImage: `url(${getOptimizedImageUrl('/images/about-automation-atlas.png', 960)})`,
           backgroundPosition: atlasPositions[type],
           backgroundSize: '200% 200%',
         }}
-        whileHover={{ scale: 1.04 }}
-        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
       />
     </div>
   );
@@ -101,11 +99,7 @@ function ExpertiseVisual({ type }) {
       <div className="relative w-36 h-32" aria-hidden="true">
         <div className="absolute left-0 top-0 w-20 h-16 border border-black/35 bg-black/10" />
         <div className="absolute left-2 top-2 w-20 h-16 border border-black/55 bg-white/[0.08]" />
-        <motion.div
-          className="absolute left-4 top-4 w-20 h-16 border-2 border-black bg-[#d9d9d7] text-black shadow-[6px_6px_0_rgba(0,0,0,0.24)]"
-          whileHover={{ x: 3, y: 3 }}
-          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <div className="absolute left-4 top-4 w-20 h-16 border-2 border-black bg-[#d9d9d7] text-black shadow-[6px_6px_0_rgba(0,0,0,0.24)] transition-transform duration-300 hover:translate-x-[3px] hover:translate-y-[3px]">
           <div className="h-3 px-1 flex items-center gap-1 border-b border-black/30 bg-white/40">
             <span className="w-1.5 h-1.5 bg-primary" />
             <span className="w-1.5 h-1.5 bg-black/25" />
@@ -119,7 +113,7 @@ function ExpertiseVisual({ type }) {
               <span className="block h-px bg-black/20" />
             </span>
           </div>
-        </motion.div>
+        </div>
         <span className="absolute right-0 bottom-1 w-4 h-4 border border-black bg-white/35" />
       </div>
     );
@@ -131,19 +125,14 @@ function ExpertiseVisual({ type }) {
         <div className="absolute inset-5 border border-white/15 rotate-45" />
         <div className="absolute left-0 right-0 top-1/2 h-px bg-white/20" />
         <div className="absolute top-0 bottom-0 left-1/2 w-px bg-white/20" />
-        <motion.div
-          className="relative z-10 w-[72px] h-[72px] border border-primary/70 bg-black shadow-[0_0_24px_rgba(165,29,52,0.18)] flex items-center justify-center"
-          animate={{ borderColor: ['rgba(165,29,52,0.5)', 'rgba(190,42,64,1)', 'rgba(165,29,52,0.5)'] }}
-          transition={{ duration: 2.8, repeat: Infinity }}
-        >
+        <div className="relative z-10 w-[72px] h-[72px] border border-primary/70 bg-black shadow-[0_0_24px_rgba(165,29,52,0.18)] flex items-center justify-center signal-pulse">
           <BrainCircuit className="w-9 h-9 text-white" strokeWidth={1.25} />
-        </motion.div>
+        </div>
         {['left-0 top-[58px]', 'right-0 top-[58px]', 'left-[58px] top-0', 'left-[58px] bottom-0'].map((position, index) => (
-          <motion.span
+          <span
             key={position}
-            className={`absolute ${position} w-3 h-3 border ${index === 1 ? 'border-primary bg-primary' : 'border-white/50 bg-black'}`}
-            animate={{ scale: [1, 1.35, 1] }}
-            transition={{ duration: 2, delay: index * 0.28, repeat: Infinity }}
+            className={`absolute ${position} w-3 h-3 border signal-pulse ${index === 1 ? 'border-primary bg-primary' : 'border-white/50 bg-black'}`}
+            style={{ animationDelay: `${index * 280}ms` }}
           />
         ))}
       </div>
@@ -155,17 +144,13 @@ function ExpertiseVisual({ type }) {
       <div className="absolute left-0 right-0 bottom-6 h-px bg-white/30" />
       <div className="absolute inset-x-0 bottom-7 h-16 flex items-end gap-2">
         {[24, 36, 48, 62, 78, 96].map((height, index) => (
-          <motion.div
+          <div
             key={height}
             className="relative flex-1 border border-white/30 bg-white/[0.04]"
             style={{ height: `${height}%` }}
-            initial={{ scaleY: 0 }}
-            whileInView={{ scaleY: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, delay: index * 0.08 }}
           >
             <span className={`absolute inset-x-0 top-0 h-1 ${index === 5 ? 'bg-primary' : 'bg-white/65'}`} />
-          </motion.div>
+          </div>
         ))}
       </div>
       <span className="absolute left-0 bottom-0 font-mono text-[9px] text-white/45">2014</span>
@@ -217,11 +202,7 @@ export default function About() {
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
         <span className="absolute bottom-5 left-5 text-white/15 text-xs">+</span>
         <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 pt-16 pb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          >
+          <div className="page-enter">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 border signal-badge rounded-sm text-[11px] mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-primary" />
               О компании
@@ -229,20 +210,16 @@ export default function About() {
             <h1 className="font-serif text-5xl md:text-6xl 2xl:text-7xl text-white tracking-tight leading-tight">
               ИИ-автоматизация бизнеса<br />и интеграции для компаний
             </h1>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          >
+          <div className="page-enter page-enter-delay">
             <p className="text-sm text-white leading-relaxed mb-6">
               AI TehCon автоматизирует бизнес-процессы с помощью ИИ: от анализа данных и документов до действий в рабочих системах.
             </p>
             <p className="text-sm text-white/80 leading-relaxed">
               Объединяем экспертизу в машинном обучении, интеграциях и оптимизации процессов. Обладаем углублёнными знаниями 1С, но работаем и с CRM, Excel, почтой, ТСД, API и внутренними сервисами компании.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -296,22 +273,12 @@ export default function About() {
 
               <div className="relative grid grid-cols-1 lg:grid-cols-4">
                 <div className="hidden lg:block absolute left-[12.5%] right-[12.5%] top-20 h-1 bg-white/10" aria-hidden="true">
-                  <motion.div
-                    className="h-full bg-primary origin-left"
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                  />
+                  <div className="h-full bg-primary" />
                 </div>
 
                 {implementationSteps.map((step, index) => (
-                  <motion.article
+                  <article
                     key={step.title}
-                    initial={{ opacity: 0, y: 18 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.35 }}
-                    transition={{ duration: 0.55, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
                     className={`relative p-6 md:p-8 ${index < 3 ? 'border-b lg:border-b-0 lg:border-r border-white/[0.12]' : ''}`}
                   >
                     <div className="absolute top-4 left-4 w-7 h-7 bg-white text-black font-mono text-[10px] flex items-center justify-center z-10">
@@ -329,7 +296,7 @@ export default function About() {
                       <span className="w-2 h-2 bg-primary" aria-hidden="true" />
                       {step.result}
                     </div>
-                  </motion.article>
+                  </article>
                 ))}
               </div>
             </div>

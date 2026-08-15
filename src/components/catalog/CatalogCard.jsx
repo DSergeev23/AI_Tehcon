@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import {
   Plus,
   Send, Network,
@@ -30,24 +29,15 @@ function OneCIcon({ className }) {
 const iconMap = { Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, MessageSquare, Sparkles, OneC: OneCIcon };
 const visualMap = { Network, Database, LineChart, Workflow, Brain, BarChart3, PenTool, Layers, Share2, Hexagon, FileSearch };
 
-export default function CatalogCard({ product, index }) {
+export default function CatalogCard({ product }) {
   const Icon = iconMap[product.icon] || Sparkles;
   const VisualIcon = visualMap[product.visual] || Hexagon;
   const isOneCIcon = product.icon === 'OneC';
 
   return (
-    <motion.div
-      className="h-full"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-30px' }}
-      transition={{ duration: 0.5, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
-    >
+    <div className="h-full">
       <Link to={`/catalog/${product.id}`} className="block h-full group">
-        <motion.div
-          whileHover={{ backgroundColor: 'rgba(255,255,255,0.035)' }}
-          className="relative flex h-full flex-col overflow-hidden border border-white/[0.1] rounded-sm p-6 transition-colors duration-200 bg-black group-hover:border-primary/45"
-        >
+        <div className="relative flex h-full flex-col overflow-hidden border border-white/[0.1] rounded-sm p-6 bg-black group-hover:bg-white/[0.035] group-hover:border-primary/45 hover-lift">
           {/* Corner pluses */}
           <Plus className="absolute top-3 right-3 w-3.5 h-3.5 text-primary/70 group-hover:text-primary transition-colors" />
 
@@ -104,8 +94,8 @@ export default function CatalogCard({ product, index }) {
               Подробнее →
             </span>
           </div>
-        </motion.div>
+        </div>
       </Link>
-    </motion.div>
+    </div>
   );
 }

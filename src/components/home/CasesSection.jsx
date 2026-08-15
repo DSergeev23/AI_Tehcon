@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import RevealOnScroll from '../shared/RevealOnScroll';
+import ResponsiveImage from '../shared/ResponsiveImage';
 
 const cases = [
   {
@@ -44,7 +44,7 @@ export default function CasesSection() {
   const current = cases[active];
 
   return (
-    <section className="border-t border-white/[0.08]">
+    <section className="border-t border-white/[0.08] render-deferred">
       <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-24 2xl:py-32">
         {/* Header */}
         <RevealOnScroll>
@@ -60,12 +60,9 @@ export default function CasesSection() {
 
         {/* Card */}
         <RevealOnScroll delay={0.1}>
-          <motion.div
+          <div
             key={active}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative border premium-panel rounded-sm p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-10"
+            className="relative border premium-panel rounded-sm p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-10 page-enter"
           >
             {/* Corner marks */}
             <span className="absolute top-4 left-4 text-white/15 text-xs">+</span>
@@ -98,14 +95,16 @@ export default function CasesSection() {
 
             {/* Right: image */}
             <div className="relative overflow-hidden rounded-sm border border-white/[0.08] min-h-[220px]">
-              <img
+              <ResponsiveImage
                 src={current.image}
                 alt={current.client}
+                sizes="(min-width: 1280px) 560px, (min-width: 768px) 45vw, calc(100vw - 40px)"
+                pictureClassName="contents"
                 className="w-full h-full object-cover opacity-60 grayscale"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             </div>
-          </motion.div>
+          </div>
         </RevealOnScroll>
 
         {/* Navigation */}

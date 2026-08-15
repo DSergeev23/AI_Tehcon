@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { Mail, Send } from 'lucide-react';
-import { catalogProducts } from '../../lib/catalog';
 
 const navLinks = [
 { label: 'Главная', to: '/' },
@@ -11,24 +9,16 @@ const navLinks = [
 { label: 'Контакты', to: '/contacts' }];
 
 
-function isOneCProduct(product) {
-  const searchable = [
-    product.title,
-    product.shortDescription,
-    product.category,
-    ...(product.tags || []),
-  ].join(' ').toLowerCase();
-
-  return searchable.includes('1с') || searchable.includes('1c');
-}
-
-const solutions = [...catalogProducts]
-  .sort((a, b) => Number(isOneCProduct(b)) - Number(isOneCProduct(a)))
-  .slice(0, 8)
-  .map((product) => ({
-    label: product.title,
-    to: `/catalog/${product.id}`,
-  }));
+const solutions = [
+  { label: 'ИИ-агент для 1С: ответы по данным бизнеса', to: '/catalog/ai-agent-for-1c-chat-voice-analytics' },
+  { label: 'Анализ договоров поставки на предмет нарушений', to: '/catalog/1c-supplier-contract-penalty-analysis' },
+  { label: 'Автоматизация блока закупок с помощью ИИ на примере 1С:УТ', to: '/catalog/1c-procurement-ai-automation' },
+  { label: 'Автоматические ежедневные отчеты 1С с поиском отклонений', to: '/catalog/1c-daily-deviation-reports' },
+  { label: 'Автоматический анализ цен конкурентов с данными 1С', to: '/catalog/1c-competitor-price-analysis' },
+  { label: 'Помощь в закупке товаров 1С через Ozon, Wildberries и Яндекс Маркет', to: '/catalog/1c-marketplace-procurement-assistant' },
+  { label: 'Помощник по браку и качеству на производстве в программах 1С', to: '/catalog/1c-production-quality-defects-assistant' },
+  { label: 'Анализ норм списания материалов в производстве в программах 1С', to: '/catalog/1c-material-consumption-norms-analysis' },
+];
 
 const legal = [
 { label: 'Политика конфиденциальности', to: '/privacy-policy' },
@@ -40,22 +30,20 @@ function FooterLink({ to, children, external }) {
   if (external) {
     const opensInNewTab = /^https?:/.test(to);
     return (
-      <motion.a
+      <a
         href={to}
         target={opensInNewTab ? '_blank' : undefined}
         rel={opensInNewTab ? 'noopener noreferrer' : undefined}
-        className={base}
-        whileHover={{ x: 2 }}
-        transition={{ duration: 0.15 }}>
+        className={`${base} transition-transform hover:translate-x-0.5`}>
         
         {children}
-      </motion.a>);
+      </a>);
 
   }
   return (
-    <motion.div whileHover={{ x: 2 }} transition={{ duration: 0.15 }}>
+    <div className="transition-transform hover:translate-x-0.5">
       <Link to={to} className={base}>{children}</Link>
-    </motion.div>);
+    </div>);
 
 }
 
@@ -71,8 +59,11 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Link to="/" className="inline-flex items-center gap-2.5 mb-5 group">
               <img
-                src="/images/icon.png"
+                src="/images/icon-32.png"
+                srcSet="/images/icon-32.png 1x, /images/icon-64.png 2x"
                 alt="AI TehCon"
+                width="20"
+                height="20"
                 className="w-5 h-5 rounded-sm transition-opacity group-hover:opacity-80"
               />
               <span className="text-sm font-semibold text-white tracking-tight">AI TehCon</span>
@@ -82,26 +73,22 @@ export default function Footer() {
             </p>
             {/* Social */}
             <div className="flex items-center gap-3 mt-6">
-              <motion.a
+              <a
                 href="https://t.me/ai_tehcon_business"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="AI TehCon в Telegram"
-                className="w-8 h-8 rounded-md border border-primary/35 bg-primary/10 flex items-center justify-center text-primary hover:text-white hover:border-primary/60 transition-colors"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.15 }}>
+                className="w-8 h-8 rounded-md border border-primary/35 bg-primary/10 flex items-center justify-center text-primary hover:text-white hover:border-primary/60 transition-transform hover:scale-105">
                 
                 <Send className="w-3.5 h-3.5" />
-              </motion.a>
-              <motion.a
+              </a>
+              <a
                 href="mailto:hello@ai-tehcon.ru"
                 aria-label="Написать на hello@ai-tehcon.ru"
-                className="w-8 h-8 rounded-md border border-primary/35 bg-primary/10 flex items-center justify-center text-primary hover:text-white hover:border-primary/60 transition-colors"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.15 }}>
+                className="w-8 h-8 rounded-md border border-primary/35 bg-primary/10 flex items-center justify-center text-primary hover:text-white hover:border-primary/60 transition-transform hover:scale-105">
                 
                 <Mail className="w-3.5 h-3.5" />
-              </motion.a>
+              </a>
             </div>
           </div>
 
@@ -148,11 +135,11 @@ export default function Footer() {
           <p className="text-[11px] text-white/55">© 2026 AI TehCon. Все права защищены.</p>
           <div className="flex items-center gap-5">
             {legal.map((l) =>
-            <motion.div key={l.to} whileHover={{ x: 1 }} transition={{ duration: 0.15 }}>
+            <div key={l.to} className="transition-transform hover:translate-x-px">
                 <Link to={l.to} className="text-[11px] text-white/55 hover:text-white transition-colors">
                   {l.label}
                 </Link>
-              </motion.div>
+              </div>
             )}
           </div>
         </div>

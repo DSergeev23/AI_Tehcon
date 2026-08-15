@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Calendar,
   FileText,
@@ -41,7 +40,7 @@ const integrations = [
 
 export default function IntegrationsSection() {
   return (
-    <section className="border-t border-white/[0.08]">
+    <section className="border-t border-white/[0.08] render-deferred">
       <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-16 2xl:py-24">
         <RevealOnScroll>
           <div className="mb-12">
@@ -57,13 +56,9 @@ export default function IntegrationsSection() {
         </RevealOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
-          {integrations.map((item, i) => (
-            <motion.div
+          {integrations.map((item) => (
+            <div
               key={item.title}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-20px' }}
-              transition={{ duration: 0.4, delay: i * 0.03 }}
               className="group bg-neutral-950 border border-white/10 rounded-lg p-6 hover:bg-white/[0.03] hover:border-primary/45 transition-all duration-300"
             >
               <div className="p-3 rounded-lg bg-primary/10 text-primary w-fit mb-4 group-hover:bg-primary/15 transition-colors duration-300">
@@ -71,7 +66,7 @@ export default function IntegrationsSection() {
               </div>
               <h3 className="text-white font-medium text-lg mb-2">{item.title}</h3>
               <p className="text-white/80 text-sm leading-relaxed">{item.description}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

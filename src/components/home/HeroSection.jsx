@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { Plus } from 'lucide-react';
 import WireframeGlobe from './WireframeGlobe';
 
@@ -18,34 +17,23 @@ export default function HeroSection() {
 
       <div className="relative z-10 w-full mx-auto px-6 md:px-12 lg:px-20 2xl:px-28 3xl:px-40 flex flex-col items-center py-16">
         {/* Globe - centered at top */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, ease: 'easeOut' }}
-          className="relative mb-12">
+        <div className="relative mb-12 fade-enter">
           
           <WireframeGlobe size={480} />
           {/* Fade bottom of globe */}
           <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-black to-transparent" />
-        </motion.div>
+        </div>
 
         {/* Content below globe */}
         <div className="grid grid-cols-1 md:grid-cols-[55fr_45fr] gap-10 lg:gap-16 2xl:gap-24 w-full -mt-10">
           {/* Left: Heading */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+          <div className="page-enter">
 
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white leading-[1.0] tracking-tight mb-0">AI агенты и автоматизации для бизнеса</h1>
-          </motion.div>
+          </div>
 
           {/* Right: Description + CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col justify-end">
+          <div className="flex flex-col justify-end page-enter page-enter-delay">
 
             <p className="text-sm lg:text-base 2xl:text-lg text-white leading-relaxed mb-4 max-w-none">
               Превращаем 1С, CRM, Excel, Telegram и внутренние системы в единую AI-инфраструктуру управления бизнесом.
@@ -61,7 +49,7 @@ export default function HeroSection() {
                 <Plus className="w-4 h-4" />
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>);

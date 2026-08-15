@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { motion } from 'framer-motion';
+import ResponsiveImage from '../shared/ResponsiveImage';
 
 // IMAGES GUIDE:
 // - External URLs  → use full URL starting with "http", e.g. "https://images.unsplash.com/..."
@@ -23,9 +23,10 @@ function ImageBlock({ src, alt }) {
 
   return (
     <div className="my-10">
-      <img
+      <ResponsiveImage
         src={src}
         alt={alt}
+        sizes="(min-width: 1024px) 768px, calc(100vw - 40px)"
         onError={() => setErrored(true)}
         className="w-full h-auto rounded-2xl border border-white/10 shadow-xl block"
       />
@@ -79,13 +80,7 @@ export default function SectionsRenderer({ content, fallbackText }) {
   return (
     <div>
       {content.map((block, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <div key={i}>
           {block.type === 'image' ? (
             <ImageBlock src={block.value} alt={block.alt || ''} />
           
@@ -94,7 +89,7 @@ export default function SectionsRenderer({ content, fallbackText }) {
               <ReactMarkdown components={markdownComponents}>{block.value}</ReactMarkdown>
             </div>
           )}
-        </motion.div>
+        </div>
       ))}
     </div>
   );

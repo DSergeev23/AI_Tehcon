@@ -7,49 +7,68 @@ import PageNotFound from './lib/PageNotFound';
 import PageLayout from './components/layout/PageLayout';
 import YandexMetrika from './components/shared/YandexMetrika';
 import GoogleAnalytics from './components/shared/GoogleAnalytics';
-import Home from './pages/Home';
-import About from './pages/About';
-import Catalog from './pages/Catalog';
-import Contacts from './pages/Contacts';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfUse from './pages/TermsOfUse';
 
-const ProductDetail = React.lazy(() => import('./pages/ProductDetail'));
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Catalog = React.lazy(() => import('./pages/Catalog'));
+const Contacts = React.lazy(() => import('./pages/Contacts'));
+const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfUse = React.lazy(() => import('./pages/TermsOfUse'));
+const LazyProductDetail = React.lazy(() => import('./pages/ProductDetail'));
+
+function LazyRoute({ children }) {
+  return <Suspense fallback={null}>{children}</Suspense>;
+}
 
 export const PublicApp = () => {
   return (
     <Routes>
       <Route element={<PageLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/catalog/1c" element={<Catalog />} />
-        <Route path="/catalog/image-analysis" element={<Catalog />} />
-        <Route path="/catalog/content-factory" element={<Catalog />} />
-        <Route path="/catalog/marketing" element={<Catalog />} />
-        <Route path="/catalog/analytics" element={<Catalog />} />
-        <Route path="/catalog/finance" element={<Catalog />} />
+        <Route path="/" element={<LazyRoute><Home /></LazyRoute>} />
+        <Route path="/about" element={<LazyRoute><About /></LazyRoute>} />
+        <Route path="/catalog" element={<LazyRoute><Catalog /></LazyRoute>} />
+        <Route path="/catalog/1c" element={<LazyRoute><Catalog /></LazyRoute>} />
+        <Route path="/catalog/image-analysis" element={<LazyRoute><Catalog /></LazyRoute>} />
+        <Route path="/catalog/content-factory" element={<LazyRoute><Catalog /></LazyRoute>} />
+        <Route path="/catalog/marketing" element={<LazyRoute><Catalog /></LazyRoute>} />
+        <Route path="/catalog/analytics" element={<LazyRoute><Catalog /></LazyRoute>} />
+        <Route path="/catalog/finance" element={<LazyRoute><Catalog /></LazyRoute>} />
         <Route path="/catalog/ecommerce" element={<Navigate to="/catalog/marketplace" replace />} />
-        <Route path="/catalog/marketplace" element={<Catalog />} />
-        <Route path="/catalog/:id" element={<Suspense fallback={null}><ProductDetail /></Suspense>} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/catalog/marketplace" element={<LazyRoute><Catalog /></LazyRoute>} />
+        <Route
+          path="/catalog/:id"
+          element={
+            <LazyRoute>
+              <LazyProductDetail />
+            </LazyRoute>
+          }
+        />
+        <Route path="/contacts" element={<LazyRoute><Contacts /></LazyRoute>} />
+        <Route path="/privacy-policy" element={<LazyRoute><PrivacyPolicy /></LazyRoute>} />
+        <Route path="/terms-of-use" element={<LazyRoute><TermsOfUse /></LazyRoute>} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
-      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 };
+
+export function AppContent() {
+  return (
+    <>
+      <YandexMetrika />
+      <GoogleAnalytics />
+      <PublicApp />
+      <Toaster />
+    </>
+  );
+}
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
-        <YandexMetrika />
-        <GoogleAnalytics />
-        <PublicApp />
+        <AppContent />
       </Router>
-      <Toaster />
     </HelmetProvider>
   );
 }

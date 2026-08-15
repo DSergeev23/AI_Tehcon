@@ -20,7 +20,8 @@ export default function WireframeGlobe({ size = 380 }) {
 
     // Generate particles on sphere surface
     const particles = [];
-    const N = 280;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const N = window.innerWidth < 768 ? 150 : 220;
     for (let i = 0; i < N; i++) {
       const theta = Math.acos(2 * Math.random() - 1);
       const phi = 2 * Math.PI * Math.random();
@@ -28,6 +29,8 @@ export default function WireframeGlobe({ size = 380 }) {
     }
 
     let angle = 0;
+    let isVisible = false;
+    let lastFrame = 0;
 
     function project(theta, phi, rot) {
       const x = R * Math.sin(theta) * Math.cos(phi + rot);
@@ -36,9 +39,19 @@ export default function WireframeGlobe({ size = 380 }) {
       return { x: cx + x, y: cy - y, z };
     }
 
-    function draw() {
+    function draw(timestamp = 0) {
+      if (!isVisible || document.hidden) {
+        animRef.current = null;
+        return;
+      }
+
+      if (!reduceMotion && timestamp - lastFrame < 1000 / 30) {
+        animRef.current = requestAnimationFrame(draw);
+        return;
+      }
+      lastFrame = timestamp;
       ctx.clearRect(0, 0, W, H);
-      angle += 0.003;
+      if (!reduceMotion) angle += 0.006;
 
       // Sort by z for depth
       const projected = particles.map((p) => {
@@ -84,11 +97,40 @@ export default function WireframeGlobe({ size = 380 }) {
         ctx.stroke();
       }
 
+      if (!reduceMotion) animRef.current = requestAnimationFrame(draw);
+    }
+
+    function start() {
+      if (!isVisible || document.hidden || animRef.current) return;
       animRef.current = requestAnimationFrame(draw);
     }
 
-    draw();
-    return () => cancelAnimationFrame(animRef.current);
+    function handleVisibilityChange() {
+      if (document.hidden && animRef.current) {
+        cancelAnimationFrame(animRef.current);
+        animRef.current = null;
+      } else {
+        start();
+      }
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+      if (isVisible) start();
+      else if (animRef.current) {
+        cancelAnimationFrame(animRef.current);
+        animRef.current = null;
+      }
+    }, { rootMargin: '100px' });
+
+    observer.observe(canvas);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      if (animRef.current) cancelAnimationFrame(animRef.current);
+    };
   }, [size]);
 
   return (

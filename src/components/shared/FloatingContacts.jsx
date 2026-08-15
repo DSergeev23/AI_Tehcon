@@ -1,41 +1,30 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { MessageCircle, Send } from 'lucide-react';
 
 export default function FloatingContacts() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
       {/* WhatsApp */}
-      <motion.a
+      <a
         href="https://wa.me/79192137111"
         target="_blank"
         rel="noopener noreferrer"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.5, duration: 0.4 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        className="w-12 h-12 rounded-full border border-primary/45 bg-primary/10 hover:bg-primary/15 flex items-center justify-center transition-colors"
+        className="w-12 h-12 rounded-full border border-primary/45 bg-primary/10 hover:bg-primary/15 flex items-center justify-center hover-lift fade-enter"
         title="WhatsApp"
       >
         <MessageCircle className="w-5 h-5 text-primary" />
-      </motion.a>
+      </a>
 
       {/* Telegram */}
-      <motion.a
+      <a
         href="https://t.me/ai_tehcon_business"
         target="_blank"
         rel="noopener noreferrer"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.65, duration: 0.4 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        className="w-12 h-12 rounded-full border border-primary/45 bg-primary/10 hover:bg-primary/15 flex items-center justify-center transition-colors"
+        className="w-12 h-12 rounded-full border border-primary/45 bg-primary/10 hover:bg-primary/15 flex items-center justify-center hover-lift fade-enter"
         title="Telegram"
       >
         <Send className="w-5 h-5 text-primary" />
-      </motion.a>
+      </a>
     </div>
   );
 }
