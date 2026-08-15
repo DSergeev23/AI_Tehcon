@@ -69,6 +69,19 @@ function sourceFileFor(publicPath) {
   return resolve('public', publicPath.replace(/^\//, ''));
 }
 
+async function hasExactPathCasing(path) {
+  const segments = relative(PROJECT_ROOT, path).split(sep);
+  let currentDirectory = PROJECT_ROOT;
+
+  for (const segment of segments) {
+    const entries = await readdir(currentDirectory);
+    if (!entries.includes(segment)) return false;
+    currentDirectory = resolve(currentDirectory, segment);
+  }
+
+  return true;
+}
+
 function outputPathFor(publicPath, width, format) {
   const relativePath = relative('/images', publicPath).split(sep).join('/');
   const extension = extname(relativePath);
@@ -96,7 +109,9 @@ await mkdir(OUTPUT_ROOT, { recursive: true });
 
 for (const publicPath of references) {
   const sourceFile = sourceFileFor(publicPath);
-  if (!existsSync(sourceFile)) continue;
+  if (!existsSync(sourceFile) || !await hasExactPathCasing(sourceFile)) {
+    throw new Error(`Referenced image does not exist with exact path casing: ${publicPath}`);
+  }
 
   const sourceStat = await stat(sourceFile);
   const metadata = await sharp(sourceFile).metadata();

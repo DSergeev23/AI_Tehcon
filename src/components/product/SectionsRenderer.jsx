@@ -4,7 +4,7 @@ import ResponsiveImage from '../shared/ResponsiveImage';
 
 // IMAGES GUIDE:
 // - External URLs  → use full URL starting with "http", e.g. "https://images.unsplash.com/..."
-// - Local files    → place file in /public/images/ and use path "/images/filename.png"
+// - Local files    → place the source in /public/images/ and pass its public path
 
 // Renders an image block — supports both external URLs (http...) and local paths (/images/...)
 // Local files must be placed in public/images/ to resolve correctly.
