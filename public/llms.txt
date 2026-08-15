@@ -1,0 +1,26 @@
+# AI TehCon
+
+> AI TehCon разрабатывает ИИ-агентов и автоматизации для бизнеса: 1С, CRM, маркетплейсы, финансы, маркетинг, контент и аналитика.
+
+## Основные страницы
+
+- [Главная](https://ai-tehcon.ru/)
+- [Каталог ИИ-решений](https://ai-tehcon.ru/catalog)
+- [О компании](https://ai-tehcon.ru/about)
+- [Контакты](https://ai-tehcon.ru/contacts)
+- [Карта сайта](https://ai-tehcon.ru/sitemap.xml)
+
+## Направления решений
+
+- [ИИ для 1С](https://ai-tehcon.ru/catalog/1c)
+- [Анализ изображений](https://ai-tehcon.ru/catalog/image-analysis)
+- [Контент-фабрика](https://ai-tehcon.ru/catalog/content-factory)
+- [Маркетинг](https://ai-tehcon.ru/catalog/marketing)
+- [Аналитика](https://ai-tehcon.ru/catalog/analytics)
+- [Финансы](https://ai-tehcon.ru/catalog/finance)
+- [Маркетплейсы](https://ai-tehcon.ru/catalog/marketplace)
+
+## Для связи
+
+- [Написать AI TehCon](mailto:hello@ai-tehcon.ru)
+- [AI TehCon в Telegram](https://t.me/ai_tehcon_business)

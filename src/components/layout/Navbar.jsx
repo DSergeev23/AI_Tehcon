@@ -81,6 +81,10 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-primary hover:text-white transition-colors"
+            type="button"
+            aria-label={mobileOpen ? 'Закрыть меню навигации' : 'Открыть меню навигации'}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -89,7 +93,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-          <div className="fixed inset-x-0 top-16 z-40 border-b border-white/[0.08] bg-black animate-in fade-in slide-in-from-top-2 duration-200">
+          <div id="mobile-navigation" className="fixed inset-x-0 top-16 z-40 border-b border-white/[0.08] bg-black animate-in fade-in slide-in-from-top-2 duration-200">
             <div className="px-5 py-4 flex flex-col gap-0.5">
               {navLinks.map((link) => (
                 <Link
