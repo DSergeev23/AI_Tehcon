@@ -65,7 +65,7 @@ jobs:
           "
 
       - name: Upload dist to Timeweb
-        timeout-minutes: 10
+        timeout-minutes: 20
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -82,6 +82,6 @@ jobs:
             set net:timeout 20;
             set net:max-retries 2;
             set net:reconnect-interval-base 5;
-            mirror -R --verbose dist/ public_html/;
+            mirror -R --verbose --continue --parallel=4 dist/ public_html/;
             bye
           "
