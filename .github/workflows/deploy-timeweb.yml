@@ -75,15 +75,36 @@ jobs:
           : "${FTP_USERNAME:?FTP_USERNAME is not set}"
           : "${FTP_PASSWORD:?FTP_PASSWORD is not set}"
 
-          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_HOST" -e "
-            set cmd:fail-exit true;
-            set ftp:ssl-allow false;
-            set ftp:passive-mode true;
-            set net:timeout 20;
-            set net:max-retries 2;
-            set net:reconnect-interval-base 5;
-            mirror -R --verbose --parallel=4 dist/ public_html/;
-            put -O public_html -o sitemap.xml.next dist/sitemap.xml;
-            mv public_html/sitemap.xml.next public_html/sitemap.xml;
-            bye
-          "
+          upload_succeeded=false
+
+          for attempt in 1 2 3; do
+            echo "FTP upload attempt ${attempt} of 3"
+
+            if lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_HOST" -e "
+              set cmd:fail-exit true;
+              set ftp:ssl-allow false;
+              set ftp:passive-mode true;
+              set net:timeout 20;
+              set net:max-retries 1;
+              set net:reconnect-interval-base 5;
+              mirror -R --verbose --continue --parallel=4 dist/ public_html/;
+              put -O public_html -o sitemap.xml.next dist/sitemap.xml;
+              mv public_html/sitemap.xml.next public_html/sitemap.xml;
+              bye
+            "; then
+              upload_succeeded=true
+              echo "FTP upload completed on attempt ${attempt}"
+              break
+            fi
+
+            if [ "$attempt" -lt 3 ]; then
+              pause_seconds=$((attempt * 20))
+              echo "FTP upload failed. Retrying in ${pause_seconds} seconds..."
+              sleep "$pause_seconds"
+            fi
+          done
+
+          if [ "$upload_succeeded" != "true" ]; then
+            echo "FTP upload failed after 3 attempts."
+            exit 1
+          fi
