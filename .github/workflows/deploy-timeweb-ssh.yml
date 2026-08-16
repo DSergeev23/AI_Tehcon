@@ -55,7 +55,7 @@ jobs:
         env:
           SSH_HOST: bitrix378.timeweb.ru
           SSH_PORT: ${{ vars.TIMEWEB_SSH_PORT || '22' }}
-          SSH_USERNAME: ct71002_ai
+          SSH_USERNAME: ct71002
           SSHPASS: ${{ secrets.TIMEWEB_SSH_PASSWORD }}
           DEPLOY_PATH: /home/c/ct71002/ai-tehcon.ru/public_html
         run: |
@@ -71,6 +71,7 @@ jobs:
           deploy_succeeded=false
 
           ssh_options=(
+            -4
             -o ConnectTimeout=20
             -o ConnectionAttempts=1
             -o ServerAliveInterval=15
