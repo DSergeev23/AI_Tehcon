@@ -82,6 +82,8 @@ jobs:
             set net:timeout 20;
             set net:max-retries 2;
             set net:reconnect-interval-base 5;
-            mirror -R --verbose --continue --parallel=4 dist/ public_html/;
+            mirror -R --verbose --parallel=4 dist/ public_html/;
+            put -O public_html -o sitemap.xml.next dist/sitemap.xml;
+            mv public_html/sitemap.xml.next public_html/sitemap.xml;
             bye
           "
