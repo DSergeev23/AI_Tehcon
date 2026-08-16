@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import CanonicalLink from '../shared/CanonicalLink';
 import { Menu, X, Plus } from 'lucide-react';
 
 const navLinks = [
@@ -33,7 +34,7 @@ export default function Navbar() {
         <div className="mx-auto flex h-full max-w-[1600px] items-center justify-between px-6 lg:px-10">
 
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group shrink-0">
+          <CanonicalLink to="/" className="flex items-center gap-2.5 group shrink-0">
             <img
               src="/images/icon-32.png"
               srcSet="/images/icon-32.png 1x, /images/icon-64.png 2x"
@@ -43,14 +44,14 @@ export default function Navbar() {
               className="w-8 h-8 rounded-sm"
             />
             <span className="text-sm font-semibold text-white tracking-tight">AI TehCon</span>
-          </Link>
+          </CanonicalLink>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-0.5">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (
-                <Link
+                <CanonicalLink
                   key={link.path}
                   to={link.path}
                   className={[
@@ -61,20 +62,20 @@ export default function Navbar() {
                   ].join(' ')}
                 >
                   {link.label}
-                </Link>
+                </CanonicalLink>
               );
             })}
           </div>
 
           {/* CTA */}
           <div className="hidden md:flex items-center shrink-0">
-            <Link
+            <CanonicalLink
               to="/contacts"
               className="inline-flex items-center gap-2 h-11 px-6 text-base font-medium signal-button rounded-md transition-colors"
             >
               Связаться
               <Plus className="w-4 h-4" />
-            </Link>
+            </CanonicalLink>
           </div>
 
           {/* Mobile menu btn */}
@@ -96,20 +97,20 @@ export default function Navbar() {
           <div id="mobile-navigation" className="fixed inset-x-0 top-16 z-40 border-b border-white/[0.08] bg-black animate-in fade-in slide-in-from-top-2 duration-200">
             <div className="px-5 py-4 flex flex-col gap-0.5">
               {navLinks.map((link) => (
-                <Link
+                <CanonicalLink
                   key={link.path}
                   to={link.path}
                   className="py-3 text-sm text-white/75 hover:text-white border-b border-white/[0.06] last:border-0 transition-colors"
                 >
                   {link.label}
-                </Link>
+                </CanonicalLink>
               ))}
-              <Link
+              <CanonicalLink
                 to="/contacts"
                 className="mt-4 flex items-center justify-center gap-2 h-11 signal-button text-sm font-semibold rounded-md"
               >
                 Связаться <Plus className="w-4 h-4" />
-              </Link>
+              </CanonicalLink>
             </div>
           </div>
       )}

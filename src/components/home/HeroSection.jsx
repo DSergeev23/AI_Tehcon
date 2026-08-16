@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CanonicalLink from '../shared/CanonicalLink';
 import { Plus } from 'lucide-react';
 import WireframeGlobe from './WireframeGlobe';
 
@@ -43,11 +43,11 @@ export default function HeroSection() {
               Результат — на ваш мобильный телефон, почту или в мессенджер.
             </p>
             <div>
-              <Link to="/catalog"
+              <CanonicalLink to="/catalog"
               className="inline-flex items-center gap-2 px-5 py-2.5 signal-button text-sm font-semibold rounded-md transition-colors">
                 Смотреть каталог
                 <Plus className="w-4 h-4" />
-              </Link>
+              </CanonicalLink>
             </div>
           </div>
         </div>

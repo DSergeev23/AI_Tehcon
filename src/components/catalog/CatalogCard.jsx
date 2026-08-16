@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CanonicalLink from '../shared/CanonicalLink';
 import {
   Plus,
   Send, Network,
@@ -36,7 +36,7 @@ export default function CatalogCard({ product }) {
 
   return (
     <div className="h-full">
-      <Link to={`/catalog/${product.id}`} className="block h-full group">
+      <CanonicalLink to={`/catalog/${product.id}`} className="block h-full group">
         <div className="relative flex h-full flex-col overflow-hidden border border-white/[0.1] rounded-sm p-6 bg-black group-hover:bg-white/[0.035] group-hover:border-primary/45 hover-lift">
           {/* Corner pluses */}
           <Plus className="absolute top-3 right-3 w-3.5 h-3.5 text-primary/70 group-hover:text-primary transition-colors" />
@@ -95,7 +95,7 @@ export default function CatalogCard({ product }) {
             </span>
           </div>
         </div>
-      </Link>
+      </CanonicalLink>
     </div>
   );
 }

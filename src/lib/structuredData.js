@@ -1,4 +1,4 @@
-import { SITE_URL, SITE_NAME } from './seoConfig';
+import { SITE_URL, SITE_NAME, toCanonicalPath } from './seoConfig';
 
 // ── Shared Organization ──
 export const ORGANIZATION = {
@@ -18,7 +18,7 @@ export function createOrganizationSchema() {
 
 // ── Offer helper ──
 function createOffer(product) {
-  const url = `${SITE_URL}/catalog/${product.id}`;
+  const url = `${SITE_URL}${toCanonicalPath(`/catalog/${product.id}`)}`;
   const numericMatch = product.pricing?.match(/[\d\s]+/);
   const numericPrice = numericMatch ? parseInt(numericMatch[0].replace(/\s/g, ''), 10) : null;
 
@@ -45,7 +45,7 @@ function getProductDescription(product) {
 
 // ── Catalog: ItemList ──
 export function createCatalogItemListSchema(products, options = {}) {
-  const url = options.url || `${SITE_URL}/catalog`;
+  const url = options.url || `${SITE_URL}/catalog/`;
   const name = options.name || "Каталог AI-решений AI TehCon";
   const description = options.description || "Каталог ИИ-агентов, автоматизаций и интеграционных решений для бизнеса.";
 
@@ -59,7 +59,7 @@ export function createCatalogItemListSchema(products, options = {}) {
     "itemListElement": products.map((p, i) => ({
       "@type": "ListItem",
       "position": i + 1,
-      "url": `${SITE_URL}/catalog/${p.id}`,
+      "url": `${SITE_URL}${toCanonicalPath(`/catalog/${p.id}`)}`,
       "item": {
         "@type": "Service",
         "name": p.title,
@@ -77,7 +77,7 @@ export function createCatalogItemListSchema(products, options = {}) {
 export function createCatalogBreadcrumbSchema(categoryPage) {
   const itemListElement = [
     { "@type": "ListItem", "position": 1, "name": "Главная", "item": SITE_URL },
-    { "@type": "ListItem", "position": 2, "name": "Каталог", "item": `${SITE_URL}/catalog` },
+    { "@type": "ListItem", "position": 2, "name": "Каталог", "item": `${SITE_URL}/catalog/` },
   ];
 
   if (categoryPage) {
@@ -85,7 +85,7 @@ export function createCatalogBreadcrumbSchema(categoryPage) {
       "@type": "ListItem",
       "position": 3,
       "name": categoryPage.label,
-      "item": `${SITE_URL}${categoryPage.canonical}`,
+      "item": `${SITE_URL}${toCanonicalPath(categoryPage.canonical)}`,
     });
   }
 
@@ -103,7 +103,7 @@ export function createServiceSchema(product) {
     "@type": "Service",
     "name": product.title,
     "description": getProductDescription(product),
-    "url": `${SITE_URL}/catalog/${product.id}`,
+    "url": `${SITE_URL}${toCanonicalPath(`/catalog/${product.id}`)}`,
     "provider": { ...ORGANIZATION },
     "areaServed": {
       "@type": "Country",
@@ -123,8 +123,8 @@ export function createProductBreadcrumbSchema(product) {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Главная", "item": SITE_URL },
-      { "@type": "ListItem", "position": 2, "name": "Каталог", "item": `${SITE_URL}/catalog` },
-      { "@type": "ListItem", "position": 3, "name": product.title, "item": `${SITE_URL}/catalog/${product.id}` },
+      { "@type": "ListItem", "position": 2, "name": "Каталог", "item": `${SITE_URL}/catalog/` },
+      { "@type": "ListItem", "position": 3, "name": product.title, "item": `${SITE_URL}${toCanonicalPath(`/catalog/${product.id}`)}` },
     ],
   };
 }

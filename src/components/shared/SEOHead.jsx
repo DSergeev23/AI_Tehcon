@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../../lib/seoConfig';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, toCanonicalPath } from '../../lib/seoConfig';
 
 /**
  * @param {{
@@ -13,7 +13,7 @@ import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../../lib/seoConfig';
  * }} props
  */
 export default function SEOHead({ title, description, canonical, ogImage, schemaJson, keywords }) {
-  const fullUrl = `${SITE_URL}${canonical || ''}`;
+  const fullUrl = `${SITE_URL}${toCanonicalPath(canonical || '/')}`;
   const image = ogImage || DEFAULT_OG_IMAGE;
 
   return (

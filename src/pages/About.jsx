@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CanonicalLink from '../components/shared/CanonicalLink';
 import { ArrowRight, BrainCircuit } from 'lucide-react';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
 import CTASection from '../components/home/CTASection';
@@ -350,7 +350,7 @@ export default function About() {
             <h2 className="text-[12px] text-signal uppercase tracking-[0.15em] mb-6">Какие процессы автоматизируем</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-white/[0.08]">
               {automationDirections.map((direction) => (
-                <Link
+                <CanonicalLink
                   key={direction.title}
                   to={direction.to}
                   className="group p-7 border-r border-b border-white/[0.08] hover:bg-white/[0.025] transition-colors"
@@ -358,7 +358,7 @@ export default function About() {
                   <h3 className="text-base font-semibold text-white mb-3 group-hover:text-primary transition-colors">{direction.title}</h3>
                   <p className="text-sm text-white/80 leading-relaxed mb-6">{direction.description}</p>
                   <span className="text-xs text-white/75 group-hover:text-white transition-colors">Смотреть решения →</span>
-                </Link>
+                </CanonicalLink>
               ))}
             </div>
           </RevealOnScroll>

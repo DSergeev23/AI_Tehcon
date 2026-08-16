@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CanonicalLink from '../shared/CanonicalLink';
 import { Mail, Send } from 'lucide-react';
 
 const navLinks = [
@@ -42,7 +42,7 @@ function FooterLink({ to, children, external }) {
   }
   return (
     <div className="transition-transform hover:translate-x-0.5">
-      <Link to={to} className={base}>{children}</Link>
+      <CanonicalLink to={to} className={base}>{children}</CanonicalLink>
     </div>);
 
 }
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Col 1 — Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
-            <Link to="/" className="inline-flex items-center gap-2.5 mb-5 group">
+            <CanonicalLink to="/" className="inline-flex items-center gap-2.5 mb-5 group">
               <img
                 src="/images/icon-32.png"
                 srcSet="/images/icon-32.png 1x, /images/icon-64.png 2x"
@@ -67,7 +67,7 @@ export default function Footer() {
                 className="w-5 h-5 rounded-sm transition-opacity group-hover:opacity-80"
               />
               <span className="text-sm font-semibold text-white tracking-tight">AI TehCon</span>
-            </Link>
+            </CanonicalLink>
             <p className="text-[13px] text-white/75 leading-relaxed max-w-[260px]">
               Внедряем автономных AI-агентов в 1С, CRM, Excel и Telegram. Бизнес работает быстрее, точнее и дешевле.
             </p>
@@ -136,9 +136,9 @@ export default function Footer() {
           <div className="flex items-center gap-5">
             {legal.map((l) =>
             <div key={l.to} className="transition-transform hover:translate-x-px">
-                <Link to={l.to} className="text-[11px] text-white/55 hover:text-white transition-colors">
+                <CanonicalLink to={l.to} className="text-[11px] text-white/55 hover:text-white transition-colors">
                   {l.label}
-                </Link>
+                </CanonicalLink>
               </div>
             )}
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CanonicalLink from '../shared/CanonicalLink';
 
 const contentByVariant = {
   default: {
@@ -72,13 +72,13 @@ export default function CTASection({ variant = 'default' }) {
         {/* CTA */}
         <div>
           
-          <Link
+          <CanonicalLink
             to="/contacts"
             className="inline-flex items-center gap-2 signal-button text-sm font-semibold rounded-sm transition-colors"
             style={{ padding: '12px 36px' }}>
             
             {content.button}
-          </Link>
+          </CanonicalLink>
         </div>
       </div>
     </section>);

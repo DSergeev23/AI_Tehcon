@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Home, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import CanonicalLink from '../components/shared/CanonicalLink';
 import { catalogCategoryNav } from './catalog/categorySeo';
 
 export default function PageNotFound() {
@@ -28,20 +28,20 @@ export default function PageNotFound() {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Link
+            <CanonicalLink
               to="/catalog"
               className="signal-button inline-flex items-center justify-center gap-2 rounded px-6 py-3 text-sm font-medium transition-colors"
             >
               Все услуги
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-            <Link
+            </CanonicalLink>
+            <CanonicalLink
               to="/"
               className="inline-flex items-center justify-center gap-2 rounded border border-white/15 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-white/30 hover:bg-white/[0.04]"
             >
               <Home className="h-4 w-4" aria-hidden="true" />
               На главную
-            </Link>
+            </CanonicalLink>
           </div>
         </div>
       </section>
@@ -52,15 +52,15 @@ export default function PageNotFound() {
             <p className="mb-3 text-xs uppercase tracking-[0.18em] text-signal">Категории каталога</p>
             <h2 className="font-serif text-3xl tracking-tight md:text-4xl">Найдите подходящее решение</h2>
           </div>
-          <Link to="/catalog" className="inline-flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white">
+          <CanonicalLink to="/catalog" className="inline-flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white">
             Смотреть весь каталог
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </Link>
+          </CanonicalLink>
         </div>
 
         <nav aria-label="Основные категории услуг" className="grid grid-cols-1 border-l border-t border-white/[0.08] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {catalogCategoryNav.map((category, index) => (
-            <Link
+            <CanonicalLink
               key={category.slug}
               to={category.canonical}
               className="group min-h-36 border-b border-r border-white/[0.08] p-6 transition-colors hover:bg-white/[0.035]"
@@ -72,10 +72,10 @@ export default function PageNotFound() {
                 <span className="text-lg text-white/90 transition-colors group-hover:text-white">{category.label}</span>
                 <ArrowRight className="h-4 w-4 text-signal transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </span>
-            </Link>
+            </CanonicalLink>
           ))}
 
-          <Link
+          <CanonicalLink
             to="/contacts"
             className="group min-h-36 border-b border-r border-white/[0.08] bg-primary/10 p-6 transition-colors hover:bg-primary/15"
           >
@@ -84,13 +84,13 @@ export default function PageNotFound() {
               <span className="text-lg text-white/90 transition-colors group-hover:text-white">Обсудить задачу</span>
               <ArrowRight className="h-4 w-4 text-signal transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </span>
-          </Link>
+          </CanonicalLink>
         </nav>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-white/[0.08] pt-8 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>Не нашли нужное направление?</p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <Link to="/contacts" className="text-white transition-colors hover:text-primary">Контакты</Link>
+            <CanonicalLink to="/contacts" className="text-white transition-colors hover:text-primary">Контакты</CanonicalLink>
             <a href="mailto:hello@ai-tehcon.ru" className="text-white transition-colors hover:text-primary">hello@ai-tehcon.ru</a>
             <a href="tel:+79192137111" className="text-white transition-colors hover:text-primary">+7 (919) 213-71-11</a>
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import CanonicalLink from '../components/shared/CanonicalLink';
 import { catalogProducts } from '../lib/catalog';
 import {
   catalogCategoryNav,
@@ -9,7 +10,7 @@ import {
 } from '../lib/catalog/categorySeo';
 import CatalogCard from '../components/catalog/CatalogCard';
 import SEOHead from '../components/shared/SEOHead';
-import { pageSEO, SITE_URL } from '../lib/seoConfig';
+import { pageSEO, SITE_URL, toCanonicalPath } from '../lib/seoConfig';
 import { createCatalogItemListSchema, createCatalogBreadcrumbSchema } from '../lib/structuredData';
 
 const sortedCatalogProducts = [...catalogProducts].sort((a, b) => (
@@ -34,7 +35,7 @@ export default function Catalog() {
     : sortedCatalogProducts;
   const h1 = categoryPage?.h1 || 'ИИ-решения для бизнеса';
   const intro = categoryPage?.intro || 'Готовые продукты и кастомные решения для автоматизации любых бизнес-процессов';
-  const schemaUrl = `${SITE_URL}${seo.canonical}`;
+  const schemaUrl = `${SITE_URL}${toCanonicalPath(seo.canonical)}`;
   const schemaName = categoryPage ? `${categoryPage.h1} | AI TehCon` : 'Каталог AI-решений AI TehCon';
 
   const schemaJson = [
@@ -77,7 +78,7 @@ export default function Catalog() {
             {categoryLinks.map((cat) => {
               const active = activeSlug === cat.slug;
               return (
-                <Link
+                <CanonicalLink
                   key={cat.label}
                   to={cat.to}
                   className={`px-3 py-1.5 text-xs rounded-sm whitespace-nowrap transition-colors ${
@@ -87,7 +88,7 @@ export default function Catalog() {
                   }`}
                 >
                   {active ? `[${cat.label}]` : cat.label}
-                </Link>
+                </CanonicalLink>
               );
             })}
           </div>

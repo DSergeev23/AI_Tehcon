@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, BarChart3, Bot, FileSearch, Workflow } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import CanonicalLink from '../shared/CanonicalLink';
 import RevealOnScroll from '../shared/RevealOnScroll';
 
 const solutions = [
@@ -47,7 +47,7 @@ export default function SolutionsSection() {
             const Icon = solution.icon;
             return (
               <RevealOnScroll key={solution.to} delay={index * 0.06}>
-                <Link to={solution.to} className="group block h-full border border-white/[0.1] bg-white/[0.015] p-6 rounded-sm hover:border-primary/50 hover:bg-white/[0.03] transition-colors">
+                <CanonicalLink to={solution.to} className="group block h-full border border-white/[0.1] bg-white/[0.015] p-6 rounded-sm hover:border-primary/50 hover:bg-white/[0.03] transition-colors">
                   <div className="flex items-start justify-between mb-8">
                     <div className="w-10 h-10 rounded flex items-center justify-center border border-primary/35 bg-primary/10 text-primary">
                       <Icon className="w-5 h-5" />
@@ -56,7 +56,7 @@ export default function SolutionsSection() {
                   </div>
                   <h3 className="text-base font-semibold text-white mb-3">{solution.title}</h3>
                   <p className="text-sm text-white/80 leading-relaxed">{solution.description}</p>
-                </Link>
+                </CanonicalLink>
               </RevealOnScroll>
             );
           })}

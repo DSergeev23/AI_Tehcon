@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CanonicalLink from '../shared/CanonicalLink';
 import { ArrowUpRight } from 'lucide-react';
 import ResponsiveImage from '../shared/ResponsiveImage';
 
@@ -44,12 +44,12 @@ export default function AutomationBlock() {
             </p>
 
             <div className="inline-block hover-lift">
-              <Link
+              <CanonicalLink
                 to="/contacts"
                 className="inline-flex items-center gap-2 px-6 py-3 signal-button text-sm font-semibold rounded-sm transition-colors">
                 Связаться с отделом продаж
                 <ArrowUpRight className="w-4 h-4" />
-              </Link>
+              </CanonicalLink>
             </div>
           </div>
 

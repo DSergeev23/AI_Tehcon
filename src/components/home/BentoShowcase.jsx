@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CanonicalLink from '../shared/CanonicalLink';
 import { Zap, Layers, ArrowUpRight } from 'lucide-react';
 import RevealOnScroll from '../shared/RevealOnScroll';
 
@@ -56,9 +56,9 @@ export default function BentoShowcase() {
                     </div>
                   )}
                 </div>
-                <Link
+                <CanonicalLink
                   to="/contacts"
-                  className="flex w-full sm:w-auto items-center justify-center gap-1.5 px-4 py-2 signal-button text-xs font-semibold rounded-sm transition-colors text-center whitespace-normal sm:whitespace-nowrap">Рассчитать потенциал</Link>
+                  className="flex w-full sm:w-auto items-center justify-center gap-1.5 px-4 py-2 signal-button text-xs font-semibold rounded-sm transition-colors text-center whitespace-normal sm:whitespace-nowrap">Рассчитать потенциал</CanonicalLink>
               </div>
             </div>
           </RevealOnScroll>
@@ -141,12 +141,12 @@ export default function BentoShowcase() {
                 </p>
               </div>
 
-              <Link
+              <CanonicalLink
                 to="/contacts"
                 className="relative z-10 mt-4 flex items-center gap-1.5 text-xs text-white/75 hover:text-white transition-colors">
                 
                 Записаться на аудит процессов <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
+              </CanonicalLink>
             </div>
           </RevealOnScroll>
 

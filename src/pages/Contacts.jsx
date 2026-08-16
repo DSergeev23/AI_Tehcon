@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import CanonicalLink from '../components/shared/CanonicalLink';
 import { Plus, CheckCircle2 } from 'lucide-react';
 import SEOHead from '../components/shared/SEOHead';
 import { pageSEO } from '../lib/seoConfig';
@@ -265,9 +265,9 @@ export default function Contacts() {
                     </div>
                     <span className="text-[12px] text-white/75 leading-relaxed">
                       Я соглашаюсь с{' '}
-                      <Link to="/privacy-policy" className="text-white underline underline-offset-2 hover:text-primary transition-colors">
+                      <CanonicalLink to="/privacy-policy" className="text-white underline underline-offset-2 hover:text-primary transition-colors">
                         Политикой конфиденциальности
-                      </Link>{' '}
+                      </CanonicalLink>{' '}
                       и даю согласие на обработку персональных данных.
                     </span>
                   </label>

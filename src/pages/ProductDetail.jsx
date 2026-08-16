@@ -1,5 +1,6 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import CanonicalLink from '../components/shared/CanonicalLink';
 import { ArrowLeft, Plus, CheckCircle2, Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, Sparkles } from 'lucide-react';
 import { getProductById } from '../lib/catalog';
 import RevealOnScroll from '../components/shared/RevealOnScroll';
@@ -40,10 +41,10 @@ export default function ProductDetail() {
       {/* Breadcrumb */}
       <div className="border-b border-white/[0.08]">
         <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-4 flex items-center gap-2">
-          <Link to="/catalog" className="inline-flex items-center gap-1.5 text-xs text-white/75 hover:text-white transition-colors">
+          <CanonicalLink to="/catalog" className="inline-flex items-center gap-1.5 text-xs text-white/75 hover:text-white transition-colors">
             <ArrowLeft className="w-3.5 h-3.5" />
             Каталог
-          </Link>
+          </CanonicalLink>
           <span className="text-primary/55 text-xs">/</span>
           <span className="text-xs text-white/75 truncate max-w-[200px]">{product.title}</span>
         </div>
@@ -136,12 +137,12 @@ export default function ProductDetail() {
                   <p className="text-sm text-white/80 mt-4 max-w-md mx-auto leading-relaxed mb-8">
                     Мы не обещаем чудеса. Мы доставляем измеримые результаты, которые напрямую влияют на вашу прибыль.
                   </p>
-                  <Link
+                  <CanonicalLink
                     to="/contacts"
                     className="inline-flex items-center gap-2 px-6 py-3 signal-button text-sm font-semibold rounded-sm transition-colors"
                   >
                     Обсудить проект <Plus className="w-4 h-4" />
-                  </Link>
+                  </CanonicalLink>
                 </div>
               </RevealOnScroll>
             </div>
@@ -154,12 +155,12 @@ export default function ProductDetail() {
               <div className="border premium-panel rounded-sm p-6 mb-4">
                 <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-2">Стоимость</p>
                 <p className="text-2xl font-semibold text-white tracking-tight mb-6">{product.pricing}</p>
-                <Link
+                <CanonicalLink
                   to="/contacts"
                   className="w-full flex items-center justify-center gap-2 py-3 signal-button text-xs font-semibold rounded-sm transition-colors"
                 >
                   Обсудить проект <Plus className="w-3.5 h-3.5" />
-                </Link>
+                </CanonicalLink>
                 <p className="text-[10px] text-white/75 text-center mt-3">Ответ в течение 2 часов</p>
               </div>
 

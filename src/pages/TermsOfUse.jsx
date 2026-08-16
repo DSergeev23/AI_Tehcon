@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CanonicalLink from '../components/shared/CanonicalLink';
 import SEOHead from '../components/shared/SEOHead';
 
 const sections = [
@@ -193,12 +193,12 @@ export default function TermsOfUse() {
 
           {/* Back link */}
           <div className="mt-20 pt-10 border-t border-white/[0.08] flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
-            <Link to="/" className="text-[13px] text-white/75 hover:text-white transition-colors">
+            <CanonicalLink to="/" className="text-[13px] text-white/75 hover:text-white transition-colors">
               ← На главную
-            </Link>
-            <Link to="/privacy-policy" className="text-[13px] text-white/75 hover:text-white transition-colors">
+            </CanonicalLink>
+            <CanonicalLink to="/privacy-policy" className="text-[13px] text-white/75 hover:text-white transition-colors">
               Политика конфиденциальности →
-            </Link>
+            </CanonicalLink>
           </div>
         </div>
       </div>

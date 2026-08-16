@@ -4,6 +4,7 @@ import { catalogProducts } from '../src/lib/catalog/index.js';
 import { catalogCategoryNav } from '../src/lib/catalog/categorySeo.js';
 
 const SITE_URL = 'https://ai-tehcon.ru';
+const toCanonicalPath = (path) => (path === '/' ? '/' : `${path.replace(/\/+$/, '')}/`);
 
 const staticPages = [
   { path: '/', priority: '1.0' },
@@ -22,7 +23,7 @@ const productPages = catalogProducts.map(({ id }) => ({
 
 const urls = [...staticPages, ...productPages]
   .sort((a, b) => a.path.localeCompare(b.path))
-  .map(({ path, priority }) => `  <url><loc>${SITE_URL}${path}</loc><priority>${priority}</priority></url>`)
+  .map(({ path, priority }) => `  <url><loc>${SITE_URL}${toCanonicalPath(path)}</loc><priority>${priority}</priority></url>`)
   .join('\n');
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;

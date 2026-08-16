@@ -33,7 +33,7 @@ export const PublicApp = () => {
         <Route path="/catalog/marketing" element={<LazyRoute><Catalog /></LazyRoute>} />
         <Route path="/catalog/analytics" element={<LazyRoute><Catalog /></LazyRoute>} />
         <Route path="/catalog/finance" element={<LazyRoute><Catalog /></LazyRoute>} />
-        <Route path="/catalog/ecommerce" element={<Navigate to="/catalog/marketplace" replace />} />
+        <Route path="/catalog/ecommerce" element={<Navigate to="/catalog/marketplace/" replace />} />
         <Route path="/catalog/marketplace" element={<LazyRoute><Catalog /></LazyRoute>} />
         <Route
           path="/catalog/:id"
