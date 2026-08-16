@@ -1,0 +1,105 @@
+name: Deploy to Timeweb via SSH
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and deploy via SSH
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Validate SSH configuration
+        env:
+          SSH_PASSWORD: ${{ secrets.TIMEWEB_SSH_PASSWORD }}
+        run: |
+          : "${SSH_PASSWORD:?TIMEWEB_SSH_PASSWORD is not set}"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+
+      - name: Pack dist
+        run: tar -czf "$RUNNER_TEMP/ai-tehcon-dist.tar.gz" -C dist .
+
+      - name: Install SSH client
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Upload and extract archive on Timeweb
+        timeout-minutes: 15
+        env:
+          SSH_HOST: bitrix378.timeweb.ru
+          SSH_PORT: ${{ vars.TIMEWEB_SSH_PORT || '22' }}
+          SSH_USERNAME: ct71002_ai
+          SSHPASS: ${{ secrets.TIMEWEB_SSH_PASSWORD }}
+          DEPLOY_PATH: /home/c/ct71002/ai-tehcon.ru/public_html
+        run: |
+          : "${SSH_HOST:?SSH_HOST is not set}"
+          : "${SSH_PORT:?SSH_PORT is not set}"
+          : "${SSH_USERNAME:?SSH_USERNAME is not set}"
+          : "${SSHPASS:?TIMEWEB_SSH_PASSWORD is not set}"
+          : "${DEPLOY_PATH:?DEPLOY_PATH is not set}"
+
+          local_archive="$RUNNER_TEMP/ai-tehcon-dist.tar.gz"
+          remote_archive="/home/c/ct71002/ai-tehcon-deploy-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.tar.gz"
+          known_hosts_file="$RUNNER_TEMP/timeweb-known-hosts"
+          deploy_succeeded=false
+
+          ssh_options=(
+            -o ConnectTimeout=20
+            -o ConnectionAttempts=1
+            -o ServerAliveInterval=15
+            -o ServerAliveCountMax=2
+            -o StrictHostKeyChecking=accept-new
+            -o "UserKnownHostsFile=${known_hosts_file}"
+          )
+
+          for attempt in 1 2 3; do
+            echo "SSH deployment attempt ${attempt} of 3"
+
+            if sshpass -e scp -P "$SSH_PORT" "${ssh_options[@]}" \
+              "$local_archive" "${SSH_USERNAME}@${SSH_HOST}:${remote_archive}" && \
+              sshpass -e ssh -p "$SSH_PORT" "${ssh_options[@]}" \
+              "${SSH_USERNAME}@${SSH_HOST}" \
+              "set -e; mkdir -p '${DEPLOY_PATH}'; tar -xzf '${remote_archive}' -C '${DEPLOY_PATH}'; rm -f '${remote_archive}'"; then
+              deploy_succeeded=true
+              echo "SSH deployment completed on attempt ${attempt}"
+              break
+            fi
+
+            if [ "$attempt" -lt 3 ]; then
+              pause_seconds=$((attempt * 20))
+              echo "SSH deployment failed. Retrying in ${pause_seconds} seconds..."
+              sleep "$pause_seconds"
+            fi
+          done
+
+          if [ "$deploy_succeeded" != "true" ]; then
+            echo "SSH deployment failed after 3 attempts."
+            exit 1
+          fi
