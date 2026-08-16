@@ -1,0 +1,23 @@
+Options -MultiViews
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+RewriteBase /
+
+# Add the canonical trailing slash before Apache's DirectorySlash can create
+# an extra redirect with the wrong protocol behind Timeweb's nginx proxy.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.[A-Za-z0-9]{1,10}$
+RewriteRule ^(.+)$ https://ai-tehcon.ru/$1/ [R=301,L,NE]
+
+# Consolidate every host alias on the non-www production host.
+RewriteCond %{HTTP_HOST} !^ai-tehcon\.ru$ [NC]
+RewriteRule ^ https://ai-tehcon.ru%{REQUEST_URI} [R=301,L,NE]
+
+# Timeweb terminates TLS at nginx and reports HTTPS to Apache via X-HTTPS.
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-HTTPS} !1
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+RewriteRule ^ https://ai-tehcon.ru%{REQUEST_URI} [R=301,L,NE]

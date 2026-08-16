@@ -82,7 +82,7 @@ const oneCMarketplaceProcurementAssistant = {
     }
   ],
   "seo": {
-    "title": "Закупка товаров из 1С через Ozon, Wildberries и Яндекс Маркет | AI TehCon",
+    "title": "Закупка товаров из 1С на маркетплейсах | AI TehCon",
     "description": "ИИ-агент берет заказ клиента из 1С, ищет товары на Ozon, Wildberries и Яндекс Маркете, выбирает выгодное предложение и создает заказ поставщику.",
     "canonical": "/catalog/1c-marketplace-procurement-assistant",
     "keywords": "закупка товаров 1С, Ozon Wildberries Яндекс Маркет, ИИ агент для закупок, заказ поставщику 1С, подбор товаров на маркетплейсах"

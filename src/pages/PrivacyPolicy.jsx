@@ -149,7 +149,7 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-black">
       <SEOHead
-        title="AI TehCon"
+        title="Политика конфиденциальности | AI TehCon"
         description="Политика конфиденциальности AI TehCon: порядок обработки персональных данных, cookies, заявки, коммуникации и права пользователей."
         canonical="/privacy-policy"
       />

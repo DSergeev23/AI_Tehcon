@@ -5,6 +5,23 @@ const sharedBenefits = [
   'Повторное использование экспертизы: один источник превращается в несколько полезных форматов.',
 ];
 
+const seoOverrides = {
+  'ai-content-factory-telegram-channel': { description: 'ИИ-агент создаёт контент-план, посты и обложки для Telegram, управляет очередью публикаций и сохраняет экспертный стиль компании.' },
+  'expert-blog-content-plan-autoposting': { description: 'ИИ собирает темы, формирует контент-план, готовит статьи и управляет автопостингом экспертного блога на основе фактуры компании.' },
+  'ai-corporate-site-article-editor': { description: 'ИИ-редактор улучшает структуру и ясность корпоративных статей, проверяет факты и приводит тексты к единому стилю бренда.' },
+  'ai-reels-shorts-scenarios-agent': { description: 'ИИ превращает интервью, статьи и вебинары в сценарии Reels и Shorts с хуками, хронометражем и понятным заданием для монтажа.' },
+  'marketplace-product-cards-autogeneration': { description: 'ИИ автоматически готовит описания, характеристики и контент для карточек товаров на Ozon, Wildberries и Яндекс Маркете.' },
+  'ai-email-copywriter': { description: 'ИИ-копирайтер создаёт сегментированные email-письма, темы и цепочки коммуникаций на основе данных CRM и целей кампании.' },
+  'ai-knowledge-base-editor': { description: 'ИИ собирает разрозненные знания команды, актуализирует инструкции и формирует понятную корпоративную базу знаний для сотрудников.' },
+  'webinar-to-posts-and-articles': { description: 'ИИ перерабатывает записи вебинаров в статьи, посты, цитаты и письма, чтобы один эфир стал готовой контентной кампанией.' },
+  'content-agent-cases-reviews-proposals': {
+    title: 'Контент-агент для кейсов и отзывов | AI TehCon',
+    description: 'ИИ упаковывает результаты проектов в кейсы, отзывы и блоки коммерческих предложений, сохраняя подтверждённые факты и цифры.',
+  },
+  'ai-seo-articles-query-clusters': { description: 'ИИ кластеризует поисковые запросы, формирует план SEO-страниц и готовит черновики экспертных статей на основе фактуры бизнеса.' },
+  'vk-telegram-content-automation': { description: 'ИИ адаптирует материалы для VK и Telegram, ведёт общий календарь публикаций и помогает оценивать результаты контентных кампаний.' },
+};
+
 function buildContent({ title, audience, source, result, caseStudy, image, alt }) {
   return [
     {
@@ -20,6 +37,7 @@ function buildContent({ title, audience, source, result, caseStudy, image, alt }
 }
 
 function createProduct({ id, title, shortDescription, tags, source, result, caseStudy, image, alt, platforms }) {
+  const seo = seoOverrides[id] || {};
   return {
     id,
     title,
@@ -46,8 +64,8 @@ function createProduct({ id, title, shortDescription, tags, source, result, case
     pricing: 'от 10 000 ₽/мес',
     content: buildContent({ title, audience: 'Маркетинговые и экспертные команды', source, result, caseStudy, image, alt }),
     seo: {
-      title: `${title} | AI TehCon`,
-      description: shortDescription,
+      title: seo.title || `${title} | AI TehCon`,
+      description: seo.description || shortDescription,
       canonical: `/catalog/${id}`,
       keywords: `${title}, Контент завод, ИИ для создания контента, автоматизация контента`,
     },

@@ -90,7 +90,7 @@ export default function Contacts() {
 
   return (
     <div className="min-h-screen bg-black">
-      <SEOHead title="AI TehCon" description={pageSEO.contacts.description} canonical={pageSEO.contacts.canonical} />
+      <SEOHead {...pageSEO.contacts} />
       {/* Header */}
       <div className="border-b border-white/[0.08] relative">
         <span className="absolute top-5 right-5 text-white/15 text-xs">+</span>
@@ -104,6 +104,9 @@ export default function Contacts() {
             <h1 className="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">Давайте обсудим 
 Ваш проект
             </h1>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/80">
+              Расскажите, какой процесс отнимает время, где возникают ошибки или каких данных не хватает для решений. Разберём задачу и предложим практичный сценарий автоматизации.
+            </p>
           </div>
         </div>
       </div>
@@ -146,12 +149,26 @@ export default function Contacts() {
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.1}>
-              <div className="p-8">
+              <div className="p-8 border-b border-white/[0.08]">
                 <h2 className="text-xs text-signal uppercase tracking-[0.15em] mb-4">Время работы</h2>
                 <p className="text-base text-white/80 leading-relaxed">
                   Пн — Пт: 10:00 — 19:00 (МСК)<br />
                   Ответ на заявку — в течение 2 часов.
                 </p>
+              </div>
+            </RevealOnScroll>
+
+            <RevealOnScroll delay={0.15}>
+              <div className="p-8">
+                <h2 className="text-xs text-signal uppercase tracking-[0.15em] mb-4">С чем поможем</h2>
+                <p className="text-sm text-white/80 leading-relaxed mb-4">
+                  Проведём первичный разбор процесса, оценим доступность данных и интеграций, определим границы пилота и ожидаемый бизнес-эффект.
+                </p>
+                <ul className="space-y-2 text-sm text-white/75 leading-relaxed">
+                  <li>— Автоматизация операций в 1С, CRM и внутренних системах.</li>
+                  <li>— ИИ-анализ документов, переписок, звонков и показателей.</li>
+                  <li>— Интеграции с Telegram, маркетплейсами и корпоративными сервисами.</li>
+                </ul>
               </div>
             </RevealOnScroll>
           </div>

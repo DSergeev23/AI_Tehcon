@@ -53,7 +53,7 @@ jobs:
       - name: Upload and extract archive on Timeweb
         timeout-minutes: 15
         env:
-          SSH_HOST: bitrix378.timeweb.ru
+          SSH_HOST: ${{ vars.TIMEWEB_SSH_HOST || '92.53.96.50' }}
           SSH_PORT: ${{ vars.TIMEWEB_SSH_PORT || '22' }}
           SSH_USERNAME: ct71002
           SSHPASS: ${{ secrets.TIMEWEB_SSH_PASSWORD }}

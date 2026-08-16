@@ -6,6 +6,7 @@ import { catalogProducts } from './src/lib/catalog/index.js'
 import { catalogCategoryNav } from './src/lib/catalog/categorySeo.js'
 
 const prerenderRoutes = [
+  '/404.html',
   '/about',
   '/catalog',
   ...catalogCategoryNav.map(({ slug }) => `/catalog/${slug}`),
