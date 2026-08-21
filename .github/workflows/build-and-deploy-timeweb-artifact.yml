@@ -1,4 +1,4 @@
-name: Build and deploy to Timeweb from artifact
+name: "2 step: build - deploy"
 
 on:
   workflow_dispatch:
