@@ -236,6 +236,28 @@
   animation: signal-pulse 2.8s ease-in-out infinite;
 }
 
+.partner-range {
+  accent-color: var(--signal-red);
+  cursor: pointer;
+}
+
+.partner-input {
+  min-height: 2.5rem;
+  border-color: rgba(255, 255, 255, 0.12);
+  border-radius: 0.125rem;
+  background: rgba(255, 255, 255, 0.02);
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.partner-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.partner-input:focus {
+  border-color: rgba(165, 29, 52, 0.7);
+}
+
 .hover-lift {
   transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
 }

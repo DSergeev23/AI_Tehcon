@@ -113,20 +113,27 @@ export default function CasesSection() {
             {cases.map((_, i) => (
               <button
                 key={i}
+                type="button"
                 onClick={() => setActive(i)}
+                aria-label={`Показать кейс ${i + 1}: ${cases[i].client}`}
+                aria-pressed={i === active}
                 className={`w-6 h-0.5 transition-colors duration-200 ${i === active ? 'bg-primary' : 'bg-white/40 hover:bg-white/75'}`}
               />
             ))}
           </div>
           <div className="flex gap-2">
             <button
+              type="button"
               onClick={() => setActive((active - 1 + cases.length) % cases.length)}
+              aria-label="Показать предыдущий кейс"
               className="w-9 h-9 border border-white/[0.16] rounded-sm flex items-center justify-center text-white/75 hover:text-white hover:border-primary/45 transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
             <button
+              type="button"
               onClick={() => setActive((active + 1) % cases.length)}
+              aria-label="Показать следующий кейс"
               className="w-9 h-9 border border-white/[0.16] rounded-sm flex items-center justify-center text-white/75 hover:text-white hover:border-primary/45 transition-colors"
             >
               <ChevronRight className="w-4 h-4" />

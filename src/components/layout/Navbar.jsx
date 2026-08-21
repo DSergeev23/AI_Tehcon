@@ -6,6 +6,7 @@ import { Menu, X, Plus } from 'lucide-react';
 const navLinks = [
   { label: 'Главная', path: '/' },
   { label: 'Каталог', path: '/catalog' },
+  { label: 'Партнёрам', path: '/partners' },
   { label: 'О компании', path: '/about' },
 ];
 

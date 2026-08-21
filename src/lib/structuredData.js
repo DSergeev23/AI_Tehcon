@@ -62,6 +62,7 @@ export function createCatalogItemListSchema(products, options = {}) {
       "url": `${SITE_URL}${toCanonicalPath(`/catalog/${p.id}`)}`,
       "item": {
         "@type": "Service",
+        "url": `${SITE_URL}${toCanonicalPath(`/catalog/${p.id}`)}`,
         "name": p.title,
         "description": getProductDescription(p),
         "provider": { ...ORGANIZATION },
