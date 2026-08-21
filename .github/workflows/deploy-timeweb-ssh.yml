@@ -69,6 +69,7 @@ jobs:
           remote_archive="/home/c/ct71002/ai-tehcon-deploy-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.tar.gz"
           known_hosts_file="$RUNNER_TEMP/timeweb-known-hosts"
           deploy_succeeded=false
+          retry_limit=5
 
           ssh_options=(
             -4
@@ -80,8 +81,8 @@ jobs:
             -o "UserKnownHostsFile=${known_hosts_file}"
           )
 
-          for attempt in 1 2 3; do
-            echo "SSH deployment attempt ${attempt} of 3"
+          for attempt in $(seq 1 "$retry_limit"); do
+            echo "SSH deployment attempt ${attempt} of ${retry_limit}"
 
             if sshpass -e scp -P "$SSH_PORT" "${ssh_options[@]}" \
               "$local_archive" "${SSH_USERNAME}@${SSH_HOST}:${remote_archive}" && \
@@ -93,7 +94,7 @@ jobs:
               break
             fi
 
-            if [ "$attempt" -lt 3 ]; then
+            if [ "$attempt" -lt "$retry_limit" ]; then
               pause_seconds=$((attempt * 20))
               echo "SSH deployment failed. Retrying in ${pause_seconds} seconds..."
               sleep "$pause_seconds"
@@ -101,6 +102,6 @@ jobs:
           done
 
           if [ "$deploy_succeeded" != "true" ]; then
-            echo "SSH deployment failed after 3 attempts."
+            echo "SSH deployment failed after ${retry_limit} attempts."
             exit 1
           fi
