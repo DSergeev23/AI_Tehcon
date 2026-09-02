@@ -6,6 +6,7 @@ import { Menu, X, Plus } from 'lucide-react';
 const navLinks = [
   { label: 'Главная', path: '/' },
   { label: 'Каталог', path: '/catalog' },
+  { label: 'Новости', path: '/news' },
   { label: 'Партнёрам', path: '/partners' },
   { label: 'О компании', path: '/about' },
 ];
@@ -50,7 +51,7 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-0.5">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(`${link.path}/`));
               return (
                 <CanonicalLink
                   key={link.path}

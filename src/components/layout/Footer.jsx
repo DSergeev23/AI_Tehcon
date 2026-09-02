@@ -6,6 +6,7 @@ const navLinks = [
 { label: 'Главная', to: '/' },
 { label: 'О компании', to: '/about' },
 { label: 'Каталог решений', to: '/catalog' },
+{ label: 'Новости', to: '/news' },
 { label: 'Партнёрам', to: '/partners' },
 { label: 'Контакты', to: '/contacts' }];
 

@@ -7,6 +7,12 @@ export function toCanonicalPath(path) {
   return `${path.replace(/\/+$/, '')}/`;
 }
 
+export function toAbsoluteUrl(value) {
+  if (!value) return DEFAULT_OG_IMAGE;
+  if (/^https:\/\//i.test(value)) return value;
+  return `${SITE_URL}/${value.replace(/^\/+/, '')}`;
+}
+
 export const pageSEO = {
   home: {
     title: 'AI TehCon — AI-агенты для 1С и автоматизации бизнеса',
@@ -38,6 +44,12 @@ export const pageSEO = {
     canonical: '/partners/',
     keywords: 'партнёрская программа ИИ, партнёрство по автоматизации, реферальная программа B2B, интегратор 1С, AI TehCon партнёры',
   },
+  news: {
+    title: 'Новости искусственного интеллекта и автоматизации | AI TehCon',
+    description: 'Новости, практические разборы и опыт применения искусственного интеллекта в бизнес-процессах, 1С, аналитике и корпоративной автоматизации.',
+    canonical: '/news/',
+    keywords: 'новости искусственного интеллекта, новости AI, ИИ для бизнеса, AI автоматизация, ИИ агенты, 1С и AI',
+  },
 };
 
 export function getProductSEO(product) {
@@ -48,5 +60,15 @@ export function getProductSEO(product) {
     description: seo.description || `${product.shortDescription} Цена: ${product.pricing}. Интеграция нейросетей, разработка AI решений и автоматизация бизнес-процессов с AI TehCon.`,
     canonical: toCanonicalPath(seo.canonical || `/catalog/${product.id}`),
     keywords: seo.keywords || `${product.title}, ${product.category}, ИИ агент, автоматизация бизнеса, ${product.tags?.join(', ')}`,
+  };
+}
+
+export function getNewsSEO(article) {
+  return {
+    title: article.seo?.title || `${article.title} | AI TehCon`,
+    description: article.seo?.description || article.excerpt,
+    canonical: toCanonicalPath(`/news/${article.slug}`),
+    ogImage: toAbsoluteUrl(article.coverImage),
+    ogType: 'article',
   };
 }

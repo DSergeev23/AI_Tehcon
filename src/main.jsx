@@ -6,7 +6,10 @@ import '@/index.css'
 const root = document.getElementById('root')
 const application = <App />
 
-if (root.hasChildNodes()) {
+if (document.documentElement.dataset.newsGenerated === 'true') {
+  root.replaceChildren()
+  createRoot(root).render(application)
+} else if (root.hasChildNodes()) {
   hydrateRoot(root, application)
 } else {
   createRoot(root).render(application)

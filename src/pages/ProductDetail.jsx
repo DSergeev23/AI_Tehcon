@@ -9,6 +9,8 @@ import { getProductSEO } from '../lib/seoConfig';
 import { createServiceSchema, createProductBreadcrumbSchema } from '../lib/structuredData';
 import SectionsRenderer from '../components/product/SectionsRenderer';
 import PageNotFound from '../lib/PageNotFound';
+import NewsCard from '../components/news/NewsCard';
+import useNewsArticles from '../hooks/useNewsArticles';
 
 function OneCIcon({ className }) {
   return (
@@ -23,6 +25,7 @@ const iconMap = { Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, 
 
 export default function ProductDetail() {
   const { id } = useParams();
+  const { articles: newsArticles } = useNewsArticles();
   const product = getProductById(id);
   if (!product) return <PageNotFound />;
 
@@ -33,6 +36,11 @@ export default function ProductDetail() {
     createServiceSchema(product),
     createProductBreadcrumbSchema(product),
   ];
+
+  const relatedNews = [
+    ...newsArticles.filter((article) => article.relatedSolutionIds?.includes(product.id)),
+    ...newsArticles.filter((article) => !article.relatedSolutionIds?.includes(product.id)),
+  ].slice(0, 3);
 
   return (
     <div className="min-h-screen bg-black">
@@ -181,6 +189,33 @@ export default function ProductDetail() {
 
         </div>
       </div>
+
+      {relatedNews.length > 0 && (
+        <section className="border-t border-white/[0.08] py-16 md:py-20" aria-labelledby="related-news-title">
+          <div className="mx-auto w-full max-w-[1280px] px-5 md:px-8">
+            <div className="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="mb-3 text-[10px] uppercase tracking-[0.18em] text-signal">Материалы по теме</p>
+                <h2 id="related-news-title" className="font-serif text-3xl tracking-tight text-white md:text-4xl">
+                  Новости и практика
+                </h2>
+              </div>
+              <CanonicalLink
+                to="/news"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-white transition-colors hover:text-primary"
+              >
+                Все публикации <Plus className="h-3.5 w-3.5" />
+              </CanonicalLink>
+            </div>
+
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {relatedNews.map((article) => (
+                <NewsCard key={article.slug} article={article} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

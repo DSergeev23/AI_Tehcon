@@ -11,6 +11,7 @@ const prerenderRoutes = [
   '/catalog',
   ...catalogCategoryNav.map(({ slug }) => `/catalog/${slug}`),
   ...catalogProducts.map(({ id }) => `/catalog/${id}`),
+  '/news',
   '/contacts',
   '/privacy-policy',
   '/terms-of-use',

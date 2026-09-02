@@ -1,4 +1,4 @@
-import { SITE_URL, SITE_NAME, toCanonicalPath } from './seoConfig';
+import { SITE_URL, SITE_NAME, toAbsoluteUrl, toCanonicalPath } from './seoConfig';
 
 // ── Shared Organization ──
 export const ORGANIZATION = {
@@ -126,6 +126,58 @@ export function createProductBreadcrumbSchema(product) {
       { "@type": "ListItem", "position": 1, "name": "Главная", "item": SITE_URL },
       { "@type": "ListItem", "position": 2, "name": "Каталог", "item": `${SITE_URL}/catalog/` },
       { "@type": "ListItem", "position": 3, "name": product.title, "item": `${SITE_URL}${toCanonicalPath(`/catalog/${product.id}`)}` },
+    ],
+  };
+}
+
+export function createNewsCollectionSchema(articles) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Новости и практика применения AI",
+    "description": "Новости и практические материалы AI TehCon об искусственном интеллекте и автоматизации бизнеса.",
+    "url": `${SITE_URL}/news/`,
+    "publisher": { ...ORGANIZATION },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": articles.length,
+      "itemListElement": articles.map((article, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "url": `${SITE_URL}${toCanonicalPath(`/news/${article.slug}`)}`,
+        "name": article.title,
+      })),
+    },
+  };
+}
+
+export function createNewsArticleSchema(article) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": article.title,
+    "description": article.seo?.description || article.excerpt,
+    "image": [toAbsoluteUrl(article.coverImage)],
+    "datePublished": article.publishedAt,
+    "dateModified": article.updatedAt,
+    "author": {
+      "@type": "Organization",
+      "name": article.author,
+      "url": SITE_URL,
+    },
+    "publisher": { ...ORGANIZATION },
+    "mainEntityOfPage": `${SITE_URL}${toCanonicalPath(`/news/${article.slug}`)}`,
+  };
+}
+
+export function createNewsBreadcrumbSchema(article) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": SITE_URL },
+      { "@type": "ListItem", "position": 2, "name": "Новости", "item": `${SITE_URL}/news/` },
+      { "@type": "ListItem", "position": 3, "name": article.title, "item": `${SITE_URL}${toCanonicalPath(`/news/${article.slug}`)}` },
     ],
   };
 }

@@ -10,9 +10,10 @@ import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, toCanonicalPath } from '../../li
  *   ogImage?: string;
  *   schemaJson?: unknown;
  *   keywords?: string;
+ *   ogType?: string;
  * }} props
  */
-export default function SEOHead({ title, description, canonical, ogImage, schemaJson, keywords }) {
+export default function SEOHead({ title, description, canonical, ogImage, schemaJson, keywords, ogType = 'website' }) {
   const fullUrl = `${SITE_URL}${toCanonicalPath(canonical || '/')}`;
   const image = ogImage || DEFAULT_OG_IMAGE;
 
@@ -26,7 +27,7 @@ export default function SEOHead({ title, description, canonical, ogImage, schema
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
       {/* Open Graph — Telegram, WhatsApp, LinkedIn */}
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

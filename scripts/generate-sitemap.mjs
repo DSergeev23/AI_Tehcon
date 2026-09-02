@@ -11,6 +11,7 @@ const staticPages = [
   { path: '/catalog', priority: '0.9' },
   ...catalogCategoryNav.map(({ slug }) => ({ path: `/catalog/${slug}`, priority: '0.85' })),
   { path: '/about', priority: '0.7' },
+  { path: '/news', priority: '0.8' },
   { path: '/partners', priority: '0.7' },
   { path: '/contacts', priority: '0.7' },
   { path: '/privacy-policy', priority: '0.3' },
