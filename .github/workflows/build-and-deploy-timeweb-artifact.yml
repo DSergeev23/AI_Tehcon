@@ -45,11 +45,12 @@ jobs:
       - name: Pack dist
         run: |
           tar \
-            --exclude='./news' \
-            --exclude='./data/news/news.json' \
-            --exclude='./news-sitemap.xml' \
             -czf "$RUNNER_TEMP/ai-tehcon-dist.tar.gz" \
             -C dist .
+
+          tar -tzf "$RUNNER_TEMP/ai-tehcon-dist.tar.gz" | grep -qx './news/index.html'
+          tar -tzf "$RUNNER_TEMP/ai-tehcon-dist.tar.gz" | grep -qx './data/news/news.json'
+          tar -tzf "$RUNNER_TEMP/ai-tehcon-dist.tar.gz" | grep -qx './news-sitemap.xml'
 
       - name: Upload production artifact
         uses: actions/upload-artifact@v4
@@ -118,11 +119,31 @@ jobs:
           for attempt in $(seq 1 "$retry_limit"); do
             echo "SSH deployment attempt ${attempt} of ${retry_limit}"
 
+            remote_command="
+              set -eu
+              deploy_path='${DEPLOY_PATH}'
+              archive_path='${remote_archive}'
+              mkdir -p \"\$deploy_path\"
+              set --
+
+              if [ -f \"\$deploy_path/news/index.html\" ] && grep -q 'data-news-generated=\"true\"' \"\$deploy_path/news/index.html\"; then
+                set -- \"\$@\" --exclude='./news'
+              fi
+              if [ -f \"\$deploy_path/data/news/news.json\" ] && ! grep -q '\"generatedAt\": null' \"\$deploy_path/data/news/news.json\"; then
+                set -- \"\$@\" --exclude='./data/news/news.json'
+              fi
+              if [ -f \"\$deploy_path/news-sitemap.xml\" ] && ! grep -q 'news-sitemap-bootstrap' \"\$deploy_path/news-sitemap.xml\"; then
+                set -- \"\$@\" --exclude='./news-sitemap.xml'
+              fi
+
+              tar \"\$@\" -xzf \"\$archive_path\" -C \"\$deploy_path\"
+              rm -f \"\$archive_path\"
+            "
+
             if sshpass -e scp -P "$SSH_PORT" "${ssh_options[@]}" \
               "$local_archive" "${SSH_USERNAME}@${SSH_HOST}:${remote_archive}" && \
               sshpass -e ssh -p "$SSH_PORT" "${ssh_options[@]}" \
-              "${SSH_USERNAME}@${SSH_HOST}" \
-              "set -e; mkdir -p '${DEPLOY_PATH}'; tar -xzf '${remote_archive}' -C '${DEPLOY_PATH}'; rm -f '${remote_archive}'"; then
+              "${SSH_USERNAME}@${SSH_HOST}" "$remote_command"; then
               deploy_succeeded=true
               echo "SSH deployment completed on attempt ${attempt}"
               break
