@@ -3,12 +3,15 @@ import { Toaster } from "@/components/ui/toaster"
 import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import PageNotFound from './lib/PageNotFound';
+import { directions } from './lib/directions';
+import { categoryRedirects } from './lib/catalog/categoryRedirects';
 
 import PageLayout from './components/layout/PageLayout';
 import YandexMetrika from './components/shared/YandexMetrika';
 import GoogleAnalytics from './components/shared/GoogleAnalytics';
 
 const Home = React.lazy(() => import('./pages/Home'));
+const Direction = React.lazy(() => import('./pages/Direction'));
 const About = React.lazy(() => import('./pages/About'));
 const Catalog = React.lazy(() => import('./pages/Catalog'));
 const Contacts = React.lazy(() => import('./pages/Contacts'));
@@ -27,17 +30,15 @@ export const PublicApp = () => {
   return (
     <Routes>
       <Route element={<PageLayout />}>
+        {directions.map((direction) => <Route key={direction.slug} path={`/${direction.slug}`} element={<LazyRoute><Direction direction={direction} /></LazyRoute>} />)}
         <Route path="/" element={<LazyRoute><Home /></LazyRoute>} />
         <Route path="/about" element={<LazyRoute><About /></LazyRoute>} />
         <Route path="/catalog" element={<LazyRoute><Catalog /></LazyRoute>} />
-        <Route path="/catalog/1c" element={<LazyRoute><Catalog /></LazyRoute>} />
+        {Object.entries(categoryRedirects).map(([slug, to]) => <Route key={slug} path={`/catalog/${slug}`} element={<Navigate to={to} replace />} />)}
         <Route path="/catalog/image-analysis" element={<LazyRoute><Catalog /></LazyRoute>} />
-        <Route path="/catalog/content-factory" element={<LazyRoute><Catalog /></LazyRoute>} />
         <Route path="/catalog/marketing" element={<LazyRoute><Catalog /></LazyRoute>} />
         <Route path="/catalog/analytics" element={<LazyRoute><Catalog /></LazyRoute>} />
         <Route path="/catalog/finance" element={<LazyRoute><Catalog /></LazyRoute>} />
-        <Route path="/catalog/ecommerce" element={<Navigate to="/catalog/marketplace/" replace />} />
-        <Route path="/catalog/marketplace" element={<LazyRoute><Catalog /></LazyRoute>} />
         <Route
           path="/catalog/:id"
           element={

@@ -55,6 +55,13 @@ $phone = value($data, 'phone', 50, true);
 $company = value($data, 'company', 150) ?: 'Не указана';
 $message = value($data, 'message', 5000, true);
 $pageUrl = value($data, 'pageUrl', 2048) ?: 'Не указана';
+$contextLines = [];
+foreach (['service' => 'Услуга', 'direction' => 'Направление', 'sourcePage' => 'Переход к форме', 'landingPage' => 'Страница входа', 'referrer' => 'Внешний источник', 'utm_source' => 'UTM source', 'utm_medium' => 'UTM medium', 'utm_campaign' => 'UTM campaign', 'utm_content' => 'UTM content', 'utm_term' => 'UTM term', 'yclid' => 'Yandex Click ID'] as $field => $label) {
+    $contextValue = value($data, $field, 1000);
+    if ($contextValue !== '') {
+        $contextLines[] = $label . ': ' . str_replace(["\r", "\n"], ' ', $contextValue);
+    }
+}
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strpbrk($email, "\r\n") !== false) {
     respond(422, ['success' => false, 'message' => 'Укажите корректный email.']);
@@ -74,6 +81,7 @@ $body = implode("\n", [
     $message,
     '',
     "Страница: {$pageUrl}",
+    ...$contextLines,
     'Дата: ' . date('c'),
 ]);
 

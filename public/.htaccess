@@ -5,6 +5,12 @@ ErrorDocument 404 /404.html
 RewriteEngine On
 RewriteBase /
 
+# Retired catalog categories: match exact paths only, including legacy index.html.
+# Before slash/host normalization to send old URLs directly to the final destination.
+RewriteRule ^catalog/1c(?:/index\.html|/)?$ https://ai-tehcon.ru/ai-for-1c/ [R=301,L,NE]
+RewriteRule ^catalog/(?:marketplace|ecommerce)(?:/index\.html|/)?$ https://ai-tehcon.ru/ai-for-marketplace/ [R=301,L,NE]
+RewriteRule ^catalog/content-factory(?:/index\.html|/)?$ https://ai-tehcon.ru/content-factory/ [R=301,L,NE]
+
 # Add the canonical trailing slash before Apache's DirectorySlash can create
 # an extra redirect with the wrong protocol behind Timeweb's nginx proxy.
 RewriteCond %{REQUEST_FILENAME} !-f

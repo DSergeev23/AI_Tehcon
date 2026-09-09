@@ -43,9 +43,9 @@ export default function HeroSection() {
               Результат — на ваш мобильный телефон, почту или в мессенджер.
             </p>
             <div>
-              <CanonicalLink to="/catalog"
+              <CanonicalLink to="/#directions"
               className="inline-flex items-center gap-2 px-5 py-2.5 signal-button text-sm font-semibold rounded-md transition-colors">
-                Смотреть каталог
+                Смотреть направления
                 <Plus className="w-4 h-4" />
               </CanonicalLink>
             </div>

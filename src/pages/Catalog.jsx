@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import CanonicalLink from '../components/shared/CanonicalLink';
 import { catalogProducts } from '../lib/catalog';
+import { directions } from '../lib/directions';
 import {
   catalogCategoryNav,
   catalogCategoryPages,
@@ -18,6 +19,7 @@ const sortedCatalogProducts = [...catalogProducts].sort((a, b) => (
 ));
 const categoryLinks = [
   { label: 'Все', to: '/catalog', slug: null },
+  ...directions.map(({ label, slug }) => ({ label, to: `/${slug}`, slug })),
   ...catalogCategoryNav.map((categoryPage) => ({
     label: categoryPage.label,
     to: categoryPage.canonical,
@@ -74,7 +76,7 @@ export default function Catalog() {
       {/* Filter */}
       <div className="border-b border-white/[0.08]">
         <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24">
-          <div className="flex flex-wrap items-center gap-1 py-3 md:flex-nowrap">
+          <div className="flex flex-wrap items-center gap-1 py-3">
             {categoryLinks.map((cat) => {
               const active = activeSlug === cat.slug;
               return (

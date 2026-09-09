@@ -1,4 +1,6 @@
-export const catalogCategoryPages = {
+import { categoryRedirects } from './categoryRedirects.js';
+
+const originalCategoryPages = {
   '1c': {
     slug: '1c',
     label: '1С',
@@ -71,6 +73,9 @@ export const catalogCategoryPages = {
   },
 };
 
+export const catalogCategoryPages = Object.fromEntries(
+  Object.entries(originalCategoryPages).filter(([slug]) => !categoryRedirects[slug]),
+);
 export const catalogCategoryNav = Object.values(catalogCategoryPages);
 
 export function isOneCProduct(product) {

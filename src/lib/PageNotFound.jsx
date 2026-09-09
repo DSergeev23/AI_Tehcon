@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Home, Mail } from 'lucide-react';
 import CanonicalLink from '../components/shared/CanonicalLink';
 import { catalogCategoryNav } from './catalog/categorySeo';
+import { directions } from './directions';
 
 export default function PageNotFound() {
   return (
@@ -59,7 +60,7 @@ export default function PageNotFound() {
         </div>
 
         <nav aria-label="Основные категории услуг" className="grid grid-cols-1 border-l border-t border-white/[0.08] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {catalogCategoryNav.map((category, index) => (
+          {[...directions.map((direction) => ({ ...direction, canonical: `/${direction.slug}` })), ...catalogCategoryNav].map((category, index) => (
             <CanonicalLink
               key={category.slug}
               to={category.canonical}

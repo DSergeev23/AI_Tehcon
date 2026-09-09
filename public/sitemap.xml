@@ -2,8 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ai-tehcon.ru/</loc><priority>1.0</priority></url>
   <url><loc>https://ai-tehcon.ru/about/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/ai-for-1c/</loc><priority>0.9</priority></url>
+  <url><loc>https://ai-tehcon.ru/ai-for-marketplace/</loc><priority>0.9</priority></url>
+  <url><loc>https://ai-tehcon.ru/business-process-automation/</loc><priority>0.9</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/</loc><priority>0.9</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/1c/</loc><priority>0.85</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/1c-accounts-receivable-ai-analysis/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/1c-ad-campaigns-ai-analyst/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/1c-ai-warehouse-inventory/</loc><priority>0.8</priority></url>
@@ -57,7 +59,6 @@
   <url><loc>https://ai-tehcon.ru/catalog/buyer-review-question-automation/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/competitor-price-promotion-monitoring/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/content-agent-cases-reviews-proposals/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/content-factory/</loc><priority>0.85</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/crypto-morning-digest/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/expert-blog-content-plan-autoposting/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/finance/</loc><priority>0.85</priority></url>
@@ -68,7 +69,6 @@
   <url><loc>https://ai-tehcon.ru/catalog/inventory-turnover-dead-stock-control/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/investment-topup-automation/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/marketing/</loc><priority>0.85</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace/</loc><priority>0.85</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/marketplace-automatic-review-replies/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/marketplace-custom-ai-analyst/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/marketplace-niche-discovery/</loc><priority>0.8</priority></url>
@@ -83,6 +83,7 @@
   <url><loc>https://ai-tehcon.ru/catalog/webinar-to-posts-and-articles/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/yandex-zen-rss-autopublish/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/contacts/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/content-factory/</loc><priority>0.9</priority></url>
   <url><loc>https://ai-tehcon.ru/news/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/partners/</loc><priority>0.7</priority></url>
   <url><loc>https://ai-tehcon.ru/privacy-policy/</loc><priority>0.3</priority></url>

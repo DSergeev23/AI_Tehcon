@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import CanonicalLink from '../shared/CanonicalLink';
-import { Menu, X, Plus } from 'lucide-react';
+import { Menu, X, Plus, ChevronDown } from 'lucide-react';
+import { directions } from '../../lib/directions';
 
 const navLinks = [
   { label: 'Главная', path: '/' },
-  { label: 'Каталог', path: '/catalog' },
+  { label: 'Направления', path: null },
   { label: 'Новости', path: '/news' },
   { label: 'Партнёрам', path: '/partners' },
   { label: 'О компании', path: '/about' },
@@ -14,6 +15,9 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [directionsOpen, setDirectionsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const triggerRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -22,7 +26,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => setMobileOpen(false), [location]);
+  useEffect(() => { setMobileOpen(false); setDirectionsOpen(false); }, [location]);
+  useEffect(() => {
+    const closeOutside = (event) => {
+      if (!dropdownRef.current?.contains(event.target)) setDirectionsOpen(false);
+    };
+    const closeOnEscape = (event) => {
+      if (event.key !== 'Escape') return;
+      if (directionsOpen) { setDirectionsOpen(false); triggerRef.current?.focus(); }
+      else setMobileOpen(false);
+    };
+    document.addEventListener('pointerdown', closeOutside);
+    document.addEventListener('keydown', closeOnEscape);
+    return () => { document.removeEventListener('pointerdown', closeOutside); document.removeEventListener('keydown', closeOnEscape); };
+  }, [directionsOpen]);
 
   return (
     <>
@@ -49,8 +66,18 @@ export default function Navbar() {
           </CanonicalLink>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-0.5">
+          <div className="hidden xl:flex items-center gap-0.5">
             {navLinks.map((link) => {
+              if (!link.path) return (
+                <div key="directions" ref={dropdownRef} className="relative" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setDirectionsOpen(false); }}>
+                  <button ref={triggerRef} type="button" aria-expanded={directionsOpen} aria-controls="desktop-directions" onClick={() => setDirectionsOpen(!directionsOpen)} className={`inline-flex h-9 items-center gap-2 rounded-md border px-4 text-sm transition-colors ${directions.some((d) => location.pathname.replace(/\/$/, '') === `/${d.slug}`) ? 'border-primary/45 bg-white/[0.07] text-white' : 'border-transparent text-white/75 hover:bg-white/[0.05] hover:text-white'}`}>
+                    Направления <ChevronDown size={14} className={directionsOpen ? 'rotate-180' : ''} />
+                  </button>
+                  <div id="desktop-directions" hidden={!directionsOpen} className="absolute left-0 top-full mt-2 w-80 rounded-md border border-white/15 bg-black p-2 shadow-xl">
+                    {directions.map((d) => <CanonicalLink key={d.slug} to={`/${d.slug}`} aria-current={location.pathname.replace(/\/$/, '') === `/${d.slug}` ? 'page' : undefined} className="block rounded-sm px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white focus-visible:bg-white/10">{d.label}</CanonicalLink>)}
+                  </div>
+                </div>
+              );
               const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(`${link.path}/`));
               return (
                 <CanonicalLink
@@ -70,7 +97,7 @@ export default function Navbar() {
           </div>
 
           {/* CTA */}
-          <div className="hidden md:flex items-center shrink-0">
+          <div className="hidden xl:flex items-center shrink-0">
             <CanonicalLink
               to="/contacts"
               className="inline-flex items-center gap-2 h-11 px-6 text-base font-medium signal-button rounded-md transition-colors"
@@ -83,7 +110,7 @@ export default function Navbar() {
           {/* Mobile menu btn */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden text-primary hover:text-white transition-colors"
+            className="xl:hidden text-primary hover:text-white transition-colors"
             type="button"
             aria-label={mobileOpen ? 'Закрыть меню навигации' : 'Открыть меню навигации'}
             aria-expanded={mobileOpen}
@@ -96,9 +123,14 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-          <div id="mobile-navigation" className="fixed inset-x-0 top-16 z-40 border-b border-white/[0.08] bg-black animate-in fade-in slide-in-from-top-2 duration-200">
+          <div id="mobile-navigation" className="fixed inset-x-0 top-16 z-40 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-white/[0.08] bg-black xl:hidden animate-in fade-in slide-in-from-top-2 duration-200">
             <div className="px-5 py-4 flex flex-col gap-0.5">
-              {navLinks.map((link) => (
+              {navLinks.map((link) => !link.path ? (
+                <details key="directions" className="border-b border-white/[0.06] py-3 text-sm text-white/75">
+                  <summary className="cursor-pointer">Направления</summary>
+                  <div className="mt-2 border-l border-primary/40 pl-4">{directions.map((d) => <CanonicalLink key={d.slug} to={`/${d.slug}`} className="block py-3 hover:text-white">{d.label}</CanonicalLink>)}</div>
+                </details>
+              ) : (
                 <CanonicalLink
                   key={link.path}
                   to={link.path}

@@ -11,6 +11,7 @@ import SectionsRenderer from '../components/product/SectionsRenderer';
 import PageNotFound from '../lib/PageNotFound';
 import NewsCard from '../components/news/NewsCard';
 import useNewsArticles from '../hooks/useNewsArticles';
+import { getProductDirection } from '../lib/catalog/directionCatalog';
 
 function OneCIcon({ className }) {
   return (
@@ -31,6 +32,7 @@ export default function ProductDetail() {
 
   const Icon = iconMap[product.icon] || Sparkles;
   const seo = getProductSEO(product);
+  const direction = getProductDirection(product.id);
 
   const productSchema = [
     createServiceSchema(product),
@@ -48,14 +50,16 @@ export default function ProductDetail() {
 
       {/* Breadcrumb */}
       <div className="border-b border-white/[0.08]">
-        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-4 flex items-center gap-2">
-          <CanonicalLink to="/catalog" className="inline-flex items-center gap-1.5 text-xs text-white/75 hover:text-white transition-colors">
+        <nav aria-label="Хлебные крошки" className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-4 flex flex-wrap items-center gap-2">
+          <CanonicalLink to="/" className="text-xs text-white/75 hover:text-white">Главная</CanonicalLink>
+          <span aria-hidden="true" className="text-primary/55 text-xs">/</span>
+          <CanonicalLink to={direction ? `/${direction.slug}` : '/catalog'} className="inline-flex items-center gap-1.5 text-xs text-white/75 hover:text-white transition-colors">
             <ArrowLeft className="w-3.5 h-3.5" />
-            Каталог
+            {direction?.label || 'Каталог'}
           </CanonicalLink>
           <span className="text-primary/55 text-xs">/</span>
-          <span className="text-xs text-white/75 truncate max-w-[200px]">{product.title}</span>
-        </div>
+          <span aria-current="page" className="text-xs text-white/75">{product.title}</span>
+        </nav>
       </div>
 
       {/* Hero */}
@@ -76,7 +80,7 @@ export default function ProductDetail() {
                 <Icon className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-1">{product.category}</p>
+                <p className="text-[10px] text-signal uppercase tracking-[0.15em] mb-1">{direction?.label || product.category}</p>
                 <h1 className="font-serif text-4xl md:text-5xl 2xl:text-6xl text-white tracking-tight leading-tight">{product.title}</h1>
               </div>
             </div>

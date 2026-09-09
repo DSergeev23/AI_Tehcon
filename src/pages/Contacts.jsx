@@ -6,8 +6,13 @@ import { pageSEO } from '../lib/seoConfig';
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import RevealOnScroll from '../components/shared/RevealOnScroll';
+import { useLocation } from 'react-router-dom';
+import { readAttribution, resolveLeadContext } from '../lib/leadContext';
 
 export default function Contacts() {
+  const { search } = useLocation();
+  const context = resolveLeadContext(search);
+  const [contextCleared, setContextCleared] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', message: '' });
   const [website, setWebsite] = useState('');
@@ -55,7 +60,8 @@ export default function Contacts() {
       return;
     }
 
-    const lastSubmitAt = Number(window.localStorage.getItem('aiTehConContactLastSubmitAt') || 0);
+    let lastSubmitAt = 0;
+    try { lastSubmitAt = Number(window.localStorage.getItem('aiTehConContactLastSubmitAt') || 0); } catch { /* Storage may be blocked. */ }
     if (Date.now() - lastSubmitAt < 60000) {
       setSubmitError('Заявка уже отправлялась недавно. Попробуйте повторить через минуту.');
       setLoading(false);
@@ -73,13 +79,17 @@ export default function Contacts() {
           ...form,
           website,
           pageUrl: window.location.href,
+          ...readAttribution(),
+          ...context,
+          service: contextCleared ? '' : context.service,
+          direction: contextCleared ? '' : context.direction,
         })
       });
       const result = await response.json().catch(() => null);
       if (!response.ok || !result?.success) {
         throw new Error('Contact form request failed');
       }
-      window.localStorage.setItem('aiTehConContactLastSubmitAt', String(Date.now()));
+      try { window.localStorage.setItem('aiTehConContactLastSubmitAt', String(Date.now())); } catch { /* Successful submission does not require storage. */ }
       setSubmitted(true);
     } catch (_) {
       setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз или напишите напрямую на hello@ai-tehcon.ru.');
@@ -188,6 +198,12 @@ export default function Contacts() {
 
               <form onSubmit={handleSubmit} className="space-y-4">
                   <h2 className="text-xs text-signal uppercase tracking-[0.15em] mb-6">Форма обратной связи</h2>
+                  {!contextCleared && (context.service || context.direction) && <div className="border border-primary/35 bg-primary/10 p-4 text-sm text-white">
+                    <p className="text-xs text-white/60">Тема обращения</p>
+                    {context.service && <p className="mt-2 font-medium">{context.service}</p>}
+                    {context.direction && <p className="mt-2 text-white/75">{context.direction}</p>}
+                    <button type="button" onClick={() => setContextCleared(true)} className="mt-3 text-xs underline underline-offset-4">У меня другая задача</button>
+                  </div>}
                   <input
                     type="text"
                     name="website"

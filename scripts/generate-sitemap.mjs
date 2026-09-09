@@ -2,11 +2,13 @@ import { writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { catalogProducts } from '../src/lib/catalog/index.js';
 import { catalogCategoryNav } from '../src/lib/catalog/categorySeo.js';
+import { directions } from '../src/lib/directions.js';
 
 const SITE_URL = 'https://ai-tehcon.ru';
 const toCanonicalPath = (path) => (path === '/' ? '/' : `${path.replace(/\/+$/, '')}/`);
 
 const staticPages = [
+  ...directions.map(({ slug }) => ({ path: `/${slug}`, priority: '0.9' })),
   { path: '/', priority: '1.0' },
   { path: '/catalog', priority: '0.9' },
   ...catalogCategoryNav.map(({ slug }) => ({ path: `/catalog/${slug}`, priority: '0.85' })),

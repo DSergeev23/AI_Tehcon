@@ -4,8 +4,20 @@ import { fileURLToPath, URL } from 'node:url'
 import { vitePrerenderPlugin } from 'vite-prerender-plugin'
 import { catalogProducts } from './src/lib/catalog/index.js'
 import { catalogCategoryNav } from './src/lib/catalog/categorySeo.js'
+import { directions } from './src/lib/directions.js'
+import { categoryRedirects } from './src/lib/catalog/categoryRedirects.js'
+
+function redirectCatalogCategory(req, res, next) {
+  const url = new URL(req.url, 'http://localhost');
+  const match = url.pathname.match(/^\/catalog\/([^/]+)(?:\/index\.html|\/)?$/);
+  const destination = match && categoryRedirects[match[1]];
+  if (!destination) return next();
+  res.writeHead(301, { Location: `${destination}${url.search}` });
+  res.end();
+}
 
 const prerenderRoutes = [
+  ...directions.map(({ slug }) => `/${slug}`),
   '/404.html',
   '/about',
   '/catalog',
@@ -21,6 +33,11 @@ const prerenderRoutes = [
 export default defineConfig({
   logLevel: 'error', // Suppress warnings, only show errors
   plugins: [
+    {
+      name: 'catalog-category-redirects',
+      configureServer(server) { server.middlewares.use(redirectCatalogCategory); },
+      configurePreviewServer(server) { server.middlewares.use(redirectCatalogCategory); },
+    },
     react(),
     vitePrerenderPlugin({
       renderTarget: '#root',

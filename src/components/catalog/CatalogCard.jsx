@@ -29,7 +29,8 @@ function OneCIcon({ className }) {
 const iconMap = { Send, Search, Activity, TrendingUp, Bot, PieChart, Megaphone, Image, FileText, UserCheck, MessageSquare, Sparkles, OneC: OneCIcon };
 const visualMap = { Network, Database, LineChart, Workflow, Brain, BarChart3, PenTool, Layers, Share2, Hexagon, FileSearch };
 
-export default function CatalogCard({ product }) {
+export default function CatalogCard({ product, headingLevel = 'h3', expanded = false }) {
+  const Heading = headingLevel === 'h4' ? 'h4' : 'h3';
   const Icon = iconMap[product.icon] || Sparkles;
   const VisualIcon = visualMap[product.visual] || Hexagon;
   const isOneCIcon = product.icon === 'OneC';
@@ -71,12 +72,12 @@ export default function CatalogCard({ product }) {
           <p className="text-[10px] text-white/75 uppercase tracking-[0.15em] font-semibold mb-1.5">{product.category}</p>
 
           {/* Title */}
-          <h3 className="mb-3 h-10 overflow-hidden text-sm font-semibold text-white leading-snug tracking-tight group-hover:text-white transition-colors line-clamp-2">
+          <Heading className={`mb-3 text-sm font-semibold text-white leading-snug tracking-tight group-hover:text-white transition-colors ${expanded ? '' : 'h-10 overflow-hidden line-clamp-2'}`}>
             {product.title}
-          </h3>
+          </Heading>
 
           {/* Description */}
-          <p className="mb-4 h-10 overflow-hidden text-xs text-white/80 leading-relaxed line-clamp-2">
+          <p className={`mb-4 text-xs text-white/80 leading-relaxed ${expanded ? '' : 'h-10 overflow-hidden line-clamp-2'}`}>
             {product.shortDescription}
           </p>
 

@@ -2,9 +2,11 @@ import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { captureAttribution } from '../../lib/leadContext';
 
 export default function PageLayout() {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
+  useEffect(() => { captureAttribution(window.location.href, document.referrer); }, [pathname, search]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -1,26 +1,17 @@
 import React from 'react';
 import CanonicalLink from '../shared/CanonicalLink';
 import { Mail, Send } from 'lucide-react';
+import { directions } from '../../lib/directions';
 
 const navLinks = [
 { label: 'Главная', to: '/' },
 { label: 'О компании', to: '/about' },
-{ label: 'Каталог решений', to: '/catalog' },
 { label: 'Новости', to: '/news' },
 { label: 'Партнёрам', to: '/partners' },
 { label: 'Контакты', to: '/contacts' }];
 
 
-const solutions = [
-  { label: 'ИИ-агент для 1С: ответы по данным бизнеса', to: '/catalog/ai-agent-for-1c-chat-voice-analytics' },
-  { label: 'Анализ договоров поставки на предмет нарушений', to: '/catalog/1c-supplier-contract-penalty-analysis' },
-  { label: 'Автоматизация блока закупок с помощью ИИ на примере 1С:УТ', to: '/catalog/1c-procurement-ai-automation' },
-  { label: 'Автоматические ежедневные отчеты 1С с поиском отклонений', to: '/catalog/1c-daily-deviation-reports' },
-  { label: 'Автоматический анализ цен конкурентов с данными 1С', to: '/catalog/1c-competitor-price-analysis' },
-  { label: 'Помощь в закупке товаров 1С через Ozon, Wildberries и Яндекс Маркет', to: '/catalog/1c-marketplace-procurement-assistant' },
-  { label: 'Помощник по браку и качеству на производстве в программах 1С', to: '/catalog/1c-production-quality-defects-assistant' },
-  { label: 'Анализ норм списания материалов в производстве в программах 1С', to: '/catalog/1c-material-consumption-norms-analysis' },
-];
+const solutions = directions.map(({ label, slug }) => ({ label, to: `/${slug}` }));
 
 const legal = [
 { label: 'Политика конфиденциальности', to: '/privacy-policy' },
@@ -106,7 +97,7 @@ export default function Footer() {
 
           {/* Col 3 — Solutions */}
           <div>
-            <h2 className="text-xs font-semibold text-signal uppercase tracking-[0.16em] mb-5">Решения</h2>
+            <h2 className="text-xs font-semibold text-signal uppercase tracking-[0.16em] mb-5">Направления</h2>
             <div className="flex flex-col gap-3">
               {solutions.map((l) =>
               <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>

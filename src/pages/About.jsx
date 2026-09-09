@@ -42,47 +42,19 @@ const expertise = [
 ];
 
 const implementationSteps = [
-  {
-    title: 'Находим потери',
-    caption: 'Ручная работа · задержки · ошибки',
-    result: 'Точка роста',
-    visual: 'process',
-  },
-  {
-    title: 'Соединяем системы',
-    caption: '1С · CRM · Excel · документы',
-    result: 'Единые данные',
-    visual: 'data',
-  },
-  {
-    title: 'Добавляем интеллект',
-    caption: 'Распознать · проверить · решить',
-    result: 'ИИ-сценарий',
-    visual: 'ai',
-  },
-  {
-    title: 'Получаем эффект',
-    caption: 'Быстрее · точнее · под контролем',
-    result: 'Измеримый результат',
-    visual: 'result',
-  },
+  { title: 'Находим потери', caption: 'Ручная работа · задержки · ошибки', result: 'Точка роста', visual: 'process' },
+  { title: 'Соединяем системы', caption: '1С · CRM · Excel · документы', result: 'Единые данные', visual: 'data' },
+  { title: 'Добавляем интеллект', caption: 'Распознать · проверить · решить', result: 'ИИ-сценарий', visual: 'ai' },
+  { title: 'Получаем эффект', caption: 'Быстрее · точнее · под контролем', result: 'Измеримый результат', visual: 'result' },
 ];
 
-const atlasPositions = {
-  process: '0% 0%',
-  data: '100% 0%',
-  ai: '0% 100%',
-  result: '100% 100%',
-};
+const atlasPositions = { process: '0% 0%', data: '100% 0%', ai: '0% 100%', result: '100% 100%' };
 
-function AtlasVisual({ type, size = 'step', blend = false }) {
+function StepIllustration({ type }) {
   return (
-    <div
-      className={`relative overflow-hidden ${size === 'expertise' ? 'w-36 h-36 md:w-44 md:h-44' : 'w-44 h-44 2xl:w-52 2xl:h-52'} ${blend ? 'mix-blend-screen' : ''}`}
-      aria-hidden="true"
-    >
+    <div className="relative h-52 flex items-center justify-center" aria-hidden="true">
       <div
-        className="absolute inset-0 bg-no-repeat transition-transform duration-500 hover:scale-[1.04]"
+        className="absolute w-44 h-44 2xl:w-52 2xl:h-52 bg-no-repeat"
         style={{
           backgroundImage: `url(${getOptimizedImageUrl('/images/about-automation-atlas.png', 960)})`,
           backgroundPosition: atlasPositions[type],
@@ -159,29 +131,6 @@ function ExpertiseVisual({ type }) {
   );
 }
 
-function StepIllustration({ type }) {
-  return (
-    <div className="relative h-52 flex items-center justify-center" aria-hidden="true">
-      <AtlasVisual type={type} />
-    </div>
-  );
-}
-
-const oneCExpertise = [
-  { title: 'Понимаем логику учёта', description: 'Работаем с документами, справочниками, регистрами, ролями, складскими и кадровыми процессами — учитываем не только интерфейс, но и правила, по которым живёт база.' },
-  { title: 'Связываем 1С с ИИ', description: 'Подключаем ИИ к данным и документам 1С: он анализирует, проверяет, ищет отклонения, готовит рекомендации и запускает согласованные действия.' },
-  { title: 'Встраиваем в контур компании', description: 'Дополняем 1С интеграциями с CRM, Excel, почтой, ТСД, API и внутренними сервисами, чтобы процесс не обрывался между системами.' },
-];
-
-const automationDirections = [
-  { title: 'Документы и OCR', description: 'Распознавание сканов, проверка реквизитов, подписей и обязательных полей.', to: '/catalog/image-analysis' },
-  { title: 'CRM и коммуникации', description: 'Обработка заявок, лидов, обращений и клиентских сообщений в рабочих каналах.', to: '/catalog/marketing' },
-  { title: 'Данные, отчёты и Excel', description: 'Сбор данных, поиск отклонений, регулярные отчёты и ответы на вопросы бизнеса.', to: '/catalog/analytics' },
-  { title: 'Склад, ТСД и операции', description: 'Инвентаризация, контроль адресного склада, пересортицы и складских документов.', to: '/catalog/1c-ai-warehouse-inventory' },
-  { title: '1С и корпоративные интеграции', description: 'Связь учёта, документов и действий в 1С с ИИ и внешними системами.', to: '/catalog/1c' },
-  { title: 'Почта, заявки и сервисы', description: 'Классификация входящей почты, маршрутизация задач и запуск сценариев по правилам.', to: '/catalog' },
-];
-
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -190,7 +139,15 @@ const orgSchema = {
   "description": "AI TehCon — агентство ИИ автоматизации бизнес-процессов. Разработка AI решений и интеграция нейросетей.",
   "foundingDate": "2014",
   "areaServed": "RU",
-  "knowsAbout": ["ИИ агенты", "автоматизация бизнеса", "машинное обучение", "нейросети"]
+  "knowsAbout": ["ИИ агенты", "автоматизация бизнеса", "машинное обучение", "нейросети"],
+  "email": "hello@ai-tehcon.ru",
+  "telephone": "+7 (919) 213-71-11",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Москва",
+    "streetAddress": "2-й Вольный переулок, 11",
+    "addressCountry": "RU"
+  }
 };
 
 export default function About() {
@@ -208,7 +165,7 @@ export default function About() {
               О компании
             </div>
             <h1 className="font-serif text-5xl md:text-6xl 2xl:text-7xl text-white tracking-tight leading-tight">
-              ИИ-автоматизация бизнеса<br />и интеграции для компаний
+              О компании AI TehCon
             </h1>
           </div>
 
@@ -223,8 +180,8 @@ export default function About() {
         </div>
       </div>
 
-      {/* Expertise and implementation infographic */}
-      <section className="border-b border-white/[0.08] overflow-hidden" aria-label="Экспертиза и процесс внедрения">
+      {/* Expertise */}
+      <section className="border-b border-white/[0.08] overflow-hidden" aria-label="Экспертиза AI TehCon">
         <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-12 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 border border-white/[0.12]">
             {expertise.map((item, index) => (
@@ -266,134 +223,115 @@ export default function About() {
               <div className="p-7 md:p-10 flex flex-col md:flex-row md:items-end md:justify-between gap-5 border-b border-white/[0.12]">
                 <div>
                   <div className="text-[11px] text-primary uppercase tracking-[0.15em] mb-4">Как запускаем решение</div>
-                  <h3 className="font-serif text-4xl md:text-5xl text-white leading-tight">От задачи до эффекта</h3>
+                  <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight">От задачи до эффекта</h2>
                 </div>
                 <div className="font-mono text-xs uppercase text-white/55">4 шага · 1 рабочий контур</div>
               </div>
-
-              <div className="relative grid grid-cols-1 lg:grid-cols-4">
-                <div className="hidden lg:block absolute left-[12.5%] right-[12.5%] top-20 h-1 bg-white/10" aria-hidden="true">
-                  <div className="h-full bg-primary" />
-                </div>
-
+              <div className="grid grid-cols-1 lg:grid-cols-4">
                 {implementationSteps.map((step, index) => (
-                  <article
-                    key={step.title}
-                    className={`relative p-6 md:p-8 ${index < 3 ? 'border-b lg:border-b-0 lg:border-r border-white/[0.12]' : ''}`}
-                  >
-                    <div className="absolute top-4 left-4 w-7 h-7 bg-white text-black font-mono text-[10px] flex items-center justify-center z-10">
-                      {String(index + 1).padStart(2, '0')}
-                    </div>
-                    {index < 3 && (
-                      <ArrowRight className="hidden lg:block absolute z-20 top-[70px] -right-3 w-6 h-6 p-1 bg-primary text-white" aria-hidden="true" />
-                    )}
-
+                  <article key={step.title} className={`relative p-6 md:p-8 ${index < 3 ? 'border-b lg:border-b-0 lg:border-r border-white/[0.12]' : ''}`}>
+                    <div className="absolute top-4 left-4 w-7 h-7 bg-white text-black font-mono text-[10px] flex items-center justify-center">{String(index + 1).padStart(2, '0')}</div>
+                    {index < 3 && <ArrowRight className="hidden lg:block absolute z-20 top-[70px] -right-3 w-6 h-6 p-1 bg-primary text-white" aria-hidden="true" />}
                     <StepIllustration type={step.visual} />
-
-                    <h4 className="font-serif text-2xl text-white mb-2">{step.title}</h4>
+                    <h3 className="font-serif text-2xl text-white mb-2">{step.title}</h3>
                     <p className="text-xs text-white/60 min-h-8">{step.caption}</p>
                     <div className="mt-6 pt-4 border-t border-white/[0.12] flex items-center gap-2 text-sm font-semibold text-white">
-                      <span className="w-2 h-2 bg-primary" aria-hidden="true" />
-                      {step.result}
+                      <span className="w-2 h-2 bg-primary" aria-hidden="true" />{step.result}
                     </div>
                   </article>
                 ))}
               </div>
             </div>
           </RevealOnScroll>
+
         </div>
       </section>
 
-      {/* Mission */}
-      <div className="border-b border-white/[0.08]">
-        <div className="w-full max-w-[1920px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <RevealOnScroll>
-              <div className="p-10 border-r border-white/[0.08]">
-                <h2 className="text-[12px] text-signal uppercase tracking-[0.15em] mb-6">Миссия</h2>
-                <h3 className="font-serif text-3xl text-white tracking-tight leading-tight mb-5">
-                  Делаем ИИ доступным<br />для каждого бизнеса
-                </h3>
-                <p className="text-sm text-white/80 leading-relaxed">
-                  Верим, что искусственный интеллект — это не привилегия корпораций, а инструмент для бизнеса любого масштаба. Создаём решения, которые встраиваются в существующие процессы без болезненных трансформаций.
-                </p>
-              </div>
-            </RevealOnScroll>
-
-            {/* Values */}
-            <RevealOnScroll delay={0.1}>
-              <div className="p-10">
-                <h2 className="text-[12px] text-signal uppercase tracking-[0.15em] mb-6">Принципы</h2>
-                <div className="space-y-5">
-                  {values.map((v, i) => (
-                    <div key={i} className="flex gap-4 py-4 border-b border-white/[0.06] last:border-0">
-                      <div className="w-6 h-6 border border-primary/35 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-[10px] font-mono text-signal">{String(i + 1).padStart(2, '0')}</span>
-                      </div>
-                      <div>
-                        <h3 className="text-sm font-semibold text-white mb-1">{v.title}</h3>
-                        <p className="text-xs text-white/80 leading-relaxed">{v.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </RevealOnScroll>
-          </div>
-        </div>
-      </div>
-
-      {/* Automation directions */}
-      <div className="border-b border-white/[0.08]">
-        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-16">
+      {/* Values */}
+      <section className="border-b border-white/[0.08]" aria-label="Принципы работы">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-12 md:py-14">
           <RevealOnScroll>
-            <h2 className="text-[12px] text-signal uppercase tracking-[0.15em] mb-6">Какие процессы автоматизируем</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-white/[0.08]">
-              {automationDirections.map((direction) => (
-                <CanonicalLink
-                  key={direction.title}
-                  to={direction.to}
-                  className="group p-7 border-r border-b border-white/[0.08] hover:bg-white/[0.025] transition-colors"
-                >
-                  <h3 className="text-base font-semibold text-white mb-3 group-hover:text-primary transition-colors">{direction.title}</h3>
-                  <p className="text-sm text-white/80 leading-relaxed mb-6">{direction.description}</p>
-                  <span className="text-xs text-white/75 group-hover:text-white transition-colors">Смотреть решения →</span>
-                </CanonicalLink>
+            <h2 className="text-[12px] text-signal uppercase tracking-[0.15em] mb-6">Принципы</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 border-t border-l border-white/[0.08]">
+              {values.map((value, index) => (
+                <div key={value.title} className="flex gap-4 p-5 border-r border-b border-white/[0.08]">
+                  <span className="text-[10px] font-mono text-signal pt-0.5">{String(index + 1).padStart(2, '0')}</span>
+                  <div>
+                    <h3 className="text-sm font-semibold text-white mb-1">{value.title}</h3>
+                    <p className="text-xs text-white/80 leading-relaxed">{value.desc}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </RevealOnScroll>
         </div>
-      </div>
+      </section>
 
       {/* 1C expertise */}
       <div className="border-b border-white/[0.08]">
-        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-16">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-12 md:py-14">
           <RevealOnScroll>
-            <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-16 items-start">
-              <div>
-                <h2 className="text-[12px] text-signal uppercase tracking-[0.15em] mb-6">Экспертиза 1С</h2>
-                <h3 className="font-serif text-3xl md:text-4xl text-white tracking-tight leading-tight mb-5">
-                  Углублённые знания 1С<br />для внедрения ИИ в работу бизнеса
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+              <div className="max-w-3xl">
+                <h2 className="text-[12px] text-signal uppercase tracking-[0.15em] mb-4">1С в контуре бизнеса</h2>
+                <h3 className="font-serif text-3xl md:text-4xl text-white tracking-tight leading-tight mb-4">
+                  Учитываем реальную логику учёта
                 </h3>
                 <p className="text-sm text-white/80 leading-relaxed max-w-xl">
-                  1С — одна из ключевых систем в операционном контуре многих компаний. Поэтому мы проектируем ИИ-сценарии с учётом реальных данных, прав доступа и документов, а не как внешнюю надстройку без связи с процессом.
+                  Проектируем ИИ-сценарии с учётом данных, документов и прав доступа в 1С — и связываем их с CRM, Excel и другими рабочими системами.
                 </p>
               </div>
-              <div className="border-t border-l border-white/[0.08]">
-                {oneCExpertise.map((item, index) => (
-                  <div key={item.title} className="grid grid-cols-[auto_1fr] gap-5 p-6 border-r border-b border-white/[0.08]">
-                    <span className="font-mono text-xs text-signal pt-0.5">{String(index + 1).padStart(2, '0')}</span>
-                    <div>
-                      <h3 className="text-sm font-semibold text-white mb-2">{item.title}</h3>
-                      <p className="text-sm text-white/80 leading-relaxed">{item.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <CanonicalLink to="/ai-for-1c/" className="shrink-0 inline-flex items-center gap-2 text-sm text-white hover:text-primary transition-colors">
+                Решения для 1С <span aria-hidden="true">→</span>
+              </CanonicalLink>
             </div>
           </RevealOnScroll>
         </div>
       </div>
+
+      {/* Contacts */}
+      <section className="border-b border-white/[0.08]" aria-label="Контактные данные">
+        <div className="w-full max-w-[1920px] mx-auto px-5 md:px-8 2xl:px-16 3xl:px-24 py-14 md:py-16">
+          <RevealOnScroll>
+            <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16">
+              <div>
+                <h2 className="text-[12px] text-signal uppercase tracking-[0.15em] mb-5">Контакты</h2>
+                <h3 className="font-serif text-3xl md:text-4xl text-white tracking-tight leading-tight mb-7">Обсудим вашу задачу</h3>
+                <dl className="border-t border-white/[0.12]">
+                  <div className="py-4 border-b border-white/[0.12]">
+                    <dt className="text-[10px] uppercase tracking-[0.12em] text-white/55 mb-2">Телефоны</dt>
+                    <dd className="flex flex-col items-start gap-1.5">
+                      <a href="tel:+79192137111" className="text-base text-white hover:text-primary transition-colors">+7 (919) 213-71-11</a>
+                      <a href="tel:+79192733552" className="text-base text-white hover:text-primary transition-colors">+7 (919) 273-35-52</a>
+                    </dd>
+                  </div>
+                  <div className="py-4 border-b border-white/[0.12]">
+                    <dt className="text-[10px] uppercase tracking-[0.12em] text-white/55 mb-2">Email</dt>
+                    <dd><a href="mailto:hello@ai-tehcon.ru" className="text-base text-white hover:text-primary transition-colors">hello@ai-tehcon.ru</a></dd>
+                  </div>
+                  <div className="py-4 border-b border-white/[0.12]">
+                    <dt className="text-[10px] uppercase tracking-[0.12em] text-white/55 mb-2">Адрес</dt>
+                    <dd className="text-base text-white">Москва, 2-й Вольный переулок, 11</dd>
+                  </div>
+                </dl>
+                <CanonicalLink to="/contacts/" className="inline-flex mt-7 items-center gap-2 text-sm text-white hover:text-primary transition-colors">
+                  Оставить заявку <span aria-hidden="true">→</span>
+                </CanonicalLink>
+              </div>
+
+              <div className="min-h-[340px] border border-white/[0.12] bg-white/[0.015] overflow-hidden">
+                <iframe
+                  title="Карта: Москва, 2-й Вольный переулок, 11"
+                  src="https://www.google.com/maps?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%202-%D0%B9%20%D0%92%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%B5%D1%80%D0%B5%D1%83%D0%BB%D0%BE%D0%BA%2C%2011&output=embed"
+                  className="block h-full min-h-[340px] w-full border-0 grayscale contrast-125"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
+          </RevealOnScroll>
+        </div>
+      </section>
 
       <CTASection variant="about" />
     </div>

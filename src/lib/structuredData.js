@@ -1,4 +1,5 @@
 import { SITE_URL, SITE_NAME, toAbsoluteUrl, toCanonicalPath } from './seoConfig';
+import { getProductDirection } from './catalog/directionCatalog';
 
 // ── Shared Organization ──
 export const ORGANIZATION = {
@@ -119,12 +120,13 @@ export function createServiceSchema(product) {
 
 // ── Product detail: BreadcrumbList ──
 export function createProductBreadcrumbSchema(product) {
+  const direction = getProductDirection(product.id);
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Главная", "item": SITE_URL },
-      { "@type": "ListItem", "position": 2, "name": "Каталог", "item": `${SITE_URL}/catalog/` },
+      { "@type": "ListItem", "position": 2, "name": direction?.label || 'Каталог', "item": direction ? `${SITE_URL}/${direction.slug}/` : `${SITE_URL}/catalog/` },
       { "@type": "ListItem", "position": 3, "name": product.title, "item": `${SITE_URL}${toCanonicalPath(`/catalog/${product.id}`)}` },
     ],
   };
