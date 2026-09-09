@@ -3,7 +3,6 @@ import SEOHead from '../components/shared/SEOHead';
 import { pageSEO } from '../lib/seoConfig';
 import HeroSection from '../components/home/HeroSection';
 import LogoBar from '../components/home/LogoBar';
-import FeaturesGrid from '../components/home/FeaturesGrid';
 import BentoShowcase from '../components/home/BentoShowcase';
 import IntegrationsSection from '../components/home/IntegrationsSection';
 import AutomationBlock from '../components/home/AutomationBlock';
@@ -77,7 +76,6 @@ export default function Home() {
         <HeroSection />
         <LogoBar />
         <SolutionsSection />
-        <FeaturesGrid />
         <BentoShowcase />
         <AutomationBlock />
         <CasesSection />

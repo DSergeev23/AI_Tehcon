@@ -9,6 +9,19 @@ import RevealOnScroll from '../components/shared/RevealOnScroll';
 import { useLocation } from 'react-router-dom';
 import { readAttribution, resolveLeadContext } from '../lib/leadContext';
 
+function formatRussianPhone(value) {
+  let digits = value.replace(/\D/g, '');
+  if (digits.startsWith('8')) digits = `7${digits.slice(1)}`;
+  if (digits === '7') return '+7';
+  if (digits.startsWith('7')) digits = digits.slice(1);
+  digits = digits.slice(0, 10);
+
+  if (!digits) return '';
+  return ['+7', digits.slice(0, 3), digits.slice(3, 6), digits.slice(6, 8), digits.slice(8, 10)]
+    .filter(Boolean)
+    .join('-');
+}
+
 export default function Contacts() {
   const { search } = useLocation();
   const context = resolveLeadContext(search);
@@ -250,8 +263,13 @@ export default function Contacts() {
                       <Input
                       type="tel"
                       value={form.phone}
-                      onChange={(e) => setForm((p) => ({ ...p, phone: e.target.value }))}
-                      placeholder="+7 (999) 000-00-00"
+                      onChange={(e) => setForm((p) => ({ ...p, phone: formatRussianPhone(e.target.value) }))}
+                      placeholder="+7-999-000-00-00"
+                      inputMode="numeric"
+                      autoComplete="tel"
+                      maxLength={16}
+                      pattern="\+7-\d{3}-\d{3}-\d{2}-\d{2}"
+                      title="Введите номер в формате +7-919-213-71-11"
                       required
                       className="bg-white/[0.02] border-white/[0.12] text-white placeholder:text-white/35 focus:border-primary/50 rounded-sm h-10 text-sm" />
                     

@@ -67,6 +67,11 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strpbrk($email, "\r\n") !== fa
     respond(422, ['success' => false, 'message' => 'Укажите корректный email.']);
 }
 
+$phoneDigits = preg_replace('/\D+/', '', $phone);
+if (!is_string($phoneDigits) || !preg_match('/^7\d{10}$/', $phoneDigits)) {
+    respond(422, ['success' => false, 'message' => 'Укажите телефон в формате +7-919-213-71-11.']);
+}
+
 $subjectText = "Новая заявка AI TehCon: {$name} / {$company}";
 $subject = '=?UTF-8?B?' . base64_encode($subjectText) . '?=';
 $body = implode("\n", [
