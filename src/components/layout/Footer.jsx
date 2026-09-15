@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CanonicalLink from '../shared/CanonicalLink';
 import { Mail, Send } from 'lucide-react';
 import { directions } from '../../lib/directions';
@@ -33,6 +34,12 @@ function FooterLink({ to, children, external }) {
         {children}
       </a>);
 
+  }
+  if (to === '/contacts') {
+    return (
+      <div className="transition-transform hover:translate-x-0.5">
+        <Link to="/contacts/?from=" className={base}>{children}</Link>
+      </div>);
   }
   return (
     <div className="transition-transform hover:translate-x-0.5">
