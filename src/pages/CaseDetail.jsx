@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { ArrowUpRight, Plus } from 'lucide-react';
 import CanonicalLink from '../components/shared/CanonicalLink';
 import ResponsiveImage, { getOptimizedImageUrl } from '../components/shared/ResponsiveImage';
 import SEOHead from '../components/shared/SEOHead';
@@ -91,8 +92,19 @@ export default function CaseDetail() {
         </div>
       </main>
       <section className="border-t border-white/[0.08]">
-        <div className="mx-auto max-w-5xl px-5 py-8 md:px-8 lg:px-12">
+        <div className="mx-auto max-w-5xl px-5 py-12 md:px-8 md:py-16 lg:px-12">
           <p className="border-l-2 border-primary/60 pl-4 text-sm leading-relaxed text-white/60">Мы соблюдаем соглашение о конфиденциальности и не раскрываем данные, название и внутренние процессы клиента. Иллюстрации показывают демонстрационные интерфейсы на условных данных и не относятся к данным конкретного заказчика.</p>
+        </div>
+      </section>
+      <section className="border-t border-white/[0.08]">
+        <div className="mx-auto max-w-5xl px-5 py-12 md:px-8 md:py-16 lg:px-12">
+          <p className="text-xs uppercase tracking-[0.16em] text-signal">Следующий шаг</p>
+          <h2 className="mt-4 font-serif text-4xl leading-tight text-white md:text-5xl">Есть похожая задача?</h2>
+          <p className="mt-6 max-w-3xl border-l-2 border-primary/60 pl-5 text-lg leading-relaxed text-white/80 md:text-2xl">Разберём ваш процесс, оценим возможность автоматизации и предложим архитектуру решения.</p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <CanonicalLink to="/contacts" className="signal-button inline-flex items-center justify-center gap-3 rounded-sm px-6 py-3.5 font-medium">Обсудить задачу <Plus size={18} /></CanonicalLink>
+            <CanonicalLink to="/catalog" className="inline-flex items-center justify-center gap-3 rounded-sm border border-white/[0.18] px-6 py-3.5 font-medium text-white transition-colors hover:border-white/40 hover:bg-white/[0.04]">Посмотреть решения <ArrowUpRight size={18} /></CanonicalLink>
+          </div>
         </div>
       </section>
     </article>
