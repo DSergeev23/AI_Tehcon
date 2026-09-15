@@ -7,6 +7,7 @@ const navLinks = [
 { label: 'Главная', to: '/' },
 { label: 'О компании', to: '/about' },
 { label: 'Новости', to: '/news' },
+{ label: 'Кейсы', to: '/cases' },
 { label: 'Партнёрам', to: '/partners' },
 { label: 'Контакты', to: '/contacts' }];
 
@@ -97,7 +98,7 @@ export default function Footer() {
 
           {/* Col 3 — Solutions */}
           <div>
-            <h2 className="text-xs font-semibold text-signal uppercase tracking-[0.16em] mb-5">Направления</h2>
+            <h2 className="text-xs font-semibold text-signal uppercase tracking-[0.16em] mb-5">Решения</h2>
             <div className="flex flex-col gap-3">
               {solutions.map((l) =>
               <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>

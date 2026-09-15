@@ -39,19 +39,19 @@ export default function Direction({ direction }) {
         </div>
       </header>
       <section id="tasks" className={`${container} scroll-mt-24 py-16 md:py-20`}>
-        <p className="text-xs uppercase tracking-widest text-signal">Задачи направления</p>
+        <p className="text-xs uppercase tracking-widest text-signal">Задачи решения</p>
         <h2 className="mt-4 font-serif text-4xl md:text-5xl">С чего можно начать</h2>
         <div className="mt-9 grid gap-4 md:grid-cols-2">
           {d.tasks.map(([title, body], i) => <div key={title} className="border border-white/10 bg-white/[0.02] p-7 md:p-9"><span className="font-mono text-xs text-primary">0{i + 1}</span><h3 className="mt-5 text-xl font-medium">{title}</h3><p className="mt-3 leading-relaxed text-white/65">{body}</p></div>)}
         </div>
       </section>
       <DirectionExample example={example} />
-      <nav aria-label="Разделы направления" className={`${container} flex flex-wrap gap-5 py-6 text-sm text-white/75`}>
+      <nav aria-label="Разделы решения" className={`${container} flex flex-wrap gap-5 py-6 text-sm text-white/75`}>
         <a href="#services" className="hover:text-white">Выбрать услугу ↓</a>
         <a href="#pricing" className="hover:text-white">Стоимость и условия ↓</a>
       </nav>
       <section id="services" aria-labelledby="services-title" className={`${container} scroll-mt-24 pb-16 md:pb-20`}>
-        <p className="text-xs uppercase tracking-widest text-signal">Услуги направления</p>
+        <p className="text-xs uppercase tracking-widest text-signal">Услуги решения</p>
         <h2 id="services-title" className="mt-4 font-serif text-4xl md:text-5xl">Выберите решение под вашу задачу</h2>
         <nav aria-label="Группы услуг" className="mt-10 mb-12 grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3">
           {groups.map((group) => <a key={group.id} href={`#${group.id}`} className="group flex min-h-12 items-center justify-between gap-3 rounded-sm border border-white/20 bg-gradient-to-b from-white/[0.08] to-white/[0.015] px-3 py-1.5 text-xs text-white/75 shadow-[inset_0_1px_0_rgba(255,255,255,0.13),0_5px_14px_rgba(0,0,0,0.3)] transition-all hover:-translate-y-px hover:border-primary/60 hover:from-white/[0.12] hover:to-white/[0.04] hover:text-white hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_8px_18px_rgba(0,0,0,0.38)] active:translate-y-0">
@@ -86,7 +86,7 @@ export default function Direction({ direction }) {
         {d.faq.map(([question, answer]) => <details key={question} className="border-t border-white/15 py-5"><summary className="cursor-pointer text-lg">{question}</summary><p className="mt-4 max-w-3xl leading-relaxed text-white/65">{answer}</p></details>)}
       </section>
       <section className="border-t border-primary/30 bg-primary/[0.07]">
-        <div className={`${container} py-16 md:py-20`}><p className="text-xs uppercase tracking-widest text-signal">Следующий шаг</p><h2 className="mt-4 font-serif text-4xl md:text-5xl">Обсудим ваш процесс</h2><p className="mt-5 max-w-2xl leading-relaxed text-white/70">Расскажите, какую задачу хотите автоматизировать и какими системами пользуетесь. Определим, с чего начать и что потребуется для оценки проекта.</p><div className="mt-8 flex flex-wrap items-center gap-6"><CanonicalLink to="/contacts" className="signal-button inline-flex items-center gap-3 rounded-sm px-6 py-3 font-medium">Связаться с командой <ArrowRight size={18} /></CanonicalLink><a href="#services" className="text-sm text-white/70 underline underline-offset-4 hover:text-white">Посмотреть услуги направления</a></div></div>
+        <div className={`${container} py-16 md:py-20`}><p className="text-xs uppercase tracking-widest text-signal">Следующий шаг</p><h2 className="mt-4 font-serif text-4xl md:text-5xl">Обсудим ваш процесс</h2><p className="mt-5 max-w-2xl leading-relaxed text-white/70">Расскажите, какую задачу хотите автоматизировать и какими системами пользуетесь. Определим, с чего начать и что потребуется для оценки проекта.</p><div className="mt-8 flex flex-wrap items-center gap-6"><CanonicalLink to="/contacts" className="signal-button inline-flex items-center gap-3 rounded-sm px-6 py-3 font-medium">Связаться с командой <ArrowRight size={18} /></CanonicalLink><a href="#services" className="text-sm text-white/70 underline underline-offset-4 hover:text-white">Посмотреть услуги решения</a></div></div>
       </section>
     </div>
   );

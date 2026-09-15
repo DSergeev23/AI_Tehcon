@@ -56,7 +56,7 @@ $company = value($data, 'company', 150) ?: 'Не указана';
 $message = value($data, 'message', 5000, true);
 $pageUrl = value($data, 'pageUrl', 2048) ?: 'Не указана';
 $contextLines = [];
-foreach (['service' => 'Услуга', 'direction' => 'Направление', 'sourcePage' => 'Переход к форме', 'landingPage' => 'Страница входа', 'referrer' => 'Внешний источник', 'utm_source' => 'UTM source', 'utm_medium' => 'UTM medium', 'utm_campaign' => 'UTM campaign', 'utm_content' => 'UTM content', 'utm_term' => 'UTM term', 'yclid' => 'Yandex Click ID'] as $field => $label) {
+foreach (['service' => 'Услуга', 'direction' => 'Решение', 'sourcePage' => 'Переход к форме', 'landingPage' => 'Страница входа', 'referrer' => 'Внешний источник', 'utm_source' => 'UTM source', 'utm_medium' => 'UTM medium', 'utm_campaign' => 'UTM campaign', 'utm_content' => 'UTM content', 'utm_term' => 'UTM term', 'yclid' => 'Yandex Click ID'] as $field => $label) {
     $contextValue = value($data, $field, 1000);
     if ($contextValue !== '') {
         $contextLines[] = $label . ': ' . str_replace(["\r", "\n"], ' ', $contextValue);

@@ -1232,6 +1232,166 @@ export const imageVariants = {
       }
     ]
   },
+  "/images/cases/ut115-daily-sales-agent.png": {
+    "width": 1586,
+    "height": 992,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/ut115-daily-sales-agent-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-daily-sales-agent-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-daily-sales-agent-w1200.avif",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/ut115-daily-sales-agent-w1586.avif",
+        "width": 1586
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/ut115-daily-sales-agent-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-daily-sales-agent-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-daily-sales-agent-w1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/ut115-daily-sales-agent-w1586.webp",
+        "width": 1586
+      }
+    ]
+  },
+  "/images/cases/ut115-document-status-report.png": {
+    "width": 1586,
+    "height": 992,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/ut115-document-status-report-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-document-status-report-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-document-status-report-w1200.avif",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/ut115-document-status-report-w1586.avif",
+        "width": 1586
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/ut115-document-status-report-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-document-status-report-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-document-status-report-w1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/ut115-document-status-report-w1586.webp",
+        "width": 1586
+      }
+    ]
+  },
+  "/images/cases/ut115-gross-profit-report.png": {
+    "width": 1586,
+    "height": 992,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/ut115-gross-profit-report-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-gross-profit-report-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-gross-profit-report-w1200.avif",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/ut115-gross-profit-report-w1586.avif",
+        "width": 1586
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/ut115-gross-profit-report-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-gross-profit-report-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-gross-profit-report-w1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/ut115-gross-profit-report-w1586.webp",
+        "width": 1586
+      }
+    ]
+  },
+  "/images/cases/ut115-sales-documents-report.png": {
+    "width": 1586,
+    "height": 992,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/ut115-sales-documents-report-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-sales-documents-report-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-sales-documents-report-w1200.avif",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/ut115-sales-documents-report-w1586.avif",
+        "width": 1586
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/ut115-sales-documents-report-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-sales-documents-report-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-sales-documents-report-w1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/ut115-sales-documents-report-w1586.webp",
+        "width": 1586
+      }
+    ]
+  },
   "/images/content-factory-blog.png": {
     "width": 1672,
     "height": 941,

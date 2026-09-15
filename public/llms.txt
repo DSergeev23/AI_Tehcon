@@ -10,7 +10,7 @@
 - [Контакты](https://ai-tehcon.ru/contacts/)
 - [Карта сайта](https://ai-tehcon.ru/sitemap.xml)
 
-## Направления решений
+## Решения
 
 - [ИИ для 1С](https://ai-tehcon.ru/catalog/1c/)
 - [Анализ изображений](https://ai-tehcon.ru/catalog/image-analysis/)

@@ -25,7 +25,7 @@ export default function PageNotFound() {
             Такой страницы нет
           </h1>
           <p className="mt-7 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
-            Возможно, адрес изменился или в ссылке есть опечатка. Выберите направление ниже либо перейдите в полный каталог решений.
+            Возможно, адрес изменился или в ссылке есть опечатка. Выберите решение ниже либо перейдите в полный каталог решений.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -89,7 +89,7 @@ export default function PageNotFound() {
         </nav>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-white/[0.08] pt-8 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>Не нашли нужное направление?</p>
+          <p>Не нашли нужное решение?</p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             <CanonicalLink to="/contacts" className="text-white transition-colors hover:text-primary">Контакты</CanonicalLink>
             <a href="mailto:hello@ai-tehcon.ru" className="text-white transition-colors hover:text-primary">hello@ai-tehcon.ru</a>

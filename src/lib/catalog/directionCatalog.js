@@ -20,6 +20,6 @@ export function getDirectionGroups(slug) {
   }));
   const related = directionAssignments.filter((entry) => entry.secondary.includes(slug))
     .map((entry) => productsById.get(entry.id));
-  if (related.length) result.push({ id: 'related-services', label: 'Решения на стыке направлений', products: related });
+  if (related.length) result.push({ id: 'related-services', label: 'Связанные решения', products: related });
   return result;
 }

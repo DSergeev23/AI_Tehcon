@@ -16,6 +16,8 @@ const About = React.lazy(() => import('./pages/About'));
 const Catalog = React.lazy(() => import('./pages/Catalog'));
 const Contacts = React.lazy(() => import('./pages/Contacts'));
 const Partners = React.lazy(() => import('./pages/Partners'));
+const Cases = React.lazy(() => import('./pages/Cases'));
+const CaseDetail = React.lazy(() => import('./pages/CaseDetail'));
 const News = React.lazy(() => import('./pages/News'));
 const NewsDetail = React.lazy(() => import('./pages/NewsDetail'));
 const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
@@ -49,6 +51,8 @@ export const PublicApp = () => {
         />
         <Route path="/contacts" element={<LazyRoute><Contacts /></LazyRoute>} />
         <Route path="/partners" element={<LazyRoute><Partners /></LazyRoute>} />
+        <Route path="/cases" element={<LazyRoute><Cases /></LazyRoute>} />
+        <Route path="/cases/:slug" element={<LazyRoute><CaseDetail /></LazyRoute>} />
         <Route path="/news" element={<LazyRoute><News /></LazyRoute>} />
         <Route path="/news/:slug" element={<LazyRoute><NewsDetail /></LazyRoute>} />
         <Route path="/privacy-policy" element={<LazyRoute><PrivacyPolicy /></LazyRoute>} />

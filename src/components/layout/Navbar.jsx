@@ -6,18 +6,26 @@ import { directions } from '../../lib/directions';
 
 const navLinks = [
   { label: 'Главная', path: '/' },
-  { label: 'Направления', path: null },
+  { label: 'Решения', dropdown: 'solutions' },
+  { label: 'Кейсы', path: '/cases' },
   { label: 'Новости', path: '/news' },
-  { label: 'Партнёрам', path: '/partners' },
+  { label: 'О компании', dropdown: 'company' },
+];
+
+const companyLinks = [
   { label: 'О компании', path: '/about' },
+  { label: 'Партнёрам', path: '/partners' },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [directionsOpen, setDirectionsOpen] = useState(false);
+  const [companyOpen, setCompanyOpen] = useState(false);
   const dropdownRef = useRef(null);
   const triggerRef = useRef(null);
+  const companyDropdownRef = useRef(null);
+  const companyTriggerRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -26,20 +34,22 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => { setMobileOpen(false); setDirectionsOpen(false); }, [location]);
+  useEffect(() => { setMobileOpen(false); setDirectionsOpen(false); setCompanyOpen(false); }, [location]);
   useEffect(() => {
     const closeOutside = (event) => {
       if (!dropdownRef.current?.contains(event.target)) setDirectionsOpen(false);
+      if (!companyDropdownRef.current?.contains(event.target)) setCompanyOpen(false);
     };
     const closeOnEscape = (event) => {
       if (event.key !== 'Escape') return;
       if (directionsOpen) { setDirectionsOpen(false); triggerRef.current?.focus(); }
+      else if (companyOpen) { setCompanyOpen(false); companyTriggerRef.current?.focus(); }
       else setMobileOpen(false);
     };
     document.addEventListener('pointerdown', closeOutside);
     document.addEventListener('keydown', closeOnEscape);
     return () => { document.removeEventListener('pointerdown', closeOutside); document.removeEventListener('keydown', closeOnEscape); };
-  }, [directionsOpen]);
+  }, [companyOpen, directionsOpen]);
 
   return (
     <>
@@ -68,16 +78,29 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden xl:flex items-center gap-0.5">
             {navLinks.map((link) => {
-              if (!link.path) return (
+              if (link.dropdown === 'solutions') return (
                 <div key="directions" ref={dropdownRef} className="relative" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setDirectionsOpen(false); }}>
-                  <button ref={triggerRef} type="button" aria-expanded={directionsOpen} aria-controls="desktop-directions" onClick={() => setDirectionsOpen(!directionsOpen)} className={`inline-flex h-9 items-center gap-2 rounded-md border px-4 text-sm transition-colors ${directions.some((d) => location.pathname.replace(/\/$/, '') === `/${d.slug}`) ? 'border-primary/45 bg-white/[0.07] text-white' : 'border-transparent text-white/75 hover:bg-white/[0.05] hover:text-white'}`}>
-                    Направления <ChevronDown size={14} className={directionsOpen ? 'rotate-180' : ''} />
+                  <button ref={triggerRef} type="button" aria-expanded={directionsOpen} aria-controls="desktop-directions" onClick={() => { setDirectionsOpen(!directionsOpen); setCompanyOpen(false); }} className={`inline-flex h-9 items-center gap-2 rounded-md border px-4 text-sm transition-colors ${directions.some((d) => location.pathname.replace(/\/$/, '') === `/${d.slug}`) ? 'border-primary/45 bg-white/[0.07] text-white' : 'border-transparent text-white/75 hover:bg-white/[0.05] hover:text-white'}`}>
+                    Решения <ChevronDown size={14} className={directionsOpen ? 'rotate-180' : ''} />
                   </button>
                   <div id="desktop-directions" hidden={!directionsOpen} className="absolute left-0 top-full mt-2 w-80 rounded-md border border-white/15 bg-black p-2 shadow-xl">
                     {directions.map((d) => <CanonicalLink key={d.slug} to={`/${d.slug}`} aria-current={location.pathname.replace(/\/$/, '') === `/${d.slug}` ? 'page' : undefined} className="block rounded-sm px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white focus-visible:bg-white/10">{d.label}</CanonicalLink>)}
                   </div>
                 </div>
               );
+              if (link.dropdown === 'company') {
+                const isActive = companyLinks.some((item) => location.pathname === item.path || location.pathname.startsWith(`${item.path}/`));
+                return (
+                  <div key="company" ref={companyDropdownRef} className="relative" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setCompanyOpen(false); }}>
+                    <button ref={companyTriggerRef} type="button" aria-expanded={companyOpen} aria-controls="desktop-company" onClick={() => { setCompanyOpen(!companyOpen); setDirectionsOpen(false); }} className={`inline-flex h-9 items-center gap-2 rounded-md border px-4 text-sm transition-colors ${isActive ? 'border-primary/45 bg-white/[0.07] text-white' : 'border-transparent text-white/75 hover:bg-white/[0.05] hover:text-white'}`}>
+                      О компании <ChevronDown size={14} className={companyOpen ? 'rotate-180' : ''} />
+                    </button>
+                    <div id="desktop-company" hidden={!companyOpen} className="absolute left-0 top-full mt-2 w-52 rounded-md border border-white/15 bg-black p-2 shadow-xl">
+                      {companyLinks.map((item) => <CanonicalLink key={item.path} to={item.path} aria-current={location.pathname === item.path ? 'page' : undefined} className="block rounded-sm px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white focus-visible:bg-white/10">{item.label}</CanonicalLink>)}
+                    </div>
+                  </div>
+                );
+              }
               const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(`${link.path}/`));
               return (
                 <CanonicalLink
@@ -125,10 +148,15 @@ export default function Navbar() {
       {mobileOpen && (
           <div id="mobile-navigation" className="fixed inset-x-0 top-16 z-40 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-white/[0.08] bg-black xl:hidden animate-in fade-in slide-in-from-top-2 duration-200">
             <div className="px-5 py-4 flex flex-col gap-0.5">
-              {navLinks.map((link) => !link.path ? (
+              {navLinks.map((link) => link.dropdown === 'solutions' ? (
                 <details key="directions" className="border-b border-white/[0.06] py-3 text-sm text-white/75">
-                  <summary className="cursor-pointer">Направления</summary>
+                  <summary className="cursor-pointer">Решения</summary>
                   <div className="mt-2 border-l border-primary/40 pl-4">{directions.map((d) => <CanonicalLink key={d.slug} to={`/${d.slug}`} className="block py-3 hover:text-white">{d.label}</CanonicalLink>)}</div>
+                </details>
+              ) : link.dropdown === 'company' ? (
+                <details key="company" className="border-b border-white/[0.06] py-3 text-sm text-white/75">
+                  <summary className="cursor-pointer">О компании</summary>
+                  <div className="mt-2 border-l border-primary/40 pl-4">{companyLinks.map((item) => <CanonicalLink key={item.path} to={item.path} className="block py-3 hover:text-white">{item.label}</CanonicalLink>)}</div>
                 </details>
               ) : (
                 <CanonicalLink

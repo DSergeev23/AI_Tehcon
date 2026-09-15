@@ -6,6 +6,7 @@ import { catalogProducts } from './src/lib/catalog/index.js'
 import { catalogCategoryNav } from './src/lib/catalog/categorySeo.js'
 import { directions } from './src/lib/directions.js'
 import { categoryRedirects } from './src/lib/catalog/categoryRedirects.js'
+import { caseStudies } from './src/lib/caseStudies.js'
 
 function redirectCatalogCategory(req, res, next) {
   const url = new URL(req.url, 'http://localhost');
@@ -21,6 +22,8 @@ const prerenderRoutes = [
   '/404.html',
   '/about',
   '/catalog',
+  '/cases',
+  ...caseStudies.map(({ slug }) => `/cases/${slug}`),
   ...catalogCategoryNav.map(({ slug }) => `/catalog/${slug}`),
   ...catalogProducts.map(({ id }) => `/catalog/${id}`),
   '/news',
