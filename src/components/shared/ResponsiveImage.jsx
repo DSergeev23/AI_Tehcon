@@ -15,8 +15,10 @@ export function getOptimizedImageUrl(src, preferredWidth = 960, format = 'avif')
 
 export default function ResponsiveImage({
   src,
+  mobileSrc = undefined,
   alt,
   sizes = '100vw',
+  mobileSizes = '100vw',
   loading = /** @type {'lazy' | 'eager'} */ ('lazy'),
   decoding = /** @type {'async' | 'sync' | 'auto'} */ ('async'),
   className = '',
@@ -24,6 +26,7 @@ export default function ResponsiveImage({
   ...imageProps
 }) {
   const image = imageVariants[src];
+  const mobileImage = mobileSrc ? imageVariants[mobileSrc] : undefined;
   if (!image) {
     return (
       <img
@@ -41,6 +44,10 @@ export default function ResponsiveImage({
 
   return (
     <picture className={pictureClassName}>
+      {mobileImage && <>
+        <source media="(max-width: 767px)" type="image/avif" srcSet={createSrcSet(mobileImage.avif)} sizes={mobileSizes} />
+        <source media="(max-width: 767px)" type="image/webp" srcSet={createSrcSet(mobileImage.webp)} sizes={mobileSizes} />
+      </>}
       <source type="image/avif" srcSet={createSrcSet(image.avif)} sizes={sizes} />
       <source type="image/webp" srcSet={createSrcSet(image.webp)} sizes={sizes} />
       <img

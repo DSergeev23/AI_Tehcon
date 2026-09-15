@@ -8,12 +8,14 @@ import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, toCanonicalPath } from '../../li
  *   description: string;
  *   canonical?: string;
  *   ogImage?: string;
+ *   ogImageWidth?: number;
+ *   ogImageHeight?: number;
  *   schemaJson?: unknown;
  *   keywords?: string;
  *   ogType?: string;
  * }} props
  */
-export default function SEOHead({ title, description, canonical, ogImage, schemaJson, keywords, ogType = 'website' }) {
+export default function SEOHead({ title, description, canonical, ogImage, ogImageWidth = 1200, ogImageHeight = 630, schemaJson, keywords, ogType = 'website' }) {
   const fullUrl = `${SITE_URL}${toCanonicalPath(canonical || '/')}`;
   const image = ogImage || DEFAULT_OG_IMAGE;
 
@@ -33,8 +35,8 @@ export default function SEOHead({ title, description, canonical, ogImage, schema
       <meta property="og:description" content={description} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={image} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:image:width" content={String(ogImageWidth)} />
+      <meta property="og:image:height" content={String(ogImageHeight)} />
       <meta property="og:image:alt" content={title} />
       <meta property="og:locale" content="ru_RU" />
 

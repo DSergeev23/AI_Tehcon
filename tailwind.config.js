@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-        serif: ['Instrument Serif', 'serif'],
+        serif: ['Inter', 'sans-serif'],
       },
       screens: {
         '3xl': '1920px',

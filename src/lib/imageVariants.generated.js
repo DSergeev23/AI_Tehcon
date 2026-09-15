@@ -1232,6 +1232,406 @@ export const imageVariants = {
       }
     ]
   },
+  "/images/cases/content-plan-autoposting-desktop.png": {
+    "width": 1672,
+    "height": 941,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-desktop-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-desktop-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-desktop-w1200.avif",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-desktop-w1600.avif",
+        "width": 1600
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-desktop-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-desktop-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-desktop-w1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-desktop-w1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/images/cases/content-plan-autoposting-mobile.png": {
+    "width": 941,
+    "height": 1672,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-mobile-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-mobile-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-mobile-w941.avif",
+        "width": 941
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-mobile-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-mobile-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/content-plan-autoposting-mobile-w941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/images/cases/telegram-lead-generator-1c-crm.png": {
+    "width": 1672,
+    "height": 941,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-1c-crm-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-1c-crm-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-1c-crm-w1200.avif",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-1c-crm-w1600.avif",
+        "width": 1600
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-1c-crm-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-1c-crm-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-1c-crm-w1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-1c-crm-w1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/images/cases/telegram-lead-generator-desktop.png": {
+    "width": 1672,
+    "height": 941,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-desktop-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-desktop-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-desktop-w1200.avif",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-desktop-w1600.avif",
+        "width": 1600
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-desktop-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-desktop-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-desktop-w1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-desktop-w1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "/images/cases/telegram-lead-generator-mobile.png": {
+    "width": 941,
+    "height": 1672,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-mobile-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-mobile-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-mobile-w941.avif",
+        "width": 941
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-mobile-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-mobile-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/telegram-lead-generator-mobile-w941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/images/cases/upp-competitor-price-analysis-desktop.png": {
+    "width": 1586,
+    "height": 992,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-desktop-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-desktop-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-desktop-w1200.avif",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-desktop-w1586.avif",
+        "width": 1586
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-desktop-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-desktop-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-desktop-w1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-desktop-w1586.webp",
+        "width": 1586
+      }
+    ]
+  },
+  "/images/cases/upp-competitor-price-analysis-mobile.png": {
+    "width": 941,
+    "height": 1672,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-mobile-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-mobile-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-mobile-w941.avif",
+        "width": 941
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-mobile-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-mobile-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-competitor-price-analysis-mobile-w941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/images/cases/upp-procurement-offers-desktop.png": {
+    "width": 1586,
+    "height": 992,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-desktop-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-desktop-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-desktop-w1200.avif",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-desktop-w1586.avif",
+        "width": 1586
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-desktop-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-desktop-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-desktop-w1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-desktop-w1586.webp",
+        "width": 1586
+      }
+    ]
+  },
+  "/images/cases/upp-procurement-offers-mobile.png": {
+    "width": 941,
+    "height": 1672,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-mobile-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-mobile-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-mobile-w941.avif",
+        "width": 941
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-mobile-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-mobile-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-procurement-offers-mobile-w941.webp",
+        "width": 941
+      }
+    ]
+  },
+  "/images/cases/upp-supplier-contract-analysis-dashboard.png": {
+    "width": 1586,
+    "height": 992,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-dashboard-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-dashboard-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-dashboard-w1200.avif",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-dashboard-w1586.avif",
+        "width": 1586
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-dashboard-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-dashboard-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-dashboard-w1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-dashboard-w1586.webp",
+        "width": 1586
+      }
+    ]
+  },
+  "/images/cases/upp-supplier-contract-analysis-mobile.png": {
+    "width": 941,
+    "height": 1672,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-mobile-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-mobile-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-mobile-w941.avif",
+        "width": 941
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-mobile-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-mobile-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/upp-supplier-contract-analysis-mobile-w941.webp",
+        "width": 941
+      }
+    ]
+  },
   "/images/cases/ut115-daily-sales-agent.png": {
     "width": 1586,
     "height": 992,
@@ -1349,6 +1749,78 @@ export const imageVariants = {
       {
         "src": "/images/optimized/cases/ut115-gross-profit-report-w1586.webp",
         "width": 1586
+      }
+    ]
+  },
+  "/images/cases/ut115-marketplace-reconciliation-desktop.png": {
+    "width": 1586,
+    "height": 992,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-desktop-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-desktop-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-desktop-w1200.avif",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-desktop-w1586.avif",
+        "width": 1586
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-desktop-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-desktop-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-desktop-w1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-desktop-w1586.webp",
+        "width": 1586
+      }
+    ]
+  },
+  "/images/cases/ut115-marketplace-reconciliation-mobile.png": {
+    "width": 941,
+    "height": 1672,
+    "avif": [
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-mobile-w480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-mobile-w768.avif",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-mobile-w941.avif",
+        "width": 941
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-mobile-w480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-mobile-w768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/optimized/cases/ut115-marketplace-reconciliation-mobile-w941.webp",
+        "width": 941
       }
     ]
   },

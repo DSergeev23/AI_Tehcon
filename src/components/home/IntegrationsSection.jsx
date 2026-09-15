@@ -46,7 +46,7 @@ export default function IntegrationsSection() {
           <div className="mb-12">
             <h2 className="font-serif text-4xl md:text-5xl 2xl:text-6xl text-white tracking-tight leading-tight mb-4">
               Подключается ко всему,<br />
-              <span className="[font-family:'Instrument_Serif',_serif] not-italic">что вы уже используете</span>
+              <span className="font-semibold not-italic">что вы уже используете</span>
             </h2>
             <p className="text-sm text-white max-w-md leading-relaxed">
               AI TehCon работает с вашими инструментами через MCP и API.{' '}

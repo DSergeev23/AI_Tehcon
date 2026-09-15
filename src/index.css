@@ -17,14 +17,6 @@
 }
 
 @font-face {
-  font-family: 'Instrument Serif';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/instrument-serif-latin.woff2') format('woff2');
-}
-
-@font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -39,7 +31,7 @@
 @layer base {
   :root {
     --font-inter: 'Inter', sans-serif;
-    --font-serif: 'Instrument Serif', serif;
+    --font-serif: 'Inter', sans-serif;
 
     --background: 0 0% 0%;
     --foreground: 0 0% 98%;
@@ -89,6 +81,7 @@
 
 .font-serif {
   font-family: var(--font-serif);
+  font-weight: 600;
 }
 
 .text-gradient-white {
@@ -292,7 +285,7 @@
   color: #fff;
   font-family: var(--font-serif);
   font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.08;
   letter-spacing: -0.02em;
 }
