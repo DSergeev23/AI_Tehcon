@@ -202,16 +202,17 @@ function jsonForHtml(mixed $value): string
     return json_encode($value, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_THROW_ON_ERROR);
 }
 
-function documentHead(array $seo, string $canonical, string $image, string $schema, string $ogType = 'article'): string
+function documentHead(array $seo, string $canonical, string $image, string $schema, string $ogType = 'article', ?string $author = null): string
 {
     $title = escape($seo['title']);
     $description = escape($seo['description']);
     $canonical = escape($canonical);
     $image = escape($image);
+    $authorMeta = $author !== null && trim($author) !== '' ? '    <meta name="author" content="' . escape($author) . '" />' . "\n" : '';
     return <<<HTML
     <title>{$title}</title>
     <meta name="description" content="{$description}" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+{$authorMeta}    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="{$canonical}" />
     <meta property="og:type" content="{$ogType}" />
     <meta property="og:site_name" content="AI TehCon" />
@@ -231,7 +232,7 @@ HTML;
 function renderDocument(string $shell, string $head, string $rootMarkup): string
 {
     $html = preg_replace('~<title>.*?</title>~is', '', $shell) ?? $shell;
-    $html = preg_replace('~<meta\b(?=[^>]*(?:name|property)="(?:description|robots|og:[^"]+|twitter:[^"]+)")[^>]*>~is', '', $html) ?? $html;
+    $html = preg_replace('~<meta\b(?=[^>]*(?:name|property)="(?:description|author|robots|og:[^"]+|twitter:[^"]+)")[^>]*>~is', '', $html) ?? $html;
     $html = preg_replace('~<link\b(?=[^>]*rel="canonical")[^>]*>~is', '', $html) ?? $html;
     $html = preg_replace('~<script\b(?=[^>]*type="application/ld\+json")[^>]*>.*?</script>~is', '', $html) ?? $html;
     $html = str_replace('</head>', $head . "\n  </head>", $html);
@@ -270,7 +271,7 @@ function renderNewsIndex(array $articles): string
 function renderArticle(array $article): string
 {
     $updated = $article['updatedAt'] !== $article['publishedAt'] ? '<span>Обновлено ' . escape(formatRussianDate($article['updatedAt'])) . '</span>' : '';
-    return '<div class="min-h-screen bg-black">' . staticNavigation() . '<main><article><header class="border-b border-white/[0.08]"><div class="mx-auto max-w-[1440px] px-5 pb-12 pt-14 md:px-8 md:pb-16 md:pt-20"><p class="text-xs uppercase tracking-[0.15em] text-signal">' . escape($article['category']) . ' · ' . escape(formatRussianDate($article['publishedAt'])) . '</p><h1 class="mt-7 font-serif text-5xl leading-tight text-white md:text-7xl">' . escape($article['title']) . '</h1><p class="mt-7 max-w-3xl text-lg leading-relaxed text-white/75">' . escape($article['excerpt']) . '</p><div class="mt-9 flex flex-wrap gap-6 border-t border-white/[0.12] pt-5 text-xs text-white/55"><span>' . escape($article['author']) . '</span><span>' . $article['readingTimeMinutes'] . ' минут</span>' . $updated . '</div></div></header><div class="mx-auto max-w-[1440px] px-5 pt-8 md:px-8 md:pt-12"><img src="' . escape($article['coverImage']) . '" alt="' . escape($article['coverAlt']) . '" width="1600" height="900" class="aspect-[16/9] h-auto w-full object-cover" /></div><div class="mx-auto grid max-w-[1180px] grid-cols-1 gap-12 px-5 py-14 md:px-8 lg:grid-cols-[minmax(0,760px)_280px] lg:gap-20 lg:py-20"><div class="news-prose min-w-0">' . markdownToHtml($article['body']) . '</div><aside><div class="border border-white/[0.12] bg-white/[0.02] p-6"><p class="text-xs uppercase tracking-[0.16em] text-signal">Применить на практике</p><h2 class="mt-4 font-serif text-3xl text-white">Найдём задачу с измеримым эффектом</h2><a href="/contacts/" class="signal-button mt-7 inline-flex px-5 py-3 text-sm font-semibold">Обсудить задачу</a></div></aside></div></article></main></div>';
+    return '<div class="min-h-screen bg-black">' . staticNavigation() . '<main><article><header class="border-b border-white/[0.08]"><div class="mx-auto max-w-[1440px] px-5 pb-12 pt-14 md:px-8 md:pb-16 md:pt-20"><p class="text-xs uppercase tracking-[0.15em] text-signal">' . escape($article['category']) . ' · ' . escape(formatRussianDate($article['publishedAt'])) . '</p><h1 class="mt-7 font-serif text-5xl leading-tight text-white md:text-7xl">' . escape($article['title']) . '</h1><p class="mt-4 text-xs text-white/55">Автор: ' . escape($article['author']) . '</p><p class="mt-7 max-w-3xl text-lg leading-relaxed text-white/75">' . escape($article['excerpt']) . '</p><div class="mt-9 flex flex-wrap gap-6 border-t border-white/[0.12] pt-5 text-xs text-white/55"><span>' . $article['readingTimeMinutes'] . ' минут</span>' . $updated . '</div></div></header><div class="mx-auto max-w-[1440px] px-5 pt-8 md:px-8 md:pt-12"><img src="' . escape($article['coverImage']) . '" alt="' . escape($article['coverAlt']) . '" width="1600" height="900" class="aspect-[16/9] h-auto w-full object-cover" /></div><div class="mx-auto grid max-w-[1180px] grid-cols-1 gap-12 px-5 py-14 md:px-8 lg:grid-cols-[minmax(0,760px)_280px] lg:gap-20 lg:py-20"><div class="news-prose min-w-0">' . markdownToHtml($article['body']) . '</div><aside><div class="border border-white/[0.12] bg-white/[0.02] p-6"><p class="text-xs uppercase tracking-[0.16em] text-signal">Применить на практике</p><h2 class="mt-4 font-serif text-3xl text-white">Найдём задачу с измеримым эффектом</h2><a href="/contacts/" class="signal-button mt-7 inline-flex px-5 py-3 text-sm font-semibold">Обсудить задачу</a></div></aside></div></article></main></div>';
 }
 
 function atomicWrite(string $path, string $contents): void
@@ -318,9 +319,18 @@ function runSelfTest(): void
         'author_name' => 'AI TehCon', 'reading_time_minutes' => 3, 'related_solution_ids' => ['test-solution'],
         'source_urls' => [], 'published_at' => '2026-08-25T09:00:00+03:00', 'updated_at' => '2026-08-25T10:00:00+03:00',
     ], ['supabase_url' => 'https://project-ref.supabase.co', 'storage_bucket' => 'news-covers']);
-    $shell = '<!doctype html><html lang="ru"><head><title>Старый title</title><meta data-rh="true" name="description" content="Старое описание"><script type="module" src="/assets/app.js"></script></head><body><div id="root"><main><div>Старый контент</div></main></div></body></html>';
+    $shell = '<!doctype html><html lang="ru"><head><title>Старый title</title><meta data-rh="true" name="description" content="Старое описание"><meta name="author" content="Старый автор"><script type="module" src="/assets/app.js"></script></head><body><div id="root"><main><div>Старый контент</div></main></div></body></html>';
     $document = renderDocument($shell, '<title>Новый title</title>', '<main><h1>Новый контент</h1></main>');
-    if ($article['publishedAt'] !== '2026-08-25' || !str_contains($article['coverImage'], '/news-covers/test-news/cover.webp') || !str_contains(markdownToHtml($article['body']), '<h2>Раздел</h2>') || str_contains(markdownToHtml('<script>alert(1)</script>'), '<script>') || str_contains($document, 'Старый контент') || !str_contains($document, 'data-news-generated="true"')) {
+    $articleDocument = renderDocument(
+        $shell,
+        documentHead($article['seo'], 'https://ai-tehcon.ru/news/test-news/', $article['coverImage'], '{}', 'article', $article['author']),
+        renderArticle($article),
+    );
+    $articleHtml = renderArticle($article);
+    $titlePosition = strpos($articleHtml, $article['title']);
+    $authorPosition = strpos($articleHtml, 'Автор: ' . $article['author']);
+    $excerptPosition = strpos($articleHtml, $article['excerpt']);
+    if ($article['publishedAt'] !== '2026-08-25' || !str_contains($article['coverImage'], '/news-covers/test-news/cover.webp') || !str_contains(markdownToHtml($article['body']), '<h2>Раздел</h2>') || str_contains(markdownToHtml('<script>alert(1)</script>'), '<script>') || str_contains($document, 'Старый контент') || !str_contains($document, 'data-news-generated="true"') || substr_count($articleDocument, 'name="author"') !== 1 || !str_contains($articleDocument, '<meta name="author" content="AI TehCon" />') || str_contains($articleDocument, 'Старый автор') || $titlePosition === false || $authorPosition === false || $excerptPosition === false || !($titlePosition < $authorPosition && $authorPosition < $excerptPosition)) {
         fail('Self-test failed');
     }
     fwrite(STDOUT, "Self-test passed\n");
@@ -399,7 +409,7 @@ try {
     foreach ($articles as $article) {
         $canonical = $siteUrl . '/news/' . $article['slug'] . '/';
         $schema = ['@context' => 'https://schema.org', '@type' => 'NewsArticle', 'headline' => $article['title'], 'description' => $article['seo']['description'], 'image' => [$article['coverImage']], 'datePublished' => $article['publishedAtIso'], 'dateModified' => $article['updatedAtIso'], 'author' => ['@type' => 'Organization', 'name' => $article['author'], 'url' => $siteUrl], 'publisher' => ['@type' => 'Organization', 'name' => SITE_NAME, 'url' => $siteUrl, 'logo' => $siteUrl . '/images/icon-512.png'], 'mainEntityOfPage' => $canonical];
-        atomicWrite($publicRoot . '/news/' . $article['slug'] . '/index.html', renderDocument($shell, documentHead($article['seo'], $canonical, $article['coverImage'], jsonForHtml($schema)), renderArticle($article)));
+        atomicWrite($publicRoot . '/news/' . $article['slug'] . '/index.html', renderDocument($shell, documentHead($article['seo'], $canonical, $article['coverImage'], jsonForHtml($schema), 'article', $article['author']), renderArticle($article)));
     }
 
     $collectionSchema = ['@context' => 'https://schema.org', '@type' => 'CollectionPage', 'name' => 'Новости и практика применения AI', 'url' => $siteUrl . '/news/', 'mainEntity' => ['@type' => 'ItemList', 'numberOfItems' => count($articles), 'itemListElement' => array_map(static fn(array $article, int $index): array => ['@type' => 'ListItem', 'position' => $index + 1, 'url' => $siteUrl . '/news/' . $article['slug'] . '/', 'name' => $article['title']], $articles, array_keys($articles))]];

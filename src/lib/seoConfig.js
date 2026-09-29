@@ -76,5 +76,6 @@ export function getNewsSEO(article) {
     canonical: toCanonicalPath(`/news/${article.slug}`),
     ogImage: toAbsoluteUrl(article.coverImage),
     ogType: 'article',
+    author: article.author,
   };
 }

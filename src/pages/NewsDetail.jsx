@@ -48,9 +48,9 @@ export default function NewsDetail() {
               <time dateTime={article.publishedAt} className="text-white/55">{formatNewsDate(article.publishedAt)}</time>
             </div>
             <h1 className="mt-7 font-serif text-5xl leading-[0.98] tracking-tight text-white md:text-7xl">{article.title}</h1>
+            <p className="mt-4 text-xs text-white/55">Автор: {article.author}</p>
             <p className="mt-7 max-w-3xl text-base leading-relaxed text-white/75 md:text-lg">{article.excerpt}</p>
             <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/[0.12] pt-5 text-xs text-white/55">
-              <span>{article.author}</span>
               <span className="inline-flex items-center gap-1.5"><Clock3 className="h-3.5 w-3.5 text-primary" /> {article.readingTime}</span>
               {article.updatedAt !== article.publishedAt && <span>Обновлено {formatNewsDate(article.updatedAt)}</span>}
             </div>
