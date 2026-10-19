@@ -12,10 +12,7 @@ function csvValue(value) {
 
 function getMinimumPrice(pricing) {
   const price = Number(String(pricing).replace(/[^\d]/g, ''));
-  if (!Number.isFinite(price) || price <= 0) {
-    throw new Error(`Не удалось извлечь минимальную цену из: ${pricing}`);
-  }
-  return price;
+  return Number.isFinite(price) && price > 0 ? price : null;
 }
 
 function getImage(product) {
@@ -28,7 +25,7 @@ function getImage(product) {
 }
 
 const header = ['ID', 'URL', 'Image', 'Title', 'Description', 'Price', 'Currency', 'custom_label_0'];
-const rows = catalogProducts.map((product) => {
+const rows = catalogProducts.filter((product) => getMinimumPrice(product.pricing) !== null).map((product) => {
   const image = getImage(product);
 
   return [

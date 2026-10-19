@@ -1,13 +1,41 @@
 import React, { useState } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import CaseCard from '../components/cases/CaseCard';
+import CanonicalLink from '../components/shared/CanonicalLink';
+import ResponsiveImage from '../components/shared/ResponsiveImage';
 import SEOHead from '../components/shared/SEOHead';
 import { caseStudies } from '../lib/caseStudies';
 import { directions } from '../lib/directions';
 import { pageSEO } from '../lib/seoConfig';
 
+const marketplaceSolutions = [
+  {
+    id: 'marketplace-financial-auditor',
+    title: 'ИИ-аудитор финансов WB и Ozon',
+    description: 'Сверяет данные маркетплейсов и 1С, показывает структуру расходов, изменение маржи и суммы, которые требуют проверки.',
+    image: '/images/marketplace-financial-auditor-report.svg',
+    alt: 'Отчёт финансового аудита Ozon со структурой расходов и маржинальной прибылью',
+  },
+  {
+    id: 'marketplace-financial-director',
+    title: 'ИИ-финансовый директор для WB и Ozon',
+    description: 'Собирает P&L, сравнивает план с фактом и объясняет влияние выручки, ДРР и затрат на операционную прибыль.',
+    image: '/images/marketplace-financial-director-report.svg',
+    alt: 'Отчёт P&L с планом, фактом, ДРР и расшифровкой отклонения прибыли',
+  },
+  {
+    id: 'marketplace-unit-economist',
+    title: 'ИИ-экономист по SKU для WB и Ozon',
+    description: 'Считает юнит-экономику и показывает минимальную цену продажи и допустимую себестоимость при целевой марже.',
+    image: '/images/marketplace-unit-economist-report.svg',
+    alt: 'Отчёт по SKU с юнит-экономикой, минимальной ценой и запасом до порога',
+  },
+];
+
 export default function Cases() {
   const [activeSolution, setActiveSolution] = useState(null);
   const filteredCases = activeSolution ? caseStudies.filter((caseStudy) => caseStudy.solution === activeSolution) : caseStudies;
+  const showMarketplaceSolutions = !activeSolution || activeSolution === 'ai-for-marketplace';
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -32,6 +60,27 @@ export default function Cases() {
               })}
             </div>
           </section>
+          {showMarketplaceSolutions && (
+            <section className="mb-12" aria-labelledby="marketplace-solutions-title">
+              <p className="mb-3 text-xs uppercase tracking-[0.16em] text-signal">Решения по теме кейсов</p>
+              <h2 id="marketplace-solutions-title" className="mb-7 font-serif text-3xl text-white md:text-4xl">Финансовый контроль маркетплейсов</h2>
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+                {marketplaceSolutions.map((solution) => (
+                  <article key={solution.id} className="group flex h-full flex-col overflow-hidden border border-primary/35 bg-white/[0.025] transition-colors hover:border-primary/60 hover:bg-white/[0.04]">
+                    <CanonicalLink to={`/catalog/${solution.id}`} className="relative block aspect-[16/10] overflow-hidden bg-[#f7f8f9]" aria-label={`Смотреть решение: ${solution.title}`}>
+                      <ResponsiveImage src={solution.image} alt={solution.alt} sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]" />
+                    </CanonicalLink>
+                    <div className="flex flex-1 flex-col p-6">
+                      <p className="text-[10px] uppercase tracking-[0.14em] text-signal">Решение · ИИ для маркетплейсов</p>
+                      <h3 className="mt-4 text-[1.65rem] font-semibold leading-[1.12] tracking-[-0.025em] text-white"><CanonicalLink to={`/catalog/${solution.id}`}>{solution.title}</CanonicalLink></h3>
+                      <p className="mt-4 text-sm leading-relaxed text-white/70">{solution.description}</p>
+                      <CanonicalLink to={`/catalog/${solution.id}`} className="mt-auto inline-flex items-center gap-2 pt-7 text-xs font-semibold text-white transition-colors hover:text-primary">Смотреть решение <ArrowUpRight className="h-4 w-4" /></CanonicalLink>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
           {filteredCases.length > 0 ? <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">{filteredCases.map((caseStudy) => <CaseCard key={caseStudy.slug} caseStudy={caseStudy} />)}</div> : <div className="border border-white/[0.12] bg-white/[0.015] p-8 text-white/70"><h2 className="font-serif text-3xl text-white">Кейсов пока нет</h2><p className="mt-3 text-sm leading-relaxed">Для этого направления мы ещё готовим подтверждённые материалы.</p></div>}
         </> : <div className="border border-white/[0.12] bg-white/[0.015] p-8 text-white/70"><h2 className="font-serif text-3xl text-white">Кейсы скоро появятся</h2><p className="mt-3 text-sm leading-relaxed">Собираем подтверждённые результаты внедрений и подготовим подробные материалы.</p></div>}
       </main>

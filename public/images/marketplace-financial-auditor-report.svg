@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1280" viewBox="0 0 1600 1280" role="img" aria-labelledby="title description">
+  <title id="title">Финансовый аудит продаж Ozon за июль 2026 года</title>
+  <desc id="description">Выручка 600 000 рублей, прямые расходы 447 000 рублей, маржинальная прибыль 153 000 рублей или 25,5 процента. Показаны статьи расходов, сравнение с январём, маржа на единицу товара и два сигнала для проверки.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; }
+      .eyebrow { font-size: 18px; font-weight: 700; letter-spacing: 2px; }
+      .label { font-size: 19px; font-weight: 700; letter-spacing: 1px; }
+      .body { font-size: 23px; }
+      .body-bold { font-size: 23px; font-weight: 700; }
+      .value { font-size: 46px; font-weight: 700; }
+      .section { font-size: 29px; font-weight: 700; }
+      .heading { font-size: 52px; font-weight: 700; }
+      .small { font-size: 19px; }
+      .mono { font-family: Arial, sans-serif; font-variant-numeric: tabular-nums; }
+    </style>
+  </defs>
+  <rect width="1600" height="1280" fill="#eceff1"/>
+  <rect x="20" y="20" width="1560" height="1240" rx="20" fill="#f7f8f9" stroke="#d5dbe0" stroke-width="2"/>
+  <path d="M40 20h1520a20 20 0 0 1 20 20v145H20V40a20 20 0 0 1 20-20Z" fill="#171c22"/>
+  <rect x="54" y="54" width="7" height="27" fill="#c8444c"/>
+  <text x="78" y="77" class="eyebrow" fill="#e6e9ec">AI TEHCON / ФИНАНСОВЫЙ АУДИТ</text>
+  <text x="54" y="137" class="heading" fill="#ffffff">Куда уходит выручка Ozon</text>
+  <rect x="1260" y="57" width="286" height="50" rx="8" fill="#2a3139" stroke="#67727c"/>
+  <text x="1291" y="90" class="label" fill="#f0f2f4">ИЮЛЬ 2026 · OZON</text>
+  <rect x="54" y="207" width="356" height="173" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="80" y="250" class="label" fill="#697681">СЕБЕСТОИМОСТЬ</text>
+  <text x="80" y="312" class="value mono" fill="#171c22">45,8%</text>
+  <text x="80" y="352" class="small mono" fill="#66727e">274 800 ₽ · в январе 43,8%</text>
+  <rect x="430" y="207" width="356" height="173" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="456" y="250" class="label" fill="#697681">КОМИССИЯ OZON</text>
+  <text x="456" y="312" class="value mono" fill="#171c22">20,8%</text>
+  <text x="456" y="352" class="small mono" fill="#66727e">124 800 ₽ · в январе 17,9%</text>
+  <rect x="806" y="207" width="356" height="173" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="832" y="250" class="label" fill="#697681">ЛОГИСТИКА</text>
+  <text x="832" y="312" class="value mono" fill="#171c22">3,8%</text>
+  <text x="832" y="352" class="small mono" fill="#66727e">22 800 ₽ · в январе 3,5%</text>
+  <rect x="1182" y="207" width="364" height="173" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="1208" y="250" class="label" fill="#697681">РЕКЛАМА</text>
+  <text x="1208" y="312" class="value mono" fill="#171c22">3,2%</text>
+  <text x="1208" y="352" class="small mono" fill="#66727e">19 200 ₽ · в январе 4,7%</text>
+  <rect x="54" y="410" width="850" height="608" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="82" y="459" class="section" fill="#20262d">Структура выручки за июль</text>
+  <text x="82" y="498" class="eyebrow" fill="#697681">СТАТЬЯ</text>
+  <text x="548" y="498" class="eyebrow mono" text-anchor="end" fill="#697681">ИЮЛЬ, ₽</text>
+  <text x="710" y="498" class="eyebrow mono" text-anchor="end" fill="#697681">ДОЛЯ</text>
+  <text x="877" y="498" class="eyebrow mono" text-anchor="end" fill="#697681">ЯНВАРЬ</text>
+  <line x1="82" y1="516" x2="877" y2="516" stroke="#cbd2d8" stroke-width="2"/>
+  <g class="body" fill="#2a3037">
+    <text x="82" y="554">Себестоимость</text><text x="548" y="554" text-anchor="end" class="mono">274 800</text><text x="710" y="554" text-anchor="end" class="mono" fill="#b63740">45,8%</text><text x="877" y="554" text-anchor="end" class="mono">43,8%</text>
+    <text x="82" y="610">Комиссия Ozon</text><text x="548" y="610" text-anchor="end" class="mono">124 800</text><text x="710" y="610" text-anchor="end" class="mono" fill="#b63740">20,8%</text><text x="877" y="610" text-anchor="end" class="mono">17,9%</text>
+    <text x="82" y="666">Логистика</text><text x="548" y="666" text-anchor="end" class="mono">22 800</text><text x="710" y="666" text-anchor="end" class="mono">3,8%</text><text x="877" y="666" text-anchor="end" class="mono">3,5%</text>
+    <text x="82" y="722">Реклама</text><text x="548" y="722" text-anchor="end" class="mono">19 200</text><text x="710" y="722" text-anchor="end" class="mono">3,2%</text><text x="877" y="722" text-anchor="end" class="mono">4,7%</text>
+    <text x="82" y="778">Эквайринг</text><text x="548" y="778" text-anchor="end" class="mono">5 400</text><text x="710" y="778" text-anchor="end" class="mono">0,9%</text><text x="877" y="778" text-anchor="end" class="mono">2,0%</text>
+    <text x="82" y="834">Маркетинг (платный бренд)</text><text x="548" y="834" text-anchor="end" class="mono">0</text><text x="710" y="834" text-anchor="end" class="mono">0%</text><text x="877" y="834" text-anchor="end" class="mono">0%</text>
+  </g>
+  <g stroke="#e0e5e9"><line x1="82" y1="572" x2="877" y2="572"/><line x1="82" y1="628" x2="877" y2="628"/><line x1="82" y1="684" x2="877" y2="684"/><line x1="82" y1="740" x2="877" y2="740"/><line x1="82" y1="796" x2="877" y2="796"/><line x1="82" y1="852" x2="877" y2="852"/></g>
+  <g class="body-bold" fill="#20262d">
+    <text x="82" y="895">Прямые расходы всего</text><text x="548" y="895" text-anchor="end" class="mono">447 000</text><text x="710" y="895" text-anchor="end" class="mono">74,5%</text><text x="877" y="895" text-anchor="end" class="mono">71,9%</text>
+    <text x="82" y="968">Маржинальная прибыль</text><text x="548" y="968" text-anchor="end" class="mono">153 000</text><text x="710" y="968" text-anchor="end" class="mono" fill="#238456">25,5%</text><text x="877" y="968" text-anchor="end" class="mono">28,1%</text>
+  </g>
+  <line x1="82" y1="917" x2="877" y2="917" stroke="#cbd2d8" stroke-width="2"/>
+  <rect x="928" y="410" width="618" height="220" rx="13" fill="#fbf3f2" stroke="#e2c8c8" stroke-width="2"/>
+  <rect x="928" y="410" width="7" height="220" rx="3" fill="#c8444c"/>
+  <text x="958" y="453" class="label" fill="#b63740">ПОЧЕМУ МАРЖА СНИЗИЛАСЬ</text>
+  <text x="958" y="494" class="body" fill="#2a3037">Себестоимость: 43,8% → 45,8% (+2,0 п.п.)</text>
+  <text x="958" y="528" class="body" fill="#2a3037">Комиссия Ozon: 17,9% → 20,8% (+2,9 п.п.)</text>
+  <text x="958" y="570" class="body-bold" fill="#20262d">Вместе: +4,9 п.п. прямых расходов.</text>
+  <text x="958" y="605" class="body" fill="#2a3037">Маржа: 28,1% → 25,5% (−2,6 п.п.).</text>
+  <rect x="928" y="650" width="618" height="157" rx="13" fill="#fff8e6" stroke="#e8d6a4" stroke-width="2"/>
+  <text x="958" y="694" class="section" fill="#20262d">Экономия частично помогла</text>
+  <text x="958" y="737" class="body" fill="#2a3037">Реклама: 33 840 ₽ → 19 200 ₽ (−1,5 п.п.).</text>
+  <text x="958" y="776" class="body" fill="#2a3037">Эквайринг: 2,0% → 0,9% (−1,1 п.п.).</text>
+  <rect x="928" y="827" width="618" height="191" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="958" y="872" class="section" fill="#20262d">Маржа на одну продажу</text>
+  <text x="958" y="913" class="body mono" fill="#2a3037">Янв 337 · Фев 318 · Мар 361 · Апр 330</text>
+  <text x="958" y="948" class="body mono" fill="#2a3037">Май 346 · Июн 339 · Июл 340 ₽/шт.</text>
+  <text x="958" y="981" class="small" fill="#66727e">Январь: 720 000 ₽ · 600 шт. · маржа 202 320 ₽.</text>
+  <text x="958" y="1006" class="small" fill="#66727e">Июль: 600 000 ₽ · 450 шт. · маржа 153 000 ₽.</text>
+  <rect x="54" y="1043" width="1492" height="176" rx="13" fill="#20262d"/>
+  <text x="82" y="1087" class="eyebrow" fill="#f5b0b3">СИГНАЛЫ ДЛЯ ПРОВЕРКИ</text>
+  <line x1="796" y1="1105" x2="796" y2="1190" stroke="#56616b"/>
+  <text x="82" y="1132" class="body-bold" fill="#ffffff">Расхождение выплаты Ozon — 8 400 ₽</text>
+  <text x="82" y="1167" class="small mono" fill="#d1d7dc">К перечислению 314 600 ₽ · банк 306 200 ₽</text>
+  <text x="82" y="1196" class="small" fill="#d1d7dc">Проверить период и удержания.</text>
+  <text x="826" y="1132" class="body-bold" fill="#ffffff">SKU-047: снижение маржи на 26 ₽/шт.</text>
+  <text x="826" y="1167" class="small mono" fill="#d1d7dc">Предыдущий период 67 ₽ · июль 41 ₽</text>
+  <text x="826" y="1196" class="small" fill="#d1d7dc">Проверить комиссию и себестоимость.</text>
+  <text x="54" y="1248" class="small" fill="#66727e">Доли = статья / выручка месяца. Выручка июля — 600 000 ₽; маржа = выручка − прямые расходы. Налоги и постоянные расходы не включены.</text>
+</svg>

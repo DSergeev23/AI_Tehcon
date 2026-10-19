@@ -4,6 +4,9 @@ import cryptoMorningDigest from './products/crypto-morning-digest.js';
 import investmentTopupAutomation from './products/investment-topup-automation.js';
 import aiWealthAssistant from './products/ai-wealth-assistant.js';
 import marketplaceCustomAiAnalyst from './products/marketplace-custom-ai-analyst.js';
+import marketplaceFinancialAuditor from './products/marketplace-financial-auditor.js';
+import marketplaceFinancialDirector from './products/marketplace-financial-director.js';
+import marketplaceUnitEconomist from './products/marketplace-unit-economist.js';
 import aiBloggingAgent from './products/ai-blogging-agent.js';
 import pinterestSeoTrafficAgent from './products/pinterest-seo-traffic-agent.js';
 import aiAgentFor1cChatVoiceAnalytics from './products/ai-agent-for-1c-chat-voice-analytics.js';
@@ -47,6 +50,9 @@ export const catalogProducts = [
   investmentTopupAutomation,
   aiWealthAssistant,
   marketplaceCustomAiAnalyst,
+  marketplaceFinancialAuditor,
+  marketplaceFinancialDirector,
+  marketplaceUnitEconomist,
   aiBloggingAgent,
   pinterestSeoTrafficAgent,
   aiAgentFor1cChatVoiceAnalytics,

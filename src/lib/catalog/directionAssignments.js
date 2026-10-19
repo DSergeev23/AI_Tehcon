@@ -195,6 +195,24 @@ export const directionAssignments = [
     "secondary": []
   },
   {
+    "id": "marketplace-financial-auditor",
+    "direction": "ai-for-marketplace",
+    "group": "Финансы и контроль",
+    "secondary": ["ai-for-1c"]
+  },
+  {
+    "id": "marketplace-financial-director",
+    "direction": "ai-for-marketplace",
+    "group": "Финансы и контроль",
+    "secondary": ["ai-for-1c"]
+  },
+  {
+    "id": "marketplace-unit-economist",
+    "direction": "ai-for-marketplace",
+    "group": "Финансы и контроль",
+    "secondary": ["ai-for-1c"]
+  },
+  {
     "id": "marketplace-niche-discovery",
     "direction": "ai-for-marketplace",
     "group": "Аналитика и развитие ассортимента",
