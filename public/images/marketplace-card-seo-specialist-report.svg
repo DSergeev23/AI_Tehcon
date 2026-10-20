@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1350" viewBox="0 0 1600 1350" role="img" aria-labelledby="title description">
+  <title id="title">Семантика и текст карточки контейнеров для круп</title>
+  <desc id="description">Отчёт ИИ-SEO-специалиста для карточки WB: четыре релевантных поисковых кластера, два исключённых запроса, обновлённый заголовок и описание набора из шести пластиковых контейнеров объёмом один литр.</desc>
+  <defs><style>
+    text { font-family: Arial, sans-serif; }
+    .eyebrow { font-size: 18px; font-weight: 700; letter-spacing: 2px; }
+    .label { font-size: 18px; font-weight: 700; letter-spacing: 1px; }
+    .body { font-size: 22px; }
+    .bold { font-size: 22px; font-weight: 700; }
+    .value { font-size: 43px; font-weight: 700; }
+    .heading { font-size: 50px; font-weight: 700; }
+    .section { font-size: 28px; font-weight: 700; }
+    .small { font-size: 18px; }
+    .mono { font-variant-numeric: tabular-nums; }
+  </style></defs>
+  <rect width="1600" height="1350" fill="#eceff1"/>
+  <rect x="20" y="20" width="1560" height="1310" rx="20" fill="#f7f8f9" stroke="#d5dbe0" stroke-width="2"/>
+  <path d="M40 20h1520a20 20 0 0 1 20 20v145H20V40a20 20 0 0 1 20-20Z" fill="#171c22"/>
+  <rect x="54" y="54" width="7" height="27" fill="#c8444c"/>
+  <text x="78" y="77" class="eyebrow" fill="#e6e9ec">AI TEHCON / SEO-СПЕЦИАЛИСТ</text>
+  <text x="54" y="137" class="heading" fill="#ffffff">Запросы → заголовок → описание</text>
+  <rect x="1200" y="57" width="346" height="50" rx="8" fill="#2a3139" stroke="#67727c"/>
+  <text x="1223" y="90" class="label" fill="#f0f2f4">SKU KTN-6X1 · WB · ОКТЯБРЬ 2026</text>
+
+  <rect x="54" y="207" width="356" height="168" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="80" y="250" class="label" fill="#697681">ТОВАР</text>
+  <text x="80" y="311" class="value mono" fill="#171c22">6 × 1 л</text>
+  <text x="80" y="349" class="small" fill="#66727e">Пластиковые контейнеры</text>
+  <rect x="430" y="207" width="356" height="168" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="456" y="250" class="label" fill="#697681">КЛАСТЕРЫ В РАБОТУ</text>
+  <text x="456" y="311" class="value mono" fill="#171c22">4</text>
+  <text x="456" y="349" class="small" fill="#66727e">По свойствам и назначению</text>
+  <rect x="806" y="207" width="356" height="168" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="832" y="250" class="label" fill="#697681">ИСКЛЮЧИТЬ ИЗ ТЕКСТА</text>
+  <text x="832" y="311" class="value mono" fill="#b63740">2</text>
+  <text x="832" y="349" class="small" fill="#66727e">Стекло и вакуум</text>
+  <rect x="1182" y="207" width="364" height="168" rx="12" fill="#fff8e6" stroke="#e8d6a4" stroke-width="2"/>
+  <text x="1208" y="250" class="label" fill="#806a2e">ПЕРЕД ПУБЛИКАЦИЕЙ</text>
+  <text x="1208" y="311" class="value" fill="#171c22">Редактура</text>
+  <text x="1208" y="349" class="small" fill="#66727e">Сверка характеристик SKU</text>
+
+  <rect x="54" y="403" width="900" height="640" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="82" y="454" class="section" fill="#20262d">Карта поисковых запросов</text>
+  <text x="82" y="498" class="small" fill="#66727e">Частотность за 30 дней помогает выбрать приоритет, не обещает позицию.</text>
+  <text x="82" y="546" class="eyebrow" fill="#697681">КЛАСТЕР</text>
+  <text x="739" y="546" class="eyebrow mono" text-anchor="end" fill="#697681">ЗАПРОСОВ</text>
+  <text x="925" y="546" class="eyebrow" text-anchor="end" fill="#697681">РЕШЕНИЕ</text>
+  <line x1="82" y1="566" x2="925" y2="566" stroke="#cbd2d8" stroke-width="2"/>
+  <g class="body mono" fill="#2a3037">
+    <text x="82" y="612">контейнеры для круп</text><text x="739" y="612" text-anchor="end">34 200</text><text x="925" y="612" text-anchor="end" fill="#238456">основной</text>
+    <text x="82" y="686">банки для сыпучих продуктов</text><text x="739" y="686" text-anchor="end">17 800</text><text x="925" y="686" text-anchor="end" fill="#238456">в работу</text>
+    <text x="82" y="760">контейнер для хранения круп</text><text x="739" y="760" text-anchor="end">12 400</text><text x="925" y="760" text-anchor="end" fill="#238456">в работу</text>
+    <text x="82" y="834">органайзер для кухни</text><text x="739" y="834" text-anchor="end">44 000</text><text x="925" y="834" text-anchor="end">дополнительно</text>
+    <text x="82" y="908">стеклянные банки для круп</text><text x="739" y="908" text-anchor="end">9 600</text><text x="925" y="908" text-anchor="end" fill="#b63740">исключить</text>
+    <text x="82" y="982">вакуумные контейнеры</text><text x="739" y="982" text-anchor="end">6 300</text><text x="925" y="982" text-anchor="end" fill="#b63740">исключить</text>
+  </g>
+  <g stroke="#e0e5e9"><line x1="82" y1="635" x2="925" y2="635"/><line x1="82" y1="709" x2="925" y2="709"/><line x1="82" y1="783" x2="925" y2="783"/><line x1="82" y1="857" x2="925" y2="857"/><line x1="82" y1="931" x2="925" y2="931"/><line x1="82" y1="1005" x2="925" y2="1005"/></g>
+
+  <rect x="978" y="403" width="568" height="295" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="1008" y="452" class="section" fill="#20262d">Заголовок карточки</text>
+  <text x="1008" y="498" class="small" fill="#697681">СЕЙЧАС</text>
+  <text x="1008" y="533" class="body" fill="#2a3037">Набор банок для кухни 6 шт</text>
+  <line x1="1008" y1="558" x2="1516" y2="558" stroke="#e0e5e9"/>
+  <text x="1008" y="601" class="small" fill="#238456">ПРЕДЛОЖЕНИЕ</text>
+  <text x="1008" y="636" class="bold" fill="#20262d">Контейнеры для круп пластиковые,</text>
+  <text x="1008" y="670" class="bold" fill="#20262d">набор 6 шт, 1 л, с крышками</text>
+  <rect x="978" y="718" width="568" height="325" rx="13" fill="#fff8e6" stroke="#e8d6a4" stroke-width="2"/>
+  <text x="1008" y="767" class="section" fill="#20262d">Основа описания</text>
+  <text x="1008" y="816" class="body" fill="#2a3037">Набор из шести пластиковых</text>
+  <text x="1008" y="851" class="body" fill="#2a3037">контейнеров объёмом 1 л каждый.</text>
+  <text x="1008" y="886" class="body" fill="#2a3037">Подходят для хранения круп</text>
+  <text x="1008" y="921" class="body" fill="#2a3037">и других сыпучих продуктов.</text>
+  <text x="1008" y="966" class="small" fill="#66727e">Крышки и комплектацию подтвердить</text>
+  <text x="1008" y="997" class="small" fill="#66727e">по карточке поставщика перед публикацией.</text>
+
+  <rect x="54" y="1063" width="1492" height="230" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="82" y="1113" class="section" fill="#20262d">Редакционный контроль и следующая проверка</text>
+  <text x="82" y="1160" class="body" fill="#2a3037">Сверить материал, объём и крышки → заполнить характеристики → утвердить заголовок и описание.</text>
+  <text x="82" y="1207" class="body" fill="#2a3037">После индексации сравнить видимость, клики и заказы по целевым запросам с прошлым периодом.</text>
+  <text x="82" y="1250" class="small mono" fill="#66727e">Основной запрос: 30 000 → 34 200 за соседние 30 дней (+14%). Сезонный пик по двум срезам не подтверждён.</text>
+  <text x="54" y="1322" class="small" fill="#66727e">Высокая частотность не делает запрос релевантным. Текст опирается на свойства товара и требует утверждения перед публикацией.</text>
+</svg>

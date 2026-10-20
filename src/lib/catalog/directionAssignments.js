@@ -213,6 +213,24 @@ export const directionAssignments = [
     "secondary": ["ai-for-1c"]
   },
   {
+    "id": "marketplace-ai-marketer",
+    "direction": "ai-for-marketplace",
+    "group": "Реклама и поисковый трафик",
+    "secondary": []
+  },
+  {
+    "id": "marketplace-ad-analyst",
+    "direction": "ai-for-marketplace",
+    "group": "Реклама и поисковый трафик",
+    "secondary": []
+  },
+  {
+    "id": "marketplace-card-seo-specialist",
+    "direction": "ai-for-marketplace",
+    "group": "Реклама и поисковый трафик",
+    "secondary": ["content-factory"]
+  },
+  {
     "id": "marketplace-niche-discovery",
     "direction": "ai-for-marketplace",
     "group": "Аналитика и развитие ассортимента",

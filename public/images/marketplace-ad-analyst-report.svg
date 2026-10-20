@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2430" viewBox="0 0 1600 2430" role="img" aria-labelledby="title description">
+<title id="title">Анализ рекламы зоотоваров Ozon: CPC против CPA</title>
+<desc id="description">Отчёт по четырём SKU: 286 заказов, выручка 535 тысяч рублей, ДРР 14,2 процента при цели 12 процентов, сравнение CPC и CPA, допустимый расход и план переноса 15 тысяч рублей.</desc>
+<g font-family="Arial, sans-serif">
+<rect x="0" y="0" width="1600" height="2430" rx="0" fill="#eceff1"/>
+<rect x="20" y="20" width="1560" height="2390" rx="20" fill="#f7f8f9" stroke="#d5dbe0" stroke-width="2"/>
+<rect x="20" y="20" width="1560" height="165" rx="20" fill="#171c22"/>
+<rect x="20" y="145" width="1560" height="40" rx="0" fill="#171c22"/>
+<rect x="54" y="54" width="7" height="27" rx="0" fill="#c8444c"/>
+<text x="78" y="77" font-size="18" font-weight="700" fill="#e6e9ec" text-anchor="start" letter-spacing="2">AI TEHCON / АНАЛИТИК РЕКЛАМЫ</text>
+<text x="54" y="138" font-size="48" font-weight="700" fill="#ffffff" text-anchor="start">CPC против CPA: что съедает бюджет</text>
+<rect x="1190" y="57" width="356" height="50" rx="8" fill="#2a3139" stroke="#67727c" stroke-width="2"/>
+<text x="1213" y="90" font-size="17" font-weight="700" fill="#f0f2f4" text-anchor="start">01–14 ОКТЯБРЯ 2026 · OZON</text>
+<rect x="54" y="207" width="356" height="168" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="80" y="250" font-size="18" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">ЗАКАЗЫ</text>
+<text x="80" y="311" font-size="42" font-weight="700" fill="#171c22" text-anchor="start">286</text>
+<text x="80" y="349" font-size="18" font-weight="400" fill="#687580" text-anchor="start">190 CPC · 96 CPA</text>
+<rect x="430" y="207" width="356" height="168" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="456" y="250" font-size="18" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">ВЫРУЧКА ПО ЗАКАЗАМ</text>
+<text x="456" y="311" font-size="42" font-weight="700" fill="#171c22" text-anchor="start">535 000 ₽</text>
+<text x="456" y="349" font-size="18" font-weight="400" fill="#687580" text-anchor="start">4 SKU · 2 канала</text>
+<rect x="806" y="207" width="356" height="168" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="832" y="250" font-size="18" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">ДРР ВСЕГО</text>
+<text x="832" y="311" font-size="42" font-weight="700" fill="#171c22" text-anchor="start">14,2%</text>
+<text x="832" y="349" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Цель: не выше 12%</text>
+<rect x="1182" y="207" width="364" height="168" rx="12" fill="#fff8f7" stroke="#dfb7b9" stroke-width="2"/>
+<text x="1208" y="250" font-size="18" font-weight="700" fill="#9b3039" text-anchor="start" letter-spacing="1">ВЫШЕ ЦЕЛЕВОГО РАСХОДА</text>
+<text x="1208" y="311" font-size="42" font-weight="700" fill="#b63740" text-anchor="start">11 800 ₽</text>
+<text x="1208" y="349" font-size="18" font-weight="400" fill="#687580" text-anchor="start">76 000 ₽ против 64 200 ₽</text>
+<rect x="54" y="403" width="1492" height="395" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="452" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">01</text>
+<text x="135" y="452" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Два канала: заказы есть в обоих, отдача разная</text>
+<rect x="82" y="484" width="700" height="232" rx="11" fill="#f1faf4" stroke="#cfe5d7" stroke-width="2"/>
+<text x="107" y="525" font-size="25" font-weight="700" fill="#20262d" text-anchor="start">CPC · оплата за клик</text>
+<text x="107" y="577" font-size="36" font-weight="700" fill="#20262d" text-anchor="start">190 заказов</text>
+<text x="107" y="618" font-size="21" font-weight="400" fill="#687580" text-anchor="start">Расход 32 000 ₽  ·  выручка 355 000 ₽</text>
+<text x="107" y="656" font-size="21" font-weight="700" fill="#238456" text-anchor="start">ДРР 9,0%  ·  CPO 168 ₽</text>
+<text x="107" y="690" font-size="20" font-weight="700" fill="#20262d" text-anchor="start">ROMI 195,3%</text>
+<rect x="818" y="484" width="700" height="232" rx="11" fill="#fbf3f2" stroke="#e2c8c8" stroke-width="2"/>
+<text x="843" y="525" font-size="25" font-weight="700" fill="#20262d" text-anchor="start">CPA · оплата за действие</text>
+<text x="843" y="577" font-size="36" font-weight="700" fill="#20262d" text-anchor="start">96 заказов</text>
+<text x="843" y="618" font-size="21" font-weight="400" fill="#687580" text-anchor="start">Расход 44 000 ₽  ·  выручка 180 000 ₽</text>
+<text x="843" y="656" font-size="21" font-weight="700" fill="#b63740" text-anchor="start">ДРР 24,4%  ·  CPO 458 ₽</text>
+<text x="843" y="690" font-size="20" font-weight="700" fill="#20262d" text-anchor="start">ROMI 9,1%</text>
+<text x="82" y="768" font-size="20" font-weight="700" fill="#20262d" text-anchor="start">CPC забирает 42% расходов и даёт 66% выручки; CPA тратит больше при заметно более высокой ДРР.</text>
+<rect x="54" y="818" width="1492" height="450" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="867" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">02</text>
+<text x="135" y="867" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">CPC и CPA по каждому товару</text>
+<text x="82" y="915" font-size="17" font-weight="700" fill="#687580" text-anchor="start">SKU</text>
+<text x="625" y="915" font-size="17" font-weight="700" fill="#687580" text-anchor="end">CPC ДРР</text>
+<text x="823" y="915" font-size="17" font-weight="700" fill="#687580" text-anchor="end">CPC CPO</text>
+<text x="1013" y="915" font-size="17" font-weight="700" fill="#687580" text-anchor="end">CPA ДРР</text>
+<text x="1213" y="915" font-size="17" font-weight="700" fill="#687580" text-anchor="end">CPA CPO</text>
+<text x="1518" y="915" font-size="17" font-weight="700" fill="#687580" text-anchor="end">ВЫВОД</text>
+<line x1="82" y1="936" x2="1518" y2="936" stroke="#cbd2d8" stroke-width="2"/>
+<text x="82" y="991" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Корм для собак 2 кг</text>
+<text x="625" y="991" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">8,8%</text>
+<text x="823" y="991" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">220 ₽</text>
+<text x="1013" y="991" font-size="22" font-weight="400" fill="#b63740" text-anchor="end">20,0%</text>
+<text x="1213" y="991" font-size="22" font-weight="400" fill="#b63740" text-anchor="end">500 ₽</text>
+<text x="1518" y="991" font-size="21" font-weight="700" fill="#b63740" text-anchor="end">CPA дороже</text>
+<line x1="82" y1="1011" x2="1518" y2="1011" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="1054" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Корм для кошек 2 кг</text>
+<text x="625" y="1054" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">9,0%</text>
+<text x="823" y="1054" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">225 ₽</text>
+<text x="1013" y="1054" font-size="22" font-weight="400" fill="#b63740" text-anchor="end">18,0%</text>
+<text x="1213" y="1054" font-size="22" font-weight="400" fill="#b63740" text-anchor="end">450 ₽</text>
+<text x="1518" y="1054" font-size="21" font-weight="700" fill="#b63740" text-anchor="end">CPA дороже</text>
+<line x1="82" y1="1074" x2="1518" y2="1074" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="1117" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Наполнитель 5 л</text>
+<text x="625" y="1117" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">10,0%</text>
+<text x="823" y="1117" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">160 ₽</text>
+<text x="1013" y="1117" font-size="22" font-weight="400" fill="#b63740" text-anchor="end">30,0%</text>
+<text x="1213" y="1117" font-size="22" font-weight="400" fill="#b63740" text-anchor="end">480 ₽</text>
+<text x="1518" y="1117" font-size="21" font-weight="700" fill="#b63740" text-anchor="end">CPA в минусе</text>
+<line x1="82" y1="1137" x2="1518" y2="1137" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="1180" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Лакомства для собак</text>
+<text x="625" y="1180" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">8,0%</text>
+<text x="823" y="1180" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">80 ₽</text>
+<text x="1013" y="1180" font-size="22" font-weight="400" fill="#b63740" text-anchor="end">40,0%</text>
+<text x="1213" y="1180" font-size="22" font-weight="400" fill="#b63740" text-anchor="end">400 ₽</text>
+<text x="1518" y="1180" font-size="21" font-weight="700" fill="#b63740" text-anchor="end">CPA в минусе</text>
+<line x1="82" y1="1200" x2="1518" y2="1200" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="1237" font-size="19" font-weight="400" fill="#687580" text-anchor="start">Наполнитель и лакомства: маржа до рекламы в CPA ниже расхода; снижение лимита требует проверки атрибуции.</text>
+<rect x="54" y="1288" width="1492" height="440" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="1337" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">03</text>
+<text x="135" y="1337" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Порог при целевой ДРР 12%</text>
+<text x="82" y="1386" font-size="17" font-weight="700" fill="#687580" text-anchor="start">SKU</text>
+<text x="772" y="1386" font-size="17" font-weight="700" fill="#687580" text-anchor="end">РАСХОД СЕЙЧАС, ₽</text>
+<text x="1115" y="1386" font-size="17" font-weight="700" fill="#687580" text-anchor="end">ДОПУСТИМО, ₽</text>
+<text x="1518" y="1386" font-size="17" font-weight="700" fill="#687580" text-anchor="end">ВЫШЕ ЦЕЛИ, ₽</text>
+<line x1="82" y1="1406" x2="1518" y2="1406" stroke="#cbd2d8" stroke-width="2"/>
+<text x="82" y="1459" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Корм для собак 2 кг</text>
+<text x="772" y="1459" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">24 000 ₽</text>
+<text x="1115" y="1459" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">22 800 ₽</text>
+<text x="1518" y="1459" font-size="22" font-weight="700" fill="#b63740" text-anchor="end">1 200 ₽</text>
+<line x1="82" y1="1479" x2="1518" y2="1479" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="1518" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Корм для кошек 2 кг</text>
+<text x="772" y="1518" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">18 000 ₽</text>
+<text x="1115" y="1518" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">18 000 ₽</text>
+<text x="1518" y="1518" font-size="22" font-weight="700" fill="#238456" text-anchor="end">0 ₽</text>
+<line x1="82" y1="1538" x2="1518" y2="1538" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="1577" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Наполнитель 5 л</text>
+<text x="772" y="1577" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">20 000 ₽</text>
+<text x="1115" y="1577" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">14 400 ₽</text>
+<text x="1518" y="1577" font-size="22" font-weight="700" fill="#b63740" text-anchor="end">5 600 ₽</text>
+<line x1="82" y1="1597" x2="1518" y2="1597" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="1636" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Лакомства для собак</text>
+<text x="772" y="1636" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">14 000 ₽</text>
+<text x="1115" y="1636" font-size="22" font-weight="400" fill="#20262d" text-anchor="end">9 000 ₽</text>
+<text x="1518" y="1636" font-size="22" font-weight="700" fill="#b63740" text-anchor="end">5 000 ₽</text>
+<line x1="82" y1="1656" x2="1518" y2="1656" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="1693" font-size="23" font-weight="700" fill="#20262d" text-anchor="start">ИТОГО</text>
+<text x="772" y="1693" font-size="23" font-weight="700" fill="#20262d" text-anchor="end">76 000 ₽</text>
+<text x="1115" y="1693" font-size="23" font-weight="700" fill="#20262d" text-anchor="end">64 200 ₽</text>
+<text x="1518" y="1693" font-size="23" font-weight="700" fill="#b63740" text-anchor="end">11 800 ₽</text>
+<rect x="54" y="1748" width="1492" height="610" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="1797" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">04</text>
+<text x="135" y="1797" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">План лимитов на следующий период · общий бюджет 76 000 ₽</text>
+<text x="82" y="1845" font-size="17" font-weight="700" fill="#687580" text-anchor="start">SKU</text>
+<text x="785" y="1845" font-size="17" font-weight="700" fill="#687580" text-anchor="end">CPC: СЕЙЧАС → ПЛАН</text>
+<text x="1220" y="1845" font-size="17" font-weight="700" fill="#687580" text-anchor="end">CPA: СЕЙЧАС → ПЛАН</text>
+<text x="1518" y="1845" font-size="17" font-weight="700" fill="#687580" text-anchor="end">ВСЕГО, ПЛАН</text>
+<line x1="82" y1="1866" x2="1518" y2="1866" stroke="#cbd2d8" stroke-width="2"/>
+<text x="82" y="1921" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Корм для собак</text>
+<text x="785" y="1921" font-size="22" font-weight="700" fill="#238456" text-anchor="end">11 000 → 15 000 ₽</text>
+<text x="1220" y="1921" font-size="22" font-weight="700" fill="#b63740" text-anchor="end">13 000 → 10 000 ₽</text>
+<text x="1518" y="1921" font-size="22" font-weight="700" fill="#20262d" text-anchor="end">25 000 ₽</text>
+<line x1="82" y1="1940" x2="1518" y2="1940" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="1986" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Корм для кошек</text>
+<text x="785" y="1986" font-size="22" font-weight="700" fill="#238456" text-anchor="end">9 000 → 12 000 ₽</text>
+<text x="1220" y="1986" font-size="22" font-weight="700" fill="#b63740" text-anchor="end">9 000 → 7 000 ₽</text>
+<text x="1518" y="1986" font-size="22" font-weight="700" fill="#20262d" text-anchor="end">19 000 ₽</text>
+<line x1="82" y1="2005" x2="1518" y2="2005" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="2051" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Наполнитель</text>
+<text x="785" y="2051" font-size="22" font-weight="700" fill="#238456" text-anchor="end">8 000 → 13 000 ₽</text>
+<text x="1220" y="2051" font-size="22" font-weight="700" fill="#b63740" text-anchor="end">12 000 → 7 000 ₽</text>
+<text x="1518" y="2051" font-size="22" font-weight="700" fill="#20262d" text-anchor="end">20 000 ₽</text>
+<line x1="82" y1="2070" x2="1518" y2="2070" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="2116" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Лакомства</text>
+<text x="785" y="2116" font-size="22" font-weight="700" fill="#238456" text-anchor="end">4 000 → 7 000 ₽</text>
+<text x="1220" y="2116" font-size="22" font-weight="700" fill="#b63740" text-anchor="end">10 000 → 5 000 ₽</text>
+<text x="1518" y="2116" font-size="22" font-weight="700" fill="#20262d" text-anchor="end">12 000 ₽</text>
+<line x1="82" y1="2135" x2="1518" y2="2135" stroke="#e0e5e9" stroke-width="1"/>
+<text x="82" y="2208" font-size="22" font-weight="700" fill="#238456" text-anchor="start">CPC: 32 000 → 47 000 ₽</text>
+<text x="806" y="2208" font-size="22" font-weight="700" fill="#b63740" text-anchor="start">CPA: 44 000 → 29 000 ₽</text>
+<text x="82" y="2262" font-size="21" font-weight="700" fill="#20262d" text-anchor="start">Перенос 15 000 ₽ — тест. Увеличивать CPC только при наличии остатков и стабильном CPO.</text>
+<text x="82" y="2310" font-size="19" font-weight="400" fill="#687580" text-anchor="start">Если объём спроса не растёт, не тратить свободный лимит автоматически. Проверить результат через две недели.</text>
+<text x="54" y="2397" font-size="18" font-weight="400" fill="#687580" text-anchor="start">ДРР = расход / выручка по заказам. ROMI = (вклад до рекламы − расход) / расход. Порог расходов рассчитан по текущей выручке.</text>
+</g>
+</svg>
