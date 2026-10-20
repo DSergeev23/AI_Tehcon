@@ -231,6 +231,18 @@ export const directionAssignments = [
     "secondary": ["content-factory"]
   },
   {
+    "id": "marketplace-content-manager",
+    "direction": "ai-for-marketplace",
+    "group": "Карточки и контент",
+    "secondary": ["content-factory"]
+  },
+  {
+    "id": "marketplace-review-manager",
+    "direction": "ai-for-marketplace",
+    "group": "Отзывы и поддержка",
+    "secondary": []
+  },
+  {
     "id": "marketplace-niche-discovery",
     "direction": "ai-for-marketplace",
     "group": "Аналитика и развитие ассортимента",

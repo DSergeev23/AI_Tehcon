@@ -63,6 +63,26 @@ const marketplaceSolutionGroups = [
       },
     ],
   },
+  {
+    id: 'marketplace-content-customer-solutions',
+    title: 'Контент и работа с покупателями',
+    solutions: [
+      {
+        id: 'marketplace-content-manager',
+        title: 'ИИ-контент-менеджер карточек WB и Ozon',
+        description: 'Для производителя туристических рюкзаков готовит атрибуты, структуру галереи и текст карточки Ozon по паспорту товара.',
+        image: '/images/marketplace-content-manager-report.svg',
+        alt: 'Отчёт контент-менеджера по карточке туристического рюкзака Ozon',
+      },
+      {
+        id: 'marketplace-review-manager',
+        title: 'ИИ-менеджер по отзывам и вопросам WB и Ozon',
+        description: 'Для бренда спортивной одежды разбирает отзывы и вопросы WB, готовит ответы и выделяет повторяющиеся проблемы.',
+        image: '/images/marketplace-review-manager-report.svg',
+        alt: 'Отчёт по отзывам спортивной одежды WB с темами и черновиками ответов',
+      },
+    ],
+  },
 ];
 
 export default function Cases() {
