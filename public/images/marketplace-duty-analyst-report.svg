@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2550" viewBox="0 0 1600 2550" role="img" aria-labelledby="title description">
+<title id="title">Три сигнала, которые нельзя пропустить</title>
+<desc id="description">Оперативная сводка продавца пластика для 3D-печати: пороги, отклонения продаж SKU, ДРР и возвратов, признаки причины и очередь ответственных.</desc>
+<g font-family="Arial, sans-serif">
+<rect x="0" y="0" width="1600" height="2550" rx="12" fill="#edf0f2"/>
+<rect x="20" y="20" width="1560" height="2510" rx="20" fill="#f8f9fa" stroke="#d5dbe0" stroke-width="2"/>
+<rect x="20" y="20" width="1560" height="165" rx="20" fill="#171c22"/>
+<rect x="20" y="145" width="1560" height="40" rx="12" fill="#171c22"/>
+<rect x="54" y="54" width="7" height="27" rx="3" fill="#c8444c"/>
+<text x="78" y="77" font-size="18" font-weight="700" fill="#e6e9ec" text-anchor="start" letter-spacing="2">AI TEHCON / ДЕЖУРНЫЙ АНАЛИТИК</text>
+<text x="54" y="138" font-size="44" font-weight="700" fill="#ffffff" text-anchor="start">Три сигнала, которые нельзя пропустить</text>
+<rect x="1190" y="56" width="355" height="50" rx="8" fill="#2a3139" stroke="#67727c" stroke-width="2"/>
+<text x="1210" y="88" font-size="17" font-weight="700" fill="#f0f2f4" text-anchor="start">22 ОКТЯБРЯ · 09:00 · WB</text>
+<rect x="54" y="207" width="356" height="170" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="80" y="250" font-size="18" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">МАГАЗИН В ЦЕЛОМ</text>
+<text x="80" y="312" font-size="43" font-weight="700" fill="#171c22" text-anchor="start">−13,3%</text>
+<text x="80" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">312 против обычных 360</text>
+<rect x="430" y="207" width="356" height="170" rx="12" fill="#fff8f7" stroke="#dfb7b9" stroke-width="2"/>
+<text x="456" y="250" font-size="18" font-weight="700" fill="#a6323c" text-anchor="start" letter-spacing="1">СИГНАЛЫ</text>
+<text x="456" y="312" font-size="43" font-weight="700" fill="#b63740" text-anchor="start">3</text>
+<text x="456" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">2 срочных · 1 на проверку</text>
+<rect x="806" y="207" width="356" height="170" rx="12" fill="#fff8f7" stroke="#dfb7b9" stroke-width="2"/>
+<text x="832" y="250" font-size="18" font-weight="700" fill="#a6323c" text-anchor="start" letter-spacing="1">PLA ЧЁРНЫЙ</text>
+<text x="832" y="312" font-size="43" font-weight="700" fill="#b63740" text-anchor="start">−47,5%</text>
+<text x="832" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">42 против 80 заказов</text>
+<rect x="1182" y="207" width="356" height="170" rx="12" fill="#fff8f7" stroke="#dfb7b9" stroke-width="2"/>
+<text x="1208" y="250" font-size="18" font-weight="700" fill="#a6323c" text-anchor="start" letter-spacing="1">ДРР КАМПАНИИ</text>
+<text x="1208" y="312" font-size="43" font-weight="700" fill="#b63740" text-anchor="start">28%</text>
+<text x="1208" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">было 16% · +12 п.п.</text>
+<rect x="54" y="407" width="1492" height="499" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="455" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">01</text>
+<text x="135" y="455" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Пороги: общий итог не скрывает SKU</text>
+<text x="82" y="479" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ПОКАЗАТЕЛЬ</text>
+<text x="650" y="479" font-size="17" font-weight="700" fill="#687580" text-anchor="start">БАЗА</text>
+<text x="875" y="479" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ФАКТ</text>
+<text x="1070" y="479" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ОТКЛОНЕНИЕ</text>
+<text x="1360" y="479" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ПОРОГ</text>
+<line x1="82" y1="503" x2="1518" y2="503" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="562" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Заказы магазина</text>
+<text x="650" y="562" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">360</text>
+<text x="875" y="562" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">312</text>
+<text x="1070" y="562" font-size="21" font-weight="700" fill="#687580" text-anchor="start">−13,3%</text>
+<text x="1360" y="562" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">−15%</text>
+<line x1="82" y1="588" x2="1518" y2="588" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="639" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Заказы PLA чёрный</text>
+<text x="650" y="639" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">80</text>
+<text x="875" y="639" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">42</text>
+<text x="1070" y="639" font-size="21" font-weight="700" fill="#b63740" text-anchor="start">−47,5%</text>
+<text x="1360" y="639" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">−25%</text>
+<line x1="82" y1="665" x2="1518" y2="665" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="716" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">ДРР PETG серый</text>
+<text x="650" y="716" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">16%</text>
+<text x="875" y="716" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">28%</text>
+<text x="1070" y="716" font-size="21" font-weight="700" fill="#b63740" text-anchor="start">+12 п.п.</text>
+<text x="1360" y="716" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">+8 п.п.</text>
+<line x1="82" y1="742" x2="1518" y2="742" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="793" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Запросы на возврат PLA белый</text>
+<text x="650" y="793" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">10</text>
+<text x="875" y="793" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">18</text>
+<text x="1070" y="793" font-size="21" font-weight="700" fill="#b63740" text-anchor="start">+80%</text>
+<text x="1360" y="793" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">+50%</text>
+<line x1="82" y1="819" x2="1518" y2="819" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="875" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Общий итог ниже порога тревоги; три локальных показателя пороги превысили.</text>
+<rect x="54" y="930" width="1492" height="748" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="978" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">02</text>
+<text x="135" y="978" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Очередь сигналов и признаки причины</text>
+<rect x="82" y="1010" width="1436" height="187" rx="9" fill="#fff6f4" stroke="#e5c9c7" stroke-width="2"/>
+<rect x="105" y="1034" width="68" height="38" rx="6" fill="#b63740"/>
+<text x="119" y="1060" font-size="19" font-weight="700" fill="#ffffff" text-anchor="start">P1</text>
+<text x="196" y="1060" font-size="25" font-weight="700" fill="#20262d" text-anchor="start">PLA чёрный · заказы −47,5%</text>
+<text x="105" y="1110" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">42 вместо 80; в ключевом кластере товар 6 часов недоступен.</text>
+<text x="105" y="1158" font-size="19" font-weight="400" fill="#687580" text-anchor="start">Менеджер поставок · сверить наличие и срок восстановления.</text>
+<rect x="82" y="1218" width="1436" height="187" rx="9" fill="#fff6f4" stroke="#e5c9c7" stroke-width="2"/>
+<rect x="105" y="1242" width="68" height="38" rx="6" fill="#b63740"/>
+<text x="119" y="1268" font-size="19" font-weight="700" fill="#ffffff" text-anchor="start">P1</text>
+<text x="196" y="1268" font-size="25" font-weight="700" fill="#20262d" text-anchor="start">PETG серый · ДРР 28%</text>
+<text x="105" y="1318" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Расход 33 600 ₽; продажи 120 000 ₽. Раньше ДРР был 16%.</text>
+<text x="105" y="1366" font-size="19" font-weight="400" fill="#687580" text-anchor="start">Специалист по рекламе · проверить ставки, кластеры, атрибуцию.</text>
+<rect x="82" y="1426" width="1436" height="187" rx="9" fill="#fff9eb" stroke="#ecd8a3" stroke-width="2"/>
+<rect x="105" y="1450" width="68" height="38" rx="6" fill="#966500"/>
+<text x="119" y="1476" font-size="19" font-weight="700" fill="#ffffff" text-anchor="start">P2</text>
+<text x="196" y="1476" font-size="25" font-weight="700" fill="#20262d" text-anchor="start">PLA белый · возвраты +80%</text>
+<text x="105" y="1526" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">18 запросов вместо 10; в 11 обращениях упомянута намотка.</text>
+<text x="105" y="1574" font-size="19" font-weight="400" fill="#687580" text-anchor="start">Качество · проверить партию и содержание обращений.</text>
+<text x="82" y="1655" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Связь с остатком и комментариями — гипотеза; ответственный подтверждает причину.</text>
+<rect x="54" y="1702" width="1492" height="378" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="1750" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">03</text>
+<text x="135" y="1750" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Проверка рекламного сигнала по исходным числам</text>
+<rect x="82" y="1782" width="690" height="210" rx="9" fill="#f7f8f9" stroke="#dce2e6" stroke-width="2"/>
+<text x="108" y="1828" font-size="18" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">СОПОСТАВИМЫЙ ПЕРИОД</text>
+<text x="108" y="1902" font-size="30" font-weight="700" fill="#20262d" text-anchor="start">22 400 / 140 000 = 16%</text>
+<text x="108" y="1953" font-size="19" font-weight="400" fill="#687580" text-anchor="start">Расход / продажи = ДРР</text>
+<rect x="798" y="1782" width="720" height="210" rx="9" fill="#fff6f4" stroke="#e5c9c7" stroke-width="2"/>
+<text x="824" y="1828" font-size="18" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="1">ТЕКУЩИЕ СУТКИ</text>
+<text x="824" y="1902" font-size="30" font-weight="700" fill="#b63740" text-anchor="start">33 600 / 120 000 = 28%</text>
+<text x="824" y="1953" font-size="19" font-weight="400" fill="#687580" text-anchor="start">Изменение: +12 п.п. при пороге +8 п.п.</text>
+<text x="82" y="2055" font-size="20" font-weight="700" fill="#20262d" text-anchor="start">Сначала проверить полноту атрибуции и изменения кампании, затем менять лимит.</text>
+<rect x="54" y="2104" width="1492" height="369" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="2152" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">04</text>
+<text x="135" y="2152" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Маршрут обработки и защита от шума</text>
+<text x="82" y="2180" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">1. Сравнивать одинаковые дни недели и только полные выгрузки.</text>
+<text x="82" y="2238" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">2. Повторные срабатывания по одной причине объединять в один инцидент.</text>
+<text x="82" y="2296" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">3. Закрепить владельца и результат проверки за каждым сигналом.</text>
+<text x="82" y="2354" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">4. После действия повторно измерить продажи, ДРР или возвраты.</text>
+<text x="54" y="2503" font-size="17" font-weight="400" fill="#687580" text-anchor="start">Источники: заказы, реклама, доступность и обращения WB. Сигнал фиксирует отклонение, причину подтверждает команда.</text>
+</g>
+</svg>

@@ -261,6 +261,30 @@ export const directionAssignments = [
     "secondary": []
   },
   {
+    "id": "marketplace-supply-manager",
+    "direction": "ai-for-marketplace",
+    "group": "Аналитика и развитие ассортимента",
+    "secondary": []
+  },
+  {
+    "id": "marketplace-duty-analyst",
+    "direction": "ai-for-marketplace",
+    "group": "Аналитика и развитие ассортимента",
+    "secondary": []
+  },
+  {
+    "id": "marketplace-operations-director",
+    "direction": "ai-for-marketplace",
+    "group": "Управление и координация",
+    "secondary": []
+  },
+  {
+    "id": "marketplace-personal-assistant",
+    "direction": "ai-for-marketplace",
+    "group": "Управление и координация",
+    "secondary": []
+  },
+  {
     "id": "marketplace-niche-discovery",
     "direction": "ai-for-marketplace",
     "group": "Аналитика и развитие ассортимента",

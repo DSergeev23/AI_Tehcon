@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2420" viewBox="0 0 1600 2420" role="img" aria-labelledby="title description">
+<title id="title">Магазин на одной панели управления</title>
+<desc id="description">Утренний обзор магазина велоаксессуаров: шесть процессов по расписанию, свежесть пяти источников, обмен данными между агентами и неполная финансовая сверка.</desc>
+<g font-family="Arial, sans-serif">
+<rect x="0" y="0" width="1600" height="2420" rx="12" fill="#edf0f2"/>
+<rect x="20" y="20" width="1560" height="2380" rx="20" fill="#f8f9fa" stroke="#d5dbe0" stroke-width="2"/>
+<rect x="20" y="20" width="1560" height="165" rx="20" fill="#171c22"/>
+<rect x="20" y="145" width="1560" height="40" rx="12" fill="#171c22"/>
+<rect x="54" y="54" width="7" height="27" rx="3" fill="#c8444c"/>
+<text x="78" y="77" font-size="18" font-weight="700" fill="#e6e9ec" text-anchor="start" letter-spacing="2">AI TEHCON / ОПЕРАЦИОННЫЙ ДИРЕКТОР</text>
+<text x="54" y="138" font-size="44" font-weight="700" fill="#ffffff" text-anchor="start">Магазин на одной панели управления</text>
+<rect x="1190" y="56" width="355" height="50" rx="8" fill="#2a3139" stroke="#67727c" stroke-width="2"/>
+<text x="1210" y="88" font-size="17" font-weight="700" fill="#f0f2f4" text-anchor="start">23 ОКТЯБРЯ · 09:10</text>
+<rect x="54" y="207" width="356" height="170" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="80" y="250" font-size="18" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">ПРОЦЕССЫ</text>
+<text x="80" y="312" font-size="43" font-weight="700" fill="#171c22" text-anchor="start">5 из 6</text>
+<text x="80" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">дали результат к 09:10</text>
+<rect x="430" y="207" width="356" height="170" rx="12" fill="#fff8f7" stroke="#dfb7b9" stroke-width="2"/>
+<text x="456" y="250" font-size="18" font-weight="700" fill="#a6323c" text-anchor="start" letter-spacing="1">СВЕЖИЕ ИСТОЧНИКИ</text>
+<text x="456" y="312" font-size="43" font-weight="700" fill="#b63740" text-anchor="start">4 из 5</text>
+<text x="456" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">финансы ждут файл за 21.10</text>
+<rect x="806" y="207" width="356" height="170" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="832" y="250" font-size="18" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">ЗАКАЗЫ</text>
+<text x="832" y="312" font-size="43" font-weight="700" fill="#171c22" text-anchor="start">186</text>
+<text x="832" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">WB + Ozon за 21 октября</text>
+<rect x="1182" y="207" width="356" height="170" rx="12" fill="#fff8f7" stroke="#dfb7b9" stroke-width="2"/>
+<text x="1208" y="250" font-size="18" font-weight="700" fill="#a6323c" text-anchor="start" letter-spacing="1">ПРИБЫЛЬ</text>
+<text x="1208" y="312" font-size="43" font-weight="700" fill="#b63740" text-anchor="start">—</text>
+<text x="1208" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">не считаем по старому файлу</text>
+<rect x="54" y="407" width="1492" height="605" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="455" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">01</text>
+<text x="135" y="455" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Расписание агентов и состояние запусков</text>
+<text x="82" y="478" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ВРЕМЯ</text>
+<text x="270" y="478" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ПРОЦЕСС</text>
+<text x="830" y="478" font-size="17" font-weight="700" fill="#687580" text-anchor="start">РЕЗУЛЬТАТ</text>
+<text x="1290" y="478" font-size="17" font-weight="700" fill="#687580" text-anchor="start">СТАТУС</text>
+<line x1="82" y1="502" x2="1518" y2="502" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="552" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">06:30</text>
+<text x="270" y="552" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Продажи WB + Ozon</text>
+<text x="830" y="552" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">186 заказов</text>
+<text x="1290" y="552" font-size="17" font-weight="700" fill="#238456" text-anchor="start">ГОТОВО</text>
+<line x1="82" y1="577" x2="1518" y2="577" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="624" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">06:45</text>
+<text x="270" y="624" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Доступные остатки</text>
+<text x="830" y="624" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">12 SKU · 1 240 шт.</text>
+<text x="1290" y="624" font-size="17" font-weight="700" fill="#238456" text-anchor="start">ГОТОВО</text>
+<line x1="82" y1="649" x2="1518" y2="649" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="696" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">07:00</text>
+<text x="270" y="696" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Рекламные данные</text>
+<text x="830" y="696" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">18 600 ₽ расхода</text>
+<text x="1290" y="696" font-size="17" font-weight="700" fill="#238456" text-anchor="start">ГОТОВО</text>
+<line x1="82" y1="721" x2="1518" y2="721" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="768" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">07:15</text>
+<text x="270" y="768" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Отзывы и вопросы</text>
+<text x="830" y="768" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">24 новых</text>
+<text x="1290" y="768" font-size="17" font-weight="700" fill="#238456" text-anchor="start">ГОТОВО</text>
+<line x1="82" y1="793" x2="1518" y2="793" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="840" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">08:00</text>
+<text x="270" y="840" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Финансовая сверка</text>
+<text x="830" y="840" font-size="20" font-weight="400" fill="#b63740" text-anchor="start">файл за 21.10 не получен</text>
+<text x="1290" y="840" font-size="17" font-weight="700" fill="#b63740" text-anchor="start">ОЖИДАЕТ</text>
+<line x1="82" y1="865" x2="1518" y2="865" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="912" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">09:00</text>
+<text x="270" y="912" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Общий обзор</text>
+<text x="830" y="912" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">4 из 5 источников</text>
+<text x="1290" y="912" font-size="17" font-weight="700" fill="#966500" text-anchor="start">ЧАСТИЧНО</text>
+<line x1="82" y1="937" x2="1518" y2="937" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="984" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Период продаж, рекламы, остатков и отзывов — 21 октября; финансовый файл пока только за 20 октября.</text>
+<rect x="54" y="1037" width="1492" height="427" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="1085" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">02</text>
+<text x="135" y="1085" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Обмен данными: один период и один SKU</text>
+<text x="82" y="1108" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ИСТОЧНИК</text>
+<text x="570" y="1108" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ПЕРЕДАЁТ</text>
+<text x="1080" y="1108" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ПОЛУЧАТЕЛЬ</text>
+<line x1="82" y1="1131" x2="1518" y2="1131" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1184" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Продажи + остатки</text>
+<text x="570" y="1184" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">SKU / кластер / 21.10</text>
+<text x="1080" y="1184" font-size="21" font-weight="700" fill="#20262d" text-anchor="start">Менеджер по поставкам</text>
+<line x1="82" y1="1209" x2="1518" y2="1209" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1266" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Рекламные расходы</text>
+<text x="570" y="1266" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">SKU / кампания / 21.10</text>
+<text x="1080" y="1266" font-size="21" font-weight="700" fill="#20262d" text-anchor="start">Аналитик рекламы</text>
+<line x1="82" y1="1291" x2="1518" y2="1291" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1348" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Отзывы и вопросы</text>
+<text x="570" y="1348" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">SKU / карточка / 21.10</text>
+<text x="1080" y="1348" font-size="21" font-weight="700" fill="#20262d" text-anchor="start">Менеджер по отзывам</text>
+<line x1="82" y1="1373" x2="1518" y2="1373" stroke="#d9dfe3" stroke-width="2"/>
+<rect x="82" y="1405" width="1436" height="39" rx="6" fill="#fff4e0"/>
+<text x="102" y="1432" font-size="18" font-weight="700" fill="#966500" text-anchor="start">Финансы: источник за 21.10 отсутствует → показатель прибыли закрыт до обновления.</text>
+<rect x="54" y="1489" width="1492" height="442" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="1537" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">03</text>
+<text x="135" y="1537" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Общий обзор из готовых источников</text>
+<rect x="82" y="1575" width="320" height="180" rx="9" fill="#f7f8f9" stroke="#dce2e6" stroke-width="2"/>
+<text x="104" y="1620" font-size="17" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">ЗАКАЗЫ</text>
+<text x="104" y="1687" font-size="35" font-weight="700" fill="#20262d" text-anchor="start">186</text>
+<text x="104" y="1728" font-size="18" font-weight="400" fill="#687580" text-anchor="start">за 21 октября</text>
+<rect x="454" y="1575" width="320" height="180" rx="9" fill="#f7f8f9" stroke="#dce2e6" stroke-width="2"/>
+<text x="476" y="1620" font-size="17" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">ПРОДАЖИ</text>
+<text x="476" y="1687" font-size="27" font-weight="700" fill="#20262d" text-anchor="start">351 540 ₽</text>
+<text x="476" y="1728" font-size="18" font-weight="400" fill="#687580" text-anchor="start">186 × 1 890 ₽</text>
+<rect x="826" y="1575" width="320" height="180" rx="9" fill="#f7f8f9" stroke="#dce2e6" stroke-width="2"/>
+<text x="848" y="1620" font-size="17" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">РЕКЛАМА</text>
+<text x="848" y="1687" font-size="27" font-weight="700" fill="#20262d" text-anchor="start">18 600 ₽</text>
+<text x="848" y="1728" font-size="18" font-weight="400" fill="#687580" text-anchor="start">расходы за день</text>
+<rect x="1198" y="1575" width="320" height="180" rx="9" fill="#f7f8f9" stroke="#dce2e6" stroke-width="2"/>
+<text x="1220" y="1620" font-size="17" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">ОТЗЫВЫ</text>
+<text x="1220" y="1687" font-size="35" font-weight="700" fill="#20262d" text-anchor="start">24</text>
+<text x="1220" y="1728" font-size="18" font-weight="400" fill="#687580" text-anchor="start">новых сообщения</text>
+<rect x="82" y="1782" width="1436" height="111" rx="9" fill="#fff6f4" stroke="#e5c9c7" stroke-width="2"/>
+<text x="108" y="1828" font-size="19" font-weight="700" fill="#b63740" text-anchor="start">ФИНАНСОВЫЙ РЕЗУЛЬТАТ: ОЖИДАЕТ ИСТОЧНИК</text>
+<text x="108" y="1870" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Нет файла за 21.10 — прибыль не подменяется данными за 20.10 или оценкой.</text>
+<rect x="54" y="1955" width="1492" height="389" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="2003" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">04</text>
+<text x="135" y="2003" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Задержка обмена и следующий шаг</text>
+<rect x="82" y="2034" width="1436" height="113" rx="9" fill="#fff9eb" stroke="#ecd8a3" stroke-width="2"/>
+<text x="107" y="2079" font-size="20" font-weight="700" fill="#966500" text-anchor="start">08:00 · ФИНАНСОВАЯ СВЕРКА</text>
+<text x="107" y="2122" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">Причина: файл площадки за выбранный день не получен. Владелец процесса — финансы.</text>
+<text x="82" y="2202" font-size="19" font-weight="400" fill="#20262d" text-anchor="start">До 10:30 проверить появление файла и повторить сверку за 21 октября.</text>
+<text x="82" y="2248" font-size="19" font-weight="400" fill="#20262d" text-anchor="start">После обновления выпустить полную версию обзора с тем же периодом и SKU.</text>
+<text x="82" y="2294" font-size="19" font-weight="400" fill="#20262d" text-anchor="start">Если файл задержится, оставить показатель закрытым и сообщить руководителю.</text>
+<text x="54" y="2374" font-size="17" font-weight="400" fill="#687580" text-anchor="start">Правило: каждый показатель содержит источник и период; неполный обзор виден как неполный.</text>
+</g>
+</svg>

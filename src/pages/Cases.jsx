@@ -110,6 +110,46 @@ const marketplaceSolutionGroups = [
       },
     ],
   },
+  {
+    id: 'marketplace-operations-solutions',
+    title: 'Поставки и оперативный контроль',
+    solutions: [
+      {
+        id: 'marketplace-supply-manager',
+        title: 'ИИ-менеджер по поставкам WB и Ozon',
+        description: 'Для производителя автомобильных щёток рассчитывает пополнение по кластерам Ozon и срочное перемещение до приёмки партии.',
+        image: '/images/marketplace-supply-manager-report.svg',
+        alt: 'План пополнения щёток Ozon: остатки, дни покрытия и распределение по кластерам',
+      },
+      {
+        id: 'marketplace-duty-analyst',
+        title: 'ИИ-дежурный аналитик WB и Ozon',
+        description: 'Для продавца пластика 3D-печати на WB выявляет падение продаж SKU, рост ДРР и возвратов и передаёт сигналы ответственным.',
+        image: '/images/marketplace-duty-analyst-report.svg',
+        alt: 'Очередь сигналов WB: отклонения заказов, рекламы и возвратов с порогами',
+      },
+    ],
+  },
+  {
+    id: 'marketplace-management-solutions',
+    title: 'Управление магазином и временем владельца',
+    solutions: [
+      {
+        id: 'marketplace-operations-director',
+        title: 'ИИ-операционный директор для WB и Ozon',
+        description: 'Для производителя велоаксессуаров связывает расписание агентов, свежесть обменов и общий утренний обзор магазина.',
+        image: '/images/marketplace-operations-director-report.svg',
+        alt: 'Отчёт операционного директора: расписание агентов, состояние обменов и сводка магазина',
+      },
+      {
+        id: 'marketplace-personal-assistant',
+        title: 'ИИ-личный ассистент владельца бизнеса',
+        description: 'Для владельца издательства настольных игр разбирает личную переписку, календарь и дела вне магазина, готовит черновики на согласование.',
+        image: '/images/marketplace-personal-assistant-report.svg',
+        alt: 'Личный брифинг владельца: входящие письма, задачи, календарь и черновики ответов',
+      },
+    ],
+  },
 ];
 
 export default function Cases() {
