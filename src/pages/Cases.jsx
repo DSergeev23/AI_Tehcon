@@ -83,6 +83,33 @@ const marketplaceSolutionGroups = [
       },
     ],
   },
+  {
+    id: 'marketplace-market-assortment-solutions',
+    title: 'Рынок, ассортимент и акции',
+    solutions: [
+      {
+        id: 'marketplace-competitor-analyst',
+        title: 'ИИ-аналитик конкурентов WB и Ozon',
+        description: 'Для производителя настольных светильников показывает изменение доли ниши, ассортимента, наличия и цен конкурентов на Ozon.',
+        image: '/images/marketplace-competitor-analyst-report.svg',
+        alt: 'Отчёт по конкурентам в нише настольных светильников: доля, ассортимент и цены',
+      },
+      {
+        id: 'marketplace-category-manager',
+        title: 'ИИ-категорийный менеджер для WB и Ozon',
+        description: 'Для импортёра фитнес-оборудования сравнивает спрос, конкуренцию и маржу двух видов роликов до закупки.',
+        image: '/images/marketplace-category-manager-report.svg',
+        alt: 'Предзакупочный отчёт по нише фитнес-роликов: спрос, конкуренция и юнит-экономика',
+      },
+      {
+        id: 'marketplace-promo-manager',
+        title: 'ИИ-менеджер по акциям WB и Ozon',
+        description: 'Для производителя листового чая рассчитывает три скидки WB и порог заказов, при котором акция сохраняет прибыль.',
+        image: '/images/marketplace-promo-manager-report.svg',
+        alt: 'Отчёт по акциям чайного бренда: скидки, вклад с заказа и порог продаж',
+      },
+    ],
+  },
 ];
 
 export default function Cases() {

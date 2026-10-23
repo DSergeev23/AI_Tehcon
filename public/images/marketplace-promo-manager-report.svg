@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2380" viewBox="0 0 1600 2380" role="img" aria-labelledby="title description">
+<title id="title">Какая скидка сохраняет прибыль</title>
+<desc id="description">Отчёт по акциям чайного бренда: экономика заказа без акции, три сценария скидки, минимальный объём заказов и чувствительность прибыли к спросу.</desc>
+<g font-family="Arial, sans-serif">
+<rect x="0" y="0" width="1600" height="2380" rx="12" fill="#edf0f2"/>
+<rect x="20" y="20" width="1560" height="2340" rx="20" fill="#f8f9fa" stroke="#d5dbe0" stroke-width="2"/>
+<rect x="20" y="20" width="1560" height="165" rx="20" fill="#171c22"/>
+<rect x="20" y="145" width="1560" height="40" rx="12" fill="#171c22"/>
+<rect x="54" y="54" width="7" height="27" rx="3" fill="#c8444c"/>
+<text x="78" y="77" font-size="18" font-weight="700" fill="#e6e9ec" text-anchor="start" letter-spacing="2">AI TEHCON / МЕНЕДЖЕР ПО АКЦИЯМ</text>
+<text x="54" y="138" font-size="46" font-weight="700" fill="#ffffff" text-anchor="start">Какая скидка сохраняет прибыль</text>
+<rect x="1195" y="56" width="350" height="50" rx="8" fill="#2a3139" stroke="#67727c" stroke-width="2"/>
+<text x="1212" y="88" font-size="17" font-weight="700" fill="#f0f2f4" text-anchor="start">НЕДЕЛЯ ПРОМО · WB</text>
+<rect x="54" y="207" width="356" height="170" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="80" y="250" font-size="18" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">ОБЫЧНАЯ НЕДЕЛЯ</text>
+<text x="80" y="312" font-size="43" font-weight="700" fill="#171c22" text-anchor="start">54 000 ₽</text>
+<text x="80" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">200 заказов × 270 ₽</text>
+<rect x="430" y="207" width="356" height="170" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="456" y="250" font-size="18" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">СКИДКА 10%</text>
+<text x="456" y="312" font-size="43" font-weight="700" fill="#171c22" text-anchor="start">188 ₽</text>
+<text x="456" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">вклад с одной упаковки</text>
+<rect x="806" y="207" width="356" height="170" rx="12" fill="#fff8f7" stroke="#dfb7b9" stroke-width="2"/>
+<text x="832" y="250" font-size="18" font-weight="700" fill="#a6323c" text-anchor="start" letter-spacing="1">ПОРОГ ДЛЯ 10%</text>
+<text x="832" y="312" font-size="43" font-weight="700" fill="#b63740" text-anchor="start">288</text>
+<text x="832" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">заказов за неделю</text>
+<rect x="1182" y="207" width="356" height="170" rx="12" fill="#fff8f7" stroke="#dfb7b9" stroke-width="2"/>
+<text x="1208" y="250" font-size="18" font-weight="700" fill="#a6323c" text-anchor="start" letter-spacing="1">ЕСЛИ ТОЛЬКО 270</text>
+<text x="1208" y="312" font-size="43" font-weight="700" fill="#b63740" text-anchor="start">50 760 ₽</text>
+<text x="1208" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">ниже обычной недели</text>
+<rect x="54" y="407" width="1492" height="360" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="455" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">01</text>
+<text x="135" y="455" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Базовая экономика набора чая</text>
+<text x="82" y="488" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Цена продажи</text>
+<text x="690" y="488" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">1 000 ₽</text>
+<text x="82" y="550" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Себестоимость / комиссия / логистика</text>
+<text x="690" y="550" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">−340 / −180 / −90 ₽</text>
+<text x="82" y="612" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Упаковка / реклама / резерв</text>
+<text x="690" y="612" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">−25 / −70 / −25 ₽</text>
+<rect x="1030" y="466" width="488" height="235" rx="10" fill="#f1faf4" stroke="#cfe5d7" stroke-width="2"/>
+<text x="1056" y="512" font-size="18" font-weight="700" fill="#238456" text-anchor="start" letter-spacing="1">ВКЛАД С ЗАКАЗА</text>
+<text x="1056" y="579" font-size="52" font-weight="700" fill="#238456" text-anchor="start">270 ₽</text>
+<text x="1056" y="631" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">200 × 270 = 54 000 ₽</text>
+<text x="82" y="735" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Сравнение ведётся по прибыли после переменных затрат за одинаковую неделю.</text>
+<rect x="54" y="790" width="1492" height="553" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="838" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">02</text>
+<text x="135" y="838" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Три механики: объём против прибыли</text>
+<text x="82" y="861" font-size="17" font-weight="700" fill="#687580" text-anchor="start">СЦЕНАРИЙ</text>
+<text x="335" y="861" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ЦЕНА</text>
+<text x="535" y="861" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ВКЛАД</text>
+<text x="735" y="861" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ПОРОГ ШТ.</text>
+<text x="955" y="861" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ОЦЕНКА ШТ.</text>
+<text x="1210" y="861" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ПРИБЫЛЬ</text>
+<line x1="82" y1="885" x2="1518" y2="885" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="946" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Без акции</text>
+<text x="335" y="946" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">1 000 ₽</text>
+<text x="535" y="946" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">270 ₽</text>
+<text x="735" y="946" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">200</text>
+<text x="955" y="946" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">200</text>
+<text x="1210" y="946" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">54 000 ₽</text>
+<line x1="82" y1="972" x2="1518" y2="972" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1031" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Скидка 10%</text>
+<text x="335" y="1031" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">900 ₽</text>
+<text x="535" y="1031" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">188 ₽</text>
+<text x="735" y="1031" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">288</text>
+<text x="955" y="1031" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">310</text>
+<text x="1210" y="1031" font-size="22" font-weight="700" fill="#238456" text-anchor="start">58 280 ₽</text>
+<line x1="82" y1="1057" x2="1518" y2="1057" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1116" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Скидка 15%</text>
+<text x="335" y="1116" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">850 ₽</text>
+<text x="535" y="1116" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">147 ₽</text>
+<text x="735" y="1116" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">368</text>
+<text x="955" y="1116" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">340</text>
+<text x="1210" y="1116" font-size="22" font-weight="700" fill="#b63740" text-anchor="start">49 980 ₽</text>
+<line x1="82" y1="1142" x2="1518" y2="1142" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1201" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">Скидка 20%</text>
+<text x="335" y="1201" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">800 ₽</text>
+<text x="535" y="1201" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">111 ₽</text>
+<text x="735" y="1201" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">487</text>
+<text x="955" y="1201" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">380</text>
+<text x="1210" y="1201" font-size="22" font-weight="700" fill="#b63740" text-anchor="start">42 180 ₽</text>
+<line x1="82" y1="1227" x2="1518" y2="1227" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1311" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Порог — минимальное целое число заказов для прибыли не ниже 54 000 ₽.</text>
+<rect x="54" y="1367" width="1492" height="406" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="1415" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">03</text>
+<text x="135" y="1415" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Откуда берётся вклад при скидке</text>
+<text x="82" y="1438" font-size="17" font-weight="700" fill="#687580" text-anchor="start">СТАТЬЯ НА УПАКОВКУ</text>
+<text x="760" y="1438" font-size="17" font-weight="700" fill="#687580" text-anchor="start">10%</text>
+<text x="1000" y="1438" font-size="17" font-weight="700" fill="#687580" text-anchor="start">15%</text>
+<text x="1240" y="1438" font-size="17" font-weight="700" fill="#687580" text-anchor="start">20%</text>
+<line x1="82" y1="1460" x2="1518" y2="1460" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1510" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">Цена после скидки</text>
+<text x="760" y="1510" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">900 ₽</text>
+<text x="1000" y="1510" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">850 ₽</text>
+<text x="1240" y="1510" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">800 ₽</text>
+<line x1="82" y1="1535" x2="1518" y2="1535" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1577" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">Себестоимость + логистика + упаковка + резерв</text>
+<text x="760" y="1577" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">−480 ₽</text>
+<text x="1000" y="1577" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">−480 ₽</text>
+<text x="1240" y="1577" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">−480 ₽</text>
+<line x1="82" y1="1602" x2="1518" y2="1602" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1644" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">Комиссия + реклама + сбор акции</text>
+<text x="760" y="1644" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">−232 ₽</text>
+<text x="1000" y="1644" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">−223 ₽</text>
+<text x="1240" y="1644" font-size="22" font-weight="400" fill="#20262d" text-anchor="start">−209 ₽</text>
+<line x1="82" y1="1669" x2="1518" y2="1669" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1711" font-size="20" font-weight="700" fill="#20262d" text-anchor="start">Вклад с упаковки</text>
+<text x="760" y="1711" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">188 ₽</text>
+<text x="1000" y="1711" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">147 ₽</text>
+<text x="1240" y="1711" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">111 ₽</text>
+<line x1="82" y1="1736" x2="1518" y2="1736" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1741" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Реклама: 50 / 50 / 45 ₽; комиссия: 162 / 153 / 144 ₽; сбор акции: 20 ₽.</text>
+<rect x="54" y="1797" width="1492" height="504" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="1845" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">04</text>
+<text x="135" y="1845" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Чувствительность и правила пилота</text>
+<text x="82" y="1872" font-size="18" font-weight="700" fill="#687580" text-anchor="start">СКИДКА 10%: ЧТО ЕСЛИ СПРОС НИЖЕ ОЦЕНКИ?</text>
+<rect x="82" y="1909" width="692" height="119" rx="9" fill="#fff6f4" stroke="#e5c9c7" stroke-width="2"/>
+<text x="104" y="1956" font-size="25" font-weight="700" fill="#b63740" text-anchor="start">270 заказов</text>
+<text x="104" y="1998" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">50 760 ₽ · −3 240 ₽ к базе</text>
+<rect x="798" y="1909" width="720" height="119" rx="9" fill="#f1faf4" stroke="#cfe5d7" stroke-width="2"/>
+<text x="820" y="1956" font-size="25" font-weight="700" fill="#238456" text-anchor="start">310 заказов</text>
+<text x="820" y="1998" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">58 280 ₽ · +4 280 ₽ к базе</text>
+<text x="82" y="2087" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Пилот: только скидка 10%, короткий период и согласованный запас товара.</text>
+<text x="82" y="2138" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">До старта проверить фактическую комиссию, рекламный лимит и сбор акции.</text>
+<text x="82" y="2189" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">Во время акции сверять темп заказов с порогом 288 и фактический вклад.</text>
+<text x="82" y="2240" font-size="21" font-weight="400" fill="#20262d" text-anchor="start">При ухудшении экономики остановить промо по согласованному правилу.</text>
+<text x="54" y="2334" font-size="17" font-weight="400" fill="#687580" text-anchor="start">Оценка заказов — сценарий по прошлым промо, не гарантия. Итог пересчитывается по фактическим условиям WB.</text>
+</g>
+</svg>

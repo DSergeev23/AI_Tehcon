@@ -12,6 +12,9 @@ import marketplaceAdAnalyst from './products/marketplace-ad-analyst.js';
 import marketplaceCardSeoSpecialist from './products/marketplace-card-seo-specialist.js';
 import marketplaceContentManager from './products/marketplace-content-manager.js';
 import marketplaceReviewManager from './products/marketplace-review-manager.js';
+import marketplaceCompetitorAnalyst from './products/marketplace-competitor-analyst.js';
+import marketplaceCategoryManager from './products/marketplace-category-manager.js';
+import marketplacePromoManager from './products/marketplace-promo-manager.js';
 import aiBloggingAgent from './products/ai-blogging-agent.js';
 import pinterestSeoTrafficAgent from './products/pinterest-seo-traffic-agent.js';
 import aiAgentFor1cChatVoiceAnalytics from './products/ai-agent-for-1c-chat-voice-analytics.js';
@@ -63,6 +66,9 @@ export const catalogProducts = [
   marketplaceCardSeoSpecialist,
   marketplaceContentManager,
   marketplaceReviewManager,
+  marketplaceCompetitorAnalyst,
+  marketplaceCategoryManager,
+  marketplacePromoManager,
   aiBloggingAgent,
   pinterestSeoTrafficAgent,
   aiAgentFor1cChatVoiceAnalytics,
