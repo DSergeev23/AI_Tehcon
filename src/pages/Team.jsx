@@ -6,6 +6,7 @@ import CanonicalLink from '../components/shared/CanonicalLink';
 import SEOHead from '../components/shared/SEOHead';
 import { pageSEO, SITE_URL } from '../lib/seoConfig';
 
+/** @type {Array<{id: string, name: string, role: string, description: string, favorite: string, photo: string, photoBase: string, photoWidth?: number, photoHeight?: number, certificates?: string[], courses?: string[], specializations?: string[]}>} */
 const employees = [
   { ...teamAuthors.lomakin, photo: '/team/sergey-lomakin.png', photoBase: '/team/sergey-lomakin', photoWidth: 299, photoHeight: 316, description: 'Руководитель проектов и специалист по внедрению 1С.', favorite: 'Автоматизация производства и решения на базе 1С и ИИ.', certificates: [
     '1С:Специалист по платформе',
