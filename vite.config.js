@@ -5,6 +5,7 @@ import { vitePrerenderPlugin } from 'vite-prerender-plugin'
 import { catalogProducts } from './src/lib/catalog/index.js'
 import { catalogCategoryNav } from './src/lib/catalog/categorySeo.js'
 import { directions } from './src/lib/directions.js'
+import { marketplaceCases } from './src/lib/marketplaceCases.js'
 import { categoryRedirects } from './src/lib/catalog/categoryRedirects.js'
 import { caseStudies } from './src/lib/caseStudies.js'
 
@@ -21,8 +22,10 @@ const prerenderRoutes = [
   ...directions.map(({ slug }) => `/${slug}`),
   '/404.html',
   '/about',
+  '/about/team',
   '/catalog',
   '/cases',
+  ...marketplaceCases.map(({ slug }) => `/cases/${slug}`),
   ...caseStudies.map(({ slug }) => `/cases/${slug}`),
   ...catalogCategoryNav.map(({ slug }) => `/catalog/${slug}`),
   ...catalogProducts.map(({ id }) => `/catalog/${id}`),

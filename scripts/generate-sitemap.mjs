@@ -4,6 +4,7 @@ import { catalogProducts } from '../src/lib/catalog/index.js';
 import { catalogCategoryNav } from '../src/lib/catalog/categorySeo.js';
 import { directions } from '../src/lib/directions.js';
 import { caseStudies } from '../src/lib/caseStudies.js';
+import { marketplaceCases } from '../src/lib/marketplaceCases.js';
 
 const SITE_URL = 'https://ai-tehcon.ru';
 const toCanonicalPath = (path) => (path === '/' ? '/' : `${path.replace(/\/+$/, '')}/`);
@@ -14,6 +15,7 @@ const staticPages = [
   { path: '/catalog', priority: '0.9' },
   ...catalogCategoryNav.map(({ slug }) => ({ path: `/catalog/${slug}`, priority: '0.85' })),
   { path: '/about', priority: '0.7' },
+  { path: '/about/team', priority: '0.7' },
   { path: '/cases', priority: '0.8' },
   { path: '/news', priority: '0.8' },
   { path: '/partners', priority: '0.7' },
@@ -27,7 +29,7 @@ const productPages = catalogProducts.map(({ id }) => ({
   priority: '0.8',
 }));
 
-const casePages = caseStudies.map(({ slug }) => ({
+const casePages = [...caseStudies, ...marketplaceCases].map(({ slug }) => ({
   path: `/cases/${slug}`,
   priority: '0.7',
 }));

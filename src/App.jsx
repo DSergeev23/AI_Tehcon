@@ -13,6 +13,7 @@ import GoogleAnalytics from './components/shared/GoogleAnalytics';
 const Home = React.lazy(() => import('./pages/Home'));
 const Direction = React.lazy(() => import('./pages/Direction'));
 const About = React.lazy(() => import('./pages/About'));
+const Team = React.lazy(() => import('./pages/Team'));
 const Catalog = React.lazy(() => import('./pages/Catalog'));
 const Contacts = React.lazy(() => import('./pages/Contacts'));
 const Partners = React.lazy(() => import('./pages/Partners'));
@@ -35,6 +36,7 @@ export const PublicApp = () => {
         {directions.map((direction) => <Route key={direction.slug} path={`/${direction.slug}`} element={<LazyRoute><Direction direction={direction} /></LazyRoute>} />)}
         <Route path="/" element={<LazyRoute><Home /></LazyRoute>} />
         <Route path="/about" element={<LazyRoute><About /></LazyRoute>} />
+        <Route path="/about/team" element={<LazyRoute><Team /></LazyRoute>} />
         <Route path="/catalog" element={<LazyRoute><Catalog /></LazyRoute>} />
         {Object.entries(categoryRedirects).map(([slug, to]) => <Route key={slug} path={`/catalog/${slug}`} element={<Navigate to={to} replace />} />)}
         <Route path="/catalog/image-analysis" element={<LazyRoute><Catalog /></LazyRoute>} />

@@ -1,161 +1,16 @@
 import React, { useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
 import CaseCard from '../components/cases/CaseCard';
-import CanonicalLink from '../components/shared/CanonicalLink';
-import ResponsiveImage from '../components/shared/ResponsiveImage';
 import SEOHead from '../components/shared/SEOHead';
 import { caseStudies } from '../lib/caseStudies';
 import { directions } from '../lib/directions';
+import { marketplaceCases } from '../lib/marketplaceCases';
 import { pageSEO } from '../lib/seoConfig';
 
-const marketplaceSolutionGroups = [
-  {
-    id: 'marketplace-finance-solutions',
-    title: 'Финансовый контроль маркетплейсов',
-    solutions: [
-      {
-        id: 'marketplace-financial-auditor',
-        title: 'ИИ-аудитор финансов WB и Ozon',
-        description: 'Сверяет данные маркетплейсов и 1С, показывает структуру расходов, изменение маржи и суммы, которые требуют проверки.',
-        image: '/images/marketplace-financial-auditor-report.svg',
-        alt: 'Отчёт финансового аудита Ozon со структурой расходов и маржинальной прибылью',
-      },
-      {
-        id: 'marketplace-financial-director',
-        title: 'ИИ-финансовый директор для WB и Ozon',
-        description: 'Собирает P&L, сравнивает план с фактом и объясняет влияние выручки, ДРР и затрат на операционную прибыль.',
-        image: '/images/marketplace-financial-director-report.svg',
-        alt: 'Отчёт P&L с планом, фактом, ДРР и расшифровкой отклонения прибыли',
-      },
-      {
-        id: 'marketplace-unit-economist',
-        title: 'ИИ-экономист по SKU для WB и Ozon',
-        description: 'Считает юнит-экономику и показывает минимальную цену продажи и допустимую себестоимость при целевой марже.',
-        image: '/images/marketplace-unit-economist-report.svg',
-        alt: 'Отчёт по SKU с юнит-экономикой, минимальной ценой и запасом до порога',
-      },
-    ],
-  },
-  {
-    id: 'marketplace-traffic-solutions',
-    title: 'Реклама и видимость на маркетплейсах',
-    solutions: [
-      {
-        id: 'marketplace-ai-marketer',
-        title: 'ИИ-маркетолог для рекламы WB и Ozon',
-        description: 'Для бренда косметики группирует восемь SKU по отдаче рекламы WB, проверяет кластеры слабых товаров и предлагает план лимитов.',
-        image: '/images/marketplace-ai-marketer-report.svg',
-        alt: 'ABC-отчёт ИИ-маркетолога по рекламе восьми косметических товаров WB',
-      },
-      {
-        id: 'marketplace-ad-analyst',
-        title: 'ИИ-аналитик рекламы WB и Ozon',
-        description: 'Для магазина зоотоваров сравнивает CPC и CPA на Ozon, считает ДРР и ROMI и предлагает перенос лимита.',
-        image: '/images/marketplace-ad-analyst-report.svg',
-        alt: 'Отчёт аналитика рекламы зоотоваров на Ozon: CPC против CPA и план бюджета',
-      },
-      {
-        id: 'marketplace-card-seo-specialist',
-        title: 'ИИ-SEO-специалист по карточкам WB и Ozon',
-        description: 'Для продавца кухонных контейнеров группирует запросы и готовит заголовок и описание карточки по свойствам товара.',
-        image: '/images/marketplace-card-seo-specialist-report.svg',
-        alt: 'Отчёт SEO-специалиста с семантикой, заголовком и описанием карточки товара',
-      },
-    ],
-  },
-  {
-    id: 'marketplace-content-customer-solutions',
-    title: 'Контент и работа с покупателями',
-    solutions: [
-      {
-        id: 'marketplace-content-manager',
-        title: 'ИИ-контент-менеджер карточек WB и Ozon',
-        description: 'Для производителя туристических рюкзаков готовит атрибуты, структуру галереи и текст карточки Ozon по паспорту товара.',
-        image: '/images/marketplace-content-manager-report.svg',
-        alt: 'Отчёт контент-менеджера по карточке туристического рюкзака Ozon',
-      },
-      {
-        id: 'marketplace-review-manager',
-        title: 'ИИ-менеджер по отзывам и вопросам WB и Ozon',
-        description: 'Для бренда спортивной одежды разбирает отзывы и вопросы WB, готовит ответы и выделяет повторяющиеся проблемы.',
-        image: '/images/marketplace-review-manager-report.svg',
-        alt: 'Отчёт по отзывам спортивной одежды WB с темами и черновиками ответов',
-      },
-    ],
-  },
-  {
-    id: 'marketplace-market-assortment-solutions',
-    title: 'Рынок, ассортимент и акции',
-    solutions: [
-      {
-        id: 'marketplace-competitor-analyst',
-        title: 'ИИ-аналитик конкурентов WB и Ozon',
-        description: 'Для производителя настольных светильников показывает изменение доли ниши, ассортимента, наличия и цен конкурентов на Ozon.',
-        image: '/images/marketplace-competitor-analyst-report.svg',
-        alt: 'Отчёт по конкурентам в нише настольных светильников: доля, ассортимент и цены',
-      },
-      {
-        id: 'marketplace-category-manager',
-        title: 'ИИ-категорийный менеджер для WB и Ozon',
-        description: 'Для импортёра фитнес-оборудования сравнивает спрос, конкуренцию и маржу двух видов роликов до закупки.',
-        image: '/images/marketplace-category-manager-report.svg',
-        alt: 'Предзакупочный отчёт по нише фитнес-роликов: спрос, конкуренция и юнит-экономика',
-      },
-      {
-        id: 'marketplace-promo-manager',
-        title: 'ИИ-менеджер по акциям WB и Ozon',
-        description: 'Для производителя листового чая рассчитывает три скидки WB и порог заказов, при котором акция сохраняет прибыль.',
-        image: '/images/marketplace-promo-manager-report.svg',
-        alt: 'Отчёт по акциям чайного бренда: скидки, вклад с заказа и порог продаж',
-      },
-    ],
-  },
-  {
-    id: 'marketplace-operations-solutions',
-    title: 'Поставки и оперативный контроль',
-    solutions: [
-      {
-        id: 'marketplace-supply-manager',
-        title: 'ИИ-менеджер по поставкам WB и Ozon',
-        description: 'Для производителя автомобильных щёток рассчитывает пополнение по кластерам Ozon и срочное перемещение до приёмки партии.',
-        image: '/images/marketplace-supply-manager-report.svg',
-        alt: 'План пополнения щёток Ozon: остатки, дни покрытия и распределение по кластерам',
-      },
-      {
-        id: 'marketplace-duty-analyst',
-        title: 'ИИ-дежурный аналитик WB и Ozon',
-        description: 'Для продавца пластика 3D-печати на WB выявляет падение продаж SKU, рост ДРР и возвратов и передаёт сигналы ответственным.',
-        image: '/images/marketplace-duty-analyst-report.svg',
-        alt: 'Очередь сигналов WB: отклонения заказов, рекламы и возвратов с порогами',
-      },
-    ],
-  },
-  {
-    id: 'marketplace-management-solutions',
-    title: 'Управление магазином и временем владельца',
-    solutions: [
-      {
-        id: 'marketplace-operations-director',
-        title: 'ИИ-операционный директор для WB и Ozon',
-        description: 'Для производителя велоаксессуаров связывает расписание агентов, свежесть обменов и общий утренний обзор магазина.',
-        image: '/images/marketplace-operations-director-report.svg',
-        alt: 'Отчёт операционного директора: расписание агентов, состояние обменов и сводка магазина',
-      },
-      {
-        id: 'marketplace-personal-assistant',
-        title: 'ИИ-личный ассистент владельца бизнеса',
-        description: 'Для владельца издательства настольных игр разбирает личную переписку, календарь и дела вне магазина, готовит черновики на согласование.',
-        image: '/images/marketplace-personal-assistant-report.svg',
-        alt: 'Личный брифинг владельца: входящие письма, задачи, календарь и черновики ответов',
-      },
-    ],
-  },
-];
 
 export default function Cases() {
   const [activeSolution, setActiveSolution] = useState(null);
-  const filteredCases = activeSolution ? caseStudies.filter((caseStudy) => caseStudy.solution === activeSolution) : caseStudies;
-  const showMarketplaceSolutions = !activeSolution || activeSolution === 'ai-for-marketplace';
+  const allCases = [...marketplaceCases, ...caseStudies];
+  const filteredCases = activeSolution ? allCases.filter((caseStudy) => caseStudy.solution === activeSolution) : allCases;
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -180,27 +35,6 @@ export default function Cases() {
               })}
             </div>
           </section>
-          {showMarketplaceSolutions && marketplaceSolutionGroups.map((group) => (
-            <section key={group.id} className="mb-12" aria-labelledby={group.id}>
-              <p className="mb-3 text-xs uppercase tracking-[0.16em] text-signal">Решения по теме кейсов</p>
-              <h2 id={group.id} className="mb-7 font-serif text-3xl text-white md:text-4xl">{group.title}</h2>
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-                {group.solutions.map((solution) => (
-                  <article key={solution.id} className="group flex h-full flex-col overflow-hidden border border-primary/35 bg-white/[0.025] transition-colors hover:border-primary/60 hover:bg-white/[0.04]">
-                    <CanonicalLink to={`/catalog/${solution.id}`} className="relative block aspect-[16/10] overflow-hidden bg-[#f7f8f9]" aria-label={`Смотреть решение: ${solution.title}`}>
-                      <ResponsiveImage src={solution.image} alt={solution.alt} sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]" />
-                    </CanonicalLink>
-                    <div className="flex flex-1 flex-col p-6">
-                      <p className="text-[10px] uppercase tracking-[0.14em] text-signal">Решение · ИИ для маркетплейсов</p>
-                      <h3 className="mt-4 text-[1.65rem] font-semibold leading-[1.12] tracking-[-0.025em] text-white"><CanonicalLink to={`/catalog/${solution.id}`}>{solution.title}</CanonicalLink></h3>
-                      <p className="mt-4 text-sm leading-relaxed text-white/70">{solution.description}</p>
-                      <CanonicalLink to={`/catalog/${solution.id}`} className="mt-auto inline-flex items-center gap-2 pt-7 text-xs font-semibold text-white transition-colors hover:text-primary">Смотреть решение <ArrowUpRight className="h-4 w-4" /></CanonicalLink>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-          ))}
           {filteredCases.length > 0 ? <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">{filteredCases.map((caseStudy) => <CaseCard key={caseStudy.slug} caseStudy={caseStudy} />)}</div> : <div className="border border-white/[0.12] bg-white/[0.015] p-8 text-white/70"><h2 className="font-serif text-3xl text-white">Кейсов пока нет</h2><p className="mt-3 text-sm leading-relaxed">Для этого направления мы ещё готовим подтверждённые материалы.</p></div>}
         </> : <div className="border border-white/[0.12] bg-white/[0.015] p-8 text-white/70"><h2 className="font-serif text-3xl text-white">Кейсы скоро появятся</h2><p className="mt-3 text-sm leading-relaxed">Собираем подтверждённые результаты внедрений и подготовим подробные материалы.</p></div>}
       </main>

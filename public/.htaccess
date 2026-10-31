@@ -11,6 +11,23 @@ RewriteRule ^catalog/1c(?:/index\.html|/)?$ https://ai-tehcon.ru/ai-for-1c/ [R=3
 RewriteRule ^catalog/(?:marketplace|ecommerce)(?:/index\.html|/)?$ https://ai-tehcon.ru/ai-for-marketplace/ [R=301,L,NE]
 RewriteRule ^catalog/content-factory(?:/index\.html|/)?$ https://ai-tehcon.ru/content-factory/ [R=301,L,NE]
 
+# Solutions moved to case pages.
+RewriteRule ^catalog/marketplace-financial-auditor(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-financial-auditor/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-financial-director(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-financial-director/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-unit-economist(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-unit-economist/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-ai-marketer(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-ai-marketer/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-ad-analyst(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-ad-analyst/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-card-seo-specialist(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-card-seo-specialist/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-content-manager(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-content-manager/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-review-manager(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-review-manager/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-competitor-analyst(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-competitor-analyst/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-category-manager(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-category-manager/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-promo-manager(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-promo-manager/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-supply-manager(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-supply-manager/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-duty-analyst(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-duty-analyst/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-operations-director(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-operations-director/ [R=301,L,NE]
+RewriteRule ^catalog/marketplace-personal-assistant(?:/index\.html|/)?$ https://ai-tehcon.ru/cases/marketplace-personal-assistant/ [R=301,L,NE]
+
 # Add the canonical trailing slash before Apache's DirectorySlash can create
 # an extra redirect with the wrong protocol behind Timeweb's nginx proxy.
 RewriteCond %{REQUEST_FILENAME} !-f

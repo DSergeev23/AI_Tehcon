@@ -1,3 +1,5 @@
+import { marketplaceCases } from '../marketplaceCases.js';
+
 import telegramLeadGenerator from './products/telegram-lead-generator.js';
 import influencerDataAutomation from './products/influencer-data-automation.js';
 import cryptoMorningDigest from './products/crypto-morning-digest.js';
@@ -55,7 +57,7 @@ import yandexZenRssAutopublish from './products/yandex-zen-rss-autopublish.js';
 import instagramAiContentManager from './products/instagram-ai-content-manager.js';
 import aiVisualQualityControl from './products/ai-visual-quality-control.js';
 
-export const catalogProducts = [
+const allProducts = [
   telegramLeadGenerator,
   influencerDataAutomation,
   cryptoMorningDigest,
@@ -113,6 +115,10 @@ export const catalogProducts = [
   ...financeAiProducts,
   ...ecommerceAiProducts,
 ];
+
+const movedIds = new Set(marketplaceCases.map(({ id }) => id));
+export const catalogProducts = allProducts.filter(({ id }) => !movedIds.has(id));
+export const movedCaseProducts = allProducts.filter(({ id }) => movedIds.has(id));
 
 export function getProductById(id) {
   return catalogProducts.find((product) => product.id === id);

@@ -1,14 +1,8 @@
 import { directions } from './directions.js';
 
-export const caseAuthor = {
-  '@type': 'Person',
-  name: 'Ломакин Сергей Юрьевич',
-  jobTitle: 'Специалист',
-  worksFor: { '@type': 'Organization', name: 'ООО ТехКон' },
-};
-
 export const caseStudies = [
   {
+    authorId: 'lomakin',
     slug: 'telegram-lead-generator-optics-network',
     title: 'Telegram-лидогенерация для сети магазинов оптики',
     seoTitle: 'Telegram-лидогенерация для сети оптики — кейс AI TehCon',
@@ -77,6 +71,7 @@ export const caseStudies = [
     ],
   },
   {
+    authorId: 'lomakin',
     slug: 'it-integrator-daily-news-autoposting',
     title: 'Ежедневный автопостинг новостей для IT-интегратора',
     seoTitle: 'Автопостинг новостей для IT-интегратора — кейс AI TehCon',
@@ -151,6 +146,7 @@ export const caseStudies = [
     ],
   },
   {
+    authorId: 'lomakin',
     slug: 'ut115-marketplace-reports-financial-reconciliation',
     title: 'Сверка отчётов Ozon и Wildberries с 1С:УТ 11.5',
     seoTitle: 'Сверка отчётов маркетплейсов с 1С:УТ 11.5 — кейс AI TehCon',
@@ -225,6 +221,7 @@ export const caseStudies = [
     ],
   },
   {
+    authorId: 'lomakin',
     slug: 'upp-competitor-price-analysis-ice-cream',
     title: 'Анализ цен конкурентов для поставщика мороженого в 1С:УПП',
     seoTitle: 'Анализ цен конкурентов в 1С:УПП — кейс AI TehCon',
@@ -299,6 +296,7 @@ export const caseStudies = [
     ],
   },
   {
+    authorId: 'lomakin',
     slug: 'upp-procurement-commercial-offers-excel',
     title: 'Автоматизация анализа предложений поставщиков в 1С:УПП',
     seoTitle: 'Анализ предложений поставщиков в 1С:УПП — кейс AI TehCon',
@@ -373,6 +371,7 @@ export const caseStudies = [
     ],
   },
   {
+    authorId: 'lomakin',
     slug: 'supplier-contract-penalty-analysis-delivery-mismatch',
     title: 'Контроль договоров поставки в 1С:УПП',
     seoTitle: 'Контроль договоров поставки в 1С:УПП — кейс AI TehCon',
@@ -455,6 +454,7 @@ export const caseStudies = [
     ],
   },
   {
+    authorId: 'lomakin',
     slug: 'daily-1c-sales-reports-critical-discount-error',
     title: 'Автоматизация анализа продаж в 1С:УТ 11.5',
     seoTitle: 'Автоматизация анализа продаж в 1С:УТ 11.5 — кейс AI TehCon',

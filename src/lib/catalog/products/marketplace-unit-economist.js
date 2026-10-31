@@ -69,7 +69,7 @@ const marketplaceUnitEconomist = {
   seo: {
     title: 'Юнит-экономика SKU и минимальная цена для WB и Ozon | AI TehCon',
     description: 'ИИ-экономист для маркетплейсов рассчитывает маржу по SKU, минимальную цену продажи и допустимую себестоимость при целевой марже.',
-    canonical: '/catalog/marketplace-unit-economist',
+    canonical: '/cases/marketplace-unit-economist',
     keywords: 'юнит экономика маркетплейсов, минимальная цена SKU Ozon WB, целевая маржа товара, допустимая себестоимость SKU',
   },
 };

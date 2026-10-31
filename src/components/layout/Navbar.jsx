@@ -14,6 +14,7 @@ const navLinks = [
 
 const companyLinks = [
   { label: 'О компании', path: '/about' },
+  { label: 'Ключевые сотрудники', path: '/about/team' },
   { label: 'Партнёрам', path: '/partners' },
 ];
 

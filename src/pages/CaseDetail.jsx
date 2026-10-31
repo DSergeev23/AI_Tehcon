@@ -5,16 +5,25 @@ import CanonicalLink from '../components/shared/CanonicalLink';
 import ResponsiveImage, { getOptimizedImageUrl } from '../components/shared/ResponsiveImage';
 import SEOHead from '../components/shared/SEOHead';
 import PageNotFound from '../lib/PageNotFound';
-import { getCaseStudy, caseAuthor } from '../lib/caseStudies';
+import { getCaseStudy } from '../lib/caseStudies';
+import { marketplaceCases } from '../lib/marketplaceCases';
+import MarketplaceCaseDetail from '../components/cases/MarketplaceCaseDetail';
+import CaseConfidentiality from '../components/cases/CaseConfidentiality';
+import { teamAuthors } from '../lib/teamAuthors';
 import { SITE_URL, toAbsoluteUrl } from '../lib/seoConfig';
 import { imageVariants } from '../lib/imageVariants.generated';
 import { getCaseSolution } from '../lib/caseStudies';
 
 export default function CaseDetail() {
   const { slug } = useParams();
+  const marketplaceCase = marketplaceCases.find((item) => item.slug === slug);
   const caseStudy = getCaseStudy(slug);
+  if (marketplaceCase) return <MarketplaceCaseDetail caseStudy={marketplaceCase} />;
   const solution = caseStudy && getCaseSolution(caseStudy);
   if (!caseStudy) return <PageNotFound />;
+  const author = teamAuthors[caseStudy.authorId];
+  if (!author) throw new Error(`Не указан или не найден автор кейса: ${caseStudy.slug}`);
+  const authorUrl = `/about/team/#${author.id}`;
   const canonical = `/cases/${caseStudy.slug}/`;
   const url = `${SITE_URL}${canonical}`;
   const ogImage = toAbsoluteUrl(getOptimizedImageUrl(caseStudy.coverImage, 1200, 'webp'));
@@ -29,7 +38,7 @@ export default function CaseDetail() {
         mainEntityOfPage: { '@type': 'WebPage', '@id': url },
         image: [ogImage], inLanguage: 'ru-RU',
         dateModified: caseStudy.dateModified,
-        author: caseAuthor,
+        author: { '@type': 'Person', name: author.name, jobTitle: author.role, url: `${SITE_URL}${authorUrl}`, worksFor: { '@type': 'Organization', name: 'ООО ТехКон' } },
         publisher: { '@type': 'Organization', name: 'ООО ТехКон', url: SITE_URL },
       },
       {
@@ -52,11 +61,10 @@ export default function CaseDetail() {
           <p className="mt-10 text-xs uppercase tracking-[0.16em] text-signal">{caseStudy.category}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {solution && <CanonicalLink to={`/${solution.slug}`} className="inline-flex rounded-sm border border-primary/35 bg-primary/10 px-3 py-1.5 text-xs text-white transition-colors hover:border-primary/60">Решение: {solution.label}</CanonicalLink>}
-            {caseStudy.service && <CanonicalLink to={caseStudy.service.path} className="inline-flex rounded-sm border border-white/[0.18] px-3 py-1.5 text-xs text-white/80 transition-colors hover:border-white/40 hover:text-white">Услуга: {caseStudy.service.label}</CanonicalLink>}
           </div>
           <h1 className="mt-5 max-w-5xl text-4xl font-semibold leading-[1.08] tracking-[-0.035em] md:text-6xl">{caseStudy.title}</h1>
           <p className="mt-7 max-w-3xl text-lg leading-relaxed text-white/75">{caseStudy.excerpt}</p>
-          <p className="mt-6 text-sm leading-relaxed text-white/60">Автор: {caseAuthor.name}, специалист компании ООО ТехКон.<br />Обновлено: <time dateTime={caseStudy.dateModified}>{caseStudy.dateModified.split('-').reverse().join('.')}</time></p>
+          <p className="mt-6 text-sm leading-relaxed text-white/60">Автор: <CanonicalLink to={authorUrl} className="text-white/85 underline underline-offset-4 hover:text-primary">{author.name}</CanonicalLink>, {author.role.toLowerCase()}.<br />Обновлено: <time dateTime={caseStudy.dateModified}>{caseStudy.dateModified.split('-').reverse().join('.')}</time></p>
         </div>
       </header>
       <main className="mx-auto max-w-[1440px] px-5 py-12 md:px-8 md:py-16 lg:px-12">
@@ -91,11 +99,7 @@ export default function CaseDetail() {
           </aside>
         </div>
       </main>
-      <section className="border-t border-white/[0.08]">
-        <div className="mx-auto max-w-5xl px-5 py-12 md:px-8 md:py-16 lg:px-12">
-          <p className="border-l-2 border-primary/60 pl-4 text-sm leading-relaxed text-white/60">Мы соблюдаем соглашение о конфиденциальности и не раскрываем данные, название и внутренние процессы клиента. Иллюстрации показывают демонстрационные интерфейсы на условных данных и не относятся к данным конкретного заказчика.</p>
-        </div>
-      </section>
+      <CaseConfidentiality />
       <section className="border-t border-white/[0.08]">
         <div className="mx-auto max-w-5xl px-5 py-12 md:px-8 md:py-16 lg:px-12">
           <p className="text-xs uppercase tracking-[0.16em] text-signal">Следующий шаг</p>
@@ -103,7 +107,7 @@ export default function CaseDetail() {
           <p className="mt-6 max-w-3xl border-l-2 border-primary/60 pl-5 text-lg leading-relaxed text-white/80 md:text-2xl">Разберём ваш процесс, оценим возможность автоматизации и предложим архитектуру решения.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <CanonicalLink to="/contacts" className="signal-button inline-flex items-center justify-center gap-3 rounded-sm px-6 py-3.5 font-medium">Обсудить задачу <Plus size={18} /></CanonicalLink>
-            <CanonicalLink to="/catalog" className="inline-flex items-center justify-center gap-3 rounded-sm border border-white/[0.18] px-6 py-3.5 font-medium text-white transition-colors hover:border-white/40 hover:bg-white/[0.04]">Посмотреть решения <ArrowUpRight size={18} /></CanonicalLink>
+            <CanonicalLink to="/cases/" className="inline-flex items-center justify-center gap-3 rounded-sm border border-white/[0.18] px-6 py-3.5 font-medium text-white transition-colors hover:border-white/40 hover:bg-white/[0.04]">Все кейсы <ArrowUpRight size={18} /></CanonicalLink>
           </div>
         </div>
       </section>

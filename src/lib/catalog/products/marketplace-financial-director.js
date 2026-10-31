@@ -69,7 +69,7 @@ const marketplaceFinancialDirector = {
   seo: {
     title: 'ИИ-финансовый директор для WB и Ozon: P&L и ДРР | AI TehCon',
     description: 'Управленческий P&L маркетплейсов: план-факт прибыли, ДРР и расшифровка отклонений по выручке и расходам WB и Ozon.',
-    canonical: '/catalog/marketplace-financial-director',
+    canonical: '/cases/marketplace-financial-director',
     keywords: 'P&L маркетплейсов, ДРР WB Ozon, план факт прибыли маркетплейсы, финансовый директор для селлера',
   },
 };

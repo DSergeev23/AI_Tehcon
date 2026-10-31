@@ -920,46 +920,6 @@ export const imageVariants = {
       }
     ]
   },
-  "/images/about-automation-atlas.png": {
-    "width": 1254,
-    "height": 1254,
-    "avif": [
-      {
-        "src": "/images/optimized/about-automation-atlas-w480.avif",
-        "width": 480
-      },
-      {
-        "src": "/images/optimized/about-automation-atlas-w768.avif",
-        "width": 768
-      },
-      {
-        "src": "/images/optimized/about-automation-atlas-w1200.avif",
-        "width": 1200
-      },
-      {
-        "src": "/images/optimized/about-automation-atlas-w1254.avif",
-        "width": 1254
-      }
-    ],
-    "webp": [
-      {
-        "src": "/images/optimized/about-automation-atlas-w480.webp",
-        "width": 480
-      },
-      {
-        "src": "/images/optimized/about-automation-atlas-w768.webp",
-        "width": 768
-      },
-      {
-        "src": "/images/optimized/about-automation-atlas-w1200.webp",
-        "width": 1200
-      },
-      {
-        "src": "/images/optimized/about-automation-atlas-w1254.webp",
-        "width": 1254
-      }
-    ]
-  },
   "/images/ai-ad-lead-qualification.png": {
     "width": 1672,
     "height": 941,

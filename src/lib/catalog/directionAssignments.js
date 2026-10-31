@@ -1,5 +1,7 @@
 // Explicit assignments from docs/directions-card-mapping.md; existing product URLs stay unchanged.
-export const directionAssignments = [
+import { marketplaceCases } from '../marketplaceCases.js';
+
+const allDirectionAssignments = [
   {
     "id": "ai-agent-for-1c-chat-voice-analytics",
     "direction": "ai-for-1c",
@@ -537,3 +539,6 @@ export const directionAssignments = [
     ]
   }
 ];
+
+const movedIds = new Set(marketplaceCases.map(({ id }) => id));
+export const directionAssignments = allDirectionAssignments.filter(({ id }) => !movedIds.has(id));

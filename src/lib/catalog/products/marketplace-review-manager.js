@@ -69,7 +69,7 @@ const marketplaceReviewManager = {
   seo: {
     title: 'ИИ-менеджер по отзывам и вопросам WB и Ozon | AI TehCon',
     description: 'Разбор отзывов и вопросов по темам, персональные черновики ответов и очередь сложных случаев. Отчёт на примере спортивной одежды WB.',
-    canonical: '/catalog/marketplace-review-manager',
+    canonical: '/cases/marketplace-review-manager',
     keywords: 'ИИ менеджер по отзывам маркетплейсов, анализ отзывов WB, ответы на вопросы покупателей, разбор жалоб по SKU',
   },
 };

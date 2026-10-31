@@ -7,6 +7,7 @@ import { directions } from '../../lib/directions';
 const navLinks = [
 { label: 'Главная', to: '/' },
 { label: 'О компании', to: '/about' },
+{ label: 'Ключевые сотрудники', to: '/about/team' },
 { label: 'Новости', to: '/news' },
 { label: 'Кейсы', to: '/cases' },
 { label: 'Партнёрам', to: '/partners' },

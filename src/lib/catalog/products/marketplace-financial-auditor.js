@@ -85,7 +85,7 @@ const marketplaceFinancialAuditor = {
   seo: {
     title: 'Финансовый аудит продаж WB и Ozon с ИИ | AI TehCon',
     description: 'ИИ-аудитор финансов маркетплейсов сверяет данные WB и Ozon с 1С, выявляет расхождения в выплатах и показывает снижение маржи по SKU.',
-    canonical: '/catalog/marketplace-financial-auditor',
+    canonical: '/cases/marketplace-financial-auditor',
     keywords: 'финансовый аудит маркетплейсов, сверка WB Ozon с 1С, маржа по SKU, контроль комиссий Ozon, аудит выплат Wildberries',
   },
 };

@@ -2,12 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ai-tehcon.ru/</loc><priority>1.0</priority></url>
   <url><loc>https://ai-tehcon.ru/about/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/about/team/</loc><priority>0.7</priority></url>
   <url><loc>https://ai-tehcon.ru/ai-for-1c/</loc><priority>0.9</priority></url>
   <url><loc>https://ai-tehcon.ru/ai-for-marketplace/</loc><priority>0.9</priority></url>
   <url><loc>https://ai-tehcon.ru/business-process-automation/</loc><priority>0.9</priority></url>
   <url><loc>https://ai-tehcon.ru/cases/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/cases/daily-1c-sales-reports-critical-discount-error/</loc><priority>0.7</priority></url>
   <url><loc>https://ai-tehcon.ru/cases/it-integrator-daily-news-autoposting/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-ad-analyst/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-ai-marketer/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-card-seo-specialist/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-category-manager/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-competitor-analyst/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-content-manager/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-duty-analyst/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-financial-auditor/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-financial-director/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-operations-director/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-personal-assistant/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-promo-manager/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-review-manager/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-supply-manager/</loc><priority>0.7</priority></url>
+  <url><loc>https://ai-tehcon.ru/cases/marketplace-unit-economist/</loc><priority>0.7</priority></url>
   <url><loc>https://ai-tehcon.ru/cases/supplier-contract-penalty-analysis-delivery-mismatch/</loc><priority>0.7</priority></url>
   <url><loc>https://ai-tehcon.ru/cases/telegram-lead-generator-optics-network/</loc><priority>0.7</priority></url>
   <url><loc>https://ai-tehcon.ru/cases/upp-competitor-price-analysis-ice-cream/</loc><priority>0.7</priority></url>
@@ -77,27 +93,12 @@
   <url><loc>https://ai-tehcon.ru/catalog/inventory-turnover-dead-stock-control/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/investment-topup-automation/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/marketing/</loc><priority>0.85</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-ad-analyst/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-ai-marketer/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/marketplace-automatic-review-replies/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-card-seo-specialist/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-category-manager/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-competitor-analyst/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-content-manager/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/marketplace-custom-ai-analyst/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-duty-analyst/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-financial-auditor/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-financial-director/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/marketplace-niche-discovery/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-operations-director/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/marketplace-order-cancellation-control/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-personal-assistant/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/marketplace-product-cards-autogeneration/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-promo-manager/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/marketplace-report-1c-reconciliation/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-review-manager/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-supply-manager/</loc><priority>0.8</priority></url>
-  <url><loc>https://ai-tehcon.ru/catalog/marketplace-unit-economist/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/pinterest-seo-traffic-agent/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/smart-bank-reconciliation/</loc><priority>0.8</priority></url>
   <url><loc>https://ai-tehcon.ru/catalog/telegram-lead-generator/</loc><priority>0.8</priority></url>
