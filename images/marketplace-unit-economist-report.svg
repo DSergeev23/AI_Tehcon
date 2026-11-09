@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1350" viewBox="0 0 1600 1350" role="img" aria-labelledby="title description">
+  <title id="title">Юнит-экономика и порог цены по SKU</title>
+  <desc id="description">Для SKU-A17 цена 1 590 рублей, маржа 198 рублей или 12,5 процента. При цели 15 процентов минимальная цена 1 652 рубля, допустимая себестоимость 669 рублей. Показана структура цены и сравнение трёх товаров.</desc>
+  <defs><style>
+    text { font-family: Arial, sans-serif; }
+    .eyebrow { font-size: 18px; font-weight: 700; letter-spacing: 2px; }
+    .label { font-size: 19px; font-weight: 700; letter-spacing: 1px; }
+    .body { font-size: 23px; }
+    .bold { font-size: 23px; font-weight: 700; }
+    .value { font-size: 46px; font-weight: 700; }
+    .heading { font-size: 52px; font-weight: 700; }
+    .section { font-size: 29px; font-weight: 700; }
+    .small { font-size: 19px; }
+    .mono { font-variant-numeric: tabular-nums; }
+  </style></defs>
+  <rect width="1600" height="1350" fill="#eceff1"/>
+  <rect x="20" y="20" width="1560" height="1310" rx="20" fill="#f7f8f9" stroke="#d5dbe0" stroke-width="2"/>
+  <path d="M40 20h1520a20 20 0 0 1 20 20v145H20V40a20 20 0 0 1 20-20Z" fill="#171c22"/>
+  <rect x="54" y="54" width="7" height="27" fill="#c8444c"/>
+  <text x="78" y="77" class="eyebrow" fill="#e6e9ec">AI TEHCON / ЭКОНОМИСТ ПО SKU</text>
+  <text x="54" y="137" class="heading" fill="#ffffff">Цена товара: запас до целевой маржи</text>
+  <rect x="1250" y="57" width="296" height="50" rx="8" fill="#2a3139" stroke="#67727c"/>
+  <text x="1276" y="90" class="label" fill="#f0f2f4">OZON · SKU-A17 · СЕНТЯБРЬ</text>
+
+  <rect x="54" y="207" width="356" height="167" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="80" y="250" class="label" fill="#697681">ТЕКУЩАЯ ЦЕНА</text>
+  <text x="80" y="311" class="value mono" fill="#171c22">1 590 ₽</text>
+  <text x="80" y="349" class="small" fill="#66727e">Цена продажи SKU-A17</text>
+  <rect x="430" y="207" width="356" height="167" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="456" y="250" class="label" fill="#697681">МАРЖА НА ЕДИНИЦУ</text>
+  <text x="456" y="311" class="value mono" fill="#171c22">198 ₽</text>
+  <text x="456" y="349" class="small mono" fill="#b63740">12,5% · цель 15,0%</text>
+  <rect x="806" y="207" width="356" height="167" rx="12" fill="#fff8f7" stroke="#dfb7b9" stroke-width="2"/>
+  <text x="832" y="250" class="label" fill="#9b3039">МИНИМАЛЬНАЯ ЦЕНА</text>
+  <text x="832" y="311" class="value mono" fill="#171c22">1 652 ₽</text>
+  <text x="832" y="349" class="small mono" fill="#b63740">Выше текущей на 62 ₽</text>
+  <rect x="1182" y="207" width="364" height="167" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="1208" y="250" class="label" fill="#697681">ПРЕДЕЛ СЕБЕСТОИМОСТИ</text>
+  <text x="1208" y="311" class="value mono" fill="#171c22">669 ₽</text>
+  <text x="1208" y="349" class="small mono" fill="#66727e">Сейчас 710 ₽ · разница 41 ₽</text>
+
+  <rect x="54" y="402" width="850" height="600" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="82" y="451" class="section" fill="#20262d">Структура цены SKU-A17</text>
+  <text x="82" y="489" class="eyebrow" fill="#697681">СТАТЬЯ</text>
+  <text x="661" y="489" class="eyebrow mono" text-anchor="end" fill="#697681">₽ / ШТ.</text>
+  <text x="877" y="489" class="eyebrow mono" text-anchor="end" fill="#697681">ДОЛЯ ЦЕНЫ</text>
+  <line x1="82" y1="508" x2="877" y2="508" stroke="#cbd2d8" stroke-width="2"/>
+  <g class="body mono" fill="#2a3037">
+    <text x="82" y="548">Цена продажи</text><text x="661" y="548" text-anchor="end">1 590</text><text x="877" y="548" text-anchor="end">100,0%</text>
+    <text x="82" y="604">Себестоимость</text><text x="661" y="604" text-anchor="end">710</text><text x="877" y="604" text-anchor="end">44,7%</text>
+    <text x="82" y="660">Комиссия Ozon</text><text x="661" y="660" text-anchor="end">270</text><text x="877" y="660" text-anchor="end">17,0%</text>
+    <text x="82" y="716">Эквайринг</text><text x="661" y="716" text-anchor="end">32</text><text x="877" y="716" text-anchor="end">2,0%</text>
+    <text x="82" y="772">Логистика</text><text x="661" y="772" text-anchor="end">130</text><text x="877" y="772" text-anchor="end">8,2%</text>
+    <text x="82" y="828">Реклама на продажу</text><text x="661" y="828" text-anchor="end">190</text><text x="877" y="828" text-anchor="end">11,9%</text>
+    <text x="82" y="884">Резерв возвратов</text><text x="661" y="884" text-anchor="end">60</text><text x="877" y="884" text-anchor="end">3,8%</text>
+  </g>
+  <g stroke="#e0e5e9"><line x1="82" y1="566" x2="877" y2="566"/><line x1="82" y1="622" x2="877" y2="622"/><line x1="82" y1="678" x2="877" y2="678"/><line x1="82" y1="734" x2="877" y2="734"/><line x1="82" y1="790" x2="877" y2="790"/><line x1="82" y1="846" x2="877" y2="846"/><line x1="82" y1="902" x2="877" y2="902"/></g>
+  <text x="82" y="960" class="bold" fill="#20262d">Маржинальная прибыль</text>
+  <text x="661" y="960" class="bold mono" text-anchor="end" fill="#20262d">198</text>
+  <text x="877" y="960" class="bold mono" text-anchor="end" fill="#b63740">12,5%</text>
+
+  <rect x="928" y="402" width="618" height="248" rx="13" fill="#fbf3f2" stroke="#e2c8c8" stroke-width="2"/>
+  <rect x="928" y="402" width="7" height="248" rx="3" fill="#c8444c"/>
+  <text x="958" y="449" class="section" fill="#20262d">Цена ниже целевого порога</text>
+  <text x="958" y="494" class="body mono" fill="#2a3037">Затраты без процентных сборов: 1 090 ₽</text>
+  <text x="958" y="532" class="body mono" fill="#2a3037">Комиссия и эквайринг: 19% цены</text>
+  <text x="958" y="570" class="body mono" fill="#2a3037">Целевая маржа: 15% цены</text>
+  <text x="958" y="617" class="bold mono" fill="#b63740">1 090 / (1 − 0,19 − 0,15) = 1 652 ₽*</text>
+
+  <rect x="928" y="670" width="618" height="153" rx="13" fill="#fff8e6" stroke="#e8d6a4" stroke-width="2"/>
+  <text x="958" y="715" class="section" fill="#20262d">Два пути к цели</text>
+  <text x="958" y="758" class="body mono" fill="#2a3037">Цена продажи: +62 ₽ до 1 652 ₽</text>
+  <text x="958" y="796" class="body mono" fill="#2a3037">Или себестоимость: −41 ₽ до 669 ₽</text>
+
+  <rect x="928" y="843" width="618" height="159" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+  <text x="958" y="889" class="section" fill="#20262d">Предел закупки при цене 1 590 ₽</text>
+  <text x="958" y="932" class="body mono" fill="#2a3037">1 590 × (1 − 19% − 15%) − 380 = 669 ₽**</text>
+  <text x="958" y="970" class="small" fill="#66727e">380 ₽ = логистика + реклама + резерв возвратов.</text>
+
+  <rect x="54" y="1028" width="1492" height="257" rx="13" fill="#20262d"/>
+  <text x="82" y="1073" class="section" fill="#ffffff">Сравнение товаров при цели 15%</text>
+  <text x="82" y="1114" class="eyebrow" fill="#aeb8c1">SKU</text>
+  <text x="565" y="1114" class="eyebrow mono" text-anchor="end" fill="#aeb8c1">ЦЕНА</text>
+  <text x="895" y="1114" class="eyebrow mono" text-anchor="end" fill="#aeb8c1">МАРЖА</text>
+  <text x="1207" y="1114" class="eyebrow mono" text-anchor="end" fill="#aeb8c1">МИН. ЦЕНА</text>
+  <text x="1517" y="1114" class="eyebrow mono" text-anchor="end" fill="#aeb8c1">ЗАПАС</text>
+  <line x1="82" y1="1130" x2="1517" y2="1130" stroke="#56616b"/>
+  <g class="body mono" fill="#f0f2f4">
+    <text x="82" y="1169">SKU-A17 · лампа</text><text x="565" y="1169" text-anchor="end">1 590 ₽</text><text x="895" y="1169" text-anchor="end">198 ₽ · 12,5%</text><text x="1207" y="1169" text-anchor="end">1 652 ₽</text><text x="1517" y="1169" text-anchor="end" fill="#f5b0b3">−62 ₽</text>
+    <text x="82" y="1216">SKU-B04 · органайзер</text><text x="565" y="1216" text-anchor="end">990 ₽</text><text x="895" y="1216" text-anchor="end">242 ₽ · 24,4%</text><text x="1207" y="1216" text-anchor="end">851 ₽</text><text x="1517" y="1216" text-anchor="end" fill="#a8d9bf">+139 ₽</text>
+    <text x="82" y="1263">SKU-C12 · термокружка</text><text x="565" y="1263" text-anchor="end">1 290 ₽</text><text x="895" y="1263" text-anchor="end">252 ₽ · 19,5%</text><text x="1207" y="1263" text-anchor="end">1 200 ₽</text><text x="1517" y="1263" text-anchor="end" fill="#a8d9bf">+90 ₽</text>
+  </g>
+  <text x="54" y="1316" class="small" fill="#66727e">* Минимальная цена округлена вверх. ** Допустимая себестоимость округлена вниз. Доли от текущей цены округлены до 0,1 п.п.</text>
+</svg>

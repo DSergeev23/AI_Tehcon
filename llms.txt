@@ -1,0 +1,33 @@
+# AI TehCon
+
+> AI TehCon разрабатывает ИИ-решения и автоматизирует бизнес-процессы с интеграцией в 1С, CRM и другие рабочие системы.
+
+## Основные страницы
+
+- [Главная](https://ai-tehcon.ru/): направления и услуги AI TehCon.
+- [О компании](https://ai-tehcon.ru/about/): экспертиза, подход к работе и проекты.
+- [Ключевые сотрудники](https://ai-tehcon.ru/about/team/): руководство, направления работы и квалификация сотрудников.
+- [Кейсы](https://ai-tehcon.ru/cases/): примеры применения ИИ и проекты автоматизации.
+- [Каталог ИИ-решений](https://ai-tehcon.ru/catalog/): решения для бизнес-процессов и рабочих систем.
+- [Новости](https://ai-tehcon.ru/news/): новости и материалы AI TehCon.
+- [Контакты](https://ai-tehcon.ru/contacts/): способы связи с компанией.
+- [Карта сайта](https://ai-tehcon.ru/sitemap.xml): адреса страниц сайта.
+
+## Направления
+
+- [ИИ для 1С](https://ai-tehcon.ru/ai-for-1c/): аналитика, документы и автоматизация процессов в 1С.
+- [ИИ для маркетплейсов](https://ai-tehcon.ru/ai-for-marketplace/): аналитика и автоматизация задач продавцов.
+- [Автоматизация бизнес-процессов](https://ai-tehcon.ru/business-process-automation/): документы, данные и интеграции между системами.
+- [Контент-завод](https://ai-tehcon.ru/content-factory/): подготовка и публикация контента с помощью ИИ.
+
+## Категории каталога
+
+- [Анализ изображений](https://ai-tehcon.ru/catalog/image-analysis/)
+- [Маркетинг](https://ai-tehcon.ru/catalog/marketing/)
+- [Аналитика](https://ai-tehcon.ru/catalog/analytics/)
+- [Финансы](https://ai-tehcon.ru/catalog/finance/)
+
+## Для связи
+
+- [Электронная почта](mailto:hello@ai-tehcon.ru)
+- [AI TehCon в Telegram](https://t.me/ai_tehcon_business)

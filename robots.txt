@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-tehcon.ru/sitemap.xml
+Sitemap: https://ai-tehcon.ru/news-sitemap.xml

@@ -1,0 +1,77 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" rx="32" fill="#050505"/>
+  <g opacity="0.16">
+    <path d="M0 120H1600M0 240H1600M0 360H1600M0 480H1600M0 600H1600M0 720H1600" stroke="white"/>
+    <path d="M160 0V900M320 0V900M480 0V900M640 0V900M800 0V900M960 0V900M1120 0V900M1280 0V900M1440 0V900" stroke="white"/>
+  </g>
+  <rect x="58" y="58" width="1484" height="784" rx="24" stroke="white" stroke-opacity="0.14"/>
+  <g opacity="0.42">
+    <path d="M98 98H118M108 88V108M1482 98H1502M1492 88V108M98 802H118M108 792V812M1482 802H1502M1492 792V812" stroke="white" stroke-width="2"/>
+  </g>
+
+  <g>
+    <rect x="122" y="208" width="360" height="420" rx="18" fill="#080808" stroke="white" stroke-opacity="0.18"/>
+    <circle cx="212" cy="306" r="48" stroke="white" stroke-opacity="0.65" stroke-width="3"/>
+    <path d="M182 382C196 350 228 350 242 382" stroke="white" stroke-opacity="0.65" stroke-width="3" stroke-linecap="round"/>
+    <rect x="168" y="438" width="260" height="86" rx="16" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.18"/>
+    <text x="196" y="472" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">Вопрос</text>
+    <text x="196" y="504" fill="white" fill-opacity="0.72" font-family="Arial, sans-serif" font-size="18">Как прошли продажи?</text>
+    <path d="M256 628L362 730H184L256 628Z" stroke="white" stroke-opacity="0.22"/>
+    <path d="M184 730H362" stroke="white" stroke-opacity="0.22"/>
+    <text x="152" y="164" fill="white" fill-opacity="0.42" font-family="Arial, sans-serif" font-size="16" letter-spacing="6">РУКОВОДИТЕЛЬ</text>
+  </g>
+
+  <g>
+    <path d="M514 420H664" stroke="white" stroke-opacity="0.55" stroke-width="3"/>
+    <path d="M642 398L664 420L642 442" stroke="white" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M664 500H514" stroke="white" stroke-opacity="0.35" stroke-width="3"/>
+    <path d="M536 478L514 500L536 522" stroke="white" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <ellipse cx="800" cy="296" rx="150" ry="58" stroke="white" stroke-opacity="0.76" stroke-width="3"/>
+    <path d="M650 296V574C650 606 717 632 800 632C883 632 950 606 950 574V296" stroke="white" stroke-opacity="0.55" stroke-width="3"/>
+    <ellipse cx="800" cy="574" rx="150" ry="58" stroke="white" stroke-opacity="0.55" stroke-width="3"/>
+    <path d="M650 390C650 422 717 448 800 448C883 448 950 422 950 390" stroke="white" stroke-opacity="0.24" stroke-width="2"/>
+    <path d="M650 482C650 514 717 540 800 540C883 540 950 514 950 482" stroke="white" stroke-opacity="0.24" stroke-width="2"/>
+    <text x="758" y="332" fill="white" font-family="Arial, sans-serif" font-size="54" font-weight="800">1C</text>
+    <text x="700" y="390" fill="white" fill-opacity="0.74" font-family="Arial, sans-serif" font-size="24" font-weight="700">База данных</text>
+    <text x="690" y="430" fill="white" fill-opacity="0.45" font-family="Arial, sans-serif" font-size="18">документы • регистры • остатки</text>
+    <circle cx="800" cy="218" r="10" fill="white" fill-opacity="0.72"/>
+    <circle cx="740" cy="238" r="6" fill="white" fill-opacity="0.36"/>
+    <circle cx="860" cy="238" r="6" fill="white" fill-opacity="0.36"/>
+    <text x="650" y="164" fill="white" fill-opacity="0.42" font-family="Arial, sans-serif" font-size="16" letter-spacing="6">АНАЛИЗ ДАННЫХ 1С</text>
+  </g>
+
+  <g>
+    <path d="M960 420H1108" stroke="white" stroke-opacity="0.55" stroke-width="3"/>
+    <path d="M1086 398L1108 420L1086 442" stroke="white" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <rect x="1118" y="168" width="360" height="564" rx="18" fill="#080808" stroke="white" stroke-opacity="0.18"/>
+    <text x="1150" y="220" fill="white" fill-opacity="0.42" font-family="Arial, sans-serif" font-size="16" letter-spacing="6">ОТВЕТ</text>
+    <rect x="1150" y="254" width="296" height="94" rx="14" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.16"/>
+    <text x="1176" y="292" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">Продажи</text>
+    <path d="M1178 322L1222 306L1272 318L1326 282L1418 286" stroke="white" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round"/>
+    <rect x="1150" y="378" width="296" height="94" rx="14" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.16"/>
+    <text x="1176" y="416" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">Остатки</text>
+    <rect x="1178" y="438" width="32" height="18" rx="4" fill="white" fill-opacity="0.42"/>
+    <rect x="1224" y="430" width="46" height="26" rx="4" fill="white" fill-opacity="0.54"/>
+    <rect x="1284" y="410" width="58" height="46" rx="4" fill="white" fill-opacity="0.68"/>
+    <rect x="1356" y="422" width="62" height="34" rx="4" fill="white" fill-opacity="0.48"/>
+    <rect x="1150" y="502" width="296" height="94" rx="14" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.16"/>
+    <text x="1176" y="540" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">Долги</text>
+    <path d="M1180 566H1418M1180 586H1362" stroke="white" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round"/>
+    <rect x="1150" y="626" width="296" height="58" rx="14" fill="white" fill-opacity="0.09" stroke="white" stroke-opacity="0.2"/>
+    <text x="1176" y="662" fill="white" fill-opacity="0.8" font-family="Arial, sans-serif" font-size="20">Готовый отчёт руководителю</text>
+  </g>
+
+  <g opacity="0.55">
+    <path d="M674 680H926" stroke="white" stroke-opacity="0.18"/>
+    <path d="M698 720H902" stroke="white" stroke-opacity="0.18"/>
+    <circle cx="722" cy="680" r="5" fill="white"/>
+    <circle cx="878" cy="720" r="5" fill="white"/>
+    <text x="612" y="782" fill="white" fill-opacity="0.42" font-family="Arial, sans-serif" font-size="16" letter-spacing="5">ГОЛОС • ЧАТ • МОБИЛЬНЫЙ ОТЧЁТ</text>
+  </g>
+</svg>

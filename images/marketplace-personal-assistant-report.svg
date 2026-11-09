@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2550" viewBox="0 0 1600 2550" role="img" aria-labelledby="title description">
+<title id="title">Личный брифинг: что решить сегодня</title>
+<desc id="description">Очередь личных дел владельца издательства настольных игр: 32 цепочки писем, 12 действий, восемь черновиков, два предложения встреч, два решения владельца и проверка календаря.</desc>
+<g font-family="Arial, sans-serif">
+<rect x="0" y="0" width="1600" height="2550" rx="12" fill="#edf0f2"/>
+<rect x="20" y="20" width="1560" height="2510" rx="20" fill="#f8f9fa" stroke="#d5dbe0" stroke-width="2"/>
+<rect x="20" y="20" width="1560" height="165" rx="20" fill="#171c22"/>
+<rect x="20" y="145" width="1560" height="40" rx="12" fill="#171c22"/>
+<rect x="54" y="54" width="7" height="27" rx="3" fill="#c8444c"/>
+<text x="78" y="77" font-size="18" font-weight="700" fill="#e6e9ec" text-anchor="start" letter-spacing="2">AI TEHCON / ЛИЧНЫЙ АССИСТЕНТ</text>
+<text x="54" y="138" font-size="44" font-weight="700" fill="#ffffff" text-anchor="start">Личный брифинг: что решить сегодня</text>
+<rect x="1190" y="56" width="355" height="50" rx="8" fill="#2a3139" stroke="#67727c" stroke-width="2"/>
+<text x="1210" y="88" font-size="17" font-weight="700" fill="#f0f2f4" text-anchor="start">23 ОКТЯБРЯ · 09:00</text>
+<rect x="54" y="207" width="356" height="170" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="80" y="250" font-size="18" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">ВХОДЯЩИЕ ЦЕПОЧКИ</text>
+<text x="80" y="312" font-size="43" font-weight="700" fill="#171c22" text-anchor="start">32</text>
+<text x="80" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">из разрешённых папок</text>
+<rect x="430" y="207" width="356" height="170" rx="12" fill="#fff8f7" stroke="#dfb7b9" stroke-width="2"/>
+<text x="456" y="250" font-size="18" font-weight="700" fill="#a6323c" text-anchor="start" letter-spacing="1">НУЖНЫ ДЕЙСТВИЯ</text>
+<text x="456" y="312" font-size="43" font-weight="700" fill="#b63740" text-anchor="start">12</text>
+<text x="456" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">8 писем · 2 встречи · 2 решения</text>
+<rect x="806" y="207" width="356" height="170" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="832" y="250" font-size="18" font-weight="700" fill="#687580" text-anchor="start" letter-spacing="1">ЧЕРНОВИКИ</text>
+<text x="832" y="312" font-size="43" font-weight="700" fill="#171c22" text-anchor="start">8</text>
+<text x="832" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">ожидают согласования</text>
+<rect x="1182" y="207" width="356" height="170" rx="12" fill="#fff8f7" stroke="#dfb7b9" stroke-width="2"/>
+<text x="1208" y="250" font-size="18" font-weight="700" fill="#a6323c" text-anchor="start" letter-spacing="1">ВОПРОСЫ ВЛАДЕЛЬЦУ</text>
+<text x="1208" y="312" font-size="43" font-weight="700" fill="#b63740" text-anchor="start">2</text>
+<text x="1208" y="350" font-size="17" font-weight="400" fill="#687580" text-anchor="start">без автоматического решения</text>
+<rect x="54" y="407" width="1492" height="445" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="455" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">01</text>
+<text x="135" y="455" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Разбор входящих без потери задач</text>
+<text x="82" y="511" font-size="23" font-weight="700" fill="#20262d" text-anchor="start">Требует действия</text>
+<rect x="510" y="485" width="560" height="35" rx="5" fill="#eed4d6"/>
+<text x="1130" y="511" font-size="25" font-weight="700" fill="#20262d" text-anchor="end">12</text>
+<text x="1180" y="511" font-size="18" font-weight="400" fill="#687580" text-anchor="start">8 черновиков · 2 встречи · 2 решения</text>
+<line x1="82" y1="538" x2="1518" y2="538" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="611" font-size="23" font-weight="700" fill="#20262d" text-anchor="start">Только к сведению</text>
+<rect x="510" y="585" width="513" height="35" rx="5" fill="#dce7f3"/>
+<text x="1130" y="611" font-size="25" font-weight="700" fill="#20262d" text-anchor="end">11</text>
+<text x="1180" y="611" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Сохранено в утренней сводке</text>
+<line x1="82" y1="638" x2="1518" y2="638" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="711" font-size="23" font-weight="700" fill="#20262d" text-anchor="start">Без новой задачи</text>
+<rect x="510" y="685" width="420" height="35" rx="5" fill="#e8ecef"/>
+<text x="1130" y="711" font-size="25" font-weight="700" fill="#20262d" text-anchor="end">9</text>
+<text x="1180" y="711" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Повторы и сообщения без срока</text>
+<line x1="82" y1="738" x2="1518" y2="738" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="826" font-size="18" font-weight="400" fill="#687580" text-anchor="start">12 + 11 + 9 = 32 цепочки. Исходное письмо и срок прикреплены к каждому действию.</text>
+<rect x="54" y="878" width="1492" height="529" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="926" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">02</text>
+<text x="135" y="926" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Очередь решений владельца</text>
+<text x="82" y="949" font-size="17" font-weight="700" fill="#687580" text-anchor="start">ДЕЛО</text>
+<text x="660" y="949" font-size="17" font-weight="700" fill="#687580" text-anchor="start">СРОК / СТАТУС</text>
+<text x="1135" y="949" font-size="17" font-weight="700" fill="#687580" text-anchor="start">СЛЕДУЮЩИЙ ШАГ</text>
+<line x1="82" y1="972" x2="1518" y2="972" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1029" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">Приглашение выступить</text>
+<text x="660" y="1029" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">Сегодня до 17:00</text>
+<text x="1135" y="1029" font-size="19" font-weight="400" fill="#20262d" text-anchor="start">Решить, участвовать ли</text>
+<line x1="82" y1="1056" x2="1518" y2="1056" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1115" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">Вариант личной поездки</text>
+<text x="660" y="1115" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">Завтра до 12:00</text>
+<text x="1135" y="1115" font-size="19" font-weight="400" fill="#20262d" text-anchor="start">Выбрать вариант</text>
+<line x1="82" y1="1142" x2="1518" y2="1142" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1201" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">Встреча с дизайнером</text>
+<text x="660" y="1201" font-size="20" font-weight="400" fill="#b63740" text-anchor="start">Есть конфликт в 11:30</text>
+<text x="1135" y="1201" font-size="19" font-weight="400" fill="#20262d" text-anchor="start">Согласовать 15:00</text>
+<line x1="82" y1="1228" x2="1518" y2="1228" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1287" font-size="22" font-weight="700" fill="#20262d" text-anchor="start">Разговор с организатором</text>
+<text x="660" y="1287" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">Слот 16:30 свободен</text>
+<text x="1135" y="1287" font-size="19" font-weight="400" fill="#20262d" text-anchor="start">Подтвердить время</text>
+<line x1="82" y1="1314" x2="1518" y2="1314" stroke="#d9dfe3" stroke-width="2"/>
+<text x="82" y="1381" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Участие и поездка — решения владельца; ассистент не принимает обязательств от его имени.</text>
+<rect x="54" y="1432" width="1492" height="379" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="1480" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">03</text>
+<text x="135" y="1480" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Календарь: не предлагать занятое время</text>
+<rect x="82" y="1518" width="317" height="178" rx="9" fill="#f7f8f9" stroke="#dce2e6" stroke-width="2"/>
+<text x="102" y="1581" font-size="25" font-weight="700" fill="#20262d" text-anchor="start">11:00–12:00</text>
+<text x="102" y="1644" font-size="19" font-weight="700" fill="#687580" text-anchor="start">Уже занято</text>
+<rect x="455" y="1518" width="317" height="178" rx="9" fill="#fff6f4" stroke="#e5c9c7" stroke-width="2"/>
+<text x="475" y="1581" font-size="30" font-weight="700" fill="#20262d" text-anchor="start">11:30</text>
+<text x="475" y="1644" font-size="19" font-weight="700" fill="#b63740" text-anchor="start">Запрос: конфликт</text>
+<rect x="828" y="1518" width="317" height="178" rx="9" fill="#f1faf4" stroke="#cfe5d7" stroke-width="2"/>
+<text x="848" y="1581" font-size="25" font-weight="700" fill="#20262d" text-anchor="start">15:00–15:30</text>
+<text x="848" y="1644" font-size="19" font-weight="700" fill="#238456" text-anchor="start">Встреча: свободно</text>
+<rect x="1201" y="1518" width="317" height="178" rx="9" fill="#f1faf4" stroke="#cfe5d7" stroke-width="2"/>
+<text x="1221" y="1581" font-size="25" font-weight="700" fill="#20262d" text-anchor="start">16:30–17:00</text>
+<text x="1221" y="1644" font-size="19" font-weight="700" fill="#238456" text-anchor="start">Созвон: свободно</text>
+<text x="82" y="1778" font-size="20" font-weight="400" fill="#20262d" text-anchor="start">Предложенные слоты не бронируются и не отправляются собеседнику до согласия владельца.</text>
+<rect x="54" y="1834" width="1492" height="637" rx="13" fill="#ffffff" stroke="#cfd6db" stroke-width="2"/>
+<text x="82" y="1882" font-size="19" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="2">04</text>
+<text x="135" y="1882" font-size="29" font-weight="700" fill="#20262d" text-anchor="start">Черновики писем: готовы, но не отправлены</text>
+<rect x="82" y="1921" width="1436" height="202" rx="9" fill="#f7f8f9" stroke="#dce2e6" stroke-width="2"/>
+<text x="108" y="1968" font-size="18" font-weight="700" fill="#b63740" text-anchor="start" letter-spacing="1">ВЫСТУПЛЕНИЕ · НУЖНО РЕШЕНИЕ ВЛАДЕЛЬЦА</text>
+<text x="108" y="2020" font-size="23" font-weight="400" fill="#20262d" text-anchor="start">«Спасибо за приглашение. Уточню возможность участия и вернусь</text>
+<text x="108" y="2055" font-size="23" font-weight="400" fill="#20262d" text-anchor="start">с ответом сегодня до 17:00.»</text>
+<text x="108" y="2100" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Источник: письмо организатора · статус: черновик на согласовании</text>
+<rect x="82" y="2142" width="1436" height="202" rx="9" fill="#f7f8f9" stroke="#dce2e6" stroke-width="2"/>
+<text x="108" y="2189" font-size="18" font-weight="700" fill="#238456" text-anchor="start" letter-spacing="1">ВСТРЕЧА · СВОБОДНЫЙ СЛОТ ПРОВЕРЕН</text>
+<text x="108" y="2241" font-size="23" font-weight="400" fill="#20262d" text-anchor="start">«В 11:30 у меня уже есть встреча. Подойдёт ли вам 15:00?</text>
+<text x="108" y="2276" font-size="23" font-weight="400" fill="#20262d" text-anchor="start">Если нет, предложите, пожалуйста, другой удобный интервал.»</text>
+<text x="108" y="2321" font-size="18" font-weight="400" fill="#687580" text-anchor="start">Источник: письмо и календарь · статус: черновик на согласовании</text>
+<text x="82" y="2441" font-size="20" font-weight="700" fill="#20262d" text-anchor="start">Все 8 черновиков и обе встречи требуют подтверждения владельца перед отправкой.</text>
+<text x="54" y="2504" font-size="17" font-weight="400" fill="#687580" text-anchor="start">Показываются только разрешённые источники. Адреса, личные документы и содержимое частных писем скрыты.</text>
+</g>
+</svg>

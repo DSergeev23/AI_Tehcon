@@ -1,0 +1,1 @@
+import{j as i}from"./prerender-CIx2jZtg.js";function a({children:e,className:r="",delay:o=0,direction:t="up"}){return i.jsx("div",{className:r,children:e})}export{a as R};
