@@ -2,7 +2,7 @@ name: Publish news to Timeweb App Platform
 
 on:
   schedule:
-    - cron: '37 * * * *'
+    - cron: '0 6 * * *'
   workflow_dispatch:
   workflow_run:
     workflows:
