@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '13 * * * *'
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Publish static site to Timeweb App Platform
+    types:
+      - completed
 
 permissions:
   contents: read
@@ -14,6 +19,7 @@ concurrency:
 
 jobs:
   publish:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Get generator from main
