@@ -1,4 +1,4 @@
-name: Publish news without App Platform deployment
+name: Publish news to Timeweb App Platform
 
 on:
   schedule:
@@ -11,10 +11,10 @@ on:
       - completed
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
-  group: news-publish
+  group: app-platform-publish
   cancel-in-progress: false
 
 jobs:
@@ -25,7 +25,14 @@ jobs:
       - name: Get generator from main
         uses: actions/checkout@v4
         with:
+          ref: main
           path: source
+
+      - name: Get published site branch
+        uses: actions/checkout@v4
+        with:
+          ref: app-platform
+          path: site
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
@@ -44,40 +51,55 @@ jobs:
           export NEWS_PUBLIC_ROOT="$RUNNER_TEMP/news-generated"
           export NEWS_STATE_FILE="$RUNNER_TEMP/news-managed-slugs.json"
           mkdir -p "$NEWS_PUBLIC_ROOT"
-          curl --fail --silent --show-error --location --retry 3 \
-            'https://dsergeev23-ai-tehcon-b981.twc1.net/' \
-            --output "$NEWS_PUBLIC_ROOT/index.html"
+          cp site/index.html "$NEWS_PUBLIC_ROOT/index.html"
           grep -q '<div id="root"' "$NEWS_PUBLIC_ROOT/index.html"
           php -l source/scripts/timeweb/sync-news.php
           php source/scripts/timeweb/sync-news.php --self-test
           php source/scripts/timeweb/sync-news.php source/scripts/timeweb/news-sync.config.github.php
           node -e 'const fs=require("node:fs");const p=JSON.parse(fs.readFileSync(process.env.NEWS_PUBLIC_ROOT+"/data/news/news.json","utf8"));if(!Array.isArray(p.articles)||p.articles.length===0)throw Error("No published articles; refusing to clear live news")'
 
-      - name: Upload generated news to Supabase Storage
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.SUPABASE_S3_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.SUPABASE_S3_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: ${{ vars.SUPABASE_S3_REGION }}
-          SUPABASE_S3_ENDPOINT: ${{ vars.SUPABASE_S3_ENDPOINT }}
-          AWS_EC2_METADATA_DISABLED: 'true'
+      - name: Publish changed news to app-platform branch
+        id: publish
         run: |
           set -euo pipefail
-          test -n "$AWS_ACCESS_KEY_ID"
-          test -n "$AWS_SECRET_ACCESS_KEY"
-          test -n "$AWS_DEFAULT_REGION"
-          test -n "$SUPABASE_S3_ENDPOINT"
-          aws --version
-          aws configure set default.s3.addressing_style path
           root="$RUNNER_TEMP/news-generated"
-          endpoint="$SUPABASE_S3_ENDPOINT"
-          bucket="s3://news-pages"
+          if node -e '
+            const fs = require("node:fs");
+            const next = JSON.parse(fs.readFileSync(process.argv[1], "utf8"));
+            const current = JSON.parse(fs.readFileSync(process.argv[2], "utf8"));
+            if (JSON.stringify(next.articles) !== JSON.stringify(current.articles)) process.exit(1);
+          ' "$root/data/news/news.json" site/data/news/news.json; then
+            echo "News has not changed; no commit or Timeweb deployment needed"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
 
-          aws --endpoint-url "$endpoint" s3 sync "$root/news/" "$bucket/news/" \
-            --delete --content-type 'text/html; charset=utf-8' \
-            --cache-control 'public, max-age=60'
-          aws --endpoint-url "$endpoint" s3 cp "$root/news-sitemap.xml" "$bucket/news-sitemap.xml" \
-            --content-type 'application/xml; charset=utf-8' \
-            --cache-control 'public, max-age=60'
-          aws --endpoint-url "$endpoint" s3 cp "$root/data/news/news.json" "$bucket/data/news/news.json" \
-            --content-type 'application/json; charset=utf-8' \
-            --cache-control 'public, max-age=60'
+          rsync -a --delete "$root/news/" site/news/
+          cp "$root/data/news/news.json" site/data/news/news.json
+          cp "$root/news-sitemap.xml" site/news-sitemap.xml
+          git -C site config user.name "github-actions[bot]"
+          git -C site config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C site add -A -- news/ data/news/news.json news-sitemap.xml
+          git -C site commit -m "Publish updated news"
+          git -C site push origin HEAD:refs/heads/app-platform
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git -C site rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Start Timeweb deployment
+        if: ${{ steps.publish.outputs.changed == 'true' }}
+        env:
+          TIMEWEB_APP_ID: ${{ vars.TIMEWEB_APP_ID }}
+          TIMEWEB_CLOUD_TOKEN: ${{ secrets.TIMEWEB_CLOUD_TOKEN }}
+          DEPLOY_SHA: ${{ steps.publish.outputs.sha }}
+        run: |
+          set -euo pipefail
+          test -n "$TIMEWEB_APP_ID"
+          test -n "$TIMEWEB_CLOUD_TOKEN"
+          curl --fail-with-body --silent --show-error \
+            --retry 3 --retry-delay 5 --retry-all-errors \
+            --request POST \
+            --header "Authorization: Bearer ${TIMEWEB_CLOUD_TOKEN}" \
+            --header "Content-Type: application/json" \
+            --data "{\"commit_sha\":\"${DEPLOY_SHA}\"}" \
+            "https://api.timeweb.cloud/api/v1/apps/${TIMEWEB_APP_ID}/deploy"
