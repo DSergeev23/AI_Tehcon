@@ -43,6 +43,29 @@ jobs:
           test -f dist/index.html
           rm -f dist/api/contact.php dist/.htaccess
 
+      - name: Set up PHP for news generation
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: curl
+
+      - name: Include current news in the static site
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_PUBLISHABLE_KEY: ${{ vars.SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "$SUPABASE_URL"
+          test -n "$SUPABASE_PUBLISHABLE_KEY"
+          export NEWS_PUBLIC_ROOT="$GITHUB_WORKSPACE/dist"
+          export NEWS_STATE_FILE="$RUNNER_TEMP/news-managed-slugs.json"
+          php -l scripts/timeweb/sync-news.php
+          php scripts/timeweb/sync-news.php --self-test
+          php scripts/timeweb/sync-news.php scripts/timeweb/news-sync.config.github.php
+          test -s dist/news/index.html
+          test -s dist/data/news/news.json
+          test -s dist/news-sitemap.xml
+
       - name: Publish built files to app-platform branch
         id: publish
         env:

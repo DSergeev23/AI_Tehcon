@@ -1,0 +1,77 @@
+name: Publish news without App Platform deployment
+
+on:
+  schedule:
+    - cron: '13 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: news-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get generator from main
+        uses: actions/checkout@v4
+        with:
+          path: source
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: curl
+
+      - name: Generate news pages
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_PUBLISHABLE_KEY: ${{ vars.SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "$SUPABASE_URL"
+          test -n "$SUPABASE_PUBLISHABLE_KEY"
+          export NEWS_PUBLIC_ROOT="$RUNNER_TEMP/news-generated"
+          export NEWS_STATE_FILE="$RUNNER_TEMP/news-managed-slugs.json"
+          mkdir -p "$NEWS_PUBLIC_ROOT"
+          curl --fail --silent --show-error --location --retry 3 \
+            'https://dsergeev23-ai-tehcon-b981.twc1.net/' \
+            --output "$NEWS_PUBLIC_ROOT/index.html"
+          grep -q '<div id="root"' "$NEWS_PUBLIC_ROOT/index.html"
+          php -l source/scripts/timeweb/sync-news.php
+          php source/scripts/timeweb/sync-news.php --self-test
+          php source/scripts/timeweb/sync-news.php source/scripts/timeweb/news-sync.config.github.php
+          node -e 'const fs=require("node:fs");const p=JSON.parse(fs.readFileSync(process.env.NEWS_PUBLIC_ROOT+"/data/news/news.json","utf8"));if(!Array.isArray(p.articles)||p.articles.length===0)throw Error("No published articles; refusing to clear live news")'
+
+      - name: Upload generated news to Supabase Storage
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.SUPABASE_S3_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SUPABASE_S3_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ vars.SUPABASE_S3_REGION }}
+          SUPABASE_S3_ENDPOINT: ${{ vars.SUPABASE_S3_ENDPOINT }}
+          AWS_EC2_METADATA_DISABLED: 'true'
+        run: |
+          set -euo pipefail
+          test -n "$AWS_ACCESS_KEY_ID"
+          test -n "$AWS_SECRET_ACCESS_KEY"
+          test -n "$AWS_DEFAULT_REGION"
+          test -n "$SUPABASE_S3_ENDPOINT"
+          aws --version
+          aws configure set default.s3.addressing_style path
+          root="$RUNNER_TEMP/news-generated"
+          endpoint="$SUPABASE_S3_ENDPOINT"
+          bucket="s3://news-pages"
+
+          aws --endpoint-url "$endpoint" s3 sync "$root/news/" "$bucket/news/" \
+            --delete --content-type 'text/html; charset=utf-8' \
+            --cache-control 'public, max-age=60'
+          aws --endpoint-url "$endpoint" s3 cp "$root/news-sitemap.xml" "$bucket/news-sitemap.xml" \
+            --content-type 'application/xml; charset=utf-8' \
+            --cache-control 'public, max-age=60'
+          aws --endpoint-url "$endpoint" s3 cp "$root/data/news/news.json" "$bucket/data/news/news.json" \
+            --content-type 'application/json; charset=utf-8' \
+            --cache-control 'public, max-age=60'
