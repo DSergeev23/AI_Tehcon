@@ -1,3 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- news-sitemap-bootstrap: replaced by the Timeweb news synchronizer -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ai-tehcon.ru/news/openai-gpt-6-cyber-limited-access/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/changshin-palantir-footwear-development-factory-ai/</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/ibm-watsonx-orchestrate-agent-identity-audit-kill-switch/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/openai-dots-enterprise-admin-preview-november-2026/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/microsoft-copilot-harness-foundry-preview/</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/enveda-claude-proverka-proizvodstvennyh-dokumentov/</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/openai-gpt-6-1-terra-dlya-raboty-s-dokumentami/</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/google-gemini-4-carbon-limited-cyber-access/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/enveda-claude-pharma-document-review/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/openai-gpt-6-1-terra-business-automation/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/openai-models-google-cloud-model-garden-preview/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/anthropic-agent-skills-aaif/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/openai-gpt-6-1-terra-computer-use/</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/anthropic-metr-independent-ai-evaluation/</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/openai-cobol-migration-evaluations/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/copilot-studio-agent-accounts-shared-memory/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/anthropic-claude-unintended-actions-real-websites/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/openai-plugin-access-by-role-enterprise-edu/</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/anthropic-claude-haiku-5-5-business-workflows/</loc><lastmod>2026-10-13</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/chatgpt-audio-uploads-transcription/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/anthropic-claude-frontier-academy-engineers/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/atlassian-openai-rovo-enterprise-context/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/brazil-ai-deepfake-transparency-rules/</loc><lastmod>2026-09-03</lastmod></url>
+  <url><loc>https://ai-tehcon.ru/news/openai-nyt-copyright-training-data/</loc><lastmod>2026-09-03</lastmod></url>
+</urlset>
