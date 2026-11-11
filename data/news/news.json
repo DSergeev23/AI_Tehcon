@@ -1,7 +1,38 @@
 {
     "version": 1,
-    "generatedAt": "2026-11-11T06:59:33+00:00",
+    "generatedAt": "2026-11-11T07:26:09+00:00",
     "articles": [
+        {
+            "slug": "confluent-lightning-tables-aws-streamhouse",
+            "title": "Confluent запустила Lightning Tables на AWS для доступа к потоковым данным",
+            "excerpt": "Lightning Tables переводит события Kafka в обновляемые таблицы, доступные для запросов. Решение может дать AI-приложениям более свежие данные, если компания заранее определила правила их обработки и доступа.",
+            "category": "Корпоративные технологии",
+            "coverImage": "https://ngnpumsmxqvtkwcenbtu.supabase.co/storage/v1/object/public/news-covers/generated/ab39f7b2-96c9-4991-8226-63d53886ac33/confluent-lightning-tables-aws-streamhouse.avif",
+            "coverAlt": "Схема потоков данных от корпоративных систем к обновляемым таблицам и AI-приложению",
+            "publishedAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
+            "publishedAtIso": "2026-11-11T07:00:00+00:00",
+            "updatedAtIso": "2026-11-11T07:00:00+00:00",
+            "readingTimeMinutes": 3,
+            "author": "AI TehCon",
+            "tags": [
+                "Confluent",
+                "Streamhouse",
+                "Kafka",
+                "AI-интеграции",
+                "данные"
+            ],
+            "relatedSolutionIds": [],
+            "sourceUrls": [
+                "https://master.www.confluent.io/press-release/confluent-introduces-its-streamhouse-architecture-to-power-ai-with-real-time-business-context/",
+                "https://www.crn.com/news/ai/2026/confluent-current-2026-5-big-streamhouse-ibm-and-ai-takeaways"
+            ],
+            "seo": {
+                "title": "Confluent открыла доступ к Lightning Tables на AWS",
+                "description": "Что меняет запуск Lightning Tables для AI-агентов и приложений, работающих с текущими корпоративными данными."
+            },
+            "body": "4 ноября Confluent объявила об общей доступности Lightning Tables в Confluent Cloud на AWS. Сервис позволяет обращаться к текущему состоянию данных из потоков Kafka через SQL и API; компания представляет его как часть архитектуры Streamhouse для приложений и AI-агентов. [Confluent](https://master.www.confluent.io/press-release/confluent-introduces-its-streamhouse-architecture-to-power-ai-with-real-time-business-context/), [CRN](https://www.crn.com/news/ai/2026/confluent-current-2026-5-big-streamhouse-ibm-and-ai-takeaways).\n\n## Как устроен доступ к данным\n\nLightning Tables поддерживает обновляемые таблицы на основе событий Kafka. Это слой чтения: приложения могут запрашивать состояние данных, не создавая для этой задачи отдельную базу и очередной конвейер переноса. В более широкой схеме Confluent использует Flink для обработки потоков, а Real-Time Context Engine — для передачи контекста AI-агентам через MCP. Это разные компоненты: доступность Lightning Tables сама по себе не означает, что агент уже подключён к корпоративным данным. [Confluent](https://master.www.confluent.io/press-release/confluent-introduces-its-streamhouse-architecture-to-power-ai-with-real-time-business-context/).\n\nНа дату анонса общая доступность Lightning Tables подтверждена для AWS. О планах расширения на другие облака представитель Confluent рассказал [CRN](https://www.crn.com/news/ai/2026/confluent-current-2026-5-big-streamhouse-ibm-and-ai-takeaways); сроки издание не приводит. Опубликованные Confluent показатели задержки получены во внутренних тестах и не гарантируют такую же скорость на данных конкретного предприятия.\n\n## Когда это имеет значение для бизнеса\n\nЕсли AI-ассистент отвечает на вопрос об остатках или статусе заказа, расхождение между оперативной системой и подготовленной для анализа копией данных может привести к неверному действию. Потоковая архитектура помогает сокращать такое расхождение, но требует определить источник истины, порядок обработки повторных событий, допустимую задержку и права на чтение данных.\n\nДля интеграции с учётной системой, включая 1С, стоит сначала проверить, какие изменения можно надёжно передавать в поток и как сверять итоговое состояние с исходными записями. AI TehCon помогает разбирать бизнес-процессы и проектировать AI-интеграции; такую задачу можно обсудить на примере конкретного процесса и его данных."
+        },
         {
             "slug": "openai-gpt-6-cyber-limited-access",
             "title": "OpenAI открыла ограниченный доступ к модели GPT-6 Cyber для проверки уязвимостей",
