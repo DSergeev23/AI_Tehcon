@@ -1,7 +1,38 @@
 {
     "version": 1,
-    "generatedAt": "2026-11-12T06:40:25+00:00",
+    "generatedAt": "2026-11-13T06:00:20+00:00",
     "articles": [
+        {
+            "slug": "changshin-palantir-footwear-production-ai",
+            "title": "Changshin и Palantir договорились связать разработку обуви с данными фабрик",
+            "excerpt": "Производитель обуви Changshin планирует внедрить Foundry и AIP в процессы разработки и выпуска продукции. Пока речь о партнёрстве и планируемом внедрении, а не о подтверждённом результате на производстве.",
+            "category": "AI в бизнесе",
+            "coverImage": "https://ngnpumsmxqvtkwcenbtu.supabase.co/storage/v1/object/public/news-covers/generated/ab39f7b2-96c9-4991-8226-63d53886ac33/changshin-palantir-footwear-production-ai.avif",
+            "coverAlt": "Сотрудники сопоставляют цифровую спецификацию обуви с данными производственной линии",
+            "publishedAt": "2026-11-12",
+            "updatedAt": "2026-11-12",
+            "publishedAtIso": "2026-11-12T07:00:00+00:00",
+            "updatedAtIso": "2026-11-12T07:00:00+00:00",
+            "readingTimeMinutes": 3,
+            "author": "AI TehCon",
+            "tags": [
+                "Changshin",
+                "Palantir",
+                "производство",
+                "автоматизация",
+                "корпоративные данные"
+            ],
+            "relatedSolutionIds": [],
+            "sourceUrls": [
+                "https://www.changshininc.com/en/pr/news/changshin-partners-with-palantir-sets-out-to-innovate-footwear-manufacturing-with-ai/",
+                "https://www.thelec.net/news/articleView.html?idxno=15371"
+            ],
+            "seo": {
+                "title": "Changshin и Palantir свяжут разработку обуви и производство",
+                "description": "Что известно о планируемом внедрении Foundry и AIP у Changshin и какие вопросы важны для AI-проекта на производстве."
+            },
+            "body": "Производитель обуви Changshin объявил 5 ноября о партнёрстве с Palantir: компании намерены связать данные разработки, планирования образцов и фабричного производства с помощью Foundry и Artificial Intelligence Platform (AIP). Для бизнеса это пример задачи, в которой ценность AI зависит от связи между решениями разных подразделений и обратной связью с производства. [Changshin](https://www.changshininc.com/en/pr/news/changshin-partners-with-palantir-sets-out-to-innovate-footwear-manufacturing-with-ai/), [The Elec](https://www.thelec.net/news/articleView.html?idxno=15371).\n\n## Что компании планируют соединить\n\nПо сообщению Changshin, Foundry будет объединять и анализировать данные предприятия, а AIP — включать генеративный ИИ в рабочие процессы. Цель проекта — сделать решения, принятые при разработке модели обуви, доступными для планирования и исполнения на фабрике, а производственную обратную связь использовать при последующих решениях. Это заявленная цель внедрения, а не опубликованный результат. [Changshin](https://www.changshininc.com/en/pr/news/changshin-partners-with-palantir-sets-out-to-innovate-footwear-manufacturing-with-ai/).\n\n[The Elec](https://www.thelec.net/news/articleView.html?idxno=15371) сообщает, что инженеры Changshin и Palantir уже демонстрировали начальные рабочие сценарии на данных производителя во время AgentCamp. Демонстрация показывает направление работы, но не подтверждает устойчивую эксплуатацию решения на всех фабриках. Сроки развёртывания, стоимость и измеримый эффект компании не раскрыли.\n\n## Что стоит проверить при похожем проекте\n\nВ таком процессе полезно проследить путь конкретного изменения: кто меняет спецификацию, когда новая версия попадает в производственное планирование, как фиксируется отклонение на фабрике и кто принимает решение по нему. Без согласованных идентификаторов изделий, версий данных и ответственных за исправление ошибок AI может быстрее распространять противоречивую информацию между подразделениями.\n\nAI TehCon работает с анализом и автоматизацией бизнес-процессов, AI-интеграциями и 1С. Если похожий разрыв возникает между разработкой, учётом и исполнением, можно обсудить, какие данные и решения следует связать в первую очередь."
+        },
         {
             "slug": "confluent-lightning-tables-aws-streamhouse",
             "title": "Confluent запустила Lightning Tables на AWS для доступа к потоковым данным",
