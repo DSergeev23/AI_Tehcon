@@ -1,7 +1,39 @@
 {
     "version": 1,
-    "generatedAt": "2026-11-13T06:00:20+00:00",
+    "generatedAt": "2026-11-15T06:00:20+00:00",
     "articles": [
+        {
+            "slug": "openai-business-hub-business-agents-chatgpt",
+            "title": "OpenAI запустила Business Hub и Business Agents для компаний в ChatGPT",
+            "excerpt": "Компании получили возможность подтверждать профиль и обновлять сведения о себе в ChatGPT. Диалоговые Business Agents пока доступны только подходящим интернет-магазинам и онлайн-сервисам в США.",
+            "category": "AI-продукты",
+            "coverImage": "https://ngnpumsmxqvtkwcenbtu.supabase.co/storage/v1/object/public/news-covers/generated/b0b4220d-cecc-4763-8239-b05dbf9e66a8/openai-business-hub-business-agents-chatgpt.avif",
+            "coverAlt": "Иллюстрация каталога компании, связанного с диалоговым интерфейсом ChatGPT",
+            "publishedAt": "2026-11-14",
+            "updatedAt": "2026-11-14",
+            "publishedAtIso": "2026-11-14T07:00:00+00:00",
+            "updatedAtIso": "2026-11-14T07:00:00+00:00",
+            "readingTimeMinutes": 2,
+            "author": "AI TehCon",
+            "tags": [
+                "OpenAI",
+                "ChatGPT",
+                "Business Agents",
+                "электронная коммерция",
+                "интеграции"
+            ],
+            "relatedSolutionIds": [],
+            "sourceUrls": [
+                "https://openai.com/index/introducing-businesses-chatgpt/",
+                "https://openai.com/business/businesses-in-chatgpt/",
+                "https://apps.shopify.com/chatgpt"
+            ],
+            "seo": {
+                "title": "OpenAI запустила Business Hub и Business Agents в ChatGPT",
+                "description": "Как компании обновляют сведения о себе в ChatGPT, кому доступны Business Agents и что проверить перед подключением каталога."
+            },
+            "body": "10 ноября OpenAI [представила в бета-версии Businesses in ChatGPT](https://openai.com/index/introducing-businesses-chatgpt/). Компании могут подтверждать сведения о себе и передавать актуальную информацию о товарах; часть компаний также получила возможность общаться с потенциальными клиентами через Business Agent. Для бизнеса это ещё один канал, где точность каталога и правил обслуживания влияет на ответы покупателям.\n\n## Что может обновить компания\n\nЧерез Business Hub организация после проверки может изменить основные сведения о себе и загрузить данные о товарах, включая цены и наличие. OpenAI также обещает агрегированные показатели упоминаний, переходов на сайт и тем разговоров, в которых сайт компании цитировался. Сами разговоры пользователей компаниям не передаются, а статистика появляется только при достаточном числе взаимодействий. [Подтверждение профиля доступно подходящим компаниям там, где работает ChatGPT](https://openai.com/index/introducing-businesses-chatgpt/); оно [не гарантирует более высокое место в ответах или продажи](https://openai.com/business/businesses-in-chatgpt/).\n\n## Где доступен диалоговый агент\n\nBusiness Agent отвечает на вопросы на основе сведений и правил, заданных компанией. Разговор с ним помечен отдельно от обычного ответа ChatGPT. На старте агенты доступны подходящим интернет-магазинам и онлайн-сервисам в США; доступность самого Business Hub и агента — разные условия. [OpenAI описывает эти ограничения в анонсе](https://openai.com/index/introducing-businesses-chatgpt/).\n\nДля магазинов на Shopify предусмотрено подключение каталога: [приложение OpenAI размещено в Shopify App Store](https://apps.shopify.com/chatgpt). Это подтверждает наличие интеграции, но не её безошибочную работу у каждого продавца: опубликованные там отзывы от 12 ноября описывают отдельные сбои проверки и синхронизации. Перед запуском стоит проверить, как обновляются цены и наличие, какие вопросы агент передаёт человеку и что видит покупатель при ошибке в данных.\n\nAI TehCon занимается анализом и автоматизацией бизнес-процессов и AI-интеграциями. Если вы рассматриваете подобный канал, можно обсудить, какие данные и проверки потребуются между каталогом, учётной системой и ответами клиентам."
+        },
         {
             "slug": "changshin-palantir-footwear-production-ai",
             "title": "Changshin и Palantir договорились связать разработку обуви с данными фабрик",
