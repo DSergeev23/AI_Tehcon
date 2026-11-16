@@ -1,7 +1,38 @@
 {
     "version": 1,
-    "generatedAt": "2026-11-15T06:00:20+00:00",
+    "generatedAt": "2026-11-16T06:00:20+00:00",
     "articles": [
+        {
+            "slug": "chatgpt-enterprise-aws-marketplace",
+            "title": "ChatGPT Enterprise появился в AWS Marketplace",
+            "excerpt": "С 9 ноября организации могут оформлять ChatGPT Enterprise через AWS Marketplace. Изменение касается закупки и выставления счетов; условия размещения данных и стоимость нужно проверять отдельно.",
+            "category": "Корпоративный AI",
+            "coverImage": "https://ngnpumsmxqvtkwcenbtu.supabase.co/storage/v1/object/public/news-covers/generated/b0b4220d-cecc-4763-8239-b05dbf9e66a8/chatgpt-enterprise-aws-marketplace.avif",
+            "coverAlt": "Иллюстрация корпоративной закупки AI-сервиса через облачный маркетплейс",
+            "publishedAt": "2026-11-15",
+            "updatedAt": "2026-11-15",
+            "publishedAtIso": "2026-11-15T07:00:00+00:00",
+            "updatedAtIso": "2026-11-15T07:00:00+00:00",
+            "readingTimeMinutes": 2,
+            "author": "AI TehCon",
+            "tags": [
+                "OpenAI",
+                "ChatGPT Enterprise",
+                "AWS Marketplace",
+                "закупки",
+                "данные"
+            ],
+            "relatedSolutionIds": [],
+            "sourceUrls": [
+                "https://openai.com/index/chatgpt-enterprise-aws-marketplace/",
+                "https://aws.amazon.com/marketplace/pp/prodview-sscra4m7iracg"
+            ],
+            "seo": {
+                "title": "ChatGPT Enterprise стал доступен через AWS Marketplace",
+                "description": "Что меняется для корпоративной закупки ChatGPT Enterprise через AWS и почему условия обработки данных нужно проверять отдельно."
+            },
+            "body": "9 ноября OpenAI [сообщила о появлении ChatGPT Enterprise в AWS Marketplace](https://openai.com/index/chatgpt-enterprise-aws-marketplace/). Для компаний, которые уже закупают программы через AWS, это открывает существующий канал согласования и оплаты корпоративного AI-сервиса. Сам продукт сохраняет функции, доступные при покупке напрямую у OpenAI.\n\n## Что меняется в закупке\n\nПо сообщению OpenAI, подходящие расходы могут засчитываться в обязательства клиента перед AWS. [Карточка предложения в AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-sscra4m7iracg) подтверждает, что подписка оформляется как SaaS через частное коммерческое предложение. Публичной фиксированной цены там нет: стоимость зависит от требований клиента и его права на предложение. OpenAI рекомендует уточнять условия у команды OpenAI или AWS.\n\nЭто отдельный способ приобрести ChatGPT Enterprise, а не новый вариант моделей OpenAI в Amazon Bedrock. В [анонсе OpenAI](https://openai.com/index/chatgpt-enterprise-aws-marketplace/) Bedrock описан как путь для разработки приложений с моделями, а ChatGPT Enterprise — как сервис для работы команд.\n\n## Что проверить перед договором\n\nЗакупка через AWS не означает, что все данные обрабатываются в инфраструктуре AWS или внутри облачной среды заказчика. Это прямо указано в [описании предложения](https://aws.amazon.com/marketplace/pp/prodview-sscra4m7iracg): обработчиком данных остаётся OpenAI, а доступность хранения и выполнения модели в выбранном регионе зависит от подключённых настроек и их ограничений. IT-команде стоит отдельно сверить договор, требования к размещению данных, права администраторов и условия подключения корпоративных систем.\n\nAI TehCon работает с анализом процессов и AI-интеграциями, в том числе с учётными системами. Если компания оценивает корпоративный AI-сервис, можно обсудить конкретный процесс и требования к обмену данными до выбора канала закупки."
+        },
         {
             "slug": "openai-business-hub-business-agents-chatgpt",
             "title": "OpenAI запустила Business Hub и Business Agents для компаний в ChatGPT",
