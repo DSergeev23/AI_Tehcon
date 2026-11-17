@@ -1,7 +1,39 @@
 {
     "version": 1,
-    "generatedAt": "2026-11-16T06:00:20+00:00",
+    "generatedAt": "2026-11-17T06:00:17+00:00",
     "articles": [
+        {
+            "slug": "anthropic-claude-fable-mythos-5-2",
+            "title": "Anthropic выпустила Claude Fable 5.2 и ограничила доступ к Mythos 5.2",
+            "excerpt": "Новые версии моделей Claude предназначены для сложных технических задач. Fable 5.2 доступна на платформах Anthropic и облачных партнёров, а для Mythos 5.2 требуется участие в программах проверки.",
+            "category": "Модели AI",
+            "coverImage": "https://ngnpumsmxqvtkwcenbtu.supabase.co/storage/v1/object/public/news-covers/generated/b0b4220d-cecc-4763-8239-b05dbf9e66a8/anthropic-claude-fable-mythos-5-2.avif",
+            "coverAlt": "Иллюстрация сравнения двух конфигураций модели Claude для технических задач",
+            "publishedAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
+            "publishedAtIso": "2026-11-16T07:00:00+00:00",
+            "updatedAtIso": "2026-11-16T07:00:00+00:00",
+            "readingTimeMinutes": 2,
+            "author": "AI TehCon",
+            "tags": [
+                "Anthropic",
+                "Claude Fable",
+                "Claude Mythos",
+                "оценка моделей",
+                "автоматизация"
+            ],
+            "relatedSolutionIds": [],
+            "sourceUrls": [
+                "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+                "https://www.anthropic.com/legal/supported-regions",
+                "https://artificialanalysis.ai/models/releases/claude-fable-5-2"
+            ],
+            "seo": {
+                "title": "Claude Fable 5.2 и Mythos 5.2: доступ, цена и проверка для бизнеса",
+                "description": "Anthropic обновила Claude Fable и Mythos. Разбираем ограничения доступа, API-тарифы и независимую оценку Fable 5.2."
+            },
+            "body": "9 ноября Anthropic [представила Claude Fable 5.2 и Claude Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2). Это две конфигурации одной базовой модели для сложных технических задач, но с разными ограничениями доступа. Для компаний важен выбор конкретной задачи: высокая оценка модели в тестах сама по себе не показывает стоимость и надёжность рабочего процесса.\n\n## Доступ и цена\n\nПо данным Anthropic, Fable 5.2 доступна через сервисы компании, AWS, Google Cloud и Microsoft Azure. Mythos 5.2 предназначена для одобренных участников программ проверки в кибербезопасности и биомедицинских исследованиях. Цена API для обеих конфигураций указана как $8 за миллион входных и $40 за миллион выходных токенов; ускоренный режим оплачивается отдельно. Условия доступа также зависят от [политики поддерживаемых регионов Anthropic](https://www.anthropic.com/legal/supported-regions). [Ограничения и тарифы приведены в анонсе](https://www.anthropic.com/claude-fable-and-mythos-5-2).\n\n## Что говорят испытания\n\nAnthropic сообщает об улучшениях в программировании, анализе и инженерных задачах, опираясь в том числе на собственные испытания. Независимая площадка [Artificial Analysis оценила Fable 5.2](https://artificialanalysis.ai/models/releases/claude-fable-5-2) в 65 баллов своего составного индекса при максимальном уровне усилий. На заданиях этого индекса среднее время составило 46,8 минуты, а стоимость — $26,54 за задание. Эти числа относятся к методике площадки, а не к типовой заявке бизнеса.\n\nПеред внедрением стоит сравнить Fable 5.2 с более дешёвой моделью на собственных задачах: считать стоимость завершённого результата, время, долю ошибок и объём проверки человеком. Даже Anthropic [рекомендует начинать большинство повседневных задач с Opus 5.5](https://www.anthropic.com/claude-fable-and-mythos-5-2), переходя к Fable или Mythos, когда сложность работы это оправдывает.\n\nAI TehCon помогает разбирать бизнес-процессы и проектировать AI-интеграции. Если вы оцениваете новую модель для автоматизации или связки с 1С, можно обсудить ограниченный пилот с измеримыми критериями качества и стоимости."
+        },
         {
             "slug": "chatgpt-enterprise-aws-marketplace",
             "title": "ChatGPT Enterprise появился в AWS Marketplace",
