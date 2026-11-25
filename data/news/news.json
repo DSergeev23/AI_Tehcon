@@ -1,7 +1,38 @@
 {
     "version": 1,
-    "generatedAt": "2026-11-17T06:00:17+00:00",
+    "generatedAt": "2026-11-25T06:00:23+00:00",
     "articles": [
+        {
+            "slug": "openai-chatgpt-for-sales-crm-plugins",
+            "title": "OpenAI представила ChatGPT for Sales с подключением CRM и рабочих инструментов",
+            "excerpt": "Новый плагин помогает отделам продаж готовиться к встречам и работать с данными клиентов в ChatGPT. Перед внедрением компаниям стоит проверить права доступа и доступность нужных интеграций.",
+            "category": "AI-продукты",
+            "coverImage": "https://ngnpumsmxqvtkwcenbtu.supabase.co/storage/v1/object/public/news-covers/generated/9e5d5d91-bd56-49de-a4ea-7457c84e0742/openai-chatgpt-for-sales-crm-plugins.avif",
+            "coverAlt": "Иллюстрация рабочего экрана отдела продаж с CRM, заметками о встречах и AI-помощником",
+            "publishedAt": "2026-11-24",
+            "updatedAt": "2026-11-24",
+            "publishedAtIso": "2026-11-24T07:00:00+00:00",
+            "updatedAtIso": "2026-11-24T07:00:00+00:00",
+            "readingTimeMinutes": 2,
+            "author": "AI TehCon",
+            "tags": [
+                "OpenAI",
+                "ChatGPT",
+                "продажи",
+                "CRM",
+                "AI-интеграции"
+            ],
+            "relatedSolutionIds": [],
+            "sourceUrls": [
+                "https://openai.com/index/introducing-chatgpt-for-sales/",
+                "https://www.docusign.com/en-au/company/news-center/docusign-brings-contract-intelligence-and-workflows-to-chatgpt-for-sales"
+            ],
+            "seo": {
+                "title": "ChatGPT for Sales: плагин OpenAI и интеграции с CRM",
+                "description": "OpenAI представила ChatGPT for Sales. Разбираем сценарии работы с CRM, подтверждённую интеграцию Docusign и ограничения доступности."
+            },
+            "body": "17 ноября OpenAI [представила ChatGPT for Sales](https://openai.com/index/introducing-chatgpt-for-sales/): плагин Sales с готовыми сценариями для продавцов и более 30 новых или обновлённых партнёрских плагинов. Для бизнеса это возможность собирать контекст из CRM, заметок о встречах и других рабочих систем в одном интерфейсе, но качество результата зависит от подключённых данных и настроек доступа.\n\n## Что меняется в работе отдела продаж\n\nПо описанию OpenAI, сотрудник может использовать данные CRM и историю общения, чтобы подготовиться к звонку, составить черновик письма или проверить следующие шаги по сделке. Среди перечисленных интеграций — Salesforce, HubSpot, Gong и Docusign. Плагин Sales задаёт рабочие сценарии, а партнёрские плагины предоставляют данные и действия конкретных сервисов; сам анонс не доказывает сокращения цикла продаж у любого клиента.\n\nОдин из партнёров, [Docusign, отдельно подтвердил](https://www.docusign.com/en-au/company/news-center/docusign-brings-contract-intelligence-and-workflows-to-chatgpt-for-sales) участие в запуске. Компания сообщает, что её плагин позволяет готовить сведения к продлению договора на основе подписанных условий и передавать запрос на согласование юридической команде через существующий процесс Docusign.\n\n## Что проверить перед подключением\n\nАдминистраторы рабочих пространств ChatGPT Business и Enterprise могут включать Sales и выбранные партнёрские плагины в консоли. [OpenAI предупреждает](https://openai.com/index/introducing-chatgpt-for-sales/), что доступность функций зависит от тарифа, региона и настроек пространства. Поэтому пилот стоит начать с одного процесса: определить, какие записи доступны сотруднику, какие действия плагин вправе выполнять и кто проверяет подготовленные изменения перед записью в CRM. Сопоставление черновиков с исходными данными покажет пользу надёжнее, чем демонстрационный сценарий.\n\nAI TehCon занимается анализом и автоматизацией бизнес-процессов и AI-интеграциями. Если вы рассматриваете подключение AI к CRM и другим системам продаж, можно обсудить, какой процесс разумно проверить первым."
+        },
         {
             "slug": "anthropic-claude-fable-mythos-5-2",
             "title": "Anthropic выпустила Claude Fable 5.2 и ограничила доступ к Mythos 5.2",
