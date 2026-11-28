@@ -1,7 +1,39 @@
 {
     "version": 1,
-    "generatedAt": "2026-11-27T06:00:26+00:00",
+    "generatedAt": "2026-11-28T06:00:21+00:00",
     "articles": [
+        {
+            "slug": "aws-textract-insights-document-processing",
+            "title": "AWS запустила Textract Insights для обработки комплектов документов",
+            "excerpt": "Новый API разделяет комплект документов, определяет их типы и извлекает заданные поля. При внедрении важно проверить языковую и региональную доступность.",
+            "category": "Автоматизация бизнеса",
+            "coverImage": "https://ngnpumsmxqvtkwcenbtu.supabase.co/storage/v1/object/public/news-covers/generated/bdbae5d8-b9ac-4bad-aa5f-47d90683ef1e/aws-textract-insights-document-processing.avif",
+            "coverAlt": "Иллюстрация комплекта документов, из которого выделяются структурированные поля и ссылки на исходные страницы",
+            "publishedAt": "2026-11-27",
+            "updatedAt": "2026-11-27",
+            "publishedAtIso": "2026-11-27T07:00:00+00:00",
+            "updatedAtIso": "2026-11-27T07:00:00+00:00",
+            "readingTimeMinutes": 2,
+            "author": "AI TehCon",
+            "tags": [
+                "AWS",
+                "Amazon Textract",
+                "обработка документов",
+                "AI-интеграции"
+            ],
+            "relatedSolutionIds": [],
+            "sourceUrls": [
+                "https://aws.amazon.com/blogs/machine-learning/announcing-amazon-textract-insights-verifiable-generative-ai-for-documents/",
+                "https://docs.aws.amazon.com/textract/latest/dg/amazon-textract-insights.html",
+                "https://aws.amazon.com/about-aws/whats-new/2026/11/textract-insights-ga/",
+                "https://qualifiedpoc.ai/research/en/daily-enterprise-tech-brief-22-november-2026"
+            ],
+            "seo": {
+                "title": "AWS запустила Textract Insights для обработки документов",
+                "description": "Как Textract Insights извлекает данные из комплектов документов, где доступен сервис и что проверить перед интеграцией с учётной системой."
+            },
+            "body": "20 ноября AWS объявила об общей доступности Amazon Textract Insights — API для обработки документов с применением генеративного ИИ. Сервис может разделить один файл на отдельные документы и вернуть структурированные данные с указанием, где найдено каждое значение. Для компаний это способ сократить число отдельных компонентов в процессе обработки входящих документов, но качество извлечения нужно проверять на собственных файлах. [AWS](https://aws.amazon.com/blogs/machine-learning/announcing-amazon-textract-insights-verifiable-generative-ai-for-documents/)\n\n## Как устроена обработка\n\nКомпания описывает нужные поля в шаблоне на основе JSON Schema: например, номер договора или сумму счёта. Затем асинхронный запрос передаёт файл из Amazon S3. Textract Insights может разделить смешанный комплект, сопоставить части с шаблонами и записать результат обратно в S3. Для извлечённых полей сервис возвращает оценку уверенности и ссылку на область исходной страницы. [Документация AWS](https://docs.aws.amazon.com/textract/latest/dg/amazon-textract-insights.html)\n\nПрактический сценарий — входящий пакет из заявлений, счетов и приложений, который затем нужно перенести в учётную систему. Редакционный вывод: перед автоматической записью стоит определить обязательные поля, пороги уверенности и маршрут ручной проверки. Наличие ссылки на страницу помогает проверить ответ, но само по себе не доказывает, что он верен. [AWS](https://aws.amazon.com/blogs/machine-learning/announcing-amazon-textract-insights-verifiable-generative-ai-for-documents/)\n\n## Условия и ограничения\n\nНа дату анонса Textract Insights доступен в двух регионах AWS в США: US East (N. Virginia) и US West (Oregon). AWS перечисляет шесть поддерживаемых языков документов — английский, французский, немецкий, итальянский, португальский и испанский; русского в списке нет. Доступ предусмотрен через API, оплата — за страницу. До внедрения следует проверить стоимость на реальном объёме и требования к размещению данных. [Доступность](https://aws.amazon.com/about-aws/whats-new/2026/11/textract-insights-ga/), [условия работы](https://aws.amazon.com/blogs/machine-learning/announcing-amazon-textract-insights-verifiable-generative-ai-for-documents/)\n\nAI TehCon занимается анализом и автоматизацией бизнес-процессов, включая работу с 1С. Если документы приходится вручную переносить в учётную систему, можно обсудить, какие поля и проверки нужны для такой интеграции."
+        },
         {
             "slug": "appian-ai-agent-control-plane-business-processes",
             "title": "Appian представила инструменты управления AI-агентами внутри бизнес-процессов",
